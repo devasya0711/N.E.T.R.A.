@@ -95,8 +95,8 @@ export default function Sidebar() {
       style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderRight: '1px solid rgba(255,255,255,0.5)' }}
     >
 
-      <nav className="flex flex-col gap-1 px-3 pt-5 flex-1 overflow-y-auto">
-        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-3 mb-2">
+      <nav className="flex flex-col gap-0.5 px-3 pt-3">
+        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-3 mb-1">
           Command Center
         </p>
         {NAV_ITEMS.filter((i) => i.group === "core").map((item) => (
@@ -105,7 +105,7 @@ export default function Sidebar() {
             to={item.to}
             end={item.to === "/dashboard"}
             className={({ isActive }) =>
-              `nav-link ${isActive ? "active" : ""}`
+              `nav-link py-2 ${isActive ? "active" : ""}`
             }
           >
             {item.icon}
@@ -113,9 +113,9 @@ export default function Sidebar() {
           </NavLink>
         ))}
 
-        <div className="mx-3 my-3 border-t" style={{ borderColor: 'rgba(255,255,255,0.5)' }} />
+        <div className="mx-3 my-2 border-t" style={{ borderColor: 'rgba(255,255,255,0.5)' }} />
 
-        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-3 mb-2">
+        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-3 mb-1">
           Services
         </p>
         {NAV_ITEMS.filter((i) => i.group === "services").map((item) => (
@@ -123,7 +123,7 @@ export default function Sidebar() {
             key={item.to}
             to={item.to}
             className={({ isActive }) =>
-              `nav-link ${isActive ? "active" : ""}`
+              `nav-link py-2 ${isActive ? "active" : ""}`
             }
           >
             {item.icon}
@@ -133,17 +133,13 @@ export default function Sidebar() {
       </nav>
 
       {/* Footer: System Status */}
-      <div className="px-4 pb-5 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.5)' }}>
-        <div className="rounded-lg border p-3" style={{ background: 'rgba(245,240,235,0.6)', borderColor: 'rgba(255,255,255,0.5)' }}>
+      <div className="px-3 pb-0 pt-2 mt-auto mb-2" style={{ borderTop: '1px solid rgba(255,255,255,0.5)' }}>
+        <div className="rounded-lg border p-2.5" style={{ background: 'rgba(245,240,235,0.6)', borderColor: 'rgba(255,255,255,0.5)' }}>
           <p className="text-[10px] text-slate-400 uppercase tracking-widest mb-2">System Status</p>
           <StatusRow label="Drone Fleet"     status="ONLINE"   color="emerald" />
           <StatusRow label="Satellite Feed"  status="ACTIVE"   color="emerald" />
           <StatusRow label="PG Portal API"   status="LINKED"   color="blue"    />
           <StatusRow label="CV Model v2.3"   status="RUNNING"  color="emerald" />
-        </div>
-        <div className="mt-3 flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-[11px] text-slate-500">Live · Updated 2s ago</span>
         </div>
       </div>
     </aside>

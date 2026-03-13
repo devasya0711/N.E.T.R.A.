@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { MapContainer, TileLayer, CircleMarker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, CircleMarker, Popup, GeoJSON, useMap } from "react-leaflet";
 import { usePotholeList } from "../hooks/usePotholes";
 import { useComplaints } from "../context/ComplaintContext";
+import { chhattisgarhData } from "../data/chhattisgarh";
 
 // ─── Severity colour config ────────────────────────────────────────────────
 const SEVERITY_CONFIG = {
@@ -31,6 +32,17 @@ function FlyToMarker({ position }) {
   if (position) {
     map.flyTo(position, 13, { duration: 1.2 });
   }
+  return null;
+}
+
+// Removes Leaflet default prefix (flag + "Leaflet" link) if attribution control is present.
+function AttributionCleaner() {
+  const map = useMap();
+  useEffect(() => {
+    if (map?.attributionControl) {
+      map.attributionControl.setPrefix("");
+    }
+  }, [map]);
   return null;
 }
 
@@ -190,6 +202,12 @@ export default function LiveMap() {
     REPAIRED: sourcedPotholes.filter(p => p.severity === "REPAIRED").length,
   };
 
+  const chhattisgarhBoundary = {
+    type: "Feature",
+    properties: { name: "Chhattisgarh" },
+    geometry: chhattisgarhData[0]?.geojson,
+  };
+
   return (
     <div className="overflow-hidden flex flex-col" style={{ height: "calc(100vh - 4rem)" }}>
       {/* Map toolbar */}
@@ -241,11 +259,24 @@ export default function LiveMap() {
           maxBoundsViscosity={1.0}
           className="w-full h-full"
           zoomControl={true}
+          attributionControl={true}
         >
           {/* English-only labels tile layer */}
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>'
+            attribution=""
             url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+          />
+
+          <AttributionCleaner />
+
+          <GeoJSON
+            data={chhattisgarhBoundary}
+            style={{
+              color: "#000000",
+              weight: 1,
+              opacity: 0.45,
+              fillOpacity: 0,
+            }}
           />
 
           {focusPos && <FlyToMarker position={focusPos} />}

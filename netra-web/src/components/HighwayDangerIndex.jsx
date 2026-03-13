@@ -411,7 +411,7 @@ export default function HighwayDangerIndex() {
         <div>
           <h2 className="text-xl font-black text-slate-800 tracking-tight">Highway Danger Index</h2>
           <p className="text-xs text-slate-500 mt-1">
-            Aggregated risk scores across Chhattisgarh NH/SH network · Updated every 6 hours
+            Aggregated risk scores across Chhattisgarh NH/SH network
           </p>
         </div>
         <button className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-[11px] font-semibold text-slate-500

@@ -32,7 +32,7 @@ createRoot(document.getElementById('root')).render(
       }}
       appearance={{
         variables: {
-          colorPrimary: '#6d28d9',
+          colorPrimary: '#1e3a8a',
           colorBackground: '#ffffff',
           colorText: '#1e293b',
           colorInputBackground: '#faf8f5',
@@ -50,14 +50,14 @@ createRoot(document.getElementById('root')).render(
             borderRadius: '1rem',
           },
           headerTitle: {
-            color: '#6d28d9',
+            color: '#1e3a8a',
             fontFamily: '"Inter", system-ui, sans-serif',
             fontWeight: '700',
             fontSize: '1.4rem',
           },
           headerSubtitle: { color: '#64748b' },
           formButtonPrimary: {
-            background: '#6d28d9',
+            background: '#1e3a8a',
             color: '#ffffff',
             fontWeight: '700',
             boxShadow: '0 2px 8px rgba(109,40,217,0.25)',
@@ -74,7 +74,7 @@ createRoot(document.getElementById('root')).render(
             color: '#1e293b',
           },
           formFieldLabel: { color: '#475569' },
-          footerActionLink: { color: '#6d28d9', fontWeight: '600' },
+          footerActionLink: { color: '#1e3a8a', fontWeight: '600' },
           dividerLine: { background: '#e2e8f0' },
           dividerText: { color: '#64748b' },
           identityPreviewText: { color: '#1e293b' },

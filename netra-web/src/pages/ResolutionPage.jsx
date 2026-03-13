@@ -27,7 +27,7 @@ function buildOfficerStats(potholes) {
 const VER_CONFIG = {
   Verified:         { dot: "#059669", label: "Verified",        cls: "text-emerald-600" },
   "Awaiting Repair":{ dot: "#94a3b8", label: "Awaiting Repair", cls: "text-slate-500"   },
-  Escalated:        { dot: "#9333ea", label: "Escalated",       cls: "text-purple-600" },
+  Escalated:        { dot: "#1e3a8a", label: "Escalated",       cls: "text-[#1e3a8a]" },
 };
 
 function StatusDot({ status }) {
@@ -44,7 +44,7 @@ const TIMELINE_STEPS = [
   { step: "Detection",         desc: "CV model flags anomaly from drone/satellite/dashcam",  icon: <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" strokeWidth="1.8"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" strokeLinecap="round" strokeLinejoin="round"/></svg> },
   { step: "Severity Score",    desc: "Depth + diameter + traffic → score computed (0–10)",   icon: <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#c2410c" strokeWidth="1.8"><path d="M13 10V3L4 14h7v7l9-11h-7z" strokeLinecap="round" strokeLinejoin="round"/></svg> },
   { step: "Geo-tagging",       desc: "GPS coordinates extracted and cluster-deduped",        icon: <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#0369a1" strokeWidth="1.8"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" strokeLinecap="round" strokeLinejoin="round"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round"/></svg> },
-  { step: "Auto-Filing",       desc: "Grievance dispatched via PG Portal API (automated)",  icon: <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" strokeWidth="1.8"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" strokeLinecap="round" strokeLinejoin="round"/></svg> },
+  { step: "Auto-Filing",       desc: "Grievance dispatched via PG Portal API (automated)",  icon: <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" strokeWidth="1.8"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" strokeLinecap="round" strokeLinejoin="round"/></svg> },
   { step: "Post-Repair Scan",  desc: "Same location re-scanned after SLA window",           icon: <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="1.8"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" strokeLinecap="round" strokeLinejoin="round"/></svg> },
   { step: "Verification",      desc: "Repair confirmed or complaint re-escalated",          icon: <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="1.8"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" strokeLinecap="round" strokeLinejoin="round"/></svg> },
 ];
@@ -190,7 +190,7 @@ export default function ResolutionPage() {
             />
             <Bar dataKey="filed"    name="Filed"    radius={[3,3,0,0]} fill="#1e3a8a" />
             <Bar dataKey="verified" name="Verified" radius={[3,3,0,0]} fill="#059669" />
-            <Bar dataKey="escalated"name="Escalated"radius={[3,3,0,0]} fill="#9333ea" />
+            <Bar dataKey="escalated"name="Escalated"radius={[3,3,0,0]} fill="#1e3a8a" />
           </BarChart>
         </ResponsiveContainer>
       </div>
@@ -204,7 +204,7 @@ function ProgressOrb({ status }) {
   const cfg = {
     Verified:         { color: "#10b981", glow: "#10b98144" },
     "Awaiting Repair":{ color: "#94a3b8", glow: "#94a3b822" },
-    Escalated:        { color: "#a855f7", glow: "#a855f744" },
+    Escalated:        { color: "#1e3a8a", glow: "#1e3a8a44" },
   }[status] || { color: "#94a3b8", glow: "#94a3b822" };
   return (
     <div

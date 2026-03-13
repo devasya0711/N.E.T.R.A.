@@ -16,7 +16,7 @@ const FILE_BADGE = {
 const VER_BADGE = {
   Verified:         { cls: "bg-emerald-50 text-emerald-600 border-emerald-200", label: "Verified" },
   "Awaiting Repair":{ cls: "bg-slate-100 text-slate-500 border-slate-200",           label: "Awaiting" },
-  Escalated:        { cls: "bg-purple-50 text-purple-600 border-purple-200",    label: "Escalated" },
+  Escalated:        { cls: "bg-blue-50 text-[#1e3a8a] border-blue-200",    label: "Escalated" },
 };
 
 function Badge({ config, fallbackLabel }) {
@@ -110,7 +110,7 @@ export default function PotholeTable() {
       <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center px-5 py-4 border-b border-slate-200">
         <div className="flex-1">
           <h2 className="text-sm font-bold text-slate-700">Pothole Lifecycle Database</h2>
-          <p className="text-[11px] text-slate-500">{filtered.length} records · sorted by {sortKey}</p>
+          <p className="text-[11px] text-slate-500">{filtered.length} Records · Sorted by {sortKey === 'score' ? 'Score' : sortKey}</p>
         </div>
         {/* Search */}
         <div className="relative">

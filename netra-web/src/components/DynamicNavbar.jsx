@@ -33,13 +33,13 @@ export default function DynamicNavbar({ transparent = false }) {
         {/* LOGO */}
         <NavLink to="/" className="flex items-center gap-3 group hover:opacity-80 transition-opacity duration-200">
           <div className="relative w-8 h-8 flex items-center justify-center shrink-0">
-            <div className={`absolute inset-1 rounded-full border-2 transition-colors duration-300 ${solidBg ? "border-violet-700/30" : "border-white/40"}`} />
+            <div className={`absolute inset-1 rounded-full border-2 transition-colors duration-300 ${solidBg ? "border-[#1e3a8a]/30" : "border-white/40"}`} />
             <div className="sensor-ring">
-              <Eye size={14} className={`nav-eye-logo relative z-10 transition-colors duration-300 ${solidBg ? "text-violet-800" : "text-white"}`} />
+              <Eye size={14} className={`nav-eye-logo relative z-10 transition-colors duration-300 ${solidBg ? "text-[#1e3a8a]" : "text-white"}`} />
             </div>
           </div>
           <div className="flex flex-col leading-none">
-            <span className={`text-sm font-black tracking-[0.3em] transition-colors duration-300 ${solidBg ? "text-violet-900" : "text-white"}`}>
+            <span className={`text-sm font-black tracking-[0.3em] transition-colors duration-300 ${solidBg ? "text-[#1e3a8a]" : "text-white"}`}>
               N.E.T.R.A.
             </span>
             <span className={`text-[9px] tracking-widest uppercase transition-colors duration-300 ${solidBg ? "text-stone-500" : "text-white/70"}`}>

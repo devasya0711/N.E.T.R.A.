@@ -207,7 +207,7 @@ export default function LandingPage() {
       <motion.section className="relative py-20 px-6" style={{ background: '#faf8f5' }} initial={{ opacity: 0, y: 80 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true, amount: 0.1 }}>
         <div className="max-w-5xl mx-auto space-y-8">
           <div className="text-center space-y-3">
-            <p className="text-[11px] text-violet-700 font-bold tracking-[0.3em] uppercase">See It In Action</p>
+            <p className="text-[11px] text-[#1e3a8a] font-bold tracking-[0.3em] uppercase">See It In Action</p>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900">Real-Time Pothole Detection Demo</h2>
             <p className="text-slate-500 max-w-xl mx-auto text-sm">
               Watch our AI-powered detection pipeline identify and classify road anomalies from live dashcam footage — full video with controls.
@@ -251,7 +251,7 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16 space-y-3">
-            <p className="text-[11px] text-violet-700 font-bold tracking-[0.3em] uppercase">Architecture</p>
+            <p className="text-[11px] text-[#1e3a8a] font-bold tracking-[0.3em] uppercase">Architecture</p>
             <h2 className="text-4xl font-black text-slate-900">How N.E.T.R.A. Works</h2>
             <p className="text-slate-500 max-w-xl mx-auto text-sm">
               A fully automated 3-stage pipeline that detects, scores, files, and verifies — without any manual intervention.
@@ -271,13 +271,13 @@ export default function LandingPage() {
       </motion.section>
 
       {/* ── TECH STACK STRIP ───────────────────────────────────────────────── */}
-      <motion.section className="py-12 relative" style={{ background: '#f5f0eb', borderTop: '1px solid rgba(255,255,255,0.5)', borderBottom: '1px solid rgba(255,255,255,0.5)' }} initial={{ opacity: 0, y: 80 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true, amount: 0.1 }}>
+      <motion.section className="py-12 relative" style={{ background: '#faf8f5' }} initial={{ opacity: 0, y: 80 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true, amount: 0.1 }}>
         <p className="text-center text-[10px] text-slate-500 font-bold tracking-[0.3em] uppercase mb-8">
           Technology Stack
         </p>
         <div className="flex items-center gap-10 px-8 flex-wrap justify-center">
           {["YOLOv8 CV", "React.js", "Leaflet Maps", "PG Portal API", "Recharts", "Tailwind CSS", "FastAPI", "PostGIS", "Redis Queue", "Docker"].map((t) => (
-            <span key={t} className="text-xs text-stone-500 font-semibold border border-stone-300 px-3 py-1.5 rounded-full hover:border-violet-300 hover:text-violet-700 transition-colors cursor-default">
+            <span key={t} className="text-xs text-stone-500 font-semibold border border-stone-300 px-3 py-1.5 rounded-full hover:border-[#1e3a8a]/40 hover:text-[#1e3a8a] transition-colors cursor-default">
               {t}
             </span>
           ))}
@@ -285,7 +285,7 @@ export default function LandingPage() {
       </motion.section>
 
       {/* ── FOOTER ─────────────────────────────────────────────────────────── */}
-      <motion.footer className="py-12 px-10 flex flex-col md:flex-row items-center justify-between gap-6 relative" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true, amount: 0.2 }}>
+      <motion.footer className="py-12 px-10 flex flex-col md:flex-row items-center justify-between gap-6 relative" style={{ background: '#f5f0eb', borderTop: '1px solid rgba(255,255,255,0.5)', borderBottom: '1px solid rgba(255,255,255,0.5)' }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true, amount: 0.2 }}>
         <div className="flex items-center gap-3">
           <div className="w-2 h-2 rounded-full bg-[#1e3a8a]" />
           <span className="text-sm font-bold text-[#1e3a8a] tracking-widest">N.E.T.R.A.</span>
@@ -367,7 +367,7 @@ function PipelineDiagram() {
   return (
     <div ref={ref} className="mt-16 relative"
       style={{ opacity: inView ? 1 : 0, transform: inView ? "none" : "translateY(24px)", transition: "all 0.6s ease" }}>
-      <div className="rounded-2xl p-8 overflow-x-auto border" style={{ background: '#f5f0eb', borderColor: 'rgba(255,255,255,0.5)' }}>
+      <div className="rounded-2xl p-8 overflow-x-auto border" style={{ background: '#faf8f5', borderColor: 'rgba(255,255,255,0.5)' }}>
         <p className="text-[10px] text-slate-500 uppercase tracking-widest mb-6 text-center">End-to-End Automation Pipeline</p>
         <div className="flex items-center justify-between min-w-[500px] gap-2">
           {steps.map((s, i) => (
