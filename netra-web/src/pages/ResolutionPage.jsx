@@ -70,23 +70,20 @@ export default function ResolutionPage() {
       {/* Lifecycle pipeline */}
       <div className="netra-panel p-6">
         <h2 className="text-sm font-bold text-slate-700 mb-5">Automated Resolution Pipeline</h2>
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-0">
+        <div className="flex items-start justify-between min-w-[500px] gap-2 overflow-x-auto pb-4">
           {TIMELINE_STEPS.map((s, i) => (
-            <div key={s.step} className="flex sm:flex-col items-center gap-2 sm:gap-1 flex-1">
-              <div className="flex sm:flex-col items-center gap-2 sm:gap-0">
-                <div className="w-10 h-10 rounded-full bg-slate-50 border-2 border-blue-200 flex items-center justify-center text-lg">
+            <div key={s.step} className="flex items-start gap-2 flex-1">
+              <div className="flex flex-col items-center flex-shrink-0 w-24">
+                <div className="w-10 h-10 rounded-full bg-slate-50 border-2 border-blue-200 flex items-center justify-center text-lg z-10 shrink-0">
                   {s.icon}
                 </div>
-                {i < TIMELINE_STEPS.length - 1 && (
-                  <div className="sm:hidden w-8 h-px bg-gradient-to-r from-blue-300 to-blue-100" />
-                )}
-              </div>
-              <div className="text-center hidden sm:block mt-2">
-                <p className="text-[11px] font-bold text-blue-900">{s.step}</p>
-                <p className="text-[10px] text-slate-500 max-w-[90px] leading-snug mt-0.5">{s.desc}</p>
+                <div className="text-center mt-2">
+                  <p className="text-[11px] font-bold text-blue-900">{s.step}</p>
+                  <p className="text-[10px] text-slate-500 leading-snug mt-0.5">{s.desc}</p>
+                </div>
               </div>
               {i < TIMELINE_STEPS.length - 1 && (
-                <div className="hidden sm:block flex-1 h-px bg-gradient-to-r from-blue-300 to-blue-100 mx-2 mt-5 self-start" />
+                <div className="flex-1 h-px bg-gradient-to-r from-blue-300 to-blue-100 mx-1 mt-5" />
               )}
             </div>
           ))}

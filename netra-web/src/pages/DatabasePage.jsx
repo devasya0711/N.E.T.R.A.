@@ -6,7 +6,7 @@ export default function DatabasePage() {
       <div>
         <h1 className="text-xl font-bold text-slate-800 tracking-tight">Pothole Database</h1>
         <p className="text-sm text-slate-500 mt-1">
-          Full lifecycle records — detection → complaint filing → verification. Searchable and sortable.
+          A comprehensive registry of all detected road anomalies, offering detailed tracking from logging to resolution.
         </p>
       </div>
       <PotholeTable />

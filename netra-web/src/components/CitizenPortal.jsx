@@ -579,8 +579,15 @@ export default function CitizenPortal() {
             <p className="text-[11px] text-slate-600 leading-relaxed">
               Your report and GPS coordinates will be processed by the N.E.T.R.A. AI pipeline.
               A grievance will be automatically filed to the{" "}
-              <span className="text-blue-700 font-semibold">PG Portal (CPGRAMS)</span> and assigned
-              to the concerned PWD division for repair.
+              <a 
+                href="https://pgportal.gov.in" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-700 font-semibold hover:underline"
+              >
+                PG Portal (CPGRAMS)
+              </a>{" "}
+              and assigned to the concerned PWD division for repair.
             </p>
           </div>
 
