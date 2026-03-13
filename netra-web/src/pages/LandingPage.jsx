@@ -285,22 +285,23 @@ export default function LandingPage() {
       </motion.section>
 
       {/* ── FOOTER ─────────────────────────────────────────────────────────── */}
-      <motion.footer className="py-10 px-8 flex flex-col sm:flex-row items-center justify-between gap-4" style={{ borderTop: '1px solid rgba(255,255,255,0.5)', background: '#faf8f5' }} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true, amount: 0.2 }}>
+      <motion.footer className="py-12 px-10 flex flex-col md:flex-row items-center justify-between gap-6 relative" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true, amount: 0.2 }}>
         <div className="flex items-center gap-3">
-          <div className="w-2 h-2 rounded-full bg-violet-700" />
-          <span className="text-sm font-bold text-violet-900 tracking-widest">N.E.T.R.A.</span>
-          <span className="text-slate-400 text-xs">· Networked Edge Tracking for Road Anomalies</span>
+          <div className="w-2 h-2 rounded-full bg-[#1e3a8a]" />
+          <span className="text-sm font-bold text-[#1e3a8a] tracking-widest">N.E.T.R.A.</span>
+          <span className="text-slate-400 text-xs tracking-wider">· Networked Edge Tracking for Road Anomalies</span>
         </div>
         <div className="flex items-center gap-3 text-xs text-slate-500">
-          <a href="mailto:support@codeflex.com" className="flex items-center gap-1.5 text-violet-700 hover:text-violet-900 font-semibold transition-colors">
+          <a href="mailto:support@codeflex.com" className="flex items-center gap-1.5 text-[#1e3a8a] hover:text-blue-900 font-semibold transition-colors">
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             support@codeflex.com
           </a>
         </div>
-        <div className="flex flex-col sm:flex-row items-center gap-4 text-xs text-slate-500">
-          <span>© 2026 <span className="text-slate-700 font-semibold">Team CodeFlex</span></span>
-          <span className="hidden sm:inline text-slate-300">·</span>
-          <span>Road Safety · AI + Remote Sensing</span>
+        <div className="text-xs text-slate-500 tracking-wide font-medium">
+          <span>© 2026 Team CodeFlex</span>
+        </div>
+        <div className="text-xs text-slate-500 tracking-wide font-medium">
+          Road Safety · AI + Remote Sensing
         </div>
       </motion.footer>
     </div>
