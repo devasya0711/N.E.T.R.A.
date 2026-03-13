@@ -348,7 +348,7 @@ export default function ComplaintTracker() {
             className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-[11px] font-semibold text-slate-500
             hover:text-blue-900 hover:bg-blue-50 border border-slate-200 transition-all duration-200">
             <Download size={12} />
-            Export CSV
+            Export Report
           </button>
         </div>
       </div>

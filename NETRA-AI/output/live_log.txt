@@ -8,39 +8,39 @@ Using cache found in C:\Users\Shaurya Singh/.cache\torch\hub\rwightman_gen-effic
 Using cache found in C:\Users\Shaurya Singh/.cache\torch\hub\intel-isl_MiDaS_master
 [NETRA] All modules ready.
 
-[NETRA] Processing source: C:\Users\Shaurya Singh\Desktop\N.E.T.R.A.-master\N.E.T.R.A.-master\netra-api\uploads\video-1773423885729.jpeg  (30 FPS, is_image=True)
+[NETRA] Processing source: C:\Users\Shaurya Singh\Desktop\N.E.T.R.A.-master\N.E.T.R.A.-master\netra-api\uploads\video-1773437359149.jpeg  (30 FPS, is_image=True)
 
-  ✦ NETRA-28D06595-CBE  Severity: Minor (0.19)  GPS: (28.6134, 77.2086)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-F6364C2C-CE0  Severity: Minor (0.33)  GPS: (28.6137, 77.2087)  Loop: PERSISTS  [Unique: 2]
-  ✦ NETRA-D076749B-6FA  Severity: Minor (0.31)  GPS: (28.6142, 77.2089)  Loop: REPAIRED  [Unique: 3]
-  ✦ NETRA-D6BB258B-69C  Severity: Moderate (0.36)  GPS: (28.6145, 77.2089)  Loop: REPAIRED  [Unique: 4]
-  ✦ NETRA-9E9F0890-C96  Severity: Minor (0.33)  GPS: (28.6135, 77.2087)  Loop: REPAIRED  [Unique: 5]
-  ✦ NETRA-B32A1510-35B  Severity: Moderate (0.49)  GPS: (28.6130, 77.2094)  Loop: REPAIRED  [Unique: 6]
-  ✦ NETRA-01E75730-DDA  Severity: Moderate (0.39)  GPS: (28.6140, 77.2091)  Loop: REPAIRED  [Unique: 7]
-  ✦ NETRA-5CCF5E88-557  Severity: Minor (0.27)  GPS: (28.6136, 77.2091)  Loop: PERSISTS  [Unique: 8]
-  ✦ NETRA-643F299A-DBD  Severity: Minor (0.35)  GPS: (28.6135, 77.2091)  Loop: REPAIRED  [Unique: 9]
-  ✦ NETRA-384786F3-D3F  Severity: Moderate (0.42)  GPS: (28.6146, 77.2086)  Loop: REPAIRED  [Unique: 10]
-  ✦ NETRA-29D54DA2-C5B  Severity: Moderate (0.36)  GPS: (28.6137, 77.2096)  Loop: REPAIRED  [Unique: 11]
-  ✦ NETRA-B367BE58-B3B  Severity: Moderate (0.38)  GPS: (28.6150, 77.2084)  Loop: PERSISTS  [Unique: 12]
-  ✦ NETRA-52BCA7DB-151  Severity: Minor (0.32)  GPS: (28.6138, 77.2093)  Loop: REPAIRED  [Unique: 13]
-  ✦ NETRA-E173FA9F-E36  Severity: Moderate (0.45)  GPS: (28.6132, 77.2095)  Loop: REPAIRED  [Unique: 14]
-  ✦ NETRA-CA0C9290-0E7  Severity: Minor (0.31)  GPS: (28.6147, 77.2091)  Loop: REPAIRED  [Unique: 15]
-  ✦ NETRA-CE69554E-336  Severity: Moderate (0.43)  GPS: (28.6146, 77.2085)  Loop: REPAIRED  [Unique: 16]
-  ✦ NETRA-F9770DB8-009  Severity: Moderate (0.48)  GPS: (28.6141, 77.2095)  Loop: REPAIRED  [Unique: 17]
-  ✦ NETRA-EC402FCF-946  Severity: Moderate (0.42)  GPS: (28.6132, 77.2082)  Loop: PERSISTS  [Unique: 18]
-  ✦ NETRA-CCAB4B5A-984  Severity: Moderate (0.38)  GPS: (28.6142, 77.2086)  Loop: REPAIRED  [Unique: 19]
-  ✦ NETRA-AE6A143C-0A0  Severity: Moderate (0.47)  GPS: (28.6134, 77.2088)  Loop: REPAIRED  [Unique: 20]
-  ✦ NETRA-FC1E0672-7F0  Severity: Moderate (0.50)  GPS: (28.6150, 77.2084)  Loop: REPAIRED  [Unique: 21]
-  ✦ NETRA-D8FB45D7-163  Severity: Moderate (0.51)  GPS: (28.6136, 77.2085)  Loop: REPAIRED  [Unique: 22]
-  ✦ NETRA-63A7D775-421  Severity: Moderate (0.48)  GPS: (28.6149, 77.2087)  Loop: PERSISTS  [Unique: 23]
-  ✦ NETRA-BB50F405-F40  Severity: Moderate (0.48)  GPS: (28.6129, 77.2101)  Loop: NEW  [Unique: 24]
-  ✦ NETRA-C6A59CF4-F9D  Severity: Moderate (0.36)  GPS: (28.6138, 77.2089)  Loop: REPAIRED  [Unique: 25]
-  ✦ NETRA-B2DA894A-196  Severity: Moderate (0.43)  GPS: (28.6137, 77.2084)  Loop: REPAIRED  [Unique: 26]
-  ✦ NETRA-87F8677D-0D3  Severity: Moderate (0.45)  GPS: (28.6141, 77.2097)  Loop: REPAIRED  [Unique: 27]
-  ✦ NETRA-5CD92DD8-B08  Severity: Moderate (0.51)  GPS: (28.6145, 77.2094)  Loop: REPAIRED  [Unique: 28]
-  ✦ NETRA-051EE88E-2E1  Severity: Moderate (0.44)  GPS: (28.6144, 77.2078)  Loop: REPAIRED  [Unique: 29]
-  ✦ NETRA-B0FA04FC-B2C  Severity: Moderate (0.49)  GPS: (28.6137, 77.2086)  Loop: REPAIRED  [Unique: 30]
-  ✦ NETRA-A9EC49E5-F60  Severity: Moderate (0.44)  GPS: (28.6141, 77.2083)  Loop: REPAIRED  [Unique: 31]
+  ✦ NETRA-E4F6ECD3-911  Severity: Minor (0.28)  GPS: (28.6144, 77.2097)  Loop: PERSISTS  [Unique: 1]
+  ✦ NETRA-7DCF5477-290  Severity: Minor (0.33)  GPS: (28.6139, 77.2099)  Loop: REPAIRED  [Unique: 2]
+  ✦ NETRA-99C416C6-4DC  Severity: Minor (0.30)  GPS: (28.6147, 77.2082)  Loop: REPAIRED  [Unique: 3]
+  ✦ NETRA-4CEEB9E5-B43  Severity: Moderate (0.37)  GPS: (28.6135, 77.2091)  Loop: REPAIRED  [Unique: 4]
+  ✦ NETRA-EA06E8CB-B76  Severity: Minor (0.34)  GPS: (28.6135, 77.2091)  Loop: REPAIRED  [Unique: 5]
+  ✦ NETRA-BBC03C67-662  Severity: Moderate (0.37)  GPS: (28.6133, 77.2090)  Loop: REPAIRED  [Unique: 6]
+  ✦ NETRA-455C96B6-C3E  Severity: Moderate (0.40)  GPS: (28.6146, 77.2093)  Loop: REPAIRED  [Unique: 7]
+  ✦ NETRA-DE0A8ACF-CE0  Severity: Moderate (0.37)  GPS: (28.6146, 77.2098)  Loop: PERSISTS  [Unique: 8]
+  ✦ NETRA-6E9C7B1D-F13  Severity: Minor (0.32)  GPS: (28.6138, 77.2098)  Loop: REPAIRED  [Unique: 9]
+  ✦ NETRA-6A26EEB8-267  Severity: Moderate (0.42)  GPS: (28.6147, 77.2089)  Loop: REPAIRED  [Unique: 10]
+  ✦ NETRA-8388B222-51B  Severity: Moderate (0.38)  GPS: (28.6135, 77.2094)  Loop: REPAIRED  [Unique: 11]
+  ✦ NETRA-A63D751B-94C  Severity: Moderate (0.40)  GPS: (28.6143, 77.2085)  Loop: REPAIRED  [Unique: 12]
+  ✦ NETRA-2C41EC2A-007  Severity: Moderate (0.42)  GPS: (28.6137, 77.2090)  Loop: REPAIRED  [Unique: 13]
+  ✦ NETRA-A4C4C94A-9E0  Severity: Minor (0.32)  GPS: (28.6140, 77.2096)  Loop: REPAIRED  [Unique: 14]
+  ✦ NETRA-68A2C07F-B11  Severity: Moderate (0.44)  GPS: (28.6142, 77.2093)  Loop: REPAIRED  [Unique: 15]
+  ✦ NETRA-2AC5C2B3-E31  Severity: Moderate (0.36)  GPS: (28.6135, 77.2079)  Loop: REPAIRED  [Unique: 16]
+  ✦ NETRA-ED18B23F-CBA  Severity: Moderate (0.44)  GPS: (28.6135, 77.2098)  Loop: REPAIRED  [Unique: 17]
+  ✦ NETRA-E70B59AD-F9E  Severity: Moderate (0.35)  GPS: (28.6141, 77.2094)  Loop: REPAIRED  [Unique: 18]
+  ✦ NETRA-815A760B-979  Severity: Moderate (0.36)  GPS: (28.6138, 77.2087)  Loop: REPAIRED  [Unique: 19]
+  ✦ NETRA-D0BD3D90-2FA  Severity: Moderate (0.50)  GPS: (28.6147, 77.2097)  Loop: REPAIRED  [Unique: 20]
+  ✦ NETRA-E35D93AC-7E2  Severity: Moderate (0.49)  GPS: (28.6137, 77.2088)  Loop: REPAIRED  [Unique: 21]
+  ✦ NETRA-EC8AE2F7-543  Severity: Moderate (0.36)  GPS: (28.6141, 77.2094)  Loop: REPAIRED  [Unique: 22]
+  ✦ NETRA-55E46859-F3E  Severity: Moderate (0.40)  GPS: (28.6138, 77.2083)  Loop: REPAIRED  [Unique: 23]
+  ✦ NETRA-FDBB27D2-516  Severity: Moderate (0.40)  GPS: (28.6138, 77.2090)  Loop: REPAIRED  [Unique: 24]
+  ✦ NETRA-2D3D050D-81D  Severity: Moderate (0.46)  GPS: (28.6142, 77.2087)  Loop: REPAIRED  [Unique: 25]
+  ✦ NETRA-C6A4EF63-6A5  Severity: Moderate (0.37)  GPS: (28.6143, 77.2096)  Loop: REPAIRED  [Unique: 26]
+  ✦ NETRA-EA685E4C-A88  Severity: Moderate (0.48)  GPS: (28.6139, 77.2095)  Loop: REPAIRED  [Unique: 27]
+  ✦ NETRA-000971FF-D4B  Severity: Moderate (0.40)  GPS: (28.6135, 77.2089)  Loop: REPAIRED  [Unique: 28]
+  ✦ NETRA-5698B0B3-3A1  Severity: Moderate (0.44)  GPS: (28.6142, 77.2100)  Loop: REPAIRED  [Unique: 29]
+  ✦ NETRA-27F2CA63-79B  Severity: Moderate (0.49)  GPS: (28.6136, 77.2095)  Loop: REPAIRED  [Unique: 30]
+  ✦ NETRA-CE244173-C73  Severity: Moderate (0.44)  GPS: (28.6137, 77.2089)  Loop: REPAIRED  [Unique: 31]
 [NETRA] Saved annotated image to: C:\Users\Shaurya Singh\Desktop\N.E.T.R.A.-master\N.E.T.R.A.-master\NETRA-AI\output\annotated_image.jpg
 
 ============================================================
@@ -51,35 +51,35 @@ Using cache found in C:\Users\Shaurya Singh/.cache\torch\hub\intel-isl_MiDaS_mas
   Full session    → C:\Users\Shaurya Singh\Desktop\N.E.T.R.A.-master\N.E.T.R.A.-master\NETRA-AI\output\session_detections.json
 ============================================================
 Syncing C:\Users\Shaurya Singh\Desktop\N.E.T.R.A.-master\N.E.T.R.A.-master\NETRA-AI\output\unique_potholes.json to http://localhost:5000/api/potholes ...
-[✓] Synced NETRA-28D06595-CBE
-[✓] Synced NETRA-F6364C2C-CE0
-[✓] Synced NETRA-D076749B-6FA
-[✓] Synced NETRA-D6BB258B-69C
-[✓] Synced NETRA-9E9F0890-C96
-[✓] Synced NETRA-B32A1510-35B
-[✓] Synced NETRA-01E75730-DDA
-[✓] Synced NETRA-5CCF5E88-557
-[✓] Synced NETRA-643F299A-DBD
-[✓] Synced NETRA-384786F3-D3F
-[✓] Synced NETRA-29D54DA2-C5B
-[✓] Synced NETRA-B367BE58-B3B
-[✓] Synced NETRA-52BCA7DB-151
-[✓] Synced NETRA-E173FA9F-E36
-[✓] Synced NETRA-CA0C9290-0E7
-[✓] Synced NETRA-CE69554E-336
-[✓] Synced NETRA-F9770DB8-009
-[✓] Synced NETRA-EC402FCF-946
-[✓] Synced NETRA-CCAB4B5A-984
-[✓] Synced NETRA-AE6A143C-0A0
-[✓] Synced NETRA-FC1E0672-7F0
-[✓] Synced NETRA-D8FB45D7-163
-[✓] Synced NETRA-63A7D775-421
-[✓] Synced NETRA-BB50F405-F40
-[✓] Synced NETRA-C6A59CF4-F9D
-[✓] Synced NETRA-B2DA894A-196
-[✓] Synced NETRA-87F8677D-0D3
-[✓] Synced NETRA-5CD92DD8-B08
-[✓] Synced NETRA-051EE88E-2E1
-[✓] Synced NETRA-B0FA04FC-B2C
-[✓] Synced NETRA-A9EC49E5-F60
+[✓] Synced NETRA-E4F6ECD3-911
+[✓] Synced NETRA-7DCF5477-290
+[✓] Synced NETRA-99C416C6-4DC
+[✓] Synced NETRA-4CEEB9E5-B43
+[✓] Synced NETRA-EA06E8CB-B76
+[✓] Synced NETRA-BBC03C67-662
+[✓] Synced NETRA-455C96B6-C3E
+[✓] Synced NETRA-DE0A8ACF-CE0
+[✓] Synced NETRA-6E9C7B1D-F13
+[✓] Synced NETRA-6A26EEB8-267
+[✓] Synced NETRA-8388B222-51B
+[✓] Synced NETRA-A63D751B-94C
+[✓] Synced NETRA-2C41EC2A-007
+[✓] Synced NETRA-A4C4C94A-9E0
+[✓] Synced NETRA-68A2C07F-B11
+[✓] Synced NETRA-2AC5C2B3-E31
+[✓] Synced NETRA-ED18B23F-CBA
+[✓] Synced NETRA-E70B59AD-F9E
+[✓] Synced NETRA-815A760B-979
+[✓] Synced NETRA-D0BD3D90-2FA
+[✓] Synced NETRA-E35D93AC-7E2
+[✓] Synced NETRA-EC8AE2F7-543
+[✓] Synced NETRA-55E46859-F3E
+[✓] Synced NETRA-FDBB27D2-516
+[✓] Synced NETRA-2D3D050D-81D
+[✓] Synced NETRA-C6A4EF63-6A5
+[✓] Synced NETRA-EA685E4C-A88
+[✓] Synced NETRA-000971FF-D4B
+[✓] Synced NETRA-5698B0B3-3A1
+[✓] Synced NETRA-27F2CA63-79B
+[✓] Synced NETRA-CE244173-C73
 Successfully synced 31/31 records.

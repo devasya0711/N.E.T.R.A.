@@ -70,7 +70,51 @@ class NETRAPipeline:
         self.realtime_mode = realtime_mode
         self._cached_depth_map = None
         self._cached_depth_frame = -1
+        self._live_meta_path = config.OUTPUT_DIR / "live_meta.json"
+        self._last_meta_write_ts = 0.0
         print("[NETRA] All modules ready.\n")
+
+    def _write_live_meta(self, payload: dict):
+        """Atomically write pipeline metadata for web progress polling."""
+        config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        tmp_path = config.OUTPUT_DIR / "live_meta.tmp.json"
+        with open(tmp_path, "w", encoding="utf-8") as mf:
+            json.dump(payload, mf)
+        os.replace(tmp_path, self._live_meta_path)
+
+    def _update_progress_meta(
+        self,
+        *,
+        source_fps: float,
+        is_image: bool,
+        total_frames: int,
+        processed_frames: int,
+        done: bool = False,
+    ):
+        """Persist processing progress with throttled disk writes."""
+        if total_frames <= 0:
+            progress_pct = 0 if not done else 100
+        else:
+            progress_pct = int(min(100, max(0, round((processed_frames / total_frames) * 100))))
+
+        now = time.perf_counter()
+        if not done and (now - self._last_meta_write_ts) < 0.2:
+            return
+
+        self._write_live_meta(
+            {
+                "sourceFps": round(float(source_fps), 2),
+                "previewTargetFps": round(float(self._target_preview_fps), 2),
+                "realtimeMode": bool(self.realtime_mode),
+                "sourceType": "image" if is_image else "video",
+                "totalFrames": int(max(0, total_frames)),
+                "processedFrames": int(max(0, processed_frames)),
+                "progressPct": int(progress_pct),
+                "done": bool(done),
+                "updatedAt": time.time(),
+            }
+        )
+        self._last_meta_write_ts = now
 
     def _write_live_frame(self, vis: np.ndarray, is_image: bool = False):
         """Write a lightweight live preview frame for the web UI."""
@@ -243,21 +287,18 @@ class NETRAPipeline:
             if not cap.isOpened():
                 raise RuntimeError(f"Cannot open source: {source}")
             fps = cap.get(cv2.CAP_PROP_FPS) or 30
+        total_frames = 1 if is_im else int(cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0)
             
         frame_idx = 0
         self._target_preview_fps = max(1.0, min(60.0, float(fps)))
 
-        config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-        live_meta_path = config.OUTPUT_DIR / "live_meta.json"
-        with open(live_meta_path, "w", encoding="utf-8") as mf:
-            json.dump(
-                {
-                    "sourceFps": round(float(fps), 2),
-                    "previewTargetFps": round(float(self._target_preview_fps), 2),
-                    "realtimeMode": bool(self.realtime_mode),
-                },
-                mf,
-            )
+        self._update_progress_meta(
+            source_fps=fps,
+            is_image=is_im,
+            total_frames=total_frames,
+            processed_frames=0,
+            done=False,
+        )
 
         print(f"[NETRA] Processing source: {source}  ({fps:.0f} FPS, is_image={is_im})\n")
 
@@ -308,6 +349,13 @@ class NETRAPipeline:
                                 pass
 
                         frame_idx += 1
+                        self._update_progress_meta(
+                            source_fps=fps,
+                            is_image=is_im,
+                            total_frames=total_frames,
+                            processed_frames=frame_idx,
+                            done=False,
+                        )
                         continue
 
                 t0 = time.perf_counter()
@@ -350,6 +398,13 @@ class NETRAPipeline:
                         pass
 
                 frame_idx += 1
+                self._update_progress_meta(
+                    source_fps=fps,
+                    is_image=is_im,
+                    total_frames=total_frames,
+                    processed_frames=frame_idx,
+                    done=False,
+                )
                 if is_im:
                     break # Process image only once
 
@@ -385,6 +440,15 @@ class NETRAPipeline:
         print(f"  Unique records  → {unique_path}")
         print(f"  Full session    → {all_path}")
         print(f"{'='*60}")
+
+        final_processed = total_frames if total_frames > 0 else frame_idx
+        self._update_progress_meta(
+            source_fps=fps,
+            is_image=is_im,
+            total_frames=(total_frames if total_frames > 0 else final_processed),
+            processed_frames=final_processed,
+            done=True,
+        )
 
     # ───────────────────── logging helper ───────────────────────
 
