@@ -141,8 +141,10 @@ function TableRow({ c, index }) {
       {/* Highway + Location */}
       <td className="px-4 py-3.5">
         <div className="flex flex-col">
-          <span className="text-xs font-semibold text-slate-700">{c.highway}</span>
-          <span className="text-[11px] text-slate-400 mt-0.5 max-w-[200px] truncate">{c.location}</span>
+          <span className="text-xs font-mono font-extrabold text-blue-900">{c.highway}</span>
+          {c.location && c.location !== c.highway && (
+            <span className="text-[11px] font-mono text-blue-900/60 mt-0.5 max-w-[200px] truncate">{c.location}</span>
+          )}
         </div>
       </td>
 

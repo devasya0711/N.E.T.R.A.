@@ -45,48 +45,44 @@ function haversine(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-const MOCK_CONTRACTORS = [
-  "CG Roadworks Pvt. Ltd.",
-  "Raipur Highway Repairs",
-  "National Infra Solutions",
-  "Bilaspur Civil Works",
-  "Korba Construction Co.",
-];
+  const MOCK_CONTRACTORS = [
+    "CG Roadworks Pvt. Ltd.",
+    "Raipur Highway Repairs",
+    "National Infra Solutions",
+    "Bilaspur Civil Works",
+    "Korba Construction Co.",
+    "Bhilai Infra Developers",
+    "Durg Road Systems",
+  ];
 
-export default function WorkOrdersPage() {
+  export default function WorkOrdersPage() {
   const { potholes, loading } = usePotholeList({ limit: 200 });
   const [expandId, setExpandId] = useState(null);
-  const [dispatched, setDispatched] = useState(new Set());
 
   const clusters = useMemo(() => clusterPotholes(potholes), [potholes]);
 
-  const handleDispatch = (woId) => {
-    setDispatched((prev) => new Set([...prev, woId]));
-  };
-
-  if (loading) return <div className="text-center py-12 text-slate-500">Clustering potholes for work orders...</div>;
+  if (loading) return <div className="text-center py-12 text-slate-500">Loading your assigned work orders...</div>;
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-xl font-black text-slate-800 tracking-tight">Smart Work Order Dispatch</h1>
+        <h1 className="text-xl font-black text-slate-800 tracking-tight">Assigned Work Orders</h1>
         <p className="text-xs text-slate-500 mt-1">
-          Groups nearby verified potholes into single assignments for repair contractors to optimize driving routes
+          Your active repair assignments, grouped by proximity to optimize driving routes.
         </p>
       </div>
 
       {/* KPIs */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="netra-panel p-5"><p className="text-[10px] text-slate-500 uppercase tracking-widest">Work Orders</p><p className="text-3xl font-black text-blue-900 mt-1">{clusters.length}</p></div>
+        <div className="netra-panel p-5"><p className="text-[10px] text-slate-500 uppercase tracking-widest">Active Orders</p><p className="text-3xl font-black text-blue-900 mt-1">{clusters.length}</p></div>
         <div className="netra-panel p-5"><p className="text-[10px] text-slate-500 uppercase tracking-widest">Total Potholes</p><p className="text-3xl font-black text-slate-700 mt-1">{clusters.reduce((s,c) => s + c.potholes.length, 0)}</p></div>
-        <div className="netra-panel p-5"><p className="text-[10px] text-slate-500 uppercase tracking-widest">Dispatched</p><p className="text-3xl font-black text-emerald-600 mt-1">{dispatched.size}</p></div>
-        <div className="netra-panel p-5"><p className="text-[10px] text-slate-500 uppercase tracking-widest">Pending</p><p className="text-3xl font-black text-amber-600 mt-1">{clusters.length - dispatched.size}</p></div>
+        <div className="netra-panel p-5"><p className="text-[10px] text-slate-500 uppercase tracking-widest">Completed</p><p className="text-3xl font-black text-emerald-600 mt-1">0</p></div>
+        <div className="netra-panel p-5"><p className="text-[10px] text-slate-500 uppercase tracking-widest">Pending Repairs</p><p className="text-3xl font-black text-amber-600 mt-1">{clusters.length}</p></div>
       </div>
 
       {/* Work order cards */}
       <div className="space-y-4">
         {clusters.map((wo) => {
-          const isDispatched = dispatched.has(wo.id);
           const isExpanded = expandId === wo.id;
           const contractor = MOCK_CONTRACTORS[Math.floor(Math.abs(wo.centroidLat * 1000) % MOCK_CONTRACTORS.length)];
           const urgency = wo.avgSeverity >= 7 ? "CRITICAL" : wo.avgSeverity >= 4.5 ? "HIGH" : "NORMAL";
@@ -98,7 +94,7 @@ export default function WorkOrdersPage() {
                 className="w-full flex items-center gap-4 px-5 py-4 text-left hover:bg-slate-50 transition-colors"
                 onClick={() => setExpandId(isExpanded ? null : wo.id)}
               >
-                <div className={`w-3 h-3 rounded-full shrink-0 ${isDispatched ? "bg-emerald-500" : "bg-amber-400 animate-pulse"}`} />
+                <div className="w-3 h-3 rounded-full shrink-0 bg-blue-500 animate-pulse" />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-bold text-blue-900 font-mono">{wo.id}</span>
@@ -107,20 +103,10 @@ export default function WorkOrdersPage() {
                   </div>
                   <p className="text-[11px] text-slate-500 truncate mt-0.5">{wo.location}</p>
                 </div>
-                <div className="text-right shrink-0">
-                  <p className="text-[10px] text-slate-400 uppercase">Contractor</p>
+                <div className="text-right shrink-0 pr-4">
+                  <p className="text-[10px] text-slate-400 uppercase">Assigned Contractor</p>
                   <p className="text-xs font-semibold text-slate-700">{contractor}</p>
                 </div>
-                {!isDispatched ? (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); handleDispatch(wo.id); }}
-                    className="px-3 py-1.5 rounded-lg text-[11px] font-bold bg-blue-900 text-white hover:bg-blue-800 transition-colors shrink-0"
-                  >
-                    Dispatch
-                  </button>
-                ) : (
-                  <span className="text-[10px] font-bold text-emerald-600 shrink-0">✓ DISPATCHED</span>
-                )}
                 <svg
                   className={`w-4 h-4 text-slate-400 transition-transform shrink-0 ${isExpanded ? "rotate-180" : ""}`}
                   fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -134,7 +120,7 @@ export default function WorkOrdersPage() {
                   <div className="grid grid-cols-3 gap-3 mt-3 mb-4 text-xs">
                     <div><span className="text-[10px] text-slate-400 uppercase block">Centroid</span><span className="font-mono text-slate-700">{wo.centroidLat.toFixed(4)}°N, {wo.centroidLng.toFixed(4)}°E</span></div>
                     <div><span className="text-[10px] text-slate-400 uppercase block">Total Severity</span><span className="font-bold text-slate-700">{wo.totalSeverity.toFixed(1)}</span></div>
-                    <div><span className="text-[10px] text-slate-400 uppercase block">Status</span><span className={`font-bold ${isDispatched ? "text-emerald-600" : "text-amber-600"}`}>{isDispatched ? "Dispatched" : "Pending"}</span></div>
+                    <div><span className="text-[10px] text-slate-400 uppercase block">Status</span><span className="font-bold text-blue-600">Pending Repair</span></div>
                   </div>
                   <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-2 font-bold">Included Potholes:</p>
                   <div className="space-y-1">
@@ -151,13 +137,14 @@ export default function WorkOrdersPage() {
                       </div>
                     ))}
                   </div>
+
                 </div>
               )}
             </div>
           );
         })}
         {clusters.length === 0 && (
-          <div className="netra-panel p-12 text-center text-slate-400 text-sm">No potholes to cluster into work orders.</div>
+          <div className="netra-panel p-12 text-center text-slate-400 text-sm">You have no pending work orders.</div>
         )}
       </div>
     </div>

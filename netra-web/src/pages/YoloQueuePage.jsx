@@ -2,14 +2,14 @@ import { useState, useMemo } from "react";
 
 // ── Mock YOLO detection data ──────────────────────────────────────────────────
 const MOCK_DETECTIONS = [
-  { id: "DET-001", frame: "cam-raipur-03/frame-04821.jpg", confidence: 0.94, bbox: [120, 200, 340, 380], severity: "HIGH", status: "pending", timestamp: "2026-03-14T10:23:00Z", camera: "CAM-R03", location: "NH-30, Km 42.5", class: "Pothole" },
-  { id: "DET-002", frame: "cam-bilaspur-01/frame-01293.jpg", confidence: 0.87, bbox: [45, 310, 220, 450], severity: "MEDIUM", status: "pending", timestamp: "2026-03-14T10:18:00Z", camera: "CAM-B01", location: "SH-6, Near Bilaspur Toll", class: "Surface Crack" },
-  { id: "DET-003", frame: "cam-korba-02/frame-09182.jpg", confidence: 0.72, bbox: [280, 150, 410, 290], severity: "LOW", status: "pending", timestamp: "2026-03-14T10:12:00Z", camera: "CAM-K02", location: "NH-130, Km 98.3", class: "Pothole" },
-  { id: "DET-004", frame: "cam-raipur-01/frame-07331.jpg", confidence: 0.56, bbox: [90, 400, 200, 500], severity: "LOW", status: "pending", timestamp: "2026-03-14T09:55:00Z", camera: "CAM-R01", location: "NH-30, Km 12.1", class: "Shadow Artifact" },
-  { id: "DET-005", frame: "cam-durg-01/frame-03821.jpg", confidence: 0.91, bbox: [150, 220, 380, 400], severity: "HIGH", status: "pending", timestamp: "2026-03-14T09:48:00Z", camera: "CAM-D01", location: "NH-53, Durg Bypass", class: "Road Cave-In" },
-  { id: "DET-006", frame: "cam-raipur-02/frame-11023.jpg", confidence: 0.83, bbox: [200, 100, 350, 260], severity: "MEDIUM", status: "pending", timestamp: "2026-03-14T09:35:00Z", camera: "CAM-R02", location: "Ring Road, Raipur", class: "Pothole" },
-  { id: "DET-007", frame: "cam-bilaspur-02/frame-05421.jpg", confidence: 0.45, bbox: [10, 380, 150, 450], severity: "LOW", status: "pending", timestamp: "2026-03-14T09:22:00Z", camera: "CAM-B02", location: "SH-6, Km 35.8", class: "Water Puddle" },
-  { id: "DET-008", frame: "cam-korba-01/frame-08192.jpg", confidence: 0.96, bbox: [180, 250, 400, 420], severity: "HIGH", status: "pending", timestamp: "2026-03-14T09:10:00Z", camera: "CAM-K01", location: "NH-130, Korba Entry", class: "Pothole" },
+  { id: "DET-001", frame: "cam-raipur-03/frame-04821.jpg", imageUrl: "/detections/pothole_1.png", confidence: 0.94, bbox: [250, 520, 480, 650], severity: "HIGH", status: "pending", timestamp: "2026-03-14T10:23:00Z", camera: "CAM-R03", location: "NH-30, Km 42.5", class: "Pothole" },
+  { id: "DET-002", frame: "cam-bilaspur-01/frame-01293.jpg", imageUrl: "/detections/pothole_2.png", confidence: 0.87, bbox: [100, 700, 300, 850], severity: "MEDIUM", status: "pending", timestamp: "2026-03-14T10:18:00Z", camera: "CAM-B01", location: "SH-6, Near Bilaspur Toll", class: "Surface Crack" },
+  { id: "DET-003", frame: "cam-korba-02/frame-09182.jpg", imageUrl: "/detections/pothole_1.png", confidence: 0.72, bbox: [280, 550, 420, 620], severity: "LOW", status: "pending", timestamp: "2026-03-14T10:12:00Z", camera: "CAM-K02", location: "NH-130, Km 98.3", class: "Pothole" },
+  { id: "DET-004", frame: "cam-raipur-01/frame-07331.jpg", imageUrl: "/detections/shadow.png", confidence: 0.56, bbox: [400, 600, 600, 750], severity: "LOW", status: "pending", timestamp: "2026-03-14T09:55:00Z", camera: "CAM-R01", location: "NH-30, Km 12.1", class: "Shadow Artifact" },
+  { id: "DET-005", frame: "cam-durg-01/frame-03821.jpg", imageUrl: "/detections/pothole_2.png", confidence: 0.91, bbox: [120, 720, 310, 880], severity: "HIGH", status: "pending", timestamp: "2026-03-14T09:48:00Z", camera: "CAM-D01", location: "NH-53, Durg Bypass", class: "Road Cave-In" },
+  { id: "DET-006", frame: "cam-raipur-02/frame-11023.jpg", imageUrl: "/detections/pothole_1.png", confidence: 0.83, bbox: [260, 530, 460, 640], severity: "MEDIUM", status: "pending", timestamp: "2026-03-14T09:35:00Z", camera: "CAM-R02", location: "Ring Road, Raipur", class: "Pothole" },
+  { id: "DET-007", frame: "cam-bilaspur-02/frame-05421.jpg", imageUrl: "/detections/puddle.png", confidence: 0.45, bbox: [300, 500, 800, 700], severity: "LOW", status: "pending", timestamp: "2026-03-14T09:22:00Z", camera: "CAM-B02", location: "SH-6, Km 35.8", class: "Water Puddle" },
+  { id: "DET-008", frame: "cam-korba-01/frame-08192.jpg", imageUrl: "/detections/pothole_2.png", confidence: 0.96, bbox: [130, 710, 290, 840], severity: "HIGH", status: "pending", timestamp: "2026-03-14T09:10:00Z", camera: "CAM-K01", location: "NH-130, Korba Entry", class: "Pothole" },
 ];
 
 const REJECT_REASONS = [
@@ -43,20 +43,27 @@ function ConfidenceBar({ value }) {
 function BBoxPreview({ bbox, detection }) {
   const [x1, y1, x2, y2] = bbox;
   const w = 520, h = 300;
-  const scaleX = w / 640, scaleY = h / 480;
+  const baseW = detection.imageUrl ? 1024 : 640;
+  const baseH = detection.imageUrl ? 1024 : 480;
+  const scaleX = w / baseW, scaleY = h / baseH;
+  
   return (
     <div className="relative rounded-lg overflow-hidden border border-slate-200" style={{ width: w, height: h, background: "#0f172a" }}>
-      {/* Simulated camera feed background */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-slate-800 flex items-center justify-center">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="1.5" className="w-8 h-8">
-              <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
+      {/* Real camera feed background */}
+      {detection.imageUrl ? (
+        <img src={detection.imageUrl} alt="Dashcam Frame" className="absolute inset-0 w-full h-full object-fill opacity-90" />
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-2 rounded-full bg-slate-800 flex items-center justify-center">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="1.5" className="w-8 h-8">
+                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <p className="text-slate-600 text-xs font-mono">{detection.camera} — {detection.frame.split("/")[1]}</p>
           </div>
-          <p className="text-slate-600 text-xs font-mono">{detection.camera} — {detection.frame.split("/")[1]}</p>
         </div>
-      </div>
+      )}
       {/* Bounding box overlay */}
       <div
         className="absolute border-2 rounded"

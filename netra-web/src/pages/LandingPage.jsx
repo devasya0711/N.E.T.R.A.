@@ -136,7 +136,7 @@ export default function LandingPage() {
 
           {/* Sub-headline */}
           <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-lg leading-relaxed">
-            <strong className="text-white font-semibold">N.E.T.R.A. (Networked Edge Tracking For Road Anomalies)</strong> — detects potholes via AI, scores their risk, and auto-files grievances. No human trigger. No complaint lost.
+            <strong className="text-white font-semibold">N.E.T.R.A.</strong> — Real-time road anomaly detection using computer vision, dashcams, and citizen reporting to secure our infrastructure.
           </p>
 
           {/* Role selection label */}
@@ -207,7 +207,7 @@ export default function LandingPage() {
                   </svg>
                   <span className="flex flex-col items-start">
                     <span className="text-[13px]">Citizen Portal</span>
-                    <span className="text-[9px] text-white/50 font-normal tracking-wider">Report · Track · Stay Informed</span>
+                    <span className="text-[9px] text-white/40 font-normal tracking-wider">Report · Track · Stay Informed</span>
                   </span>
                 </span>
               </button>

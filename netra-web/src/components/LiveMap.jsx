@@ -259,11 +259,10 @@ export default function LiveMap() {
           maxBoundsViscosity={1.0}
           className="w-full h-full"
           zoomControl={true}
-          attributionControl={true}
+          attributionControl={false}
         >
           {/* English-only labels tile layer */}
           <TileLayer
-            attribution=""
             url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
           />
 

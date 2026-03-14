@@ -170,27 +170,64 @@ export default function ResolutionPage() {
 
       {/* Officer performance bar chart */}
       <div className="netra-panel p-6">
-        <h2 className="text-sm font-bold text-slate-700 mb-1">Officer / Zone — Resolution Performance</h2>
-        <p className="text-[11px] text-slate-500 mb-5">Filed vs Verified complaints by PWD zone</p>
-        <ResponsiveContainer width="100%" height={220}>
-          <BarChart data={officerStats} margin={{ top: 0, right: 10, left: -20, bottom: 60 }}>
+        <div className="flex items-center justify-between mb-5">
+          <div>
+            <h2 className="text-sm font-bold text-slate-700">Officer / Zone — Resolution Performance</h2>
+            <p className="text-[11px] text-slate-500">Filed vs Verified vs Escalated complaints by PWD zone</p>
+          </div>
+          <div className="flex items-center gap-4 text-[11px] font-semibold">
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm" style={{ background: "linear-gradient(135deg, #1e3a8a, #3b82f6)" }} /> Filed</span>
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm" style={{ background: "linear-gradient(135deg, #059669, #34d399)" }} /> Verified</span>
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm" style={{ background: "linear-gradient(135deg, #7c3aed, #a78bfa)" }} /> Escalated</span>
+          </div>
+        </div>
+        <ResponsiveContainer width="100%" height={300}>
+          <BarChart data={officerStats} margin={{ top: 10, right: 10, left: -20, bottom: 70 }} barCategoryGap="20%">
+            <defs>
+              <linearGradient id="gradFiled" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#3b82f6" stopOpacity={0.95} />
+                <stop offset="100%" stopColor="#1e3a8a" stopOpacity={0.85} />
+              </linearGradient>
+              <linearGradient id="gradVerified" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#34d399" stopOpacity={0.95} />
+                <stop offset="100%" stopColor="#059669" stopOpacity={0.85} />
+              </linearGradient>
+              <linearGradient id="gradEscalated" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#a78bfa" stopOpacity={0.95} />
+                <stop offset="100%" stopColor="#7c3aed" stopOpacity={0.85} />
+              </linearGradient>
+            </defs>
             <XAxis
               dataKey="officer"
-              tick={{ fill: "#64748b", fontSize: 10 }}
-              angle={-30}
+              tick={{ fill: "#64748b", fontSize: 10, fontWeight: 500 }}
+              angle={-35}
               textAnchor="end"
               interval={0}
               axisLine={false}
               tickLine={false}
             />
-            <YAxis tick={{ fill: "#64748b", fontSize: 11 }} axisLine={false} tickLine={false} />
-            <Tooltip
-              contentStyle={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: 8, fontSize: 12 }}
-              labelStyle={{ color: "#475569" }}
+            <YAxis
+              tick={{ fill: "#94a3b8", fontSize: 11 }}
+              axisLine={false}
+              tickLine={false}
+              allowDecimals={false}
             />
-            <Bar dataKey="filed"    name="Filed"    radius={[3,3,0,0]} fill="#1e3a8a" />
-            <Bar dataKey="verified" name="Verified" radius={[3,3,0,0]} fill="#059669" />
-            <Bar dataKey="escalated"name="Escalated"radius={[3,3,0,0]} fill="#1e3a8a" />
+            <Tooltip
+              cursor={{ fill: "rgba(30, 58, 138, 0.04)", radius: 6 }}
+              contentStyle={{
+                background: "rgba(255,255,255,0.95)",
+                backdropFilter: "blur(8px)",
+                border: "1px solid #e2e8f0",
+                borderRadius: 12,
+                fontSize: 12,
+                padding: "10px 14px",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+              }}
+              labelStyle={{ color: "#1e293b", fontWeight: 700, marginBottom: 4 }}
+            />
+            <Bar dataKey="filed" name="Filed" radius={[6, 6, 0, 0]} fill="url(#gradFiled)" animationDuration={1200} animationEasing="ease-out" />
+            <Bar dataKey="verified" name="Verified" radius={[6, 6, 0, 0]} fill="url(#gradVerified)" animationDuration={1400} animationEasing="ease-out" />
+            <Bar dataKey="escalated" name="Escalated" radius={[6, 6, 0, 0]} fill="url(#gradEscalated)" animationDuration={1600} animationEasing="ease-out" />
           </BarChart>
         </ResponsiveContainer>
       </div>

@@ -6,6 +6,9 @@
 
 @layer base {
   * { box-sizing: border-box; }
+  
+
+  
   body {
     background-color: #faf8f5;
     color: #1e293b;

@@ -78,13 +78,6 @@ const TruckIcon = () => (
     <circle cx="18.5" cy="18.5" r="2.5" />
   </svg>
 );
-const PhotoIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5">
-    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-    <circle cx="8.5" cy="8.5" r="1.5" />
-    <path d="M21 15l-5-5L5 21" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
 const InboxIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5">
     <path d="M22 12h-6l-2 3H10l-2-3H2" strokeLinecap="round" strokeLinejoin="round" />
@@ -127,6 +120,11 @@ const BellIcon = () => (
     <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
+const PredictiveIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5">
+    <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
 
 // ── Admin navigation items ────────────────────────────────────────────────────
 const ADMIN_NAV = [
@@ -138,13 +136,13 @@ const ADMIN_NAV = [
     { to: "/dashboard/heatmaps", label: "Risk Heatmaps", icon: <HeatmapIcon /> },
   ]},
   { group: "AI & Fleet", items: [
+    { to: "/dashboard/predictive-engine", label: "Predictive Engine", icon: <PredictiveIcon /> },
     { to: "/dashboard/yolo-queue", label: "YOLO Detection Queue", icon: <AiIcon /> },
     { to: "/dashboard/sensor-fleet", label: "Sensor Fleet Status", icon: <SatelliteIcon /> },
   ]},
   { group: "Incident Management", items: [
     { to: "/dashboard/triage", label: "Severity Triage", icon: <TriageIcon /> },
-    { to: "/dashboard/work-orders", label: "Work Order Dispatch", icon: <TruckIcon /> },
-    { to: "/dashboard/repair-verify", label: "Repair Verification", icon: <PhotoIcon /> },
+    { to: "/dashboard/work-orders", label: "Assigned Work Orders", icon: <TruckIcon /> },
     { to: "/dashboard/resolution", label: "SLA Tracking", icon: <CheckCircleIcon /> },
   ]},
   { group: "Citizen Moderation", items: [

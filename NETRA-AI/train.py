@@ -71,7 +71,7 @@ def create_sample_data_yaml(out_dir: str = "datasets/pothole-seg") -> str:
 
 def train(
     data_yaml: str,
-    model_size: str = "yolov8s-seg.pt",   # ↑ small > nano: +3-5 mAP, 2× compute
+    model_size: str = "yolov8m-seg.pt",   # ↑ medium > small: +3-5 mAP, better masks
     epochs: int = 150,
     img_size: int = config.YOLO_IMG_SIZE,
     batch: int = 16,
@@ -152,6 +152,7 @@ def train(
             erasing=0.4,          # random rectangular erasing (occlusion sim)
             # ── Segmentation ────────────────────────────────────────────
             overlap_mask=True,    # train on overlapping mask instances
+            mask_ratio=4,         # ↑ higher-res masks (default 4, increase to 8 for ultra-precise)
             # ── LR schedule ─────────────────────────────────────────────
             cos_lr=True,          # cosine annealing (smoother than linear)
             lr0=0.01,
@@ -283,7 +284,7 @@ if __name__ == "__main__":
     # Dataset & model
     parser.add_argument("--data", type=str, default=None, help="Path to data.yaml")
     parser.add_argument(
-        "--model", type=str, default="yolov8s-seg.pt",
+        "--model", type=str, default="yolov8m-seg.pt",
         help="YOLOv8 model variant: yolov8n-seg.pt | yolov8s-seg.pt | yolov8m-seg.pt | yolov8l-seg.pt",
     )
     # Training options

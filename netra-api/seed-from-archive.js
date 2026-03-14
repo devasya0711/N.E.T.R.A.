@@ -21,21 +21,39 @@ const Pothole  = require("./models/Pothole");
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 const CSV_PATH        = path.join(__dirname, "..", "archive", "AccidentsBig.csv");
-const TARGET_POTHOLES = 250;             // how many potholes to generate
+const TARGET_POTHOLES = 121;             // how many potholes to generate
 const GRID_PRECISION  = 3;               // decimal places for geo-grid (3 = ~110m cells)
-const MIN_ACCIDENTS   = 2;               // min accidents in a cell to consider
+const MIN_ACCIDENTS   = 1;               // min accidents in a cell to consider (1 ensures maximum scattering)
 
 // ─── Chhattisgarh highway corridor names (for road name generation) ──────────
 const HIGHWAYS = [
   "NH-130", "NH-130E", "NH-30", "NH-43", "NH-200", "NH-111",
   "SH-6", "SH-10", "SH-11", "SH-5", "SH-9", "SH-12",
 ];
-const CITIES = [
-  "Raipur", "Bilaspur", "Durg", "Bhilai", "Korba", "Rajnandgaon",
-  "Raigarh", "Jagdalpur", "Ambikapur", "Mahasamund", "Dhamtari",
-  "Kawardha", "Mungeli", "Janjgir", "Champa", "Akaltara",
-  "Bemetara", "Balod", "Dongargarh", "Pithora", "Arang",
-];
+const CITIES = {
+  "Raipur": [21.2514, 81.6296],
+  "Bilaspur": [22.0797, 82.1409],
+  "Durg": [21.1938, 81.2849],
+  "Bhilai": [21.2121, 81.3831],
+  "Korba": [22.3595, 82.7501],
+  "Rajnandgaon": [21.1047, 81.0315],
+  "Raigarh": [21.8974, 83.3950],
+  "Jagdalpur": [19.0760, 82.0270],
+  "Ambikapur": [23.1355, 83.1818],
+  "Mahasamund": [21.1065, 82.0963],
+  "Dhamtari": [20.7062, 81.5496],
+  "Kawardha": [22.0152, 81.2268],
+  "Mungeli": [22.0664, 81.6888],
+  "Janjgir": [22.0163, 82.5607],
+  "Champa": [22.0400, 82.6600],
+  "Akaltara": [22.0242, 82.4243],
+  "Bemetara": [21.6967, 81.5540],
+  "Balod": [20.7291, 81.2033],
+  "Dongargarh": [21.1856, 80.7601],
+  "Pithora": [21.2676, 82.5186],
+  "Arang": [21.1963, 81.9688]
+};
+const CITY_NAMES = Object.keys(CITIES);
 const ROAD_DESCS = [
   "Near Flyover", "Junction Overpass", "Bypass Stretch", "City Road",
   "Industrial Approach", "Market Road", "Highway Crossing", "Service Road",
@@ -89,8 +107,8 @@ async function parseAccidentCSV() {
     const roadSurface = parseInt(cols[23], 10);    // 1=Dry, 2=Wet, 3=Snow, 4=Ice, 5=Flood, -1=Unknown
 
     if (isNaN(lat) || isNaN(lng)) continue;
-    // Only accept valid Indian coordinates
-    if (lng < 60 || lng > 100 || lat < 5 || lat > 40) continue;
+    // Only accept valid Chhattisgarh coordinates
+    if (lng < 80.0 || lng > 84.5 || lat < 17.5 || lat > 24.5) continue;
 
     const key = gridKey(lat, lng);
     if (!grid.has(key)) {
@@ -135,7 +153,13 @@ function generatePotholes(grid) {
 
   console.log(`   Found ${hotspots.length} accident hotspots (≥${MIN_ACCIDENTS} accidents)`);
 
-  const selected = hotspots.slice(0, TARGET_POTHOLES);
+  // Proper Fisher-Yates shuffle to guarantee completely even geographic scattering
+  const shuffled = [...hotspots];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  const selected = shuffled.slice(0, TARGET_POTHOLES);
   const total = selected.length;
 
   const potholes = selected.map((cell, i) => {
@@ -213,7 +237,8 @@ function generatePotholes(grid) {
 
     // ── Location name ────────────────────────────────────────────────
     const highway = pick(HIGHWAYS);
-    const city = pick(CITIES);
+    const city = CITY_NAMES[i % CITY_NAMES.length]; // guarantee even distribution
+    const cityCoords = CITIES[city];
     const desc = pick(ROAD_DESCS);
     const km = randInt(1, 200);
     const locationDescription = `${highway}, ${city} – ${desc}, Km ${km}`;
@@ -221,9 +246,9 @@ function generatePotholes(grid) {
     // ── Generate pothole ID ──────────────────────────────────────────
     const potholeId = `NETRA-${filedAt.getFullYear()}-${String(i + 1).padStart(5, "0")}`;
 
-    // ── Slight jitter to spread pins on the map ──────────────────────
-    const jLat = cell.lat + rand(-0.002, 0.002);
-    const jLng = cell.lng + rand(-0.002, 0.002);
+    // ── Wide jitter to spread pins across highways (approx 15-20km radius from city) ──────────────────────
+    const jLat = cityCoords[0] + rand(-0.15, 0.15);
+    const jLng = cityCoords[1] + rand(-0.15, 0.15);
 
     return {
       potholeId,

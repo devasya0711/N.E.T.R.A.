@@ -54,6 +54,17 @@ SEVERITY_THRESHOLDS = {
 }
 
 # ──────────────────────────────────────────────────────────────
+# Segmentation Visualization
+# ──────────────────────────────────────────────────────────────
+SEG_MASK_ALPHA = 0.45           # transparency for mask overlay (0=invisible, 1=opaque)
+SEG_CONTOUR_THICKNESS = 2       # polygon contour line thickness
+SEG_SHOW_AREA = True            # show area (px²) on label
+SEG_SHOW_DIAMETER = True        # show diameter (px) on label
+SEG_COLOR_PALETTE = [           # BGR — single uniform blue for all masks
+    (255, 85, 0),     # vivid blue
+]
+
+# ──────────────────────────────────────────────────────────────
 # GPS Mock
 # ──────────────────────────────────────────────────────────────
 MOCK_GPS_LAT_BASE = 28.6139    # New Delhi latitude

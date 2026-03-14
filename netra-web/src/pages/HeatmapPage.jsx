@@ -1,7 +1,30 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePotholeList } from "../hooks/usePotholes";
 import { useComplaints } from "../context/ComplaintContext";
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import "leaflet.heat";
+
+function HeatmapLayer({ points }) {
+  const map = useMap();
+  useEffect(() => {
+    if (!points || points.length === 0) return;
+    const heat = L.heatLayer(points, {
+      radius: 25,
+      blur: 20,
+      maxZoom: 10,
+      max: 1.0,
+      gradient: { 0.2: "blue", 0.4: "cyan", 0.6: "lime", 0.8: "orange", 1.0: "red" },
+    }).addTo(map);
+
+    return () => {
+      map.removeLayer(heat);
+    };
+  }, [map, points]);
+  return null;
+}
 
 // ─── Grid builder ─────────────────────────────────────────────────────────────
 const LAT_MIN = 21.0, LAT_MAX = 22.6, LNG_MIN = 81.4, LNG_MAX = 83.0;
@@ -250,6 +273,12 @@ export default function HeatmapPage() {
   const { riskGrid, countGrid, latBins, lngBins, latStep, lngStep } = useMemo(() => buildHeatGrid(filtered), [filtered]);
   const maxVal = useMemo(() => Math.max(...riskGrid.flat(), 0), [riskGrid]);
 
+  const heatmapPoints = useMemo(() => {
+    return filtered
+      .filter((p) => Number.isFinite(Number(p.lat)) && Number.isFinite(Number(p.lng)))
+      .map((p) => [Number(p.lat), Number(p.lng), getPotholeRiskScore(p) / 10]);
+  }, [filtered]);
+
   // ── Summary stats ──────────────────────────────────────────────────────
   const activeZones = countGrid.flat().filter((v) => v > 0).length;
   const criticalSegments = segmentRisk.filter((s) => s.status === "CRITICAL").length;
@@ -315,7 +344,7 @@ export default function HeatmapPage() {
     {
       label: "Active Risk Zones",
       value: activeZones,
-      sub: `of ${latBins * lngBins} grid cells`,
+      sub: `Identified geographic hotspots`,
       color: "text-blue-600",
       bg: "bg-blue-50 border-blue-200",
       icon: <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" strokeLinecap="round" strokeLinejoin="round"/></svg>,
@@ -499,76 +528,37 @@ export default function HeatmapPage() {
         ))}
       </div>
 
-      {/* Grid heatmap */}
+      {/* Geographic Leaflet Heatmap */}
       <div className="netra-panel p-6">
         <div className="flex items-center justify-between mb-4">
           <div>
             <h2 className="text-sm font-bold text-slate-700">
-              Spatial Risk Grid — Raipur to Korba (NH-130)
+              Statewide Thermal Risk Map
             </h2>
             <p className="text-[11px] text-slate-500">
-              Lat 21.0°–22.6°N  ×  Lng 81.4°–83.0°E · Click a hot cell to view on Live Map
+              Geographic distribution of dynamic severity scores across Chhattisgarh
             </p>
           </div>
           {/* Legend */}
           <div className="flex items-center gap-2 text-[10px] text-slate-500">
-            {[
-              { color: "#e2e8f0", label: "No Data" },
-              { color: "#dbeafe", label: "Low"    },
-              { color: "#fbbf24", label: "Med"    },
-              { color: "#fb923c", label: "High"   },
-              { color: "#ef4444", label: "Crit"   },
-            ].map(({ color, label }) => (
-              <div key={label} className="flex items-center gap-1">
-                <div className="w-4 h-4 rounded-sm" style={{ background: color }} />
-                <span>{label}</span>
-              </div>
-            ))}
+            <span className="font-semibold uppercase tracking-wider text-[9px] mr-1">Intensity:</span>
+            <div className="w-32 h-2 rounded-full bg-gradient-to-r from-blue-500 via-lime-400 to-red-600" />
           </div>
         </div>
 
-        {/* Grid render — rows = latitude bands, cols = longitude bands */}
-        <div
-          className="grid gap-0.5 rounded-lg overflow-hidden border border-slate-200"
-          style={{ gridTemplateColumns: `repeat(${lngBins}, 1fr)` }}
-        >
-          {/* Render rows in reverse (north at top) */}
-          {[...riskGrid].reverse().map((row, ri) =>
-            row.map((val, ci) => {
-              const intensity = val / Math.max(maxVal, 1);
-              const hits = countGrid[latBins - 1 - ri][ci];
-              let bg = "#e2e8f0";
-              if (val > 0) {
-                if (intensity < 0.2) bg = "#dbeafe";
-                else if (intensity < 0.45) bg = "#93c5fd";
-                else if (intensity < 0.65) bg = "#fbbf24";
-                else if (intensity < 0.75) bg = "#fb923c";
-                else bg = "#ef4444";
-              }
-              const lngCenter = LNG_MIN + (ci + 0.5) * lngStep;
-              return (
-                <div
-                  key={`${ri}-${ci}`}
-                  title={val > 0 ? `Composite risk: ${val.toFixed(1)} · Detections: ${hits} · ~${lngCenter.toFixed(2)}°E — Click to view on map` : "No detections in selected filters"}
-                  className={`aspect-square transition-all hover:opacity-80 ${val > 0 ? "cursor-pointer hover:ring-2 hover:ring-blue-400 hover:z-10" : "cursor-default"}`}
-                  style={{ background: bg, minHeight: "18px" }}
-                  onClick={() => handleCellClick(ri, ci, val)}
-                />
-              );
-            })
-          )}
-        </div>
-
-        {/* X-axis labels */}
-        <div
-          className="grid mt-1"
-          style={{ gridTemplateColumns: `repeat(${lngBins}, 1fr)` }}
-        >
-          {Array.from({ length: lngBins }, (_, i) => (
-            <span key={i} className="text-center text-[8px] text-slate-500 truncate">
-              {(LNG_MIN + (i + 0.5) * lngStep).toFixed(1)}°
-            </span>
-          ))}
+        <div className="h-[450px] w-full rounded-xl overflow-hidden border border-slate-200 z-0 relative">
+          <MapContainer
+            center={[21.25, 82.0]}
+            zoom={6}
+            style={{ height: "100%", width: "100%" }}
+            zoomControl={false}
+            attributionControl={false}
+          >
+            <TileLayer
+              url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+            />
+            <HeatmapLayer points={heatmapPoints} />
+          </MapContainer>
         </div>
       </div>
 

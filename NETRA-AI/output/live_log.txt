@@ -3,32 +3,82 @@ Model summary (fused): 73 layers, 11,125,971 parameters, 0 gradients, 28.4 GFLOP
 [NETRA][DepthEstimator] MiDaS unavailable, using zero-depth fallback: It looks like there is no internet connection and the repo could not be found in the cache (/Users/devas_007/.cache/torch/hub)
 [NETRA] All modules ready.
 
-[NETRA] Processing source: /Users/devas_007/Downloads/N.E.T.R.A.-master 2/netra-api/uploads/video-1773515023282.mp4  (24 FPS, is_image=False)
+[NETRA] Processing source: /Users/devas_007/Downloads/N.E.T.R.A.-master 2/netra-api/uploads/video-1773529193888.jpg  (30 FPS, is_image=True)
 
-OpenCV: FFMPEG: tag 0x30385056/'VP80' is not supported with codec id 139 and format 'webm / WebM'
-  ✦ NETRA-D3CC750F-FB0  Severity: Critical (0.97)  GPS: (28.6139, 77.2088)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-DCB3B70C-FFB  Severity: Critical (0.89)  GPS: (28.6141, 77.2098)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-565201A8-894  Severity: Critical (0.90)  GPS: (28.6145, 77.2097)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-9D70CF82-010  Severity: Critical (0.86)  GPS: (28.6149, 77.2092)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-55D8AC7B-3F3  Severity: Critical (0.93)  GPS: (28.6144, 77.2091)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-2FF8C201-FE5  Severity: Critical (0.81)  GPS: (28.6143, 77.2082)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-E9124FE4-CDD  Severity: Critical (0.90)  GPS: (28.6135, 77.2091)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-F366781D-5D3  Severity: Critical (0.91)  GPS: (28.6135, 77.2088)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-EBD713F7-505  Severity: Critical (0.90)  GPS: (28.6133, 77.2088)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-37088BF0-E7C  Severity: Critical (0.84)  GPS: (28.6135, 77.2091)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-B84D9B7D-3E3  Severity: Critical (0.87)  GPS: (28.6144, 77.2096)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-A0CD1CD0-180  Severity: Critical (0.92)  GPS: (28.6133, 77.2086)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-1242089A-646  Severity: Critical (0.93)  GPS: (28.6142, 77.2093)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-E0AF1501-9D5  Severity: Critical (0.95)  GPS: (28.6138, 77.2080)  Loop: PERSISTS  [Unique: 1]
-[NETRA] Saved annotated video to: /Users/devas_007/Downloads/N.E.T.R.A.-master 2/NETRA-AI/output/annotated_video.webm
+  ✦ NETRA-553F33EC-749  Severity: Moderate (0.60)  GPS: (28.6137, 77.2085)  Loop: PERSISTS  [Unique: 1]
+  ✦ NETRA-C2CB4B0B-776  Severity: Moderate (0.48)  GPS: (28.6141, 77.2084)  Loop: REPAIRED  [Unique: 2]
+  ✦ NETRA-3086D72E-F85  Severity: Moderate (0.53)  GPS: (28.6148, 77.2093)  Loop: PERSISTS  [Unique: 3]
+  ✦ NETRA-56B20BA1-4A7  Severity: Moderate (0.57)  GPS: (28.6137, 77.2093)  Loop: REPAIRED  [Unique: 4]
+  ✦ NETRA-826F133E-13B  Severity: Moderate (0.51)  GPS: (28.6147, 77.2086)  Loop: REPAIRED  [Unique: 5]
+  ✦ NETRA-561A0910-69C  Severity: Moderate (0.51)  GPS: (28.6132, 77.2093)  Loop: REPAIRED  [Unique: 6]
+  ✦ NETRA-DAB2FFA7-5C8  Severity: Moderate (0.53)  GPS: (28.6143, 77.2090)  Loop: REPAIRED  [Unique: 7]
+  ✦ NETRA-47869CF1-1D4  Severity: Moderate (0.57)  GPS: (28.6132, 77.2093)  Loop: PERSISTS  [Unique: 8]
+  ✦ NETRA-2CCE6E74-A7C  Severity: Moderate (0.60)  GPS: (28.6136, 77.2085)  Loop: REPAIRED  [Unique: 9]
+  ✦ NETRA-51BB04F1-D28  Severity: Moderate (0.59)  GPS: (28.6134, 77.2083)  Loop: REPAIRED  [Unique: 10]
+  ✦ NETRA-3780B250-F2E  Severity: Moderate (0.54)  GPS: (28.6138, 77.2094)  Loop: REPAIRED  [Unique: 11]
+  ✦ NETRA-717B4780-442  Severity: Moderate (0.55)  GPS: (28.6139, 77.2090)  Loop: REPAIRED  [Unique: 12]
+  ✦ NETRA-543CDD8A-E12  Severity: Moderate (0.51)  GPS: (28.6138, 77.2091)  Loop: REPAIRED  [Unique: 13]
+  ✦ NETRA-DBF8488F-388  Severity: Moderate (0.60)  GPS: (28.6134, 77.2093)  Loop: REPAIRED  [Unique: 14]
+  ✦ NETRA-DAD1D3EA-70A  Severity: Moderate (0.52)  GPS: (28.6142, 77.2101)  Loop: REPAIRED  [Unique: 15]
+  ✦ NETRA-9C98CEC8-8C1  Severity: Moderate (0.61)  GPS: (28.6144, 77.2096)  Loop: REPAIRED  [Unique: 16]
+  ✦ NETRA-ACFAD78F-547  Severity: Moderate (0.51)  GPS: (28.6135, 77.2092)  Loop: REPAIRED  [Unique: 17]
+  ✦ NETRA-A0C11DDE-CE6  Severity: Moderate (0.48)  GPS: (28.6141, 77.2086)  Loop: REPAIRED  [Unique: 18]
+  ✦ NETRA-3045A6A4-175  Severity: Moderate (0.54)  GPS: (28.6148, 77.2085)  Loop: REPAIRED  [Unique: 19]
+  ✦ NETRA-E6F56BB7-9EE  Severity: Moderate (0.54)  GPS: (28.6140, 77.2090)  Loop: REPAIRED  [Unique: 20]
+  ✦ NETRA-DD0C8D2F-A00  Severity: Moderate (0.53)  GPS: (28.6142, 77.2085)  Loop: REPAIRED  [Unique: 21]
+  ✦ NETRA-54617513-746  Severity: Moderate (0.55)  GPS: (28.6144, 77.2106)  Loop: REPAIRED  [Unique: 22]
+  ✦ NETRA-F180997D-BBA  Severity: Moderate (0.57)  GPS: (28.6147, 77.2091)  Loop: REPAIRED  [Unique: 23]
+  ✦ NETRA-3685C194-43D  Severity: Moderate (0.54)  GPS: (28.6133, 77.2085)  Loop: REPAIRED  [Unique: 24]
+  ✦ NETRA-C96ECAEA-7F3  Severity: Moderate (0.53)  GPS: (28.6134, 77.2084)  Loop: REPAIRED  [Unique: 25]
+  ✦ NETRA-BB81E76E-CA5  Severity: Moderate (0.57)  GPS: (28.6135, 77.2102)  Loop: REPAIRED  [Unique: 26]
+  ✦ NETRA-954C674A-ADD  Severity: Moderate (0.47)  GPS: (28.6141, 77.2090)  Loop: REPAIRED  [Unique: 27]
+  ✦ NETRA-66F8A5BF-8C0  Severity: Moderate (0.55)  GPS: (28.6141, 77.2083)  Loop: REPAIRED  [Unique: 28]
+  ✦ NETRA-02C4D14F-B73  Severity: Moderate (0.60)  GPS: (28.6145, 77.2095)  Loop: REPAIRED  [Unique: 29]
+  ✦ NETRA-956FACE2-8BA  Severity: Moderate (0.48)  GPS: (28.6136, 77.2097)  Loop: REPAIRED  [Unique: 30]
+  ✦ NETRA-1DAB35CB-4C2  Severity: Moderate (0.61)  GPS: (28.6139, 77.2096)  Loop: REPAIRED  [Unique: 31]
+  ✦ NETRA-AD49CE48-90B  Severity: Moderate (0.59)  GPS: (28.6140, 77.2084)  Loop: REPAIRED  [Unique: 32]
+  ✦ NETRA-B9767B0F-E3D  Severity: Moderate (0.47)  GPS: (28.6140, 77.2091)  Loop: REPAIRED  [Unique: 33]
+[NETRA] Saved annotated image to: /Users/devas_007/Downloads/N.E.T.R.A.-master 2/NETRA-AI/output/annotated_image.jpg
 
 ============================================================
   NETRA Session Complete
-  Unique potholes detected : 1
-  Total frame observations : 14
+  Unique potholes detected : 33
+  Total frame observations : 33
   Unique records  → /Users/devas_007/Downloads/N.E.T.R.A.-master 2/NETRA-AI/output/unique_potholes.json
   Full session    → /Users/devas_007/Downloads/N.E.T.R.A.-master 2/NETRA-AI/output/session_detections.json
 ============================================================
 Syncing /Users/devas_007/Downloads/N.E.T.R.A.-master 2/NETRA-AI/output/unique_potholes.json to http://localhost:5000/api/potholes ...
-[✓] Synced NETRA-9D70CF82-010
-Successfully synced 1/1 records.
+[✓] Synced NETRA-553F33EC-749
+[✓] Synced NETRA-C2CB4B0B-776
+[✓] Synced NETRA-3086D72E-F85
+[✓] Synced NETRA-56B20BA1-4A7
+[✓] Synced NETRA-826F133E-13B
+[✓] Synced NETRA-561A0910-69C
+[✓] Synced NETRA-DAB2FFA7-5C8
+[✓] Synced NETRA-47869CF1-1D4
+[✓] Synced NETRA-2CCE6E74-A7C
+[✓] Synced NETRA-51BB04F1-D28
+[✓] Synced NETRA-3780B250-F2E
+[✓] Synced NETRA-717B4780-442
+[✓] Synced NETRA-543CDD8A-E12
+[✓] Synced NETRA-DBF8488F-388
+[✓] Synced NETRA-DAD1D3EA-70A
+[✓] Synced NETRA-9C98CEC8-8C1
+[✓] Synced NETRA-ACFAD78F-547
+[✓] Synced NETRA-A0C11DDE-CE6
+[✓] Synced NETRA-3045A6A4-175
+[✓] Synced NETRA-E6F56BB7-9EE
+[✓] Synced NETRA-DD0C8D2F-A00
+[✓] Synced NETRA-54617513-746
+[✓] Synced NETRA-F180997D-BBA
+[✓] Synced NETRA-3685C194-43D
+[✓] Synced NETRA-C96ECAEA-7F3
+[✓] Synced NETRA-BB81E76E-CA5
+[✓] Synced NETRA-954C674A-ADD
+[✓] Synced NETRA-66F8A5BF-8C0
+[✓] Synced NETRA-02C4D14F-B73
+[✓] Synced NETRA-956FACE2-8BA
+[✓] Synced NETRA-1DAB35CB-4C2
+[✓] Synced NETRA-AD49CE48-90B
+[✓] Synced NETRA-B9767B0F-E3D
+Successfully synced 33/33 records.

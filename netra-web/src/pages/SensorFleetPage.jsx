@@ -43,15 +43,14 @@ export default function SensorFleetPage() {
       {/* Summary KPIs */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {[
-          { label: "Total Sensors", value: counts.all, color: "#1e3a8a", icon: "📹" },
-          { label: "Online", value: counts.online, color: "#059669", icon: "🟢" },
-          { label: "Avg Uptime", value: `${avgUptime}%`, color: "#0369a1", icon: "⚡" },
-          { label: "Frames Processed", value: totalFrames.toLocaleString(), color: "#7c3aed", icon: "🖼️" },
+          { label: "Total Sensors", value: counts.all, color: "#1e3a8a" },
+          { label: "Online", value: counts.online, color: "#059669" },
+          { label: "Avg Uptime", value: `${avgUptime}%`, color: "#0369a1" },
+          { label: "Frames Processed", value: totalFrames.toLocaleString(), color: "#7c3aed" },
         ].map((k) => (
           <div key={k.label} className="netra-panel p-5">
             <div className="flex items-start justify-between">
               <p className="text-[10px] text-slate-500 uppercase tracking-widest">{k.label}</p>
-              <span className="text-lg">{k.icon}</span>
             </div>
             <p className="text-3xl font-black mt-1" style={{ color: k.color }}>{k.value}</p>
           </div>

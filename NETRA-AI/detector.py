@@ -141,57 +141,88 @@ class PotholeDetector:
         frame: np.ndarray,
         detections: list[dict],
         color: tuple[int, int, int] = (0, 0, 255),
-        alpha: float = 0.4,
+        alpha: float = config.SEG_MASK_ALPHA,
     ) -> np.ndarray:
-        """Overlay bounding boxes using Supervision PyResearch UI standards."""
+        """
+        Render pixel-accurate segmentation overlays with:
+          1. Semi-transparent mask fill (per-pothole color)
+          2. Polygon contour outline
+          3. Bounding box
+          4. Rich label: confidence, severity, depth, area, diameter
+        """
         if not detections:
             return frame.copy()
-            
-        import supervision as sv
-        import numpy as np
-        
-        xyxy = []
-        conf = []
-        class_id = []
-        labels = []
-        
-        for det in detections:
-            xyxy.append(det["bbox"])
-            conf.append(det["confidence"])
-            class_id.append(det.get("class_id", 0))
-            
-            # Incorporate depth & severity into the neat supervision UI
+
+        vis = frame.copy()
+        overlay = frame.copy()
+        palette = config.SEG_COLOR_PALETTE
+
+        for idx, det in enumerate(detections):
+            color_bgr = palette[idx % len(palette)]
+            mask = det.get("mask")
+            polygon = det.get("polygon")
+            bbox = det["bbox"]
+            x1, y1, x2, y2 = bbox
+
+            # ── 1. Segmentation mask fill ──────────────────────────
+            if mask is not None and mask.any():
+                overlay[mask] = color_bgr
+
+            # ── 2. Polygon contour ─────────────────────────────────
+            if polygon is not None and len(polygon) >= 3:
+                pts = polygon.reshape((-1, 1, 2)).astype(np.int32)
+                cv2.polylines(
+                    vis, [pts], isClosed=True,
+                    color=color_bgr,
+                    thickness=config.SEG_CONTOUR_THICKNESS,
+                    lineType=cv2.LINE_AA,
+                )
+
+            # ── 3. Bounding box ────────────────────────────────────
+            cv2.rectangle(vis, (x1, y1), (x2, y2), color_bgr, 2, cv2.LINE_AA)
+
+            # ── 4. Build rich label ────────────────────────────────
+            parts = [f"Pothole {det['confidence']:.2f}"]
+
             depth = det.get("last_depth", 0.0)
             sev = det.get("last_severity", "")
-            
-            base_label = f"Pothole {det['confidence']:.2f}"
             if sev and sev != "Wait.":
-                base_label += f" | {sev} | D: {depth:.2f}m"
-            labels.append(base_label)
-            
-        detections_sv = sv.Detections(
-            xyxy=np.array(xyxy),
-            confidence=np.array(conf),
-            class_id=np.array(class_id)
-        )
-        
-        box_annotator = sv.BoxAnnotator(
-            thickness=2,
-            color=sv.Color.from_hex("#0055FF")
-        )
-        label_annotator = sv.LabelAnnotator(
-            text_scale=0.7,
-            text_thickness=1,
-            text_color=sv.Color.WHITE,
-            text_padding=10,
-            color=sv.Color.from_hex("#0055FF")
-        )
-        
-        annotated_frame = frame.copy()
-        annotated_frame = box_annotator.annotate(scene=annotated_frame, detections=detections_sv)
-        annotated_frame = label_annotator.annotate(scene=annotated_frame, detections=detections_sv, labels=labels)
-        
-        return annotated_frame
+                parts.append(sev)
+                parts.append(f"D:{depth:.2f}m")
+
+            area_px = det.get("area_px", 0)
+            if config.SEG_SHOW_AREA and area_px > 0:
+                parts.append(f"A:{area_px}px²")
+
+            if config.SEG_SHOW_DIAMETER and polygon is not None and len(polygon) >= 3:
+                (_, _), radius = cv2.minEnclosingCircle(polygon.astype(np.float32))
+                parts.append(f"Ø:{int(radius * 2)}px")
+
+            label = " | ".join(parts)
+
+            # ── 5. Draw label background + text ───────────────────
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            font_scale = 0.5
+            thickness = 1
+            (tw, th), baseline = cv2.getTextSize(label, font, font_scale, thickness)
+
+            label_y = max(y1 - 8, th + 4)
+            cv2.rectangle(
+                vis,
+                (x1, label_y - th - 4),
+                (x1 + tw + 6, label_y + baseline),
+                color_bgr, -1,
+            )
+            cv2.putText(
+                vis, label,
+                (x1 + 3, label_y - 2),
+                font, font_scale, (255, 255, 255), thickness, cv2.LINE_AA,
+            )
+
+        # Blend the mask overlay with the drawn frame
+        cv2.addWeighted(overlay, alpha, vis, 1 - alpha, 0, vis)
+
+        return vis
 
     # ───────────────────────── edge export ───────────────────────
 

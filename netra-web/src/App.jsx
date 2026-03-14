@@ -22,10 +22,10 @@ import YoloQueuePage         from "./pages/YoloQueuePage";
 import SensorFleetPage       from "./pages/SensorFleetPage";
 import TriagePage            from "./pages/TriagePage";
 import WorkOrdersPage        from "./pages/WorkOrdersPage";
-import RepairVerificationPage from "./pages/RepairVerificationPage";
 import ReportQueuePage       from "./pages/ReportQueuePage";
 import CostEstimatorPage     from "./pages/CostEstimatorPage";
 import CompliancePage        from "./pages/CompliancePage";
+import PredictiveEnginePage  from "./pages/PredictiveEnginePage";
 
 // ── Citizen pages ─────────────────────────────────────────────────────────────
 import CitizenDashboardPage  from "./pages/CitizenDashboardPage";
@@ -49,6 +49,8 @@ function AccessDenied() {
     </div>
   );
 }
+
+import FloatingChatbot from "./components/FloatingChatbot";
 
 /** Route guard — only admin can access */
 function AdminOnly({ children }) {
@@ -102,10 +104,10 @@ function DashboardShell() {
               <Route path="sensor-fleet"      element={<AdminOnly><SensorFleetPage /></AdminOnly>} />
               <Route path="triage"            element={<AdminOnly><TriagePage /></AdminOnly>} />
               <Route path="work-orders"       element={<AdminOnly><WorkOrdersPage /></AdminOnly>} />
-              <Route path="repair-verify"     element={<AdminOnly><RepairVerificationPage /></AdminOnly>} />
               <Route path="report-queue"      element={<AdminOnly><ReportQueuePage /></AdminOnly>} />
               <Route path="cost-estimator"    element={<AdminOnly><CostEstimatorPage /></AdminOnly>} />
               <Route path="compliance"        element={<AdminOnly><CompliancePage /></AdminOnly>} />
+              <Route path="predictive-engine" element={<AdminOnly><PredictiveEnginePage /></AdminOnly>} />
 
               {/* ── Citizen pages ── */}
               <Route path="my-reports"        element={<MyReportsPage />} />
@@ -136,6 +138,7 @@ function Shell() {
           element={<ProtectedRoute><DashboardShell /></ProtectedRoute>}
         />
       </Routes>
+      <FloatingChatbot />
     </>
   );
 }
