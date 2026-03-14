@@ -1,0 +1,86 @@
+[
+  {
+    "pothole_id": "NETRA-030F5111-FC5",
+    "timestamp": "2026-03-14T12:34:19.699240+00:00",
+    "frame_index": 9,
+    "gps": {
+      "latitude": 28.614048,
+      "longitude": 77.20929
+    },
+    "detection": {
+      "bbox": [
+        287,
+        0,
+        640,
+        390
+      ],
+      "confidence": 0.8573,
+      "area_px": 108227,
+      "track_id": 1,
+      "track_hits": 4
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 390,
+      "bbox_width_px": 353,
+      "bbox_height_px": 391
+    },
+    "severity": {
+      "score": 0.8759,
+      "label": "Critical",
+      "factors": {
+        "area_norm": 1.0,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5037
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-5D09CE5F-BB3",
+      "action": "Escalate priority \u2014 pothole persists (severity Critical)."
+    }
+  },
+  {
+    "pothole_id": "NETRA-EB15A54B-097",
+    "timestamp": "2026-03-14T12:34:18.633894+00:00",
+    "frame_index": 6,
+    "gps": {
+      "latitude": 28.614664,
+      "longitude": 77.209177
+    },
+    "detection": {
+      "bbox": [
+        499,
+        570,
+        633,
+        640
+      ],
+      "confidence": 0.6106,
+      "area_px": 7481,
+      "track_id": 2,
+      "track_hits": 3
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 134,
+      "bbox_width_px": 135,
+      "bbox_height_px": 70
+    },
+    "severity": {
+      "score": 0.5281,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0935,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.3813
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-07DDD2AB-0F8",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    }
+  }
+]

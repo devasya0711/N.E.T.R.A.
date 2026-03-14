@@ -1,0 +1,2246 @@
+[
+  {
+    "pothole_id": "NETRA-523D0D2B-743",
+    "timestamp": "2026-03-10T07:05:02.896424+00:00",
+    "frame_index": 4,
+    "gps": {
+      "latitude": 28.614789,
+      "longitude": 77.209554
+    },
+    "detection": {
+      "bbox": [
+        138,
+        264,
+        262,
+        338
+      ],
+      "confidence": 0.8824,
+      "area_px": 7367,
+      "track_id": 1,
+      "track_hits": 5
+    },
+    "depth": {
+      "max_depth_rel": 0.6314,
+      "mean_depth_rel": 0.5613,
+      "diameter_px": 124,
+      "bbox_width_px": 125,
+      "bbox_height_px": 75
+    },
+    "severity": {
+      "score": 0.4379,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0921,
+        "depth_norm": 0.6314,
+        "traffic_norm": 0.6126
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-523D0D2B-743.ply"
+  },
+  {
+    "pothole_id": "NETRA-424559DC-EB4",
+    "timestamp": "2026-03-10T07:05:02.948788+00:00",
+    "frame_index": 4,
+    "gps": {
+      "latitude": 28.614565,
+      "longitude": 77.209502
+    },
+    "detection": {
+      "bbox": [
+        409,
+        248,
+        497,
+        310
+      ],
+      "confidence": 0.938,
+      "area_px": 4403,
+      "track_id": 2,
+      "track_hits": 5
+    },
+    "depth": {
+      "max_depth_rel": 0.6477,
+      "mean_depth_rel": 0.5868,
+      "diameter_px": 88,
+      "bbox_width_px": 89,
+      "bbox_height_px": 63
+    },
+    "severity": {
+      "score": 0.4541,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.055,
+        "depth_norm": 0.6477,
+        "traffic_norm": 0.7032
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-424559DC-EB4.ply"
+  },
+  {
+    "pothole_id": "NETRA-F79B355C-0A0",
+    "timestamp": "2026-03-10T07:05:03.205570+00:00",
+    "frame_index": 5,
+    "gps": {
+      "latitude": 28.613433,
+      "longitude": 77.208743
+    },
+    "detection": {
+      "bbox": [
+        144,
+        266,
+        262,
+        336
+      ],
+      "confidence": 0.7764,
+      "area_px": 6615,
+      "track_id": 1,
+      "track_hits": 6
+    },
+    "depth": {
+      "max_depth_rel": 0.723,
+      "mean_depth_rel": 0.6774,
+      "diameter_px": 118,
+      "bbox_width_px": 119,
+      "bbox_height_px": 71
+    },
+    "severity": {
+      "score": 0.4566,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0569,
+        "depth_norm": 0.6907,
+        "traffic_norm": 0.6416
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-F79B355C-0A0.ply",
+    "_last_seen": "2026-03-10T07:05:07.265542+00:00"
+  },
+  {
+    "pothole_id": "NETRA-509631A5-E20",
+    "timestamp": "2026-03-10T07:05:03.251064+00:00",
+    "frame_index": 5,
+    "gps": {
+      "latitude": 28.614063,
+      "longitude": 77.209049
+    },
+    "detection": {
+      "bbox": [
+        408,
+        255,
+        496,
+        311
+      ],
+      "confidence": 0.8309,
+      "area_px": 3975,
+      "track_id": 2,
+      "track_hits": 6
+    },
+    "depth": {
+      "max_depth_rel": 0.6455,
+      "mean_depth_rel": 0.5745,
+      "diameter_px": 88,
+      "bbox_width_px": 89,
+      "bbox_height_px": 57
+    },
+    "severity": {
+      "score": 0.4381,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0539,
+        "depth_norm": 0.7189,
+        "traffic_norm": 0.5268
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-509631A5-E20.ply",
+    "_last_seen": "2026-03-10T07:05:08.725197+00:00"
+  },
+  {
+    "pothole_id": "NETRA-AFE80DC5-BB8",
+    "timestamp": "2026-03-10T07:05:03.490291+00:00",
+    "frame_index": 6,
+    "gps": {
+      "latitude": 28.613891,
+      "longitude": 77.208974
+    },
+    "detection": {
+      "bbox": [
+        139,
+        261,
+        255,
+        333
+      ],
+      "confidence": 0.8914,
+      "area_px": 6699,
+      "track_id": 1,
+      "track_hits": 7
+    },
+    "depth": {
+      "max_depth_rel": 0.614,
+      "mean_depth_rel": 0.5354,
+      "diameter_px": 116,
+      "bbox_width_px": 117,
+      "bbox_height_px": 73
+    },
+    "severity": {
+      "score": 0.3959,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0837,
+        "depth_norm": 0.614,
+        "traffic_norm": 0.4838
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-AFE80DC5-BB8.ply"
+  },
+  {
+    "pothole_id": "NETRA-07BC201E-C44",
+    "timestamp": "2026-03-10T07:05:03.537432+00:00",
+    "frame_index": 6,
+    "gps": {
+      "latitude": 28.613745,
+      "longitude": 77.210279
+    },
+    "detection": {
+      "bbox": [
+        408,
+        253,
+        496,
+        313
+      ],
+      "confidence": 0.8117,
+      "area_px": 4257,
+      "track_id": 2,
+      "track_hits": 7
+    },
+    "depth": {
+      "max_depth_rel": 0.6435,
+      "mean_depth_rel": 0.597,
+      "diameter_px": 88,
+      "bbox_width_px": 89,
+      "bbox_height_px": 61
+    },
+    "severity": {
+      "score": 0.4453,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0532,
+        "depth_norm": 0.6435,
+        "traffic_norm": 0.677
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-07BC201E-C44.ply"
+  },
+  {
+    "pothole_id": "NETRA-3A0F7BCA-E58",
+    "timestamp": "2026-03-10T07:05:03.771084+00:00",
+    "frame_index": 7,
+    "gps": {
+      "latitude": 28.614128,
+      "longitude": 77.208629
+    },
+    "detection": {
+      "bbox": [
+        140,
+        270,
+        262,
+        336
+      ],
+      "confidence": 0.8076,
+      "area_px": 6471,
+      "track_id": 1,
+      "track_hits": 8
+    },
+    "depth": {
+      "max_depth_rel": 0.5642,
+      "mean_depth_rel": 0.5028,
+      "diameter_px": 122,
+      "bbox_width_px": 123,
+      "bbox_height_px": 67
+    },
+    "severity": {
+      "score": 0.3639,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0809,
+        "depth_norm": 0.5642,
+        "traffic_norm": 0.4394
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-3A0F7BCA-E58.ply"
+  },
+  {
+    "pothole_id": "NETRA-E70FF495-7C9",
+    "timestamp": "2026-03-10T07:05:03.816086+00:00",
+    "frame_index": 7,
+    "gps": {
+      "latitude": 28.613394,
+      "longitude": 77.209463
+    },
+    "detection": {
+      "bbox": [
+        408,
+        250,
+        498,
+        312
+      ],
+      "confidence": 0.7164,
+      "area_px": 4507,
+      "track_id": 2,
+      "track_hits": 8
+    },
+    "depth": {
+      "max_depth_rel": 0.6184,
+      "mean_depth_rel": 0.5568,
+      "diameter_px": 90,
+      "bbox_width_px": 91,
+      "bbox_height_px": 63
+    },
+    "severity": {
+      "score": 0.4609,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0509,
+        "depth_norm": 0.7108,
+        "traffic_norm": 0.6353
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-E70FF495-7C9.ply",
+    "_last_seen": "2026-03-10T07:05:09.319579+00:00"
+  },
+  {
+    "pothole_id": "NETRA-44BC51BB-ECB",
+    "timestamp": "2026-03-10T07:05:04.042678+00:00",
+    "frame_index": 8,
+    "gps": {
+      "latitude": 28.613779,
+      "longitude": 77.209981
+    },
+    "detection": {
+      "bbox": [
+        137,
+        266,
+        261,
+        338
+      ],
+      "confidence": 0.9482,
+      "area_px": 7153,
+      "track_id": 1,
+      "track_hits": 9
+    },
+    "depth": {
+      "max_depth_rel": 0.7257,
+      "mean_depth_rel": 0.6525,
+      "diameter_px": 124,
+      "bbox_width_px": 125,
+      "bbox_height_px": 73
+    },
+    "severity": {
+      "score": 0.4916,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0894,
+        "depth_norm": 0.7257,
+        "traffic_norm": 0.6803
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-44BC51BB-ECB.ply"
+  },
+  {
+    "pothole_id": "NETRA-4BF589C8-892",
+    "timestamp": "2026-03-10T07:05:04.088252+00:00",
+    "frame_index": 8,
+    "gps": {
+      "latitude": 28.614147,
+      "longitude": 77.208999
+    },
+    "detection": {
+      "bbox": [
+        406,
+        251,
+        492,
+        309
+      ],
+      "confidence": 0.8335,
+      "area_px": 4037,
+      "track_id": 2,
+      "track_hits": 9
+    },
+    "depth": {
+      "max_depth_rel": 0.6908,
+      "mean_depth_rel": 0.6365,
+      "diameter_px": 86,
+      "bbox_width_px": 87,
+      "bbox_height_px": 59
+    },
+    "severity": {
+      "score": 0.3735,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0497,
+        "depth_norm": 0.639,
+        "traffic_norm": 0.4019
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-4BF589C8-892.ply",
+    "_last_seen": "2026-03-10T07:05:05.212899+00:00"
+  },
+  {
+    "pothole_id": "NETRA-DBA669D3-DB7",
+    "timestamp": "2026-03-10T07:05:04.307284+00:00",
+    "frame_index": 9,
+    "gps": {
+      "latitude": 28.61334,
+      "longitude": 77.209221
+    },
+    "detection": {
+      "bbox": [
+        142,
+        264,
+        264,
+        338
+      ],
+      "confidence": 0.7643,
+      "area_px": 7241,
+      "track_id": 1,
+      "track_hits": 10
+    },
+    "depth": {
+      "max_depth_rel": 0.7865,
+      "mean_depth_rel": 0.7191,
+      "diameter_px": 122,
+      "bbox_width_px": 123,
+      "bbox_height_px": 75
+    },
+    "severity": {
+      "score": 0.4524,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0905,
+        "depth_norm": 0.7865,
+        "traffic_norm": 0.4246
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-DBA669D3-DB7.ply"
+  },
+  {
+    "pothole_id": "NETRA-4FB7E656-399",
+    "timestamp": "2026-03-10T07:05:04.352899+00:00",
+    "frame_index": 9,
+    "gps": {
+      "latitude": 28.614441,
+      "longitude": 77.208902
+    },
+    "detection": {
+      "bbox": [
+        404,
+        251,
+        492,
+        313
+      ],
+      "confidence": 0.9266,
+      "area_px": 4403,
+      "track_id": 2,
+      "track_hits": 10
+    },
+    "depth": {
+      "max_depth_rel": 0.7148,
+      "mean_depth_rel": 0.6543,
+      "diameter_px": 88,
+      "bbox_width_px": 89,
+      "bbox_height_px": 63
+    },
+    "severity": {
+      "score": 0.4952,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.055,
+        "depth_norm": 0.7148,
+        "traffic_norm": 0.7601
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-4FB7E656-399.ply"
+  },
+  {
+    "pothole_id": "NETRA-7E03AC68-3BE",
+    "timestamp": "2026-03-10T07:05:04.589756+00:00",
+    "frame_index": 10,
+    "gps": {
+      "latitude": 28.614196,
+      "longitude": 77.209178
+    },
+    "detection": {
+      "bbox": [
+        139,
+        268,
+        255,
+        338
+      ],
+      "confidence": 0.7443,
+      "area_px": 6513,
+      "track_id": 1,
+      "track_hits": 11
+    },
+    "depth": {
+      "max_depth_rel": 0.675,
+      "mean_depth_rel": 0.5985,
+      "diameter_px": 116,
+      "bbox_width_px": 117,
+      "bbox_height_px": 71
+    },
+    "severity": {
+      "score": 0.4703,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0793,
+        "depth_norm": 0.7599,
+        "traffic_norm": 0.5543
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-7E03AC68-3BE.ply",
+    "_last_seen": "2026-03-10T07:05:08.974103+00:00"
+  },
+  {
+    "pothole_id": "NETRA-CFDF2981-FD6",
+    "timestamp": "2026-03-10T07:05:04.633496+00:00",
+    "frame_index": 10,
+    "gps": {
+      "latitude": 28.613936,
+      "longitude": 77.209993
+    },
+    "detection": {
+      "bbox": [
+        400,
+        250,
+        494,
+        312
+      ],
+      "confidence": 0.807,
+      "area_px": 4705,
+      "track_id": 2,
+      "track_hits": 11
+    },
+    "depth": {
+      "max_depth_rel": 0.6861,
+      "mean_depth_rel": 0.6216,
+      "diameter_px": 94,
+      "bbox_width_px": 95,
+      "bbox_height_px": 63
+    },
+    "severity": {
+      "score": 0.3813,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0588,
+        "depth_norm": 0.6861,
+        "traffic_norm": 0.345
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-CFDF2981-FD6.ply"
+  },
+  {
+    "pothole_id": "NETRA-459B3A41-AD9",
+    "timestamp": "2026-03-10T07:05:04.881957+00:00",
+    "frame_index": 11,
+    "gps": {
+      "latitude": 28.614343,
+      "longitude": 77.208178
+    },
+    "detection": {
+      "bbox": [
+        137,
+        267,
+        259,
+        333
+      ],
+      "confidence": 0.7147,
+      "area_px": 6471,
+      "track_id": 1,
+      "track_hits": 12
+    },
+    "depth": {
+      "max_depth_rel": 0.7011,
+      "mean_depth_rel": 0.6398,
+      "diameter_px": 122,
+      "bbox_width_px": 123,
+      "bbox_height_px": 67
+    },
+    "severity": {
+      "score": 0.419,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0809,
+        "depth_norm": 0.7011,
+        "traffic_norm": 0.441
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-459B3A41-AD9.ply"
+  },
+  {
+    "pothole_id": "NETRA-E4EFF981-620",
+    "timestamp": "2026-03-10T07:05:04.925253+00:00",
+    "frame_index": 11,
+    "gps": {
+      "latitude": 28.613653,
+      "longitude": 77.208852
+    },
+    "detection": {
+      "bbox": [
+        401,
+        251,
+        495,
+        309
+      ],
+      "confidence": 0.8043,
+      "area_px": 4407,
+      "track_id": 2,
+      "track_hits": 12
+    },
+    "depth": {
+      "max_depth_rel": 0.7058,
+      "mean_depth_rel": 0.6548,
+      "diameter_px": 94,
+      "bbox_width_px": 95,
+      "bbox_height_px": 59
+    },
+    "severity": {
+      "score": 0.4695,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0768,
+        "depth_norm": 0.5782,
+        "traffic_norm": 0.8455
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-E4EFF981-620.ply",
+    "_last_seen": "2026-03-10T07:05:06.035242+00:00"
+  },
+  {
+    "pothole_id": "NETRA-46C410AD-8C1",
+    "timestamp": "2026-03-10T07:05:05.170012+00:00",
+    "frame_index": 12,
+    "gps": {
+      "latitude": 28.614036,
+      "longitude": 77.209594
+    },
+    "detection": {
+      "bbox": [
+        141,
+        263,
+        263,
+        331
+      ],
+      "confidence": 0.8231,
+      "area_px": 6663,
+      "track_id": 1,
+      "track_hits": 13
+    },
+    "depth": {
+      "max_depth_rel": 0.6901,
+      "mean_depth_rel": 0.6261,
+      "diameter_px": 122,
+      "bbox_width_px": 123,
+      "bbox_height_px": 69
+    },
+    "severity": {
+      "score": 0.4143,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0894,
+        "depth_norm": 0.6596,
+        "traffic_norm": 0.4767
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-46C410AD-8C1.ply",
+    "_last_seen": "2026-03-10T07:05:09.554195+00:00"
+  },
+  {
+    "pothole_id": "NETRA-C08FE186-D00",
+    "timestamp": "2026-03-10T07:05:05.212821+00:00",
+    "frame_index": 12,
+    "gps": {
+      "latitude": 28.614209,
+      "longitude": 77.208926
+    },
+    "detection": {
+      "bbox": [
+        409,
+        252,
+        497,
+        308
+      ],
+      "confidence": 0.8114,
+      "area_px": 3975,
+      "track_id": 2,
+      "track_hits": 13
+    },
+    "depth": {
+      "max_depth_rel": 0.639,
+      "mean_depth_rel": 0.5782,
+      "diameter_px": 88,
+      "bbox_width_px": 89,
+      "bbox_height_px": 57
+    },
+    "severity": {
+      "score": 0.3735,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0497,
+        "depth_norm": 0.639,
+        "traffic_norm": 0.4019
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-4BF589C8-892",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-C08FE186-D00.ply"
+  },
+  {
+    "pothole_id": "NETRA-0B0F7EBD-550",
+    "timestamp": "2026-03-10T07:05:05.448836+00:00",
+    "frame_index": 13,
+    "gps": {
+      "latitude": 28.613506,
+      "longitude": 77.208751
+    },
+    "detection": {
+      "bbox": [
+        144,
+        265,
+        260,
+        331
+      ],
+      "confidence": 0.8102,
+      "area_px": 6145,
+      "track_id": 1,
+      "track_hits": 14
+    },
+    "depth": {
+      "max_depth_rel": 0.6044,
+      "mean_depth_rel": 0.5549,
+      "diameter_px": 116,
+      "bbox_width_px": 117,
+      "bbox_height_px": 67
+    },
+    "severity": {
+      "score": 0.4689,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0768,
+        "depth_norm": 0.6044,
+        "traffic_norm": 0.801
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-F79B355C-0A0",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-0B0F7EBD-550.ply"
+  },
+  {
+    "pothole_id": "NETRA-F43335B2-031",
+    "timestamp": "2026-03-10T07:05:05.493347+00:00",
+    "frame_index": 13,
+    "gps": {
+      "latitude": 28.613447,
+      "longitude": 77.209781
+    },
+    "detection": {
+      "bbox": [
+        404,
+        252,
+        490,
+        310
+      ],
+      "confidence": 0.8108,
+      "area_px": 4037,
+      "track_id": 2,
+      "track_hits": 14
+    },
+    "depth": {
+      "max_depth_rel": 0.6426,
+      "mean_depth_rel": 0.6059,
+      "diameter_px": 86,
+      "bbox_width_px": 87,
+      "bbox_height_px": 59
+    },
+    "severity": {
+      "score": 0.4675,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0505,
+        "depth_norm": 0.6426,
+        "traffic_norm": 0.7711
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-F43335B2-031.ply"
+  },
+  {
+    "pothole_id": "NETRA-1B7F7CD1-6E5",
+    "timestamp": "2026-03-10T07:05:05.747108+00:00",
+    "frame_index": 14,
+    "gps": {
+      "latitude": 28.613169,
+      "longitude": 77.208301
+    },
+    "detection": {
+      "bbox": [
+        137,
+        265,
+        257,
+        331
+      ],
+      "confidence": 0.8409,
+      "area_px": 6359,
+      "track_id": 1,
+      "track_hits": 15
+    },
+    "depth": {
+      "max_depth_rel": 0.6863,
+      "mean_depth_rel": 0.6168,
+      "diameter_px": 120,
+      "bbox_width_px": 121,
+      "bbox_height_px": 67
+    },
+    "severity": {
+      "score": 0.5024,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0795,
+        "depth_norm": 0.6863,
+        "traffic_norm": 0.8002
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-1B7F7CD1-6E5.ply"
+  },
+  {
+    "pothole_id": "NETRA-B2D3633B-786",
+    "timestamp": "2026-03-10T07:05:05.780395+00:00",
+    "frame_index": 14,
+    "gps": {
+      "latitude": 28.613908,
+      "longitude": 77.209215
+    },
+    "detection": {
+      "bbox": [
+        403,
+        250,
+        495,
+        312
+      ],
+      "confidence": 0.7762,
+      "area_px": 4609,
+      "track_id": 2,
+      "track_hits": 15
+    },
+    "depth": {
+      "max_depth_rel": 0.6843,
+      "mean_depth_rel": 0.6308,
+      "diameter_px": 92,
+      "bbox_width_px": 93,
+      "bbox_height_px": 63
+    },
+    "severity": {
+      "score": 0.44,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0576,
+        "depth_norm": 0.6843,
+        "traffic_norm": 0.5844
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-B2D3633B-786.ply"
+  },
+  {
+    "pothole_id": "NETRA-B3355671-83A",
+    "timestamp": "2026-03-10T07:05:06.035156+00:00",
+    "frame_index": 15,
+    "gps": {
+      "latitude": 28.613713,
+      "longitude": 77.208792
+    },
+    "detection": {
+      "bbox": [
+        143,
+        264,
+        259,
+        330
+      ],
+      "confidence": 0.8889,
+      "area_px": 6145,
+      "track_id": 1,
+      "track_hits": 16
+    },
+    "depth": {
+      "max_depth_rel": 0.5782,
+      "mean_depth_rel": 0.5317,
+      "diameter_px": 116,
+      "bbox_width_px": 117,
+      "bbox_height_px": 67
+    },
+    "severity": {
+      "score": 0.4695,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0768,
+        "depth_norm": 0.5782,
+        "traffic_norm": 0.8455
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-E4EFF981-620",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-B3355671-83A.ply"
+  },
+  {
+    "pothole_id": "NETRA-8F1CACB8-A3B",
+    "timestamp": "2026-03-10T07:05:06.081069+00:00",
+    "frame_index": 15,
+    "gps": {
+      "latitude": 28.614267,
+      "longitude": 77.209665
+    },
+    "detection": {
+      "bbox": [
+        405,
+        252,
+        497,
+        314
+      ],
+      "confidence": 0.9052,
+      "area_px": 4609,
+      "track_id": 2,
+      "track_hits": 16
+    },
+    "depth": {
+      "max_depth_rel": 0.6378,
+      "mean_depth_rel": 0.6007,
+      "diameter_px": 92,
+      "bbox_width_px": 93,
+      "bbox_height_px": 63
+    },
+    "severity": {
+      "score": 0.4064,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0576,
+        "depth_norm": 0.6378,
+        "traffic_norm": 0.5243
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-8F1CACB8-A3B.ply"
+  },
+  {
+    "pothole_id": "NETRA-304FD095-511",
+    "timestamp": "2026-03-10T07:05:06.332351+00:00",
+    "frame_index": 16,
+    "gps": {
+      "latitude": 28.6147,
+      "longitude": 77.208477
+    },
+    "detection": {
+      "bbox": [
+        142,
+        265,
+        258,
+        331
+      ],
+      "confidence": 0.944,
+      "area_px": 6145,
+      "track_id": 1,
+      "track_hits": 17
+    },
+    "depth": {
+      "max_depth_rel": 0.5958,
+      "mean_depth_rel": 0.5431,
+      "diameter_px": 116,
+      "bbox_width_px": 117,
+      "bbox_height_px": 67
+    },
+    "severity": {
+      "score": 0.4234,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0768,
+        "depth_norm": 0.5958,
+        "traffic_norm": 0.6329
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-304FD095-511.ply"
+  },
+  {
+    "pothole_id": "NETRA-CF54AB4C-DDA",
+    "timestamp": "2026-03-10T07:05:06.378473+00:00",
+    "frame_index": 16,
+    "gps": {
+      "latitude": 28.61355,
+      "longitude": 77.208652
+    },
+    "detection": {
+      "bbox": [
+        406,
+        251,
+        492,
+        311
+      ],
+      "confidence": 0.783,
+      "area_px": 4159,
+      "track_id": 2,
+      "track_hits": 17
+    },
+    "depth": {
+      "max_depth_rel": 0.6097,
+      "mean_depth_rel": 0.5737,
+      "diameter_px": 86,
+      "bbox_width_px": 87,
+      "bbox_height_px": 61
+    },
+    "severity": {
+      "score": 0.469,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.052,
+        "depth_norm": 0.6097,
+        "traffic_norm": 0.8276
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-CF54AB4C-DDA.ply"
+  },
+  {
+    "pothole_id": "NETRA-F9921DA4-46A",
+    "timestamp": "2026-03-10T07:05:06.630202+00:00",
+    "frame_index": 17,
+    "gps": {
+      "latitude": 28.613573,
+      "longitude": 77.209238
+    },
+    "detection": {
+      "bbox": [
+        143,
+        267,
+        261,
+        339
+      ],
+      "confidence": 0.9005,
+      "area_px": 6799,
+      "track_id": 1,
+      "track_hits": 18
+    },
+    "depth": {
+      "max_depth_rel": 0.6897,
+      "mean_depth_rel": 0.6143,
+      "diameter_px": 118,
+      "bbox_width_px": 119,
+      "bbox_height_px": 73
+    },
+    "severity": {
+      "score": 0.5071,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.085,
+        "depth_norm": 0.6897,
+        "traffic_norm": 0.8059
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-F9921DA4-46A.ply"
+  },
+  {
+    "pothole_id": "NETRA-97BD0ACF-837",
+    "timestamp": "2026-03-10T07:05:06.675927+00:00",
+    "frame_index": 17,
+    "gps": {
+      "latitude": 28.614039,
+      "longitude": 77.208856
+    },
+    "detection": {
+      "bbox": [
+        402,
+        247,
+        494,
+        309
+      ],
+      "confidence": 0.9005,
+      "area_px": 4609,
+      "track_id": 2,
+      "track_hits": 18
+    },
+    "depth": {
+      "max_depth_rel": 0.7127,
+      "mean_depth_rel": 0.6497,
+      "diameter_px": 92,
+      "bbox_width_px": 93,
+      "bbox_height_px": 63
+    },
+    "severity": {
+      "score": 0.4068,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0822,
+        "depth_norm": 0.7388,
+        "traffic_norm": 0.3302
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-97BD0ACF-837.ply",
+    "_last_seen": "2026-03-10T07:05:09.272751+00:00"
+  },
+  {
+    "pothole_id": "NETRA-CC227978-60A",
+    "timestamp": "2026-03-10T07:05:06.925160+00:00",
+    "frame_index": 18,
+    "gps": {
+      "latitude": 28.613466,
+      "longitude": 77.208903
+    },
+    "detection": {
+      "bbox": [
+        140,
+        267,
+        258,
+        337
+      ],
+      "confidence": 0.7891,
+      "area_px": 6615,
+      "track_id": 1,
+      "track_hits": 19
+    },
+    "depth": {
+      "max_depth_rel": 0.5895,
+      "mean_depth_rel": 0.5085,
+      "diameter_px": 118,
+      "bbox_width_px": 119,
+      "bbox_height_px": 71
+    },
+    "severity": {
+      "score": 0.3404,
+      "label": "Minor",
+      "factors": {
+        "area_norm": 0.0827,
+        "depth_norm": 0.5895,
+        "traffic_norm": 0.3027
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-CC227978-60A.ply"
+  },
+  {
+    "pothole_id": "NETRA-712C3308-19D",
+    "timestamp": "2026-03-10T07:05:06.972632+00:00",
+    "frame_index": 18,
+    "gps": {
+      "latitude": 28.612823,
+      "longitude": 77.209494
+    },
+    "detection": {
+      "bbox": [
+        402,
+        248,
+        494,
+        310
+      ],
+      "confidence": 0.8355,
+      "area_px": 4609,
+      "track_id": 2,
+      "track_hits": 19
+    },
+    "depth": {
+      "max_depth_rel": 0.6876,
+      "mean_depth_rel": 0.6376,
+      "diameter_px": 92,
+      "bbox_width_px": 93,
+      "bbox_height_px": 63
+    },
+    "severity": {
+      "score": 0.4586,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0576,
+        "depth_norm": 0.6876,
+        "traffic_norm": 0.6536
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-712C3308-19D.ply"
+  },
+  {
+    "pothole_id": "NETRA-DD796188-ED6",
+    "timestamp": "2026-03-10T07:05:07.216027+00:00",
+    "frame_index": 19,
+    "gps": {
+      "latitude": 28.614488,
+      "longitude": 77.209275
+    },
+    "detection": {
+      "bbox": [
+        139,
+        264,
+        261,
+        330
+      ],
+      "confidence": 0.8709,
+      "area_px": 6471,
+      "track_id": 1,
+      "track_hits": 20
+    },
+    "depth": {
+      "max_depth_rel": 0.7053,
+      "mean_depth_rel": 0.6477,
+      "diameter_px": 122,
+      "bbox_width_px": 123,
+      "bbox_height_px": 67
+    },
+    "severity": {
+      "score": 0.41,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0809,
+        "depth_norm": 0.7053,
+        "traffic_norm": 0.3981
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-DD796188-ED6.ply"
+  },
+  {
+    "pothole_id": "NETRA-954919A0-636",
+    "timestamp": "2026-03-10T07:05:07.265360+00:00",
+    "frame_index": 19,
+    "gps": {
+      "latitude": 28.613426,
+      "longitude": 77.208713
+    },
+    "detection": {
+      "bbox": [
+        403,
+        248,
+        497,
+        308
+      ],
+      "confidence": 0.9405,
+      "area_px": 4553,
+      "track_id": 2,
+      "track_hits": 20
+    },
+    "depth": {
+      "max_depth_rel": 0.6907,
+      "mean_depth_rel": 0.6369,
+      "diameter_px": 94,
+      "bbox_width_px": 95,
+      "bbox_height_px": 61
+    },
+    "severity": {
+      "score": 0.4566,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0569,
+        "depth_norm": 0.6907,
+        "traffic_norm": 0.6416
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-F79B355C-0A0",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-954919A0-636.ply"
+  },
+  {
+    "pothole_id": "NETRA-7B90B110-091",
+    "timestamp": "2026-03-10T07:05:07.504882+00:00",
+    "frame_index": 20,
+    "gps": {
+      "latitude": 28.613719,
+      "longitude": 77.209538
+    },
+    "detection": {
+      "bbox": [
+        137,
+        261,
+        257,
+        335
+      ],
+      "confidence": 0.7351,
+      "area_px": 7113,
+      "track_id": 1,
+      "track_hits": 21
+    },
+    "depth": {
+      "max_depth_rel": 0.6748,
+      "mean_depth_rel": 0.607,
+      "diameter_px": 120,
+      "bbox_width_px": 121,
+      "bbox_height_px": 75
+    },
+    "severity": {
+      "score": 0.3968,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0889,
+        "depth_norm": 0.6748,
+        "traffic_norm": 0.3829
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-7B90B110-091.ply"
+  },
+  {
+    "pothole_id": "NETRA-9125E44C-C05",
+    "timestamp": "2026-03-10T07:05:07.553075+00:00",
+    "frame_index": 20,
+    "gps": {
+      "latitude": 28.615081,
+      "longitude": 77.209657
+    },
+    "detection": {
+      "bbox": [
+        406,
+        247,
+        496,
+        307
+      ],
+      "confidence": 0.7434,
+      "area_px": 4351,
+      "track_id": 2,
+      "track_hits": 21
+    },
+    "depth": {
+      "max_depth_rel": 0.7006,
+      "mean_depth_rel": 0.6554,
+      "diameter_px": 90,
+      "bbox_width_px": 91,
+      "bbox_height_px": 61
+    },
+    "severity": {
+      "score": 0.3959,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0544,
+        "depth_norm": 0.7006,
+        "traffic_norm": 0.3865
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-9125E44C-C05.ply"
+  },
+  {
+    "pothole_id": "NETRA-B8A6C13B-1D6",
+    "timestamp": "2026-03-10T07:05:07.781190+00:00",
+    "frame_index": 21,
+    "gps": {
+      "latitude": 28.614051,
+      "longitude": 77.209119
+    },
+    "detection": {
+      "bbox": [
+        143,
+        263,
+        261,
+        337
+      ],
+      "confidence": 0.7513,
+      "area_px": 6997,
+      "track_id": 1,
+      "track_hits": 22
+    },
+    "depth": {
+      "max_depth_rel": 0.5504,
+      "mean_depth_rel": 0.4737,
+      "diameter_px": 118,
+      "bbox_width_px": 119,
+      "bbox_height_px": 75
+    },
+    "severity": {
+      "score": 0.4211,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0875,
+        "depth_norm": 0.5504,
+        "traffic_norm": 0.6814
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-509631A5-E20",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-B8A6C13B-1D6.ply"
+  },
+  {
+    "pothole_id": "NETRA-D9902444-DD5",
+    "timestamp": "2026-03-10T07:05:07.833979+00:00",
+    "frame_index": 21,
+    "gps": {
+      "latitude": 28.614002,
+      "longitude": 77.209565
+    },
+    "detection": {
+      "bbox": [
+        403,
+        255,
+        497,
+        311
+      ],
+      "confidence": 0.9072,
+      "area_px": 4249,
+      "track_id": 2,
+      "track_hits": 22
+    },
+    "depth": {
+      "max_depth_rel": 0.5771,
+      "mean_depth_rel": 0.5274,
+      "diameter_px": 94,
+      "bbox_width_px": 95,
+      "bbox_height_px": 57
+    },
+    "severity": {
+      "score": 0.3919,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0531,
+        "depth_norm": 0.5771,
+        "traffic_norm": 0.5701
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-46C410AD-8C1",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-D9902444-DD5.ply"
+  },
+  {
+    "pothole_id": "NETRA-B47243B4-FDA",
+    "timestamp": "2026-03-10T07:05:08.085085+00:00",
+    "frame_index": 22,
+    "gps": {
+      "latitude": 28.613752,
+      "longitude": 77.208176
+    },
+    "detection": {
+      "bbox": [
+        144,
+        267,
+        260,
+        337
+      ],
+      "confidence": 0.7409,
+      "area_px": 6513,
+      "track_id": 1,
+      "track_hits": 23
+    },
+    "depth": {
+      "max_depth_rel": 0.8284,
+      "mean_depth_rel": 0.7853,
+      "diameter_px": 116,
+      "bbox_width_px": 117,
+      "bbox_height_px": 71
+    },
+    "severity": {
+      "score": 0.4703,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0814,
+        "depth_norm": 0.8284,
+        "traffic_norm": 0.4417
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-B47243B4-FDA.ply"
+  },
+  {
+    "pothole_id": "NETRA-88AC0220-E38",
+    "timestamp": "2026-03-10T07:05:08.134899+00:00",
+    "frame_index": 22,
+    "gps": {
+      "latitude": 28.614043,
+      "longitude": 77.208736
+    },
+    "detection": {
+      "bbox": [
+        401,
+        249,
+        495,
+        311
+      ],
+      "confidence": 0.7734,
+      "area_px": 4705,
+      "track_id": 2,
+      "track_hits": 23
+    },
+    "depth": {
+      "max_depth_rel": 0.7012,
+      "mean_depth_rel": 0.6414,
+      "diameter_px": 94,
+      "bbox_width_px": 95,
+      "bbox_height_px": 63
+    },
+    "severity": {
+      "score": 0.4006,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0588,
+        "depth_norm": 0.7012,
+        "traffic_norm": 0.398
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-88AC0220-E38.ply"
+  },
+  {
+    "pothole_id": "NETRA-EDE4F2D5-3E2",
+    "timestamp": "2026-03-10T07:05:08.390496+00:00",
+    "frame_index": 23,
+    "gps": {
+      "latitude": 28.613229,
+      "longitude": 77.208529
+    },
+    "detection": {
+      "bbox": [
+        139,
+        264,
+        261,
+        334
+      ],
+      "confidence": 0.938,
+      "area_px": 6845,
+      "track_id": 1,
+      "track_hits": 24
+    },
+    "depth": {
+      "max_depth_rel": 0.6592,
+      "mean_depth_rel": 0.5858,
+      "diameter_px": 122,
+      "bbox_width_px": 123,
+      "bbox_height_px": 71
+    },
+    "severity": {
+      "score": 0.4563,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0856,
+        "depth_norm": 0.6592,
+        "traffic_norm": 0.6509
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-EDE4F2D5-3E2.ply"
+  },
+  {
+    "pothole_id": "NETRA-170D0384-E26",
+    "timestamp": "2026-03-10T07:05:08.444908+00:00",
+    "frame_index": 23,
+    "gps": {
+      "latitude": 28.61501,
+      "longitude": 77.209882
+    },
+    "detection": {
+      "bbox": [
+        403,
+        246,
+        495,
+        310
+      ],
+      "confidence": 0.7718,
+      "area_px": 4755,
+      "track_id": 2,
+      "track_hits": 24
+    },
+    "depth": {
+      "max_depth_rel": 0.6612,
+      "mean_depth_rel": 0.6179,
+      "diameter_px": 92,
+      "bbox_width_px": 93,
+      "bbox_height_px": 65
+    },
+    "severity": {
+      "score": 0.3789,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0594,
+        "depth_norm": 0.6612,
+        "traffic_norm": 0.3745
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-170D0384-E26.ply"
+  },
+  {
+    "pothole_id": "NETRA-25031F1D-EE7",
+    "timestamp": "2026-03-10T07:05:08.673152+00:00",
+    "frame_index": 24,
+    "gps": {
+      "latitude": 28.61358,
+      "longitude": 77.208481
+    },
+    "detection": {
+      "bbox": [
+        142,
+        262,
+        264,
+        336
+      ],
+      "confidence": 0.813,
+      "area_px": 7241,
+      "track_id": 1,
+      "track_hits": 25
+    },
+    "depth": {
+      "max_depth_rel": 0.6492,
+      "mean_depth_rel": 0.5642,
+      "diameter_px": 122,
+      "bbox_width_px": 123,
+      "bbox_height_px": 75
+    },
+    "severity": {
+      "score": 0.4672,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0905,
+        "depth_norm": 0.6492,
+        "traffic_norm": 0.7033
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-25031F1D-EE7.ply"
+  },
+  {
+    "pothole_id": "NETRA-A5B66B91-520",
+    "timestamp": "2026-03-10T07:05:08.725043+00:00",
+    "frame_index": 24,
+    "gps": {
+      "latitude": 28.614,
+      "longitude": 77.209025
+    },
+    "detection": {
+      "bbox": [
+        401,
+        253,
+        493,
+        311
+      ],
+      "confidence": 0.781,
+      "area_px": 4315,
+      "track_id": 2,
+      "track_hits": 25
+    },
+    "depth": {
+      "max_depth_rel": 0.7189,
+      "mean_depth_rel": 0.6623,
+      "diameter_px": 92,
+      "bbox_width_px": 93,
+      "bbox_height_px": 59
+    },
+    "severity": {
+      "score": 0.4381,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0539,
+        "depth_norm": 0.7189,
+        "traffic_norm": 0.5268
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-509631A5-E20",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-A5B66B91-520.ply"
+  },
+  {
+    "pothole_id": "NETRA-E31D0CEE-9ED",
+    "timestamp": "2026-03-10T07:05:08.973986+00:00",
+    "frame_index": 25,
+    "gps": {
+      "latitude": 28.614252,
+      "longitude": 77.209115
+    },
+    "detection": {
+      "bbox": [
+        144,
+        264,
+        260,
+        332
+      ],
+      "confidence": 0.8781,
+      "area_px": 6343,
+      "track_id": 1,
+      "track_hits": 26
+    },
+    "depth": {
+      "max_depth_rel": 0.7599,
+      "mean_depth_rel": 0.6829,
+      "diameter_px": 116,
+      "bbox_width_px": 117,
+      "bbox_height_px": 69
+    },
+    "severity": {
+      "score": 0.4703,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0793,
+        "depth_norm": 0.7599,
+        "traffic_norm": 0.5543
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-7E03AC68-3BE",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-E31D0CEE-9ED.ply"
+  },
+  {
+    "pothole_id": "NETRA-300AA29C-9BC",
+    "timestamp": "2026-03-10T07:05:09.024077+00:00",
+    "frame_index": 25,
+    "gps": {
+      "latitude": 28.614191,
+      "longitude": 77.208762
+    },
+    "detection": {
+      "bbox": [
+        401,
+        249,
+        493,
+        307
+      ],
+      "confidence": 0.8196,
+      "area_px": 4315,
+      "track_id": 2,
+      "track_hits": 26
+    },
+    "depth": {
+      "max_depth_rel": 0.7683,
+      "mean_depth_rel": 0.712,
+      "diameter_px": 92,
+      "bbox_width_px": 93,
+      "bbox_height_px": 59
+    },
+    "severity": {
+      "score": 0.4619,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0539,
+        "depth_norm": 0.7683,
+        "traffic_norm": 0.5428
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-300AA29C-9BC.ply"
+  },
+  {
+    "pothole_id": "NETRA-88E9C6B4-E5C",
+    "timestamp": "2026-03-10T07:05:09.272618+00:00",
+    "frame_index": 26,
+    "gps": {
+      "latitude": 28.614094,
+      "longitude": 77.208899
+    },
+    "detection": {
+      "bbox": [
+        135,
+        264,
+        259,
+        330
+      ],
+      "confidence": 0.9486,
+      "area_px": 6579,
+      "track_id": 1,
+      "track_hits": 27
+    },
+    "depth": {
+      "max_depth_rel": 0.7388,
+      "mean_depth_rel": 0.6956,
+      "diameter_px": 124,
+      "bbox_width_px": 125,
+      "bbox_height_px": 67
+    },
+    "severity": {
+      "score": 0.4068,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0822,
+        "depth_norm": 0.7388,
+        "traffic_norm": 0.3302
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-97BD0ACF-837",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-88E9C6B4-E5C.ply"
+  },
+  {
+    "pothole_id": "NETRA-B057769B-C4B",
+    "timestamp": "2026-03-10T07:05:09.319417+00:00",
+    "frame_index": 26,
+    "gps": {
+      "latitude": 28.613414,
+      "longitude": 77.209487
+    },
+    "detection": {
+      "bbox": [
+        407,
+        254,
+        497,
+        310
+      ],
+      "confidence": 0.7156,
+      "area_px": 4071,
+      "track_id": 2,
+      "track_hits": 27
+    },
+    "depth": {
+      "max_depth_rel": 0.7108,
+      "mean_depth_rel": 0.6677,
+      "diameter_px": 90,
+      "bbox_width_px": 91,
+      "bbox_height_px": 57
+    },
+    "severity": {
+      "score": 0.4609,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0509,
+        "depth_norm": 0.7108,
+        "traffic_norm": 0.6353
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-E70FF495-7C9",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-B057769B-C4B.ply"
+  },
+  {
+    "pothole_id": "NETRA-270153C4-558",
+    "timestamp": "2026-03-10T07:05:09.554069+00:00",
+    "frame_index": 27,
+    "gps": {
+      "latitude": 28.614049,
+      "longitude": 77.209615
+    },
+    "detection": {
+      "bbox": [
+        137,
+        264,
+        261,
+        336
+      ],
+      "confidence": 0.7591,
+      "area_px": 7153,
+      "track_id": 1,
+      "track_hits": 28
+    },
+    "depth": {
+      "max_depth_rel": 0.6596,
+      "mean_depth_rel": 0.5977,
+      "diameter_px": 124,
+      "bbox_width_px": 125,
+      "bbox_height_px": 73
+    },
+    "severity": {
+      "score": 0.4143,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0894,
+        "depth_norm": 0.6596,
+        "traffic_norm": 0.4767
+      }
+    },
+    "loop_closure": {
+      "status": "PERSISTS",
+      "baseline_id": "NETRA-46C410AD-8C1",
+      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-270153C4-558.ply"
+  },
+  {
+    "pothole_id": "NETRA-13D7A1FB-4DA",
+    "timestamp": "2026-03-10T07:05:09.607204+00:00",
+    "frame_index": 27,
+    "gps": {
+      "latitude": 28.614065,
+      "longitude": 77.209956
+    },
+    "detection": {
+      "bbox": [
+        409,
+        249,
+        497,
+        305
+      ],
+      "confidence": 0.7381,
+      "area_px": 3975,
+      "track_id": 2,
+      "track_hits": 28
+    },
+    "depth": {
+      "max_depth_rel": 0.6525,
+      "mean_depth_rel": 0.605,
+      "diameter_px": 88,
+      "bbox_width_px": 89,
+      "bbox_height_px": 57
+    },
+    "severity": {
+      "score": 0.3869,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0497,
+        "depth_norm": 0.6525,
+        "traffic_norm": 0.4339
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-13D7A1FB-4DA.ply"
+  },
+  {
+    "pothole_id": "NETRA-E70F9C0D-F66",
+    "timestamp": "2026-03-10T07:05:09.831883+00:00",
+    "frame_index": 28,
+    "gps": {
+      "latitude": 28.613714,
+      "longitude": 77.208753
+    },
+    "detection": {
+      "bbox": [
+        143,
+        264,
+        259,
+        336
+      ],
+      "confidence": 0.9038,
+      "area_px": 6699,
+      "track_id": 1,
+      "track_hits": 29
+    },
+    "depth": {
+      "max_depth_rel": 0.8524,
+      "mean_depth_rel": 0.8012,
+      "diameter_px": 116,
+      "bbox_width_px": 117,
+      "bbox_height_px": 73
+    },
+    "severity": {
+      "score": 0.4739,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0837,
+        "depth_norm": 0.8524,
+        "traffic_norm": 0.4145
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-E70F9C0D-F66.ply"
+  },
+  {
+    "pothole_id": "NETRA-E74F5FE4-C2B",
+    "timestamp": "2026-03-10T07:05:09.885389+00:00",
+    "frame_index": 28,
+    "gps": {
+      "latitude": 28.613485,
+      "longitude": 77.209005
+    },
+    "detection": {
+      "bbox": [
+        406,
+        248,
+        496,
+        306
+      ],
+      "confidence": 0.7956,
+      "area_px": 4225,
+      "track_id": 2,
+      "track_hits": 29
+    },
+    "depth": {
+      "max_depth_rel": 0.7573,
+      "mean_depth_rel": 0.6976,
+      "diameter_px": 90,
+      "bbox_width_px": 91,
+      "bbox_height_px": 59
+    },
+    "severity": {
+      "score": 0.477,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0528,
+        "depth_norm": 0.7573,
+        "traffic_norm": 0.6223
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-E74F5FE4-C2B.ply"
+  },
+  {
+    "pothole_id": "NETRA-411A8C46-31B",
+    "timestamp": "2026-03-10T07:05:10.124225+00:00",
+    "frame_index": 29,
+    "gps": {
+      "latitude": 28.614396,
+      "longitude": 77.209431
+    },
+    "detection": {
+      "bbox": [
+        137,
+        263,
+        259,
+        337
+      ],
+      "confidence": 0.8044,
+      "area_px": 7241,
+      "track_id": 1,
+      "track_hits": 30
+    },
+    "depth": {
+      "max_depth_rel": 0.6189,
+      "mean_depth_rel": 0.5436,
+      "diameter_px": 122,
+      "bbox_width_px": 123,
+      "bbox_height_px": 75
+    },
+    "severity": {
+      "score": 0.4346,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0905,
+        "depth_norm": 0.6189,
+        "traffic_norm": 0.6216
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-411A8C46-31B.ply"
+  },
+  {
+    "pothole_id": "NETRA-C93E5874-4DD",
+    "timestamp": "2026-03-10T07:05:10.178676+00:00",
+    "frame_index": 29,
+    "gps": {
+      "latitude": 28.614095,
+      "longitude": 77.209163
+    },
+    "detection": {
+      "bbox": [
+        407,
+        249,
+        497,
+        309
+      ],
+      "confidence": 0.7527,
+      "area_px": 4351,
+      "track_id": 2,
+      "track_hits": 30
+    },
+    "depth": {
+      "max_depth_rel": 0.6638,
+      "mean_depth_rel": 0.6176,
+      "diameter_px": 90,
+      "bbox_width_px": 91,
+      "bbox_height_px": 61
+    },
+    "severity": {
+      "score": 0.4294,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0544,
+        "depth_norm": 0.6638,
+        "traffic_norm": 0.5793
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "mesh_ply": "C:\\Users\\Shaurya Singh\\Documents\\Projects\\NETRA\\output\\NETRA-C93E5874-4DD.ply"
+  }
+]

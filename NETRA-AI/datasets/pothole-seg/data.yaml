@@ -1,0 +1,6 @@
+path: datasets\pothole-seg
+train: val/images
+val: val/images
+names:
+  0: pothole
+nc: 1

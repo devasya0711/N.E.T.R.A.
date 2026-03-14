@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NETRA eye icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)"/>
+  <path d="M10 32C14.8 23.3 23.1 18 32 18C40.9 18 49.2 23.3 54 32C49.2 40.7 40.9 46 32 46C23.1 46 14.8 40.7 10 32Z" fill="#ffffff"/>
+  <circle cx="32" cy="32" r="8.5" fill="#1d4ed8"/>
+  <circle cx="35.5" cy="28.5" r="2.4" fill="#ffffff"/>
+</svg>
