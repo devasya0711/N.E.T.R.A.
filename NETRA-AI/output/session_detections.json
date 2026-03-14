@@ -1,632 +1,590 @@
 [
   {
-    "pothole_id": "NETRA-6E9B6E83-C72",
-    "timestamp": "2026-03-14T14:54:04.374016+00:00",
+    "pothole_id": "NETRA-D3CC750F-FB0",
+    "timestamp": "2026-03-14T19:03:48.936739+00:00",
     "frame_index": 6,
     "gps": {
-      "latitude": 28.614322,
-      "longitude": 77.20846
+      "latitude": 28.613884,
+      "longitude": 77.208765
     },
     "detection": {
       "bbox": [
-        29,
-        0,
-        449,
-        211
+        178,
+        14,
+        640,
+        470
       ],
-      "confidence": 0.8701,
-      "area_px": 69651,
+      "confidence": 0.7047,
+      "area_px": 165944,
       "track_id": 1,
       "track_hits": 3
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 420,
-      "bbox_width_px": 421,
-      "bbox_height_px": 211
+      "diameter_px": 462,
+      "bbox_width_px": 462,
+      "bbox_height_px": 457
     },
     "severity": {
-      "score": 0.9093,
+      "score": 0.9718,
       "label": "Critical",
       "factors": {
-        "area_norm": 0.8706,
+        "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.8182
+        "traffic_norm": 0.887
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-C071C057-4C2",
+      "baseline_id": "NETRA-867238FE-854",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-5A5BB7BA-759",
-    "timestamp": "2026-03-14T14:54:05.553600+00:00",
+    "pothole_id": "NETRA-DCB3B70C-FFB",
+    "timestamp": "2026-03-14T19:03:50.593927+00:00",
     "frame_index": 9,
     "gps": {
-      "latitude": 28.613604,
-      "longitude": 77.208477
+      "latitude": 28.614101,
+      "longitude": 77.209768
     },
     "detection": {
       "bbox": [
-        26,
-        0,
-        444,
-        221
+        168,
+        11,
+        640,
+        477
       ],
-      "confidence": 0.8694,
-      "area_px": 72609,
+      "confidence": 0.6905,
+      "area_px": 173250,
       "track_id": 1,
       "track_hits": 4
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 418,
-      "bbox_width_px": 419,
-      "bbox_height_px": 221
+      "diameter_px": 472,
+      "bbox_width_px": 472,
+      "bbox_height_px": 467
     },
     "severity": {
-      "score": 0.8844,
+      "score": 0.894,
       "label": "Critical",
       "factors": {
-        "area_norm": 0.9076,
+        "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.6669
+        "traffic_norm": 0.5761
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-BCD9D062-4FF",
+      "baseline_id": "NETRA-402E1BEF-AE2",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-52A5F818-59B",
-    "timestamp": "2026-03-14T14:54:06.090684+00:00",
+    "pothole_id": "NETRA-565201A8-894",
+    "timestamp": "2026-03-14T19:03:51.164096+00:00",
     "frame_index": 12,
     "gps": {
-      "latitude": 28.614404,
-      "longitude": 77.208675
+      "latitude": 28.614509,
+      "longitude": 77.209743
     },
     "detection": {
       "bbox": [
-        29,
-        1,
-        447,
-        237
+        154,
+        6,
+        639,
+        452
       ],
-      "confidence": 0.8564,
-      "area_px": 77875,
+      "confidence": 0.6588,
+      "area_px": 170045,
       "track_id": 1,
       "track_hits": 5
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 418,
-      "bbox_width_px": 419,
-      "bbox_height_px": 237
+      "diameter_px": 484,
+      "bbox_width_px": 485,
+      "bbox_height_px": 447
     },
     "severity": {
-      "score": 0.9609,
+      "score": 0.8978,
       "label": "Critical",
       "factors": {
-        "area_norm": 0.9734,
+        "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.8808
+        "traffic_norm": 0.5913
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-F009DCBF-AA2",
+      "baseline_id": "NETRA-A1FA8B67-8CA",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-C7442B30-638",
-    "timestamp": "2026-03-14T14:54:06.605458+00:00",
+    "pothole_id": "NETRA-9D70CF82-010",
+    "timestamp": "2026-03-14T19:03:51.704834+00:00",
     "frame_index": 15,
     "gps": {
-      "latitude": 28.613941,
-      "longitude": 77.208121
+      "latitude": 28.614911,
+      "longitude": 77.209189
     },
     "detection": {
       "bbox": [
-        27,
-        5,
-        456,
-        247
+        129,
+        14,
+        640,
+        476
       ],
-      "confidence": 0.8622,
-      "area_px": 81744,
+      "confidence": 0.7648,
+      "area_px": 185441,
       "track_id": 1,
       "track_hits": 6
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 428,
-      "bbox_width_px": 429,
-      "bbox_height_px": 243
+      "diameter_px": 510,
+      "bbox_width_px": 511,
+      "bbox_height_px": 463
     },
     "severity": {
-      "score": 0.9115,
+      "score": 0.8585,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.6459
+        "traffic_norm": 0.4339
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-3B068D68-77B",
+      "baseline_id": "NETRA-0EEF5D08-D41",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-9CEE89F8-FEB",
-    "timestamp": "2026-03-14T14:54:07.132897+00:00",
+    "pothole_id": "NETRA-55D8AC7B-3F3",
+    "timestamp": "2026-03-14T19:03:52.251689+00:00",
     "frame_index": 18,
     "gps": {
-      "latitude": 28.614272,
-      "longitude": 77.208395
+      "latitude": 28.614351,
+      "longitude": 77.20912
     },
     "detection": {
       "bbox": [
-        48,
-        25,
-        458,
-        269
+        123,
+        9,
+        638,
+        478
       ],
-      "confidence": 0.8505,
-      "area_px": 79045,
+      "confidence": 0.711,
+      "area_px": 189423,
       "track_id": 1,
       "track_hits": 7
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 410,
-      "bbox_width_px": 411,
-      "bbox_height_px": 245
+      "diameter_px": 514,
+      "bbox_width_px": 515,
+      "bbox_height_px": 469
     },
     "severity": {
-      "score": 0.97,
+      "score": 0.9318,
       "label": "Critical",
       "factors": {
-        "area_norm": 0.9881,
+        "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.8967
+        "traffic_norm": 0.7272
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-99F8BA06-F7E",
+      "baseline_id": "NETRA-05DBE41C-227",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-E49EBF3C-873",
-    "timestamp": "2026-03-14T14:54:07.663508+00:00",
+    "pothole_id": "NETRA-2FF8C201-FE5",
+    "timestamp": "2026-03-14T19:03:52.801660+00:00",
     "frame_index": 21,
     "gps": {
-      "latitude": 28.614267,
-      "longitude": 77.208963
+      "latitude": 28.614262,
+      "longitude": 77.208176
     },
     "detection": {
       "bbox": [
-        58,
-        39,
-        470,
-        288
+        93,
+        15,
+        628,
+        445
       ],
-      "confidence": 0.8468,
-      "area_px": 80641,
+      "confidence": 0.6564,
+      "area_px": 180859,
       "track_id": 1,
       "track_hits": 8
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 412,
-      "bbox_width_px": 413,
-      "bbox_height_px": 249
+      "diameter_px": 534,
+      "bbox_width_px": 535,
+      "bbox_height_px": 431
     },
     "severity": {
-      "score": 0.882,
+      "score": 0.8121,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.5279
+        "traffic_norm": 0.2484
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-DEE957BB-999",
+      "baseline_id": "NETRA-D0BDA430-3CC",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-1275C8D7-28E",
-    "timestamp": "2026-03-14T14:54:08.195147+00:00",
+    "pothole_id": "NETRA-E9124FE4-CDD",
+    "timestamp": "2026-03-14T19:03:53.376240+00:00",
     "frame_index": 24,
     "gps": {
-      "latitude": 28.614241,
-      "longitude": 77.209428
+      "latitude": 28.6135,
+      "longitude": 77.20907
     },
     "detection": {
       "bbox": [
-        66,
-        55,
-        485,
-        306
+        82,
+        11,
+        601,
+        452
       ],
-      "confidence": 0.8252,
-      "area_px": 82469,
+      "confidence": 0.5528,
+      "area_px": 179489,
       "track_id": 1,
       "track_hits": 9
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 418,
-      "bbox_width_px": 419,
-      "bbox_height_px": 251
+      "diameter_px": 518,
+      "bbox_width_px": 519,
+      "bbox_height_px": 441
     },
     "severity": {
-      "score": 0.9011,
+      "score": 0.9033,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.6044
+        "traffic_norm": 0.6132
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-8E6375C8-A46",
+      "baseline_id": "NETRA-5595B377-B11",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-CB674175-2BE",
-    "timestamp": "2026-03-14T14:54:08.697089+00:00",
+    "pothole_id": "NETRA-F366781D-5D3",
+    "timestamp": "2026-03-14T19:03:53.900774+00:00",
     "frame_index": 27,
     "gps": {
-      "latitude": 28.614077,
-      "longitude": 77.208647
+      "latitude": 28.613525,
+      "longitude": 77.208809
     },
     "detection": {
       "bbox": [
-        66,
-        72,
-        491,
-        322
+        58,
+        8,
+        573,
+        445
       ],
-      "confidence": 0.8438,
-      "area_px": 83699,
+      "confidence": 0.597,
+      "area_px": 176543,
       "track_id": 1,
       "track_hits": 10
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 424,
-      "bbox_width_px": 425,
-      "bbox_height_px": 251
+      "diameter_px": 514,
+      "bbox_width_px": 515,
+      "bbox_height_px": 437
     },
     "severity": {
-      "score": 0.9677,
+      "score": 0.9085,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.871
+        "traffic_norm": 0.6341
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-57655C73-505",
+      "baseline_id": "NETRA-639DCF52-09B",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-BB481E34-2A6",
-    "timestamp": "2026-03-14T14:54:09.223603+00:00",
+    "pothole_id": "NETRA-EBD713F7-505",
+    "timestamp": "2026-03-14T19:03:54.450875+00:00",
     "frame_index": 30,
     "gps": {
-      "latitude": 28.614257,
-      "longitude": 77.208458
+      "latitude": 28.613259,
+      "longitude": 77.208795
     },
     "detection": {
       "bbox": [
-        54,
-        92,
-        507,
-        347
+        40,
+        2,
+        640,
+        460
       ],
-      "confidence": 0.8532,
-      "area_px": 90619,
+      "confidence": 0.75,
+      "area_px": 216334,
       "track_id": 1,
       "track_hits": 11
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 452,
-      "bbox_width_px": 453,
-      "bbox_height_px": 255
+      "diameter_px": 599,
+      "bbox_width_px": 600,
+      "bbox_height_px": 459
     },
     "severity": {
-      "score": 0.912,
+      "score": 0.8998,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.6479
+        "traffic_norm": 0.5992
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-40C410C6-973",
+      "baseline_id": "NETRA-75955E43-64D",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-5FFFBA65-9D4",
-    "timestamp": "2026-03-14T14:54:09.752825+00:00",
+    "pothole_id": "NETRA-37088BF0-E7C",
+    "timestamp": "2026-03-14T19:03:55.021912+00:00",
     "frame_index": 33,
     "gps": {
-      "latitude": 28.614027,
-      "longitude": 77.208538
+      "latitude": 28.613463,
+      "longitude": 77.20909
     },
     "detection": {
       "bbox": [
-        67,
-        114,
-        493,
-        376
+        22,
+        3,
+        640,
+        474
       ],
-      "confidence": 0.8452,
-      "area_px": 88055,
+      "confidence": 0.5044,
+      "area_px": 228692,
       "track_id": 1,
       "track_hits": 12
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 426,
-      "bbox_width_px": 427,
-      "bbox_height_px": 263
+      "diameter_px": 617,
+      "bbox_width_px": 618,
+      "bbox_height_px": 471
     },
     "severity": {
-      "score": 0.8742,
+      "score": 0.8415,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.4967
+        "traffic_norm": 0.3661
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-0F710142-D0D",
+      "baseline_id": "NETRA-5595B377-B11",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-6BD37406-2AB",
-    "timestamp": "2026-03-14T14:54:10.306331+00:00",
+    "pothole_id": "NETRA-B84D9B7D-3E3",
+    "timestamp": "2026-03-14T19:03:55.606507+00:00",
     "frame_index": 36,
     "gps": {
-      "latitude": 28.614825,
-      "longitude": 77.209378
+      "latitude": 28.614395,
+      "longitude": 77.209574
     },
     "detection": {
       "bbox": [
-        52,
-        139,
-        515,
-        415
+        1,
+        0,
+        634,
+        483
       ],
-      "confidence": 0.8274,
-      "area_px": 100577,
+      "confidence": 0.4176,
+      "area_px": 239729,
       "track_id": 1,
       "track_hits": 13
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 462,
-      "bbox_width_px": 463,
-      "bbox_height_px": 277
+      "diameter_px": 632,
+      "bbox_width_px": 633,
+      "bbox_height_px": 483
     },
     "severity": {
-      "score": 0.8997,
+      "score": 0.8743,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.5986
+        "traffic_norm": 0.4973
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-5992A7A9-42D",
+      "baseline_id": "NETRA-E4680BC6-896",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-6C3B71D1-1D1",
-    "timestamp": "2026-03-14T14:54:10.825991+00:00",
+    "pothole_id": "NETRA-A0CD1CD0-180",
+    "timestamp": "2026-03-14T19:03:56.131444+00:00",
     "frame_index": 39,
     "gps": {
-      "latitude": 28.614743,
-      "longitude": 77.208462
+      "latitude": 28.613281,
+      "longitude": 77.208631
     },
     "detection": {
       "bbox": [
-        54,
-        167,
-        501,
-        442
+        2,
+        0,
+        615,
+        440
       ],
-      "confidence": 0.8046,
-      "area_px": 96438,
+      "confidence": 0.4121,
+      "area_px": 212025,
       "track_id": 1,
       "track_hits": 14
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 446,
-      "bbox_width_px": 447,
-      "bbox_height_px": 275
+      "diameter_px": 612,
+      "bbox_width_px": 613,
+      "bbox_height_px": 441
     },
     "severity": {
-      "score": 0.8864,
+      "score": 0.9243,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.5456
+        "traffic_norm": 0.6971
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-A30C8952-57B",
+      "baseline_id": "NETRA-76F57F24-E56",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-FC94FDFA-380",
-    "timestamp": "2026-03-14T14:54:11.363312+00:00",
+    "pothole_id": "NETRA-1242089A-646",
+    "timestamp": "2026-03-14T19:03:56.710054+00:00",
     "frame_index": 42,
     "gps": {
-      "latitude": 28.614455,
-      "longitude": 77.209362
+      "latitude": 28.614222,
+      "longitude": 77.20929
     },
     "detection": {
       "bbox": [
-        52,
-        195,
-        500,
-        472
+        2,
+        0,
+        631,
+        500
       ],
-      "confidence": 0.8102,
-      "area_px": 97575,
+      "confidence": 0.6423,
+      "area_px": 247231,
       "track_id": 1,
       "track_hits": 15
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 448,
-      "bbox_width_px": 449,
-      "bbox_height_px": 277
+      "diameter_px": 628,
+      "bbox_width_px": 629,
+      "bbox_height_px": 501
     },
     "severity": {
-      "score": 0.9093,
+      "score": 0.9345,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.6373
+        "traffic_norm": 0.738
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-79861438-E34",
+      "baseline_id": "NETRA-6ECA23C5-308",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
     }
   },
   {
-    "pothole_id": "NETRA-E8DCF0E9-F92",
-    "timestamp": "2026-03-14T14:54:11.896377+00:00",
+    "pothole_id": "NETRA-E0AF1501-9D5",
+    "timestamp": "2026-03-14T19:03:57.346200+00:00",
     "frame_index": 45,
     "gps": {
-      "latitude": 28.61406,
-      "longitude": 77.20936
+      "latitude": 28.613764,
+      "longitude": 77.207962
     },
     "detection": {
       "bbox": [
-        53,
-        217,
-        493,
-        501
+        0,
+        0,
+        632,
+        515
       ],
-      "confidence": 0.7769,
-      "area_px": 98589,
+      "confidence": 0.6174,
+      "area_px": 255724,
       "track_id": 1,
       "track_hits": 16
     },
     "depth": {
       "max_depth_rel": 1.0,
       "mean_depth_rel": 1.0,
-      "diameter_px": 440,
-      "bbox_width_px": 441,
-      "bbox_height_px": 285
+      "diameter_px": 632,
+      "bbox_width_px": 633,
+      "bbox_height_px": 515
     },
     "severity": {
-      "score": 0.9647,
+      "score": 0.9476,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.8587
+        "traffic_norm": 0.7903
       }
     },
     "loop_closure": {
       "status": "PERSISTS",
-      "baseline_id": "NETRA-BE7A0706-335",
+      "baseline_id": "NETRA-1F492E82-162",
       "action": "Escalate priority \u2014 pothole persists (severity Critical)."
-    }
-  },
-  {
-    "pothole_id": "NETRA-0A53AEC1-24E",
-    "timestamp": "2026-03-14T14:54:11.908075+00:00",
-    "frame_index": 45,
-    "gps": {
-      "latitude": 28.612534,
-      "longitude": 77.208578
-    },
-    "detection": {
-      "bbox": [
-        313,
-        48,
-        457,
-        129
-      ],
-      "confidence": 0.6691,
-      "area_px": 9209,
-      "track_id": 3,
-      "track_hits": 3
-    },
-    "depth": {
-      "max_depth_rel": 1.0,
-      "mean_depth_rel": 1.0,
-      "diameter_px": 144,
-      "bbox_width_px": 145,
-      "bbox_height_px": 81
-    },
-    "severity": {
-      "score": 0.6164,
-      "label": "Moderate",
-      "factors": {
-        "area_norm": 0.1151,
-        "depth_norm": 1.0,
-        "traffic_norm": 0.7044
-      }
-    },
-    "loop_closure": {
-      "status": "PERSISTS",
-      "baseline_id": "NETRA-06C01308-D0A",
-      "action": "Escalate priority \u2014 pothole persists (severity Moderate)."
     }
   }
 ]

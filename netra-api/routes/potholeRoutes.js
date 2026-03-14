@@ -133,19 +133,32 @@ router.post("/", async (req, res, next) => {
 
     // Auto-Escalation to CPGRAMS if critical
     if (severityScore >= 8 || dangerIndex > 75) {
-      console.log(`[NETRA-CORE] High severity detected (Score: ${severityScore}, Danger: ${dangerIndex}). Triggering CPGRAMS auto-escalation...`);
-      const officialGrievanceId = await fileComplaint({
-        potholeId: resolvedId,
-        location,
-        locationDescription,
-        highwayName,
-        severityScore,
-        dangerIndex,
-        depthCm
+      // Enforce daily limit of 5 complaints to CPGRAMS
+      const startOfToday = new Date();
+      startOfToday.setHours(0, 0, 0, 0);
+
+      const escalatedTodayCount = await Pothole.countDocuments({
+        grievanceId: { $type: "string", $ne: "" },
+        createdAt: { $gte: startOfToday }
       });
-      if (officialGrievanceId) {
-        grievanceId = officialGrievanceId; // Overwrite internal/empty ID with official CPGRAMS ID
-        status = "Escalated"; // Automatically escalate it
+
+      if (escalatedTodayCount >= 5) {
+        console.log(`[NETRA-CORE] ⚠️ CPGRAMS daily limit of 5 reached. Skipping auto-escalation for ${resolvedId}.`);
+      } else {
+        console.log(`[NETRA-CORE] High severity detected (Score: ${severityScore}, Danger: ${dangerIndex}). Triggering CPGRAMS auto-escalation... (${escalatedTodayCount}/5 today)`);
+        const officialGrievanceId = await fileComplaint({
+          potholeId: resolvedId,
+          location,
+          locationDescription,
+          highwayName,
+          severityScore,
+          dangerIndex,
+          depthCm
+        });
+        if (officialGrievanceId) {
+          grievanceId = officialGrievanceId; // Overwrite internal ID with official CPGRAMS ID
+          status = "Escalated"; // Automatically escalate it
+        }
       }
     }
 

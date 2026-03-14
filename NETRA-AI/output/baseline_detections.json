@@ -1642,12 +1642,12 @@
       "bbox_height_px": 91
     },
     "severity": {
-      "score": 0.3814,
-      "label": "Moderate",
+      "score": 0.894,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.1612,
-        "depth_norm": 0.5311,
-        "traffic_norm": 0.4503
+        "area_norm": 1.0,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5761
       }
     },
     "loop_closure": {
@@ -1655,7 +1655,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:27:43.082034+00:00",
+    "_last_seen": "2026-03-14T19:03:50.594166+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:28:07.711891+00:00"
   },
@@ -1732,12 +1732,12 @@
       "bbox_height_px": 91
     },
     "severity": {
-      "score": 0.4694,
-      "label": "Moderate",
+      "score": 0.8743,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.0473,
-        "depth_norm": 0.7427,
-        "traffic_norm": 0.6233
+        "area_norm": 1.0,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.4973
       }
     },
     "loop_closure": {
@@ -1745,7 +1745,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:28:06.931777+00:00",
+    "_last_seen": "2026-03-14T19:03:55.606754+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:25:19.439298+00:00"
   },
@@ -1867,12 +1867,12 @@
       "bbox_height_px": 199
     },
     "severity": {
-      "score": 0.8459,
+      "score": 0.9345,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.3837
+        "traffic_norm": 0.738
       }
     },
     "loop_closure": {
@@ -1882,7 +1882,7 @@
     },
     "_closed": true,
     "_closed_at": "2026-03-14T06:17:04.536192+00:00",
-    "_last_seen": "2026-03-14T12:34:20.711785+00:00"
+    "_last_seen": "2026-03-14T19:03:56.710307+00:00"
   },
   {
     "pothole_id": "NETRA-69BC22D9-14A",
@@ -2583,12 +2583,12 @@
       "bbox_height_px": 220
     },
     "severity": {
-      "score": 0.7262,
+      "score": 0.8978,
       "label": "Critical",
       "factors": {
-        "area_norm": 0.5127,
-        "depth_norm": 0.8152,
-        "traffic_norm": 0.8825
+        "area_norm": 1.0,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5913
       }
     },
     "loop_closure": {
@@ -2596,7 +2596,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-13T21:09:49.198955+00:00",
+    "_last_seen": "2026-03-14T19:03:51.164333+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:27:08.801264+00:00"
   },
@@ -3708,12 +3708,12 @@
       "bbox_height_px": 216
     },
     "severity": {
-      "score": 0.9375,
+      "score": 0.9718,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.75
+        "traffic_norm": 0.887
       }
     },
     "loop_closure": {
@@ -3721,7 +3721,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T13:59:27.579420+00:00",
+    "_last_seen": "2026-03-14T19:03:48.937027+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:27:38.237921+00:00"
   },
@@ -3933,12 +3933,12 @@
       "bbox_height_px": 75
     },
     "severity": {
-      "score": 0.6457,
-      "label": "Moderate",
+      "score": 0.9318,
+      "label": "Critical",
       "factors": {
         "area_norm": 1.0,
-        "depth_norm": 0.6046,
-        "traffic_norm": 0.2155
+        "depth_norm": 1.0,
+        "traffic_norm": 0.7272
       }
     },
     "loop_closure": {
@@ -3946,7 +3946,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:25:58.062327+00:00",
+    "_last_seen": "2026-03-14T19:03:52.251939+00:00",
     "_closed": true,
     "_closed_at": "2026-03-13T21:08:06.538984+00:00"
   },
@@ -4608,12 +4608,12 @@
       "bbox_height_px": 89
     },
     "severity": {
-      "score": 0.858,
+      "score": 0.9085,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.4319
+        "traffic_norm": 0.6341
       }
     },
     "loop_closure": {
@@ -4621,7 +4621,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T13:36:21.499148+00:00",
+    "_last_seen": "2026-03-14T19:03:53.901007+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:27:39.428403+00:00"
   },
@@ -4833,12 +4833,12 @@
       "bbox_height_px": 123
     },
     "severity": {
-      "score": 0.6383,
-      "label": "Moderate",
+      "score": 0.9243,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.2024,
+        "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.67
+        "traffic_norm": 0.6971
       }
     },
     "loop_closure": {
@@ -4846,7 +4846,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T13:36:21.510307+00:00",
+    "_last_seen": "2026-03-14T19:03:56.131677+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:25:46.561695+00:00"
   },
@@ -7743,12 +7743,12 @@
       "bbox_height_px": 188
     },
     "severity": {
-      "score": 0.6134,
-      "label": "Moderate",
+      "score": 0.8121,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.1245,
+        "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.6793
+        "traffic_norm": 0.2484
       }
     },
     "loop_closure": {
@@ -7758,7 +7758,7 @@
     },
     "_closed": true,
     "_closed_at": "2026-03-14T06:26:17.507916+00:00",
-    "_last_seen": "2026-03-14T10:41:03.182179+00:00"
+    "_last_seen": "2026-03-14T19:03:52.801903+00:00"
   },
   {
     "pothole_id": "NETRA-C5C7AEDC-2CB",
@@ -10386,12 +10386,12 @@
       "bbox_height_px": 220
     },
     "severity": {
-      "score": 0.801,
+      "score": 0.8415,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.2039
+        "traffic_norm": 0.3661
       }
     },
     "loop_closure": {
@@ -10399,7 +10399,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T13:59:22.215713+00:00",
+    "_last_seen": "2026-03-14T19:03:55.022145+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:28:17.650188+00:00"
   },
@@ -11408,12 +11408,12 @@
       "bbox_height_px": 97
     },
     "severity": {
-      "score": 0.8732,
+      "score": 0.8585,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.4926
+        "traffic_norm": 0.4339
       }
     },
     "loop_closure": {
@@ -11421,7 +11421,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T14:04:31.817836+00:00",
+    "_last_seen": "2026-03-14T19:03:51.705088+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:16:04.400606+00:00"
   },
@@ -11498,12 +11498,12 @@
       "bbox_height_px": 33
     },
     "severity": {
-      "score": 0.8227,
+      "score": 0.8998,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.2908
+        "traffic_norm": 0.5992
       }
     },
     "loop_closure": {
@@ -11511,7 +11511,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T13:36:22.627340+00:00",
+    "_last_seen": "2026-03-14T19:03:54.451124+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:13:32.510528+00:00"
   },
@@ -13768,12 +13768,12 @@
       "bbox_height_px": 79
     },
     "severity": {
-      "score": 0.3956,
-      "label": "Moderate",
+      "score": 0.9476,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.0519,
-        "depth_norm": 0.6989,
-        "traffic_norm": 0.3916
+        "area_norm": 1.0,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.7903
       }
     },
     "loop_closure": {
@@ -13783,7 +13783,7 @@
     },
     "_closed": true,
     "_closed_at": "2026-03-13T16:36:40.328937+00:00",
-    "_last_seen": "2026-03-14T06:25:22.631527+00:00"
+    "_last_seen": "2026-03-14T19:03:57.346438+00:00"
   },
   {
     "pothole_id": "NETRA-39E852F9-524",
