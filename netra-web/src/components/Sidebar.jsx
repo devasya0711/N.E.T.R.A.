@@ -25,6 +25,18 @@ const NAV_ITEMS = [
     ),
   },
   {
+    to: "/dashboard/dashcam",
+    label: "AI Analysis",
+    group: "core",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5">
+        <path d="M2 8a2 2 0 012-2h11a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8z" />
+        <path d="M17 10l4-2v8l-4-2" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="9.5" cy="12" r="2.5" />
+      </svg>
+    ),
+  },
+  {
     to: "/dashboard/database",
     label: "Pothole Database",
     group: "core",

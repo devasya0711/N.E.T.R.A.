@@ -80,7 +80,24 @@ class NETRAPipeline:
         tmp_path = config.OUTPUT_DIR / "live_meta.tmp.json"
         with open(tmp_path, "w", encoding="utf-8") as mf:
             json.dump(payload, mf)
-        os.replace(tmp_path, self._live_meta_path)
+
+        # On Windows, frequent polling can briefly lock live_meta.json.
+        # Retry replace a few times; if still locked, fall back to direct write.
+        for _ in range(5):
+            try:
+                os.replace(tmp_path, self._live_meta_path)
+                return
+            except PermissionError:
+                time.sleep(0.02)
+
+        with open(self._live_meta_path, "w", encoding="utf-8") as mf:
+            json.dump(payload, mf)
+
+        if tmp_path.exists():
+            try:
+                tmp_path.unlink()
+            except OSError:
+                pass
 
     def _update_progress_meta(
         self,

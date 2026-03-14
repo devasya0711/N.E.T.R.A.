@@ -595,8 +595,34 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
   const aiDir = path.resolve(__dirname, "../../NETRA-AI");
   
   const isImage = /\.(jpg|jpeg|png|bmp)$/i.test(req.file.originalname);
+  const liveMetaPath = path.resolve(aiDir, "output/live_meta.json");
   
   console.log(`[NETRA-API] Starting AI analysis on ${videoPath}`);
+
+  // Reset progress metadata at request start so UI never reuses previous run's 100% snapshot.
+  try {
+    fs.mkdirSync(path.dirname(liveMetaPath), { recursive: true });
+    fs.writeFileSync(
+      liveMetaPath,
+      JSON.stringify(
+        {
+          sourceFps: 0,
+          previewTargetFps: 0,
+          realtimeMode: true,
+          sourceType: isImage ? "image" : "video",
+          totalFrames: 0,
+          processedFrames: 0,
+          progressPct: 0,
+          done: false,
+          updatedAt: Date.now() / 1000,
+        },
+        null,
+        0
+      )
+    );
+  } catch (metaErr) {
+    console.warn("[NETRA-API] Failed to reset live_meta.json", metaErr);
+  }
 
   // Spawn the python process
   // Adjust 'python' to 'python3' if needed, but since user is on Windows running 'python', we use 'python'

@@ -13,6 +13,7 @@ import ComplaintTrackerPage  from "./pages/ComplaintTrackerPage";
 import CitizenPortalPage     from "./pages/CitizenPortalPage";
 import HighwayIndexPage      from "./pages/HighwayIndexPage";
 import DashboardPage         from "./pages/DashboardPage";
+import DashcamAnalysisPage   from "./pages/DashcamAnalysisPage";
 import { ComplaintProvider }  from "./context/ComplaintContext";
 
 function DashboardShell() {
@@ -31,6 +32,7 @@ function DashboardShell() {
           <div className="p-8">
             <Routes>
               <Route index                    element={<DashboardPage />}        />
+              <Route path="dashcam"           element={<DashcamAnalysisPage />}  />
               <Route path="livemap"           element={<LiveMapPage />}          />
               <Route path="database"          element={<DatabasePage />}         />
               <Route path="heatmaps"          element={<HeatmapPage />}          />

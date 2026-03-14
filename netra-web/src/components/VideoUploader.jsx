@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import { useStats } from "../hooks/usePotholes";
@@ -15,6 +15,7 @@ export default function VideoUploader() {
   
   const [resultUrl, setResultUrl] = useState(null);
   const [analysisStats, setAnalysisStats] = useState(null);
+  const uploadStartedAtRef = useRef(0);
 
   const handleExportPdfReport = () => {
     if (!analysisStats?.potholesList?.length) return;
@@ -98,6 +99,15 @@ export default function VideoUploader() {
         if (!res.ok || res.status !== 200) return;
 
         const meta = await res.json();
+        const metaUpdatedAtMs = Number(meta?.updatedAt || 0) * 1000;
+        if (
+          uploadStartedAtRef.current > 0 &&
+          metaUpdatedAtMs > 0 &&
+          metaUpdatedAtMs + 250 < uploadStartedAtRef.current
+        ) {
+          return;
+        }
+
         const total = Number(meta?.totalFrames || 0);
         const processed = Number(meta?.processedFrames || 0);
 
@@ -139,12 +149,14 @@ export default function VideoUploader() {
       setFrameProgress({ processed: 0, total: 0 });
       setLog("");
       setResultUrl(null);
+      uploadStartedAtRef.current = 0;
     }
   };
 
   const handleUpload = async () => {
     if (!file) return;
 
+    uploadStartedAtRef.current = Date.now();
     setStatus("uploading");
     setProgress(0);
     setFrameProgress({ processed: 0, total: 0 });
@@ -222,7 +234,7 @@ export default function VideoUploader() {
   };
 
   return (
-    <div className="netra-panel p-5 mb-6">
+    <div className="netra-panel p-4 md:p-6 mb-6 bg-gradient-to-b from-[#f8fafc] to-[#f1f5f9] rounded-2xl border border-slate-200/80">
       <style>{`
         .eye-blink-slow {
           animation: netraEyeBlink 8s ease-in-out infinite;
@@ -234,6 +246,22 @@ export default function VideoUploader() {
         .progress-sheen {
           background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 45%, rgba(255,255,255,0) 100%);
           animation: netraSheen 1.8s linear infinite;
+        }
+        .progress-indeterminate {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        .progress-indeterminate::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          width: 34%;
+          border-radius: 9999px;
+          background: linear-gradient(90deg, #93c5fd 0%, #3b82f6 55%, #1d4ed8 100%);
+          box-shadow: 0 0 16px rgba(59, 130, 246, 0.35);
+          animation: netraIndeterminateSlide 1.2s ease-in-out infinite;
         }
         @keyframes netraEyeBlink {
           0%, 44%, 48%, 92%, 100% { transform: scaleY(1); }
@@ -247,92 +275,110 @@ export default function VideoUploader() {
           0% { transform: translateX(-120%); }
           100% { transform: translateX(140%); }
         }
+        @keyframes netraIndeterminateSlide {
+          0% { transform: translateX(-120%); }
+          100% { transform: translateX(320%); }
+        }
+        .netra-log-box {
+          background: linear-gradient(180deg, #0b1733 0%, #0a1a3f 100%);
+          color: #c7e3ff;
+          border: 1px solid rgba(96, 165, 250, 0.2);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        }
       `}</style>
-      <h2 className="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
-        <span className="relative inline-flex items-center justify-center w-7 h-7">
-          <svg viewBox="0 0 64 40" className="w-7 h-7 text-blue-600 eye-blink-slow" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M4 20C10 10 20 4 32 4C44 4 54 10 60 20C54 30 44 36 32 36C20 36 10 30 4 20Z" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-            <circle cx="32" cy="20" r="8" fill="currentColor"/>
-            <circle cx="35" cy="17" r="2" fill="white"/>
-          </svg>
-          <span className="absolute inline-flex h-full w-full rounded-full bg-blue-300 eye-aura-slow"></span>
-        </span>
-        NETRA-AI Dashcam & Image Analysis
-      </h2>
-      <p className="text-sm text-slate-500 mb-4">
-        Upload a dashcam video or image directly to the NETRA pipeline for live AI segmentation, depth-estimation, and severity tracking. Detected potholes will automatically sync to the database and map.
-      </p>
+      <section className="rounded-2xl border border-blue-100 bg-white/90 backdrop-blur-sm shadow-sm p-4 md:p-6">
+        <h2 className="text-xl font-extrabold text-slate-800 mb-3 flex items-center gap-2 tracking-tight">
+          <span className="relative inline-flex items-center justify-center w-8 h-8">
+            <svg viewBox="0 0 64 40" className="w-8 h-8 text-blue-600 eye-blink-slow" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 20C10 10 20 4 32 4C44 4 54 10 60 20C54 30 44 36 32 36C20 36 10 30 4 20Z" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <circle cx="32" cy="20" r="8" fill="currentColor"/>
+              <circle cx="35" cy="17" r="2" fill="white"/>
+            </svg>
+            <span className="absolute inline-flex h-full w-full rounded-full bg-blue-300 eye-aura-slow"></span>
+          </span>
+          NETRA-AI Dashcam & Image Analysis
+        </h2>
+        <p className="text-[15px] leading-relaxed text-slate-600">
+          Upload a dashcam video or image directly to the NETRA pipeline for live AI segmentation, depth-estimation, and severity tracking. Detected potholes will automatically sync to the database and map.
+        </p>
 
-      <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-        <label className="flex-1 cursor-pointer w-full border-2 border-dashed border-slate-300 hover:border-slate-400 bg-slate-50 hover:bg-slate-100 transition-colors rounded-lg flex flex-col justify-center items-center p-4 min-h-[160px]">
-          <input
-            type="file"
-            accept="video/*,image/*"
-            className="hidden"
-            onChange={handleFileChange}
-          />
-          {!file && (
-            <span className="text-sm font-medium text-slate-600">
-              Click/Tap to select a video (.mp4, .avi) or image (.jpg, .png)
-            </span>
-          )}
-          
-          {file && preview && file.type.startsWith("image/") && (
-            <img src={preview} alt="Preview" className="max-h-32 object-contain rounded" />
-          )}
+        <div className="mt-5 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-4 items-stretch">
+          <label className="cursor-pointer w-full border-2 border-dashed border-blue-200 hover:border-blue-400 bg-gradient-to-b from-slate-50 to-blue-50/40 hover:from-blue-50 hover:to-blue-100/40 transition-colors rounded-xl flex flex-col justify-center items-center p-5 min-h-[180px]">
+            <input
+              type="file"
+              accept="video/*,image/*"
+              className="hidden"
+              onChange={handleFileChange}
+            />
+            {!file && (
+              <span className="text-sm font-semibold text-slate-700 text-center">
+                Click/Tap to select a video (.mp4, .avi) or image (.jpg, .png)
+              </span>
+            )}
 
-          {file && preview && file.type.startsWith("video/") && (
-            <video src={preview} controls className="max-h-32 object-contain rounded" />
-          )}
+            {file && preview && file.type.startsWith("image/") && (
+              <img src={preview} alt="Preview" className="max-h-36 object-contain rounded-md shadow-sm" />
+            )}
 
-          {file && (
-             <span className="text-xs font-medium text-slate-500 mt-2">
-               Selected: {file.name}
-             </span>
-          )}
-        </label>
+            {file && preview && file.type.startsWith("video/") && (
+              <video src={preview} controls className="max-h-36 object-contain rounded-md shadow-sm" />
+            )}
 
-        <button
-          onClick={handleUpload}
-          disabled={!file || status === "uploading" || status === "analyzing"}
-          className={`px-6 py-4 rounded-lg font-bold text-white transition-all shadow-md ${
-            !file || status === "uploading" || status === "analyzing"
-              ? "bg-slate-400 cursor-not-allowed"
-              : "bg-blue-600 hover:bg-blue-700 hover:shadow-lg"
-          }`}
-        >
-          {status === "uploading" && "Uploading to API..."}
-          {status === "analyzing" && "AI Processing (Please wait)..."}
-          {status === "idle" && "Run Diagnostics"}
-          {status === "success" && "Analyzed!"}
-          {status === "error" && "Retry Upload"}
-        </button>
-      </div>
+            {file && (
+              <span className="text-sm font-semibold text-slate-600 mt-3">
+                Selected: {file.name}
+              </span>
+            )}
+          </label>
+
+          <div className="flex items-center lg:items-stretch">
+            <button
+              onClick={handleUpload}
+              disabled={!file || status === "uploading" || status === "analyzing"}
+              className={`w-full lg:w-auto min-w-[190px] px-6 py-4 rounded-xl font-extrabold text-white transition-all shadow-md ${
+                !file || status === "uploading" || status === "analyzing"
+                  ? "bg-slate-400/90 cursor-not-allowed"
+                  : "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 hover:shadow-lg"
+              }`}
+            >
+              {status === "uploading" && "Uploading to API..."}
+              {status === "analyzing" && "AI Processing (Please wait)..."}
+              {status === "idle" && "Run Diagnostics"}
+              {status === "success" && "Analyzed!"}
+              {status === "error" && "Retry Upload"}
+            </button>
+          </div>
+        </div>
+      </section>
 
       {(status === "uploading" || status === "analyzing") && (
-          <div className="mt-6 p-8 rounded-xl bg-white border border-slate-200 shadow-sm flex flex-col items-center w-full max-w-2xl mx-auto">
+          <div className="mt-6 p-6 md:p-8 rounded-2xl bg-gradient-to-b from-white to-blue-50/40 border border-blue-100 shadow-sm flex flex-col items-center w-full">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-6 h-6 rounded-full border-4 border-blue-100 border-t-blue-600 animate-spin"></div>
               <h3 className="text-lg font-bold text-slate-800">Processing {mediaType}...</h3>
             </div>
             
-            <p className="text-sm text-slate-500 mb-6 text-center">
+            <p className="text-sm text-slate-600 mb-6 text-center">
               Our AI engine is currently analyzing the {mediaType.toLowerCase()} feed for road anomalies, estimating depths, and mapping locations. This may take a few moments depending on the {mediaType.toLowerCase()} size.
             </p>
 
             <div className="w-full mb-2">
               <div className="w-full rounded-full h-4 bg-blue-50 border border-blue-200 overflow-hidden shadow-inner">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-300 relative"
-                  style={{ width: `${progress}%` }}
-                >
-                  <div className="progress-sheen absolute inset-0"></div>
-                </div>
+                {frameProgress.total > 0 ? (
+                  <div
+                    className="h-full rounded-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-300 relative"
+                    style={{ width: `${progress}%` }}
+                  >
+                    <div className="progress-sheen absolute inset-0"></div>
+                  </div>
+                ) : (
+                  <div className="progress-indeterminate" aria-hidden="true"></div>
+                )}
               </div>
             </div>
 
-            <div className="w-full flex items-center justify-between text-sm font-semibold text-blue-700">
-              <p>{progress}%</p>
+            <div className="w-full flex items-center justify-between text-sm font-semibold text-blue-800">
+              <p>{frameProgress.total > 0 ? `${progress}%` : ""}</p>
               <p>
                 {frameProgress.total > 0
                   ? `${Math.min(frameProgress.processed, frameProgress.total)} / ${frameProgress.total} frames`
@@ -340,24 +386,24 @@ export default function VideoUploader() {
               </p>
             </div>
             
-            <p className="text-xs text-blue-600 font-semibold animate-pulse uppercase tracking-wider mt-2">
+            <p className="text-xs text-blue-700 font-semibold animate-pulse uppercase tracking-wider mt-2">
               Neural Network Active
             </p>
           </div>
       )}
 
       {resultUrl && (
-        <div className="mt-4 p-4 rounded-md border border-slate-200 bg-slate-50 flex flex-col items-center">
-          <h4 className="text-sm font-bold text-slate-800 mb-2">AI Detection Output</h4>
+        <div className="mt-6 p-4 md:p-6 rounded-2xl border border-blue-100 bg-gradient-to-b from-white to-slate-50 shadow-sm">
+          <h4 className="text-lg font-extrabold text-slate-800 mb-4 text-center">AI Detection Output</h4>
           {analysisStats && (
-            <div className="w-full flex flex-col items-center mb-4">
-              <div className="flex items-center gap-4 px-4 py-2 bg-green-100 border border-green-300 rounded-lg text-green-800 font-semibold w-full justify-between shadow-sm">
+            <div className="w-full flex flex-col items-center mb-5">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 px-4 py-3 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900 font-semibold w-full justify-between shadow-sm">
                 <span>Total Unique Potholes Found: {analysisStats.total}</span>
                 {analysisStats.potholesList && analysisStats.potholesList.length > 0 && (
                   <button
                     type="button"
                     onClick={handleExportPdfReport}
-                    className="px-3 py-1.5 bg-green-600 text-white rounded text-sm hover:bg-green-700 transition flex items-center gap-2 shadow-sm cursor-pointer"
+                    className="px-3 py-2 bg-emerald-600 text-white rounded-lg text-sm hover:bg-emerald-700 transition flex items-center gap-2 shadow-sm cursor-pointer"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     Export Report
@@ -369,7 +415,7 @@ export default function VideoUploader() {
                 <div className="w-full mt-4 bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
                   <div className="overflow-x-auto max-h-64">
                     <table className="w-full text-left border-collapse text-sm">
-                      <thead className="bg-slate-100 text-slate-700 sticky top-0 font-medium">
+                      <thead className="bg-slate-100 text-slate-700 sticky top-0 font-semibold">
                         <tr>
                           <th className="p-3 border-b">ID</th>
                           <th className="p-3 border-b">Severity</th>
@@ -381,7 +427,7 @@ export default function VideoUploader() {
                       </thead>
                       <tbody className="divide-y divide-slate-100">
                         {analysisStats.potholesList.map((ph, idx) => (
-                          <tr key={idx} className="hover:bg-slate-50 transition-colors">
+                          <tr key={idx} className="hover:bg-blue-50/50 transition-colors">
                             <td className="p-3 font-mono text-xs text-blue-600 font-medium">{ph.pothole_id}</td>
                             <td className="p-3">
                               <span className={`px-2 py-1 rounded text-xs font-semibold ${
@@ -413,27 +459,29 @@ export default function VideoUploader() {
               )}
             </div>
           )}
-          {resultUrl.endsWith(".jpg") || resultUrl.includes(".jpg") ? (
-             <img src={resultUrl} alt="Annotated Result" className="max-h-64 object-contain rounded mb-3 shadow-sm border border-slate-300" />
-          ) : (
-             <video src={resultUrl} controls className="max-h-64 object-contain rounded mb-3 shadow-sm border border-slate-300" />
-          )}
-          <a
-            href={resultUrl}
-            download
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-slate-800 text-white rounded text-sm hover:bg-slate-700 transition"
-          >
-            Download Processed File
-          </a>
+          <div className="w-full rounded-xl border border-slate-200 bg-slate-50 p-3 md:p-4 flex flex-col items-center">
+            {resultUrl.endsWith(".jpg") || resultUrl.includes(".jpg") ? (
+               <img src={resultUrl} alt="Annotated Result" className="max-h-72 object-contain rounded-md mb-4 shadow-sm border border-slate-300" />
+            ) : (
+               <video src={resultUrl} controls className="max-h-72 object-contain rounded-md mb-4 shadow-sm border border-slate-300" />
+            )}
+            <a
+              href={resultUrl}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-gradient-to-r from-slate-800 to-slate-700 text-white rounded-lg text-sm font-semibold hover:from-slate-700 hover:to-slate-600 transition"
+            >
+              Download Processed File
+            </a>
+          </div>
         </div>
       )}
 
       {log && (
-        <div className="mt-4">
-          <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Process Logs</h4>
-          <pre className="bg-[#0f172a] text-[#38bdf8] p-4 rounded-md text-xs overflow-x-auto overflow-y-auto max-h-64 whitespace-pre-wrap">
+        <div className="mt-6 rounded-2xl border border-blue-100 bg-white/90 p-4 md:p-5 shadow-sm">
+          <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2">Process Logs</h4>
+          <pre className="netra-log-box p-4 rounded-lg text-xs leading-relaxed overflow-x-auto overflow-y-auto max-h-64 whitespace-pre-wrap">
             {log}
           </pre>
         </div>
