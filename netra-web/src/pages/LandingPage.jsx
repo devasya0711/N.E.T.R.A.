@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { SignInButton, useUser } from "@clerk/react";
+import { useRole } from "../context/RoleContext";
 
 // ─── Animated counter hook ────────────────────────────────────────────────────
 function useCounter(target, duration = 2000, start = false) {
@@ -87,6 +88,7 @@ const STATS_DATA = [
 // ─── Main component ───────────────────────────────────────────────────────────
 export default function LandingPage() {
   const { isSignedIn } = useUser();
+  const { setRole } = useRole();
   const navigate = useNavigate();
   const [statsRef, statsInView] = useInView(0.1);
 
@@ -137,43 +139,96 @@ export default function LandingPage() {
             <strong className="text-white font-semibold">N.E.T.R.A. (Networked Edge Tracking For Road Anomalies)</strong> — detects potholes via AI, scores their risk, and auto-files grievances. No human trigger. No complaint lost.
           </p>
 
-          {/* CTA row */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          {/* Role selection label */}
+          <p className="text-[11px] text-white/50 uppercase tracking-[0.25em] font-semibold pt-4 mb-0">
+            Choose your portal
+          </p>
+
+          {/* CTA row — Admin + Citizen buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-1">
+            {/* ── Admin Portal Button ── */}
             {isSignedIn ? (
               <button
-                onClick={() => navigate("/dashboard")}
-                className="group relative px-8 py-4 rounded-xl font-bold text-sm tracking-wider text-gray-300 transition-all duration-300 overflow-hidden bg-transparent hover:bg-white/15 hover:text-white hover:shadow-lg backdrop-blur-sm hover:backdrop-blur-md border border-white/25 hover:border-white/20"
+                onClick={() => { setRole("admin"); navigate("/dashboard"); }}
+                className="group relative px-8 py-4 rounded-xl font-bold text-sm tracking-wider transition-all duration-300 overflow-hidden backdrop-blur-md border"
+                style={{ background: "rgba(30,58,138,0.35)", borderColor: "rgba(30,58,138,0.5)" }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(30,58,138,0.55)"; e.currentTarget.style.borderColor = "rgba(30,58,138,0.7)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(30,58,138,0.35)"; e.currentTarget.style.borderColor = "rgba(30,58,138,0.5)"; }}
               >
-                <span className="relative flex items-center gap-2">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" /></svg>
-                  Access Dashboard
+                <span className="relative flex items-center gap-3 text-white">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <span className="flex flex-col items-start">
+                    <span className="text-[13px]">Admin Portal</span>
+                    <span className="text-[9px] text-white/50 font-normal tracking-wider">Municipal · NHAI Officials</span>
+                  </span>
                 </span>
               </button>
             ) : (
               <SignInButton mode="modal" forceRedirectUrl="/dashboard">
                 <button
-                  className="group relative px-8 py-4 rounded-xl font-bold text-sm tracking-wider text-gray-300 transition-all duration-300 overflow-hidden bg-transparent hover:bg-white/15 hover:text-white hover:shadow-lg backdrop-blur-sm hover:backdrop-blur-md border border-white/25 hover:border-white/20"
+                  onClick={() => setRole("admin")}
+                  className="group relative px-8 py-4 rounded-xl font-bold text-sm tracking-wider transition-all duration-300 overflow-hidden backdrop-blur-md border"
+                  style={{ background: "rgba(30,58,138,0.35)", borderColor: "rgba(30,58,138,0.5)" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(30,58,138,0.55)"; e.currentTarget.style.borderColor = "rgba(30,58,138,0.7)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(30,58,138,0.35)"; e.currentTarget.style.borderColor = "rgba(30,58,138,0.5)"; }}
                 >
-                  <span className="relative flex items-center gap-2">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" /></svg>
-                    Access Dashboard
+                  <span className="relative flex items-center gap-3 text-white">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                      <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <span className="flex flex-col items-start">
+                      <span className="text-[13px]">Admin Portal</span>
+                      <span className="text-[9px] text-white/50 font-normal tracking-wider">Municipal · NHAI Officials</span>
+                    </span>
                   </span>
                 </button>
               </SignInButton>
             )}
+
+            {/* Divider */}
+            <div className="hidden sm:block w-px h-12 bg-white/15" />
+            <span className="hidden sm:block text-[10px] text-white/30 font-bold tracking-widest">OR</span>
+            <div className="hidden sm:block w-px h-12 bg-white/15" />
+
+            {/* ── Citizen Portal Button ── */}
             {isSignedIn ? (
               <button
-                onClick={() => navigate("/dashboard/livemap")}
-                className="px-8 py-4 rounded-xl font-bold text-sm tracking-wider border border-white/25 text-gray-300 transition-all duration-300 bg-transparent hover:bg-white/15 hover:text-white hover:shadow-lg backdrop-blur-sm hover:backdrop-blur-md hover:border-white/20"
+                onClick={() => { setRole("citizen"); navigate("/dashboard"); }}
+                className="group relative px-8 py-4 rounded-xl font-bold text-sm tracking-wider transition-all duration-300 overflow-hidden backdrop-blur-md border"
+                style={{ background: "rgba(5,150,105,0.25)", borderColor: "rgba(5,150,105,0.45)" }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(5,150,105,0.45)"; e.currentTarget.style.borderColor = "rgba(5,150,105,0.65)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(5,150,105,0.25)"; e.currentTarget.style.borderColor = "rgba(5,150,105,0.45)"; }}
               >
-                View Live Map →
+                <span className="relative flex items-center gap-3 text-white">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                    <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <span className="flex flex-col items-start">
+                    <span className="text-[13px]">Citizen Portal</span>
+                    <span className="text-[9px] text-white/50 font-normal tracking-wider">Report · Track · Stay Informed</span>
+                  </span>
+                </span>
               </button>
             ) : (
-              <SignInButton mode="modal" forceRedirectUrl="/dashboard/livemap">
+              <SignInButton mode="modal" forceRedirectUrl="/dashboard">
                 <button
-                  className="px-8 py-4 rounded-xl font-bold text-sm tracking-wider border border-white/25 text-gray-300 transition-all duration-300 bg-transparent hover:bg-white/15 hover:text-white hover:shadow-lg backdrop-blur-sm hover:backdrop-blur-md hover:border-white/20"
+                  onClick={() => setRole("citizen")}
+                  className="group relative px-8 py-4 rounded-xl font-bold text-sm tracking-wider transition-all duration-300 overflow-hidden backdrop-blur-md border"
+                  style={{ background: "rgba(5,150,105,0.25)", borderColor: "rgba(5,150,105,0.45)" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(5,150,105,0.45)"; e.currentTarget.style.borderColor = "rgba(5,150,105,0.65)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(5,150,105,0.25)"; e.currentTarget.style.borderColor = "rgba(5,150,105,0.45)"; }}
                 >
-                  View Live Map →
+                  <span className="relative flex items-center gap-3 text-white">
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                      <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <span className="flex flex-col items-start">
+                      <span className="text-[13px]">Citizen Portal</span>
+                      <span className="text-[9px] text-white/50 font-normal tracking-wider">Report · Track · Stay Informed</span>
+                    </span>
+                  </span>
                 </button>
               </SignInButton>
             )}

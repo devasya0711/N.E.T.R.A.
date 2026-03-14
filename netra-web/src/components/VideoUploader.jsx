@@ -479,12 +479,22 @@ export default function VideoUploader() {
       )}
 
       {log && (
-        <div className="mt-6 rounded-2xl border border-blue-100 bg-white/90 p-4 md:p-5 shadow-sm">
-          <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-2">Process Logs</h4>
-          <pre className="netra-log-box p-4 rounded-lg text-xs leading-relaxed overflow-x-auto overflow-y-auto max-h-64 whitespace-pre-wrap">
-            {log}
-          </pre>
-        </div>
+        <details className="mt-6 rounded-2xl border border-blue-100 bg-white/90 shadow-sm group">
+          <summary className="flex items-center justify-between cursor-pointer px-4 md:px-5 py-3 select-none list-none [&::-webkit-details-marker]:hidden">
+            <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Process Logs</h4>
+            <svg
+              className="w-4 h-4 text-slate-400 transition-transform group-open:rotate-180"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+            >
+              <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </summary>
+          <div className="px-4 md:px-5 pb-4 md:pb-5">
+            <pre className="netra-log-box p-4 rounded-lg text-xs leading-relaxed overflow-x-auto overflow-y-auto max-h-64 whitespace-pre-wrap">
+              {log}
+            </pre>
+          </div>
+        </details>
       )}
     </div>
   );
