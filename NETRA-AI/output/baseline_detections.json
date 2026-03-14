@@ -387,12 +387,12 @@
       "bbox_height_px": 179
     },
     "severity": {
-      "score": 0.6613,
+      "score": 0.9647,
       "label": "Critical",
       "factors": {
-        "area_norm": 0.2354,
+        "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.7157
+        "traffic_norm": 0.8587
       }
     },
     "loop_closure": {
@@ -400,7 +400,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T10:41:02.144797+00:00",
+    "_last_seen": "2026-03-14T14:54:11.896620+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:15:39.368005+00:00"
   },
@@ -1282,12 +1282,12 @@
       "bbox_height_px": 97
     },
     "severity": {
-      "score": 0.4182,
-      "label": "Moderate",
+      "score": 0.8742,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.1322,
-        "depth_norm": 0.7285,
-        "traffic_norm": 0.322
+        "area_norm": 1.0,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.4967
       }
     },
     "loop_closure": {
@@ -1295,7 +1295,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:28:22.162456+00:00",
+    "_last_seen": "2026-03-14T14:54:09.753093+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:28:21.446797+00:00"
   },
@@ -1327,12 +1327,12 @@
       "bbox_height_px": 193
     },
     "severity": {
-      "score": 0.6657,
+      "score": 0.97,
       "label": "Critical",
       "factors": {
-        "area_norm": 0.4788,
-        "depth_norm": 0.7371,
-        "traffic_norm": 0.8131
+        "area_norm": 0.9881,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.8967
       }
     },
     "loop_closure": {
@@ -1340,7 +1340,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-13T20:53:20.105913+00:00",
+    "_last_seen": "2026-03-14T14:54:07.133137+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:27:15.402229+00:00"
   },
@@ -1552,12 +1552,12 @@
       "bbox_height_px": 89
     },
     "severity": {
-      "score": 0.9502,
+      "score": 0.882,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.8007
+        "traffic_norm": 0.5279
       }
     },
     "loop_closure": {
@@ -1565,7 +1565,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T13:59:24.913492+00:00",
+    "_last_seen": "2026-03-14T14:54:07.663744+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:12:59.617074+00:00"
   },
@@ -2763,12 +2763,12 @@
       "bbox_height_px": 211
     },
     "severity": {
-      "score": 0.7842,
+      "score": 0.8844,
       "label": "Critical",
       "factors": {
-        "area_norm": 0.9947,
-        "depth_norm": 0.5418,
-        "traffic_norm": 0.8773
+        "area_norm": 0.9076,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.6669
       }
     },
     "loop_closure": {
@@ -2776,7 +2776,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:27:21.619222+00:00",
+    "_last_seen": "2026-03-14T14:54:05.553840+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:27:28.440370+00:00"
   },
@@ -3033,12 +3033,12 @@
       "bbox_height_px": 200
     },
     "severity": {
-      "score": 0.5513,
-      "label": "Moderate",
+      "score": 0.9609,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.2686,
+        "area_norm": 0.9734,
         "depth_norm": 1.0,
-        "traffic_norm": 0.2291
+        "traffic_norm": 0.8808
       }
     },
     "loop_closure": {
@@ -3046,7 +3046,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T10:41:06.348378+00:00",
+    "_last_seen": "2026-03-14T14:54:06.090925+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:25:25.360387+00:00"
   },
@@ -3618,12 +3618,12 @@
       "bbox_height_px": 83
     },
     "severity": {
-      "score": 0.5138,
-      "label": "Moderate",
+      "score": 0.9115,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.0505,
-        "depth_norm": 0.9079,
-        "traffic_norm": 0.532
+        "area_norm": 1.0,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.6459
       }
     },
     "loop_closure": {
@@ -3631,7 +3631,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-13T21:09:49.347377+00:00",
+    "_last_seen": "2026-03-14T14:54:06.605719+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:22:21.691038+00:00"
   },
@@ -4293,12 +4293,12 @@
       "bbox_height_px": 105
     },
     "severity": {
-      "score": 0.4954,
-      "label": "Moderate",
+      "score": 0.9093,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.2245,
-        "depth_norm": 0.8136,
-        "traffic_norm": 0.3656
+        "area_norm": 0.8706,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.8182
       }
     },
     "loop_closure": {
@@ -4306,7 +4306,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:26:22.618085+00:00",
+    "_last_seen": "2026-03-14T14:54:04.374257+00:00",
     "_closed": true,
     "_closed_at": "2026-03-13T21:10:07.489902+00:00"
   },
@@ -4788,12 +4788,12 @@
       "bbox_height_px": 115
     },
     "severity": {
-      "score": 0.8752,
+      "score": 0.9677,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.501
+        "traffic_norm": 0.871
       }
     },
     "loop_closure": {
@@ -4801,7 +4801,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T13:36:15.993926+00:00",
+    "_last_seen": "2026-03-14T14:54:08.697331+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:26:32.734699+00:00"
   },
@@ -6715,12 +6715,12 @@
       "bbox_height_px": 187
     },
     "severity": {
-      "score": 0.618,
-      "label": "Moderate",
+      "score": 0.912,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.4779,
-        "depth_norm": 0.6163,
-        "traffic_norm": 0.8168
+        "area_norm": 1.0,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.6479
       }
     },
     "loop_closure": {
@@ -6728,7 +6728,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:28:50.584519+00:00",
+    "_last_seen": "2026-03-14T14:54:09.223898+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:26:16.663493+00:00"
   },
@@ -6760,12 +6760,12 @@
       "bbox_height_px": 97
     },
     "severity": {
-      "score": 0.3941,
-      "label": "Moderate",
+      "score": 0.9011,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.0794,
-        "depth_norm": 0.6895,
-        "traffic_norm": 0.362
+        "area_norm": 1.0,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.6044
       }
     },
     "loop_closure": {
@@ -6773,7 +6773,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:28:15.456332+00:00",
+    "_last_seen": "2026-03-14T14:54:08.195400+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:16:36.769361+00:00"
   },
@@ -8058,12 +8058,12 @@
       "bbox_height_px": 25
     },
     "severity": {
-      "score": 0.5632,
-      "label": "Moderate",
+      "score": 0.9093,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.2442,
+        "area_norm": 1.0,
         "depth_norm": 1.0,
-        "traffic_norm": 0.311
+        "traffic_norm": 0.6373
       }
     },
     "loop_closure": {
@@ -8071,7 +8071,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T10:41:03.171250+00:00",
+    "_last_seen": "2026-03-14T14:54:11.363558+00:00",
     "_closed": true,
     "_closed_at": "2026-03-13T20:35:13.674606+00:00"
   },
@@ -14164,12 +14164,12 @@
       "bbox_height_px": 47
     },
     "severity": {
-      "score": 0.5362,
-      "label": "Moderate",
+      "score": 0.8864,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.0315,
-        "depth_norm": 0.8959,
-        "traffic_norm": 0.6673
+        "area_norm": 1.0,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5456
       }
     },
     "loop_closure": {
@@ -14177,7 +14177,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:26:22.705780+00:00",
+    "_last_seen": "2026-03-14T14:54:10.826238+00:00",
     "_closed": true,
     "_closed_at": "2026-03-13T17:38:19.915497+00:00"
   },
@@ -15306,12 +15306,12 @@
       "bbox_height_px": 57
     },
     "severity": {
-      "score": 0.3717,
+      "score": 0.6164,
       "label": "Moderate",
       "factors": {
-        "area_norm": 0.0883,
-        "depth_norm": 0.6688,
-        "traffic_norm": 0.2931
+        "area_norm": 0.1151,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.7044
       }
     },
     "loop_closure": {
@@ -15319,7 +15319,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-13T13:20:24.421129+00:00"
+    "_last_seen": "2026-03-14T14:54:11.908294+00:00"
   },
   {
     "pothole_id": "NETRA-EDA434B1-492",
@@ -19635,12 +19635,12 @@
       "bbox_height_px": 149
     },
     "severity": {
-      "score": 0.84,
+      "score": 0.8997,
       "label": "Critical",
       "factors": {
         "area_norm": 1.0,
-        "depth_norm": 0.671,
-        "traffic_norm": 0.8865
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5986
       }
     },
     "loop_closure": {
@@ -19648,7 +19648,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-13T21:09:58.562565+00:00",
+    "_last_seen": "2026-03-14T14:54:10.306579+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T06:14:49.094667+00:00"
   },

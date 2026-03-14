@@ -367,41 +367,85 @@ router.get("/trends", async (_req, res, next) => {
 // ─────────────────────────────────────────────────────────────────────────────
 // GET /api/potholes/highways
 // Aggregate highway-level danger index stats for HighwayDangerIndex.
+// Danger Index = f(pothole_density_per_km, avg_traffic, avg_severity)
 // ─────────────────────────────────────────────────────────────────────────────
+
+// Highway metadata lookup — stretch names, lengths, districts, traffic
+const HIGHWAY_META = {
+  "NH-130":  { stretch: "Raipur – Bilaspur",                      district: "Raipur / Bilaspur",            lengthKm: 120, avgTrafficPCU: 12400 },
+  "NH-30":   { stretch: "Raipur – Durg – Rajnandgaon",            district: "Raipur / Durg / Rajnandgaon",  lengthKm: 80,  avgTrafficPCU: 14200 },
+  "NH-43":   { stretch: "Raipur – Dhamtari – Jagdalpur",           district: "Raipur / Dhamtari / Bastar",   lengthKm: 300, avgTrafficPCU: 7800  },
+  "NH-200":  { stretch: "Raipur – Mahasamund – Raigarh",           district: "Raipur / Mahasamund / Raigarh",lengthKm: 250, avgTrafficPCU: 6500  },
+  "NH-130E": { stretch: "Bilaspur – Champa – Korba",               district: "Bilaspur / Janjgir-Champa",    lengthKm: 110, avgTrafficPCU: 8900  },
+  "NH-111":  { stretch: "Ambikapur – Manendragarh",                district: "Surguja / Korea",              lengthKm: 95,  avgTrafficPCU: 4200  },
+  "NH-353A": { stretch: "Jagdalpur – Dantewada – Sukma",           district: "Bastar / Dantewada / Sukma",   lengthKm: 167, avgTrafficPCU: 3800  },
+  "NH-49":   { stretch: "Ambikapur – Renukoot (CG section)",       district: "Surguja / Balrampur",          lengthKm: 130, avgTrafficPCU: 5100  },
+  "NH-930":  { stretch: "Bilaspur – Mungeli – Kawardha",           district: "Bilaspur / Mungeli / Kabirdham",lengthKm: 140,avgTrafficPCU: 5800  },
+  "NH-30A":  { stretch: "Rajnandgaon – Dongargarh – Mohla",        district: "Rajnandgaon",                  lengthKm: 85,  avgTrafficPCU: 4600  },
+  "SH-6":    { stretch: "Raipur – Gariaband – Mahasamund",         district: "Raipur / Gariaband",           lengthKm: 97,  avgTrafficPCU: 7200  },
+  "SH-5":    { stretch: "Raigarh – Saria – Dharamjaigarh",         district: "Raigarh",                      lengthKm: 78,  avgTrafficPCU: 4800  },
+  "SH-10":   { stretch: "Bhilai – Dalli Rajhara",                  district: "Durg / Balod",                 lengthKm: 112, avgTrafficPCU: 6800  },
+  "SH-11":   { stretch: "Raipur – Durg Express Corridor",          district: "Raipur / Durg",                lengthKm: 45,  avgTrafficPCU: 11800 },
+  "SH-17":   { stretch: "Dhamtari – Kanker",                       district: "Dhamtari / Kanker",            lengthKm: 143, avgTrafficPCU: 3900  },
+  "SH-22":   { stretch: "Kawardha – Dongargarh",                   district: "Kabirdham / Rajnandgaon",      lengthKm: 89,  avgTrafficPCU: 2800  },
+};
+
 router.get("/highways", async (_req, res, next) => {
   try {
+    // Aggregate from pothole DB — only active (non-fixed) potholes
     const pipeline = [
-      { $match: { status: { $ne: "Fixed" } } },
+      { $match: { status: { $ne: "Fixed" }, highwayName: { $exists: true, $ne: null } } },
       {
         $group: {
           _id: "$highwayName",
           activePotholes: { $sum: 1 },
-          avgDangerIndex: { $avg: "$dangerIndex" },
           avgDepth: { $avg: "$depthCm" },
           avgScore: { $avg: "$severityScore" },
           avgTraffic: { $avg: "$dailyTrafficPCU" },
         },
       },
-      { $match: { _id: { $ne: null } } },
-      { $sort: { avgDangerIndex: -1 } },
+      { $sort: { activePotholes: -1 } },
     ];
 
     const raw = await Pothole.aggregate(pipeline);
 
-    const highways = raw.map((r) => ({
-      id: (r._id || "").toLowerCase().replace(/[^a-z0-9]/g, "-"),
-      name: r._id || "Unknown",
-      stretch: r._id || "Unknown",
-      activePotholes: r.activePotholes,
-      dangerIndex: Math.round(r.avgDangerIndex),
-      avgDepth: parseFloat((r.avgDepth || 0).toFixed(1)),
-      avgScore: parseFloat((r.avgScore || 0).toFixed(1)),
-      pcuDaily: Math.round(r.avgTraffic || 0),
-      trend: "stable",
-      lastScanned: "Today",
-      length: 0,
-      district: "",
-    }));
+    const highways = raw.map((r) => {
+      const meta = HIGHWAY_META[r._id] || {};
+      const lengthKm = meta.lengthKm || 100;
+      const avgTraffic = Math.round(r.avgTraffic || meta.avgTrafficPCU || 5000);
+      const avgSev = r.avgScore || 5;
+      const density = r.activePotholes / lengthKm;
+
+      // Danger Index = weighted combination:
+      //   30% pothole density (per km), 40% traffic volume, 30% avg severity
+      //   Each normalized to 0–1 then scaled to 0–100
+      const dangerIndex = Math.min(100, Math.round(
+        30 * Math.min(density / 2, 1) +
+        40 * Math.min(avgTraffic / 15000, 1) +
+        30 * Math.min(avgSev / 8, 1)
+      ));
+
+      // Trend: based on severity vs mid-point
+      const trend = avgSev >= 7 ? "up" : avgSev <= 4 ? "down" : "stable";
+
+      return {
+        id: (r._id || "").toLowerCase().replace(/[^a-z0-9]/g, "-"),
+        name: r._id || "Unknown",
+        stretch: meta.stretch || r._id || "Unknown",
+        activePotholes: r.activePotholes,
+        dangerIndex,
+        avgDepth: parseFloat((r.avgDepth || 0).toFixed(1)),
+        avgScore: parseFloat((r.avgScore || 0).toFixed(1)),
+        pcuDaily: avgTraffic,
+        trend,
+        lastScanned: "Today",
+        length: lengthKm,
+        district: meta.district || "",
+      };
+    });
+
+    // Sort by danger index descending
+    highways.sort((a, b) => b.dangerIndex - a.dangerIndex);
 
     res.json({ success: true, data: highways });
   } catch (err) {
