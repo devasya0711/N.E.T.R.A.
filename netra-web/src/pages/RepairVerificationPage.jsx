@@ -79,11 +79,12 @@ export default function RepairVerificationPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-3 text-xs">
                 <div><span className="text-[10px] text-slate-400 uppercase block">Location</span><span className="text-slate-700 font-medium">{p.location || "—"}</span></div>
                 <div><span className="text-[10px] text-slate-400 uppercase block">Severity</span><span className={`font-bold ${p.score >= 7.5 ? "text-red-600" : p.score >= 4 ? "text-amber-600" : "text-blue-600"}`}>{p.severity} ({p.score}/10)</span></div>
                 <div><span className="text-[10px] text-slate-400 uppercase block">Officer</span><span className="text-slate-700">{p.officer}</span></div>
                 <div><span className="text-[10px] text-slate-400 uppercase block">Source</span><span className="text-slate-600">{p.source}</span></div>
+                <div><span className="text-[10px] text-slate-400 uppercase block">CPGRAMS ID</span><span className="text-blue-700 font-mono font-bold">{p.grievanceId || "N/A"}</span></div>
               </div>
 
               {/* SLA progress bar */}

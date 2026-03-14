@@ -399,7 +399,9 @@ function generatePool() {
   const pool = [];
   for (const hw of HIGHWAYS) {
     const pts = hw.points;
-    const count = Math.ceil(pts.length * hw.weight * 1.3);
+    // Base pothole count on length of highway + small weight multiplier
+    // A 100km highway gets ~10-15 base points, modified by weight.
+    const count = Math.ceil((hw.lengthKm / 15) * (1 + hw.weight * 0.5));
     for (let j = 0; j < count; j++) {
       const seg = randInt(0, pts.length - 2);
       const p1 = { lat: pts[seg][0], lng: pts[seg][1] };

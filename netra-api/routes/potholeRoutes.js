@@ -22,9 +22,10 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 const { spawn } = require("child_process");
+const { fileComplaint } = require("../services/cpgramsService");
 
 const router = express.Router();
-
+  
 // Setup Multer for video uploads
 const uploadDirectory = path.join(__dirname, '..', 'uploads');
 if (!fs.existsSync(uploadDirectory)) {
@@ -61,7 +62,6 @@ function resolvePythonCommand(aiDir) {
     }
   }
 
-  // On macOS, Homebrew Python commonly has project deps while /usr/bin/python3 does not.
   if (fs.existsSync("/usr/local/bin/python3")) {
     return "/usr/local/bin/python3";
   }
@@ -71,10 +71,8 @@ function resolvePythonCommand(aiDir) {
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-/** Allowed status values (mirrors the Mongoose enum) */
 const VALID_STATUSES = ["Submitted", "In Progress", "Fixed", "Escalated"];
 
-/** Legal status transitions — prevent illogical jumps */
 const STATUS_TRANSITIONS = {
   Submitted:   ["In Progress", "Escalated"],
   "In Progress": ["Fixed", "Escalated"],
@@ -82,7 +80,6 @@ const STATUS_TRANSITIONS = {
   Fixed:       [], // terminal state
 };
 
-/** Build a MongoDB filter object from query-string parameters */
 function buildFilter(query) {
   const filter = {};
 
@@ -90,14 +87,12 @@ function buildFilter(query) {
   if (query.detectionSource) filter.detectionSource = query.detectionSource;
   if (query.highwayName)     filter.highwayName     = new RegExp(query.highwayName, "i");
 
-  // Severity range: ?minSeverity=5&maxSeverity=10
   if (query.minSeverity || query.maxSeverity) {
     filter.severityScore = {};
     if (query.minSeverity) filter.severityScore.$gte = Number(query.minSeverity);
     if (query.maxSeverity) filter.severityScore.$lte = Number(query.maxSeverity);
   }
 
-  // Danger index range: ?minDanger=70
   if (query.minDanger || query.maxDanger) {
     filter.dangerIndex = {};
     if (query.minDanger) filter.dangerIndex.$gte = Number(query.minDanger);
@@ -113,7 +108,7 @@ function buildFilter(query) {
 // ─────────────────────────────────────────────────────────────────────────────
 router.post("/", async (req, res, next) => {
   try {
-    const {
+    let {
       potholeId,
       location,
       highwayName,
@@ -132,10 +127,27 @@ router.post("/", async (req, res, next) => {
       dailyTrafficPCU,
     } = req.body;
 
-    // potholeId defaults to a timestamp-based ID if not provided by the AI pipeline
     const resolvedId =
       potholeId ||
       `NETRA-${new Date().getFullYear()}-${Date.now().toString(36).toUpperCase()}`;
+
+    // Auto-Escalation to CPGRAMS if critical
+    if (severityScore >= 8 || dangerIndex > 75) {
+      console.log(`[NETRA-CORE] High severity detected (Score: ${severityScore}, Danger: ${dangerIndex}). Triggering CPGRAMS auto-escalation...`);
+      const officialGrievanceId = await fileComplaint({
+        potholeId: resolvedId,
+        location,
+        locationDescription,
+        highwayName,
+        severityScore,
+        dangerIndex,
+        depthCm
+      });
+      if (officialGrievanceId) {
+        grievanceId = officialGrievanceId; // Overwrite internal/empty ID with official CPGRAMS ID
+        status = "Escalated"; // Automatically escalate it
+      }
+    }
 
     const pothole = await Pothole.create({
       potholeId: resolvedId,

@@ -149,7 +149,7 @@ export default function LandingPage() {
             {/* ── Admin Portal Button ── */}
             {isSignedIn ? (
               <button
-                onClick={() => { setRole("admin"); navigate("/dashboard"); }}
+                onClick={() => { sessionStorage.setItem("intended_portal", "admin"); navigate("/dashboard"); }}
                 className="group relative px-8 py-4 rounded-xl font-bold text-sm tracking-wider transition-all duration-300 overflow-hidden backdrop-blur-md border"
                 style={{ background: "rgba(30,58,138,0.35)", borderColor: "rgba(30,58,138,0.5)" }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(30,58,138,0.55)"; e.currentTarget.style.borderColor = "rgba(30,58,138,0.7)"; }}
@@ -168,7 +168,7 @@ export default function LandingPage() {
             ) : (
               <SignInButton mode="modal" forceRedirectUrl="/dashboard">
                 <button
-                  onClick={() => setRole("admin")}
+                  onClick={() => sessionStorage.setItem("intended_portal", "admin")}
                   className="group relative px-8 py-4 rounded-xl font-bold text-sm tracking-wider transition-all duration-300 overflow-hidden backdrop-blur-md border"
                   style={{ background: "rgba(30,58,138,0.35)", borderColor: "rgba(30,58,138,0.5)" }}
                   onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(30,58,138,0.55)"; e.currentTarget.style.borderColor = "rgba(30,58,138,0.7)"; }}
@@ -195,7 +195,7 @@ export default function LandingPage() {
             {/* ── Citizen Portal Button ── */}
             {isSignedIn ? (
               <button
-                onClick={() => { setRole("citizen"); navigate("/dashboard"); }}
+                onClick={() => { sessionStorage.setItem("intended_portal", "citizen"); navigate("/dashboard"); }}
                 className="group relative px-8 py-4 rounded-xl font-bold text-sm tracking-wider transition-all duration-300 overflow-hidden backdrop-blur-md border"
                 style={{ background: "rgba(5,150,105,0.25)", borderColor: "rgba(5,150,105,0.45)" }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(5,150,105,0.45)"; e.currentTarget.style.borderColor = "rgba(5,150,105,0.65)"; }}
@@ -214,7 +214,7 @@ export default function LandingPage() {
             ) : (
               <SignInButton mode="modal" forceRedirectUrl="/dashboard">
                 <button
-                  onClick={() => setRole("citizen")}
+                  onClick={() => sessionStorage.setItem("intended_portal", "citizen")}
                   className="group relative px-8 py-4 rounded-xl font-bold text-sm tracking-wider transition-all duration-300 overflow-hidden backdrop-blur-md border"
                   style={{ background: "rgba(5,150,105,0.25)", borderColor: "rgba(5,150,105,0.45)" }}
                   onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(5,150,105,0.45)"; e.currentTarget.style.borderColor = "rgba(5,150,105,0.65)"; }}

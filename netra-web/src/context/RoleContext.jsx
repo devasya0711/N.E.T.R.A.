@@ -1,4 +1,5 @@
-import { createContext, useContext, useMemo, useState, useCallback } from "react";
+import { createContext, useContext, useMemo, useCallback } from "react";
+import { useUser } from "@clerk/react";
 
 const RoleContext = createContext({
   role: "citizen",
@@ -7,34 +8,28 @@ const RoleContext = createContext({
   setRole: () => {},
 });
 
-const ROLE_STORAGE_KEY = "netra_user_role";
-
 export function RoleProvider({ children }) {
-  // Read initial role from localStorage (persists across sessions)
-  const [role, setRoleState] = useState(() => {
-    try {
-      return localStorage.getItem(ROLE_STORAGE_KEY) || "citizen";
-    } catch {
-      return "citizen";
-    }
-  });
+  const { user } = useUser();
+  
+  const isAdmin = useMemo(() => {
+    if (!user) return false;
+    const email = user.primaryEmailAddress?.emailAddress;
+    return typeof email === 'string' && email.endsWith("@iiitnr.edu.in");
+  }, [user]);
 
-  const setRole = useCallback((newRole) => {
-    const r = newRole === "admin" ? "admin" : "citizen";
-    setRoleState(r);
-    try {
-      localStorage.setItem(ROLE_STORAGE_KEY, r);
-    } catch {
-      // localStorage unavailable
-    }
+  const role = isAdmin ? "admin" : "citizen";
+
+  // Prevent UI errors if components still try to call setRole
+  const setRole = useCallback(() => {
+    console.warn("setRole is disabled: Role is strictly enforced by email domain.");
   }, []);
 
   const value = useMemo(() => ({
     role,
-    isAdmin: role === "admin",
-    isCitizen: role !== "admin",
+    isAdmin,
+    isCitizen: !isAdmin,
     setRole,
-  }), [role, setRole]);
+  }), [role, isAdmin, setRole]);
 
   return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;
 }

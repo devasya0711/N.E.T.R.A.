@@ -184,10 +184,10 @@ export default function Sidebar() {
     <aside className="fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 flex flex-col z-30 overflow-y-auto"
       style={{ background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderRight: '1px solid rgba(255,255,255,0.5)' }}
     >
-      {/* Role badge + switch */}
-      <div className="px-4 pt-3 pb-1 flex items-center justify-between">
+      {/* Role badge */}
+      <div className="px-4 pt-4 pb-2 flex items-center justify-between">
         <span
-          className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${
+          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest ${
             isAdmin
               ? "bg-blue-50 text-blue-900 border border-blue-200"
               : "bg-emerald-50 text-emerald-700 border border-emerald-200"
@@ -199,13 +199,6 @@ export default function Sidebar() {
           />
           {role}
         </span>
-        <button
-          onClick={() => setRole(isAdmin ? "citizen" : "admin")}
-          className="text-[9px] font-bold text-slate-400 hover:text-blue-700 transition-colors px-2 py-1 rounded-md hover:bg-slate-100"
-          title={`Switch to ${isAdmin ? "Citizen" : "Admin"} view`}
-        >
-          Switch to {isAdmin ? "Citizen" : "Admin"} ↗
-        </button>
       </div>
 
       <nav className="flex flex-col gap-0.5 px-3 pt-1 pb-3">

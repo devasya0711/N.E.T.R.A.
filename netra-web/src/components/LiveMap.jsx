@@ -181,43 +181,43 @@ export default function LiveMap() {
   const [sourceFilter, setSourceFilter] = useState("ALL");
   const [focusPos, setFocusPos] = useState(null);
   const { citizenPotholes } = useComplaints();
-  const { potholes: apiPotholes, loading } = usePotholeList({ limit: 200 });
-
+  const { potholes: apiPotholes, loading } = usePotholeList({ limit: 500 });
+  
   const allPotholes = [...apiPotholes, ...citizenPotholes];
-
+  
   const sourcedPotholes = sourceFilter === "ALL"
     ? allPotholes
     : sourceFilter === "Citizen Reported"
       ? allPotholes.filter(p => p.source === "Citizen-Portal")
       : allPotholes.filter(p => p.source !== "Citizen-Portal");
-
+  
   const visiblePotholes = filter === "ALL"
     ? sourcedPotholes
     : sourcedPotholes.filter((p) => p.severity === filter);
-
+  
   const counts = {
     HIGH:     sourcedPotholes.filter(p => p.severity === "HIGH").length,
     MEDIUM:   sourcedPotholes.filter(p => p.severity === "MEDIUM").length,
     LOW:      sourcedPotholes.filter(p => p.severity === "LOW").length,
     REPAIRED: sourcedPotholes.filter(p => p.severity === "REPAIRED").length,
   };
-
+  
   const chhattisgarhBoundary = {
     type: "Feature",
     properties: { name: "Chhattisgarh" },
     geometry: chhattisgarhData[0]?.geojson,
   };
-
+  
   return (
     <div className="overflow-hidden flex flex-col" style={{ height: "calc(100vh - 4rem)" }}>
       {/* Map toolbar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-5 py-4 border-b border-slate-200">
         <div>
           <h2 className="text-sm font-bold text-slate-700">
-            Live Pothole Map — Raipur · Bilaspur · Korba Corridor
+            Live Pothole Map — Chhattisgarh State Highway Network
           </h2>
           <p className="text-[11px] text-slate-500 mt-0.5">
-            NH-130 Stretch, Chhattisgarh · {visiblePotholes.length} markers visible
+            Active monitoring across NH/SH network · {visiblePotholes.length} markers visible
           </p>
         </div>
         <FilterBar active={filter} onChange={setFilter} />

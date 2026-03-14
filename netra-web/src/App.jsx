@@ -33,10 +33,27 @@ import MyReportsPage         from "./pages/MyReportsPage";
 
 import { ComplaintProvider }  from "./context/ComplaintContext";
 
+/** Access Denied fallback for non-admins */
+function AccessDenied() {
+  return (
+    <div className="flex flex-col items-center justify-center h-[60vh] text-center">
+      <div className="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+      </div>
+      <h2 className="text-2xl font-black text-slate-800 mb-2">Access Denied</h2>
+      <p className="text-slate-500 max-w-md mb-6">
+        You do not have permission to view the Admin Portal. This area is strictly reserved for authorized <strong>@iiitnr.edu.in</strong> administrative accounts.
+      </p>
+    </div>
+  );
+}
+
 /** Route guard — only admin can access */
 function AdminOnly({ children }) {
   const { isAdmin } = useRole();
-  if (!isAdmin) return <Navigate to="/dashboard" replace />;
+  if (!isAdmin) return <AccessDenied />;
   return children;
 }
 
@@ -44,7 +61,17 @@ function AdminOnly({ children }) {
 function DashboardShell() {
   const location = useLocation();
   const { isAdmin } = useRole();
+  const intendedPortal = sessionStorage.getItem("intended_portal");
   const isLiveMap = location.pathname === "/dashboard/livemap";
+
+  // Strict check: if they clicked 'Admin Portal' but don't have an @iiitnr.edu.in email
+  if (!isAdmin && intendedPortal === "admin") {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-slate-50">
+        <AccessDenied />
+      </div>
+    );
+  }
 
   return (
     <div className="flex min-h-screen" style={{ backgroundColor: "#faf8f5" }}>

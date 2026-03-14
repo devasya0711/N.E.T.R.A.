@@ -12,6 +12,7 @@ require("dotenv").config();
 
 const potholeRoutes  = require("./routes/potholeRoutes");
 const { errorHandler, notFound } = require("./middleware/errorHandler");
+const { startSyncJob } = require('./cron/cpgramsSync'); // CPGRAMS syncing job
 
 // ─── App ──────────────────────────────────────────────────────────────────────
 const app  = express();
@@ -76,6 +77,7 @@ mongoose
   .connect(MONGO_URI)
   .then(() => {
     console.log(`✅  MongoDB connected → ${MONGO_URI.replace(/\/\/.*@/, "//***@")}`);
+    startSyncJob();
     app.listen(PORT, () => {
       console.log(`🚀  N.E.T.R.A. API listening on http://localhost:${PORT}`);
       console.log(`   Health check → http://localhost:${PORT}/health`);
