@@ -4,8 +4,8 @@
     "timestamp": "2026-03-13T12:07:37.371474+00:00",
     "frame_index": 2,
     "gps": {
-      "latitude": 28.613599,
-      "longitude": 77.209868
+      "latitude": 21.253599,
+      "longitude": 81.629868
     },
     "detection": {
       "bbox": [
@@ -49,8 +49,8 @@
     "timestamp": "2026-03-13T12:07:37.372958+00:00",
     "frame_index": 2,
     "gps": {
-      "latitude": 28.614515,
-      "longitude": 77.209453
+      "latitude": 21.254515,
+      "longitude": 81.629453
     },
     "detection": {
       "bbox": [
@@ -94,8 +94,8 @@
     "timestamp": "2026-03-13T12:07:40.298731+00:00",
     "frame_index": 3,
     "gps": {
-      "latitude": 28.61402,
-      "longitude": 77.208732
+      "latitude": 21.25402,
+      "longitude": 81.628732
     },
     "detection": {
       "bbox": [
@@ -132,15 +132,15 @@
     },
     "_last_seen": "2026-03-14T22:52:55.323164+00:00",
     "_closed": true,
-    "_closed_at": "2026-03-14T22:57:01.131574+00:00"
+    "_closed_at": "2026-03-14T23:35:47.348306+00:00"
   },
   {
     "pothole_id": "NETRA-17799762-7F4",
     "timestamp": "2026-03-13T12:07:40.301744+00:00",
     "frame_index": 3,
     "gps": {
-      "latitude": 28.614139,
-      "longitude": 77.209068
+      "latitude": 21.254139,
+      "longitude": 81.629068
     },
     "detection": {
       "bbox": [
@@ -184,8 +184,8 @@
     "timestamp": "2026-03-13T12:07:43.167567+00:00",
     "frame_index": 4,
     "gps": {
-      "latitude": 28.613833,
-      "longitude": 77.209568
+      "latitude": 21.253833,
+      "longitude": 81.629568
     },
     "detection": {
       "bbox": [
@@ -207,12 +207,12 @@
       "bbox_height_px": 181
     },
     "severity": {
-      "score": 0.6905,
+      "score": 0.6718,
       "label": "Critical",
       "factors": {
-        "area_norm": 0.5036,
-        "depth_norm": 0.7391,
-        "traffic_norm": 0.8745
+        "area_norm": 0.2559,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.7287
       }
     },
     "loop_closure": {
@@ -220,7 +220,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:42:00.314445+00:00",
+    "_last_seen": "2026-03-14T23:38:27.273923+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T22:57:11.107167+00:00"
   },
@@ -229,8 +229,8 @@
     "timestamp": "2026-03-13T12:07:43.169863+00:00",
     "frame_index": 4,
     "gps": {
-      "latitude": 28.613607,
-      "longitude": 77.209147
+      "latitude": 21.253607,
+      "longitude": 81.629147
     },
     "detection": {
       "bbox": [
@@ -274,8 +274,8 @@
     "timestamp": "2026-03-13T12:07:46.034827+00:00",
     "frame_index": 5,
     "gps": {
-      "latitude": 28.614579,
-      "longitude": 77.208155
+      "latitude": 21.254579,
+      "longitude": 81.628155
     },
     "detection": {
       "bbox": [
@@ -319,8 +319,8 @@
     "timestamp": "2026-03-13T12:07:46.036896+00:00",
     "frame_index": 5,
     "gps": {
-      "latitude": 28.613616,
-      "longitude": 77.209289
+      "latitude": 21.253616,
+      "longitude": 81.629289
     },
     "detection": {
       "bbox": [
@@ -364,8 +364,8 @@
     "timestamp": "2026-03-13T12:07:49.110290+00:00",
     "frame_index": 6,
     "gps": {
-      "latitude": 28.614053,
-      "longitude": 77.209404
+      "latitude": 21.254053,
+      "longitude": 81.629404
     },
     "detection": {
       "bbox": [
@@ -409,8 +409,8 @@
     "timestamp": "2026-03-13T12:07:49.113288+00:00",
     "frame_index": 6,
     "gps": {
-      "latitude": 28.613232,
-      "longitude": 77.209201
+      "latitude": 21.253232,
+      "longitude": 81.629201
     },
     "detection": {
       "bbox": [
@@ -449,8 +449,8 @@
     "timestamp": "2026-03-13T12:08:00.513908+00:00",
     "frame_index": 2,
     "gps": {
-      "latitude": 28.613402,
-      "longitude": 77.208777
+      "latitude": 21.253402,
+      "longitude": 81.628777
     },
     "detection": {
       "bbox": [
@@ -494,8 +494,8 @@
     "timestamp": "2026-03-13T12:08:00.518911+00:00",
     "frame_index": 2,
     "gps": {
-      "latitude": 28.613339,
-      "longitude": 77.207901
+      "latitude": 21.253339,
+      "longitude": 81.627901
     },
     "detection": {
       "bbox": [
@@ -539,8 +539,8 @@
     "timestamp": "2026-03-13T12:08:04.818226+00:00",
     "frame_index": 3,
     "gps": {
-      "latitude": 28.613387,
-      "longitude": 77.209393
+      "latitude": 21.253387,
+      "longitude": 81.629393
     },
     "detection": {
       "bbox": [
@@ -562,12 +562,12 @@
       "bbox_height_px": 179
     },
     "severity": {
-      "score": 0.8272,
-      "label": "Critical",
+      "score": 0.6466,
+      "label": "Moderate",
       "factors": {
-        "area_norm": 0.9423,
-        "depth_norm": 0.7084,
-        "traffic_norm": 0.856
+        "area_norm": 0.1837,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.7292
       }
     },
     "loop_closure": {
@@ -575,7 +575,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:26:44.761950+00:00",
+    "_last_seen": "2026-03-14T23:36:46.540500+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T22:59:55.512513+00:00"
   },
@@ -584,8 +584,8 @@
     "timestamp": "2026-03-13T12:08:04.825810+00:00",
     "frame_index": 3,
     "gps": {
-      "latitude": 28.613743,
-      "longitude": 77.208747
+      "latitude": 21.253743,
+      "longitude": 81.628747
     },
     "detection": {
       "bbox": [
@@ -629,8 +629,8 @@
     "timestamp": "2026-03-13T12:08:09.315616+00:00",
     "frame_index": 4,
     "gps": {
-      "latitude": 28.614498,
-      "longitude": 77.208789
+      "latitude": 21.254498,
+      "longitude": 81.628789
     },
     "detection": {
       "bbox": [
@@ -674,8 +674,8 @@
     "timestamp": "2026-03-13T12:08:09.321200+00:00",
     "frame_index": 4,
     "gps": {
-      "latitude": 28.613431,
-      "longitude": 77.209627
+      "latitude": 21.253431,
+      "longitude": 81.629627
     },
     "detection": {
       "bbox": [
@@ -719,8 +719,8 @@
     "timestamp": "2026-03-13T12:08:13.737389+00:00",
     "frame_index": 5,
     "gps": {
-      "latitude": 28.613807,
-      "longitude": 77.209467
+      "latitude": 21.253807,
+      "longitude": 81.629467
     },
     "detection": {
       "bbox": [
@@ -764,8 +764,8 @@
     "timestamp": "2026-03-13T12:08:13.743439+00:00",
     "frame_index": 5,
     "gps": {
-      "latitude": 28.613396,
-      "longitude": 77.208593
+      "latitude": 21.253396,
+      "longitude": 81.628593
     },
     "detection": {
       "bbox": [
@@ -809,8 +809,8 @@
     "timestamp": "2026-03-13T12:08:18.124729+00:00",
     "frame_index": 6,
     "gps": {
-      "latitude": 28.614605,
-      "longitude": 77.208573
+      "latitude": 21.254605,
+      "longitude": 81.628573
     },
     "detection": {
       "bbox": [
@@ -854,8 +854,8 @@
     "timestamp": "2026-03-13T12:08:18.129954+00:00",
     "frame_index": 6,
     "gps": {
-      "latitude": 28.613632,
-      "longitude": 77.208062
+      "latitude": 21.253632,
+      "longitude": 81.628062
     },
     "detection": {
       "bbox": [
@@ -899,8 +899,8 @@
     "timestamp": "2026-03-13T12:08:22.445308+00:00",
     "frame_index": 7,
     "gps": {
-      "latitude": 28.613487,
-      "longitude": 77.208551
+      "latitude": 21.253487,
+      "longitude": 81.628551
     },
     "detection": {
       "bbox": [
@@ -944,8 +944,8 @@
     "timestamp": "2026-03-13T12:08:26.964635+00:00",
     "frame_index": 8,
     "gps": {
-      "latitude": 28.613892,
-      "longitude": 77.208441
+      "latitude": 21.253892,
+      "longitude": 81.628441
     },
     "detection": {
       "bbox": [
@@ -989,8 +989,8 @@
     "timestamp": "2026-03-13T12:08:31.284982+00:00",
     "frame_index": 9,
     "gps": {
-      "latitude": 28.614164,
-      "longitude": 77.210068
+      "latitude": 21.254164,
+      "longitude": 81.630068
     },
     "detection": {
       "bbox": [
@@ -1034,8 +1034,8 @@
     "timestamp": "2026-03-13T12:08:31.299248+00:00",
     "frame_index": 9,
     "gps": {
-      "latitude": 28.614886,
-      "longitude": 77.208569
+      "latitude": 21.254886,
+      "longitude": 81.628569
     },
     "detection": {
       "bbox": [
@@ -1079,8 +1079,8 @@
     "timestamp": "2026-03-13T12:08:35.686874+00:00",
     "frame_index": 10,
     "gps": {
-      "latitude": 28.61357,
-      "longitude": 77.20787
+      "latitude": 21.25357,
+      "longitude": 81.62787
     },
     "detection": {
       "bbox": [
@@ -1124,8 +1124,8 @@
     "timestamp": "2026-03-13T12:08:39.895011+00:00",
     "frame_index": 11,
     "gps": {
-      "latitude": 28.614014,
-      "longitude": 77.209112
+      "latitude": 21.254014,
+      "longitude": 81.629112
     },
     "detection": {
       "bbox": [
@@ -1162,15 +1162,15 @@
     },
     "_last_seen": "2026-03-14T10:41:08.574826+00:00",
     "_closed": true,
-    "_closed_at": "2026-03-14T22:59:55.725401+00:00"
+    "_closed_at": "2026-03-14T23:37:21.366047+00:00"
   },
   {
     "pothole_id": "NETRA-5A3F64E9-DE8",
     "timestamp": "2026-03-13T12:08:39.902258+00:00",
     "frame_index": 11,
     "gps": {
-      "latitude": 28.612648,
-      "longitude": 77.209319
+      "latitude": 21.252648,
+      "longitude": 81.629319
     },
     "detection": {
       "bbox": [
@@ -1214,8 +1214,8 @@
     "timestamp": "2026-03-13T12:08:44.346851+00:00",
     "frame_index": 12,
     "gps": {
-      "latitude": 28.614121,
-      "longitude": 77.209248
+      "latitude": 21.254121,
+      "longitude": 81.629248
     },
     "detection": {
       "bbox": [
@@ -1259,8 +1259,8 @@
     "timestamp": "2026-03-13T12:08:44.360323+00:00",
     "frame_index": 12,
     "gps": {
-      "latitude": 28.614092,
-      "longitude": 77.208536
+      "latitude": 21.254092,
+      "longitude": 81.628536
     },
     "detection": {
       "bbox": [
@@ -1304,8 +1304,8 @@
     "timestamp": "2026-03-13T12:08:48.770748+00:00",
     "frame_index": 13,
     "gps": {
-      "latitude": 28.614281,
-      "longitude": 77.208349
+      "latitude": 21.254281,
+      "longitude": 81.628349
     },
     "detection": {
       "bbox": [
@@ -1349,8 +1349,8 @@
     "timestamp": "2026-03-13T12:08:53.139166+00:00",
     "frame_index": 14,
     "gps": {
-      "latitude": 28.614,
-      "longitude": 77.208898
+      "latitude": 21.254,
+      "longitude": 81.628898
     },
     "detection": {
       "bbox": [
@@ -1394,8 +1394,8 @@
     "timestamp": "2026-03-13T12:08:53.149748+00:00",
     "frame_index": 14,
     "gps": {
-      "latitude": 28.612998,
-      "longitude": 77.209125
+      "latitude": 21.252998,
+      "longitude": 81.629125
     },
     "detection": {
       "bbox": [
@@ -1439,8 +1439,8 @@
     "timestamp": "2026-03-13T12:08:57.979482+00:00",
     "frame_index": 15,
     "gps": {
-      "latitude": 28.613075,
-      "longitude": 77.208078
+      "latitude": 21.253075,
+      "longitude": 81.628078
     },
     "detection": {
       "bbox": [
@@ -1484,8 +1484,8 @@
     "timestamp": "2026-03-13T12:08:57.990542+00:00",
     "frame_index": 15,
     "gps": {
-      "latitude": 28.614229,
-      "longitude": 77.20975
+      "latitude": 21.254229,
+      "longitude": 81.62975
     },
     "detection": {
       "bbox": [
@@ -1529,8 +1529,8 @@
     "timestamp": "2026-03-13T12:09:02.635064+00:00",
     "frame_index": 16,
     "gps": {
-      "latitude": 28.614256,
-      "longitude": 77.208959
+      "latitude": 21.254256,
+      "longitude": 81.628959
     },
     "detection": {
       "bbox": [
@@ -1552,12 +1552,12 @@
       "bbox_height_px": 89
     },
     "severity": {
-      "score": 0.5933,
+      "score": 0.5139,
       "label": "Moderate",
       "factors": {
-        "area_norm": 0.0411,
+        "area_norm": 0.1663,
         "depth_norm": 1.0,
-        "traffic_norm": 0.7159
+        "traffic_norm": 0.2227
       }
     },
     "loop_closure": {
@@ -1565,7 +1565,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T22:47:36.879995+00:00",
+    "_last_seen": "2026-03-14T23:35:47.359502+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T22:56:36.636784+00:00"
   },
@@ -1574,8 +1574,8 @@
     "timestamp": "2026-03-13T12:09:07.413221+00:00",
     "frame_index": 17,
     "gps": {
-      "latitude": 28.614513,
-      "longitude": 77.208257
+      "latitude": 21.254513,
+      "longitude": 81.628257
     },
     "detection": {
       "bbox": [
@@ -1619,8 +1619,8 @@
     "timestamp": "2026-03-13T12:09:16.496118+00:00",
     "frame_index": 19,
     "gps": {
-      "latitude": 28.61414,
-      "longitude": 77.209729
+      "latitude": 21.25414,
+      "longitude": 81.629729
     },
     "detection": {
       "bbox": [
@@ -1664,8 +1664,8 @@
     "timestamp": "2026-03-13T12:09:26.007295+00:00",
     "frame_index": 21,
     "gps": {
-      "latitude": 28.613653,
-      "longitude": 77.208392
+      "latitude": 21.253653,
+      "longitude": 81.628392
     },
     "detection": {
       "bbox": [
@@ -1709,8 +1709,8 @@
     "timestamp": "2026-03-13T12:09:26.017939+00:00",
     "frame_index": 21,
     "gps": {
-      "latitude": 28.614353,
-      "longitude": 77.209617
+      "latitude": 21.254353,
+      "longitude": 81.629617
     },
     "detection": {
       "bbox": [
@@ -1754,8 +1754,8 @@
     "timestamp": "2026-03-13T12:09:31.184256+00:00",
     "frame_index": 22,
     "gps": {
-      "latitude": 28.613528,
-      "longitude": 77.209315
+      "latitude": 21.253528,
+      "longitude": 81.629315
     },
     "detection": {
       "bbox": [
@@ -1799,8 +1799,8 @@
     "timestamp": "2026-03-13T12:09:35.931251+00:00",
     "frame_index": 23,
     "gps": {
-      "latitude": 28.613465,
-      "longitude": 77.208297
+      "latitude": 21.253465,
+      "longitude": 81.628297
     },
     "detection": {
       "bbox": [
@@ -1844,8 +1844,8 @@
     "timestamp": "2026-03-13T12:09:40.493272+00:00",
     "frame_index": 24,
     "gps": {
-      "latitude": 28.614269,
-      "longitude": 77.209223
+      "latitude": 21.254269,
+      "longitude": 81.629223
     },
     "detection": {
       "bbox": [
@@ -1889,8 +1889,8 @@
     "timestamp": "2026-03-13T12:09:40.503757+00:00",
     "frame_index": 24,
     "gps": {
-      "latitude": 28.613609,
-      "longitude": 77.20958
+      "latitude": 21.253609,
+      "longitude": 81.62958
     },
     "detection": {
       "bbox": [
@@ -1934,8 +1934,8 @@
     "timestamp": "2026-03-13T12:09:45.050164+00:00",
     "frame_index": 25,
     "gps": {
-      "latitude": 28.613327,
-      "longitude": 77.209246
+      "latitude": 21.253327,
+      "longitude": 81.629246
     },
     "detection": {
       "bbox": [
@@ -1979,8 +1979,8 @@
     "timestamp": "2026-03-13T12:09:45.061612+00:00",
     "frame_index": 25,
     "gps": {
-      "latitude": 28.614641,
-      "longitude": 77.208476
+      "latitude": 21.254641,
+      "longitude": 81.628476
     },
     "detection": {
       "bbox": [
@@ -2024,8 +2024,8 @@
     "timestamp": "2026-03-13T12:09:49.565214+00:00",
     "frame_index": 26,
     "gps": {
-      "latitude": 28.613683,
-      "longitude": 77.20787
+      "latitude": 21.253683,
+      "longitude": 81.62787
     },
     "detection": {
       "bbox": [
@@ -2069,8 +2069,8 @@
     "timestamp": "2026-03-13T12:09:49.576482+00:00",
     "frame_index": 26,
     "gps": {
-      "latitude": 28.613793,
-      "longitude": 77.209022
+      "latitude": 21.253793,
+      "longitude": 81.629022
     },
     "detection": {
       "bbox": [
@@ -2114,8 +2114,8 @@
     "timestamp": "2026-03-13T12:09:54.596263+00:00",
     "frame_index": 27,
     "gps": {
-      "latitude": 28.613215,
-      "longitude": 77.208473
+      "latitude": 21.253215,
+      "longitude": 81.628473
     },
     "detection": {
       "bbox": [
@@ -2159,8 +2159,8 @@
     "timestamp": "2026-03-13T12:09:59.051886+00:00",
     "frame_index": 28,
     "gps": {
-      "latitude": 28.614135,
-      "longitude": 77.20892
+      "latitude": 21.254135,
+      "longitude": 81.62892
     },
     "detection": {
       "bbox": [
@@ -2197,15 +2197,15 @@
     },
     "_last_seen": "2026-03-14T22:52:40.253167+00:00",
     "_closed": true,
-    "_closed_at": "2026-03-14T22:52:59.532386+00:00"
+    "_closed_at": "2026-03-14T23:38:27.285855+00:00"
   },
   {
     "pothole_id": "NETRA-C7C211EE-74F",
     "timestamp": "2026-03-13T12:10:02.560695+00:00",
     "frame_index": 29,
     "gps": {
-      "latitude": 28.613934,
-      "longitude": 77.209272
+      "latitude": 21.253934,
+      "longitude": 81.629272
     },
     "detection": {
       "bbox": [
@@ -2249,8 +2249,8 @@
     "timestamp": "2026-03-13T12:10:05.631835+00:00",
     "frame_index": 30,
     "gps": {
-      "latitude": 28.613785,
-      "longitude": 77.208612
+      "latitude": 21.253785,
+      "longitude": 81.628612
     },
     "detection": {
       "bbox": [
@@ -2294,8 +2294,8 @@
     "timestamp": "2026-03-13T12:10:08.829587+00:00",
     "frame_index": 31,
     "gps": {
-      "latitude": 28.613178,
-      "longitude": 77.209582
+      "latitude": 21.253178,
+      "longitude": 81.629582
     },
     "detection": {
       "bbox": [
@@ -2339,8 +2339,8 @@
     "timestamp": "2026-03-13T12:10:08.837476+00:00",
     "frame_index": 31,
     "gps": {
-      "latitude": 28.614808,
-      "longitude": 77.209245
+      "latitude": 21.254808,
+      "longitude": 81.629245
     },
     "detection": {
       "bbox": [
@@ -2384,8 +2384,8 @@
     "timestamp": "2026-03-13T12:10:11.966484+00:00",
     "frame_index": 32,
     "gps": {
-      "latitude": 28.613882,
-      "longitude": 77.208929
+      "latitude": 21.253882,
+      "longitude": 81.628929
     },
     "detection": {
       "bbox": [
@@ -2429,8 +2429,8 @@
     "timestamp": "2026-03-13T12:10:11.975407+00:00",
     "frame_index": 32,
     "gps": {
-      "latitude": 28.613422,
-      "longitude": 77.20818
+      "latitude": 21.253422,
+      "longitude": 81.62818
     },
     "detection": {
       "bbox": [
@@ -2474,8 +2474,8 @@
     "timestamp": "2026-03-13T12:10:15.111140+00:00",
     "frame_index": 33,
     "gps": {
-      "latitude": 28.613456,
-      "longitude": 77.209207
+      "latitude": 21.253456,
+      "longitude": 81.629207
     },
     "detection": {
       "bbox": [
@@ -2519,8 +2519,8 @@
     "timestamp": "2026-03-13T12:10:15.132332+00:00",
     "frame_index": 33,
     "gps": {
-      "latitude": 28.614838,
-      "longitude": 77.208472
+      "latitude": 21.254838,
+      "longitude": 81.628472
     },
     "detection": {
       "bbox": [
@@ -2564,8 +2564,8 @@
     "timestamp": "2026-03-13T12:10:18.196942+00:00",
     "frame_index": 34,
     "gps": {
-      "latitude": 28.61447,
-      "longitude": 77.209757
+      "latitude": 21.25447,
+      "longitude": 81.629757
     },
     "detection": {
       "bbox": [
@@ -2609,8 +2609,8 @@
     "timestamp": "2026-03-13T12:10:18.222366+00:00",
     "frame_index": 34,
     "gps": {
-      "latitude": 28.614197,
-      "longitude": 77.208729
+      "latitude": 21.254197,
+      "longitude": 81.628729
     },
     "detection": {
       "bbox": [
@@ -2654,8 +2654,8 @@
     "timestamp": "2026-03-13T12:10:21.426597+00:00",
     "frame_index": 35,
     "gps": {
-      "latitude": 28.613859,
-      "longitude": 77.209906
+      "latitude": 21.253859,
+      "longitude": 81.629906
     },
     "detection": {
       "bbox": [
@@ -2699,8 +2699,8 @@
     "timestamp": "2026-03-13T12:10:21.445502+00:00",
     "frame_index": 35,
     "gps": {
-      "latitude": 28.614384,
-      "longitude": 77.209815
+      "latitude": 21.254384,
+      "longitude": 81.629815
     },
     "detection": {
       "bbox": [
@@ -2744,8 +2744,8 @@
     "timestamp": "2026-03-13T12:10:24.548468+00:00",
     "frame_index": 36,
     "gps": {
-      "latitude": 28.613585,
-      "longitude": 77.20846
+      "latitude": 21.253585,
+      "longitude": 81.62846
     },
     "detection": {
       "bbox": [
@@ -2789,8 +2789,8 @@
     "timestamp": "2026-03-13T12:10:24.564869+00:00",
     "frame_index": 36,
     "gps": {
-      "latitude": 28.614614,
-      "longitude": 77.208698
+      "latitude": 21.254614,
+      "longitude": 81.628698
     },
     "detection": {
       "bbox": [
@@ -2834,8 +2834,8 @@
     "timestamp": "2026-03-13T12:10:27.844322+00:00",
     "frame_index": 37,
     "gps": {
-      "latitude": 28.613413,
-      "longitude": 77.208971
+      "latitude": 21.253413,
+      "longitude": 81.628971
     },
     "detection": {
       "bbox": [
@@ -2879,8 +2879,8 @@
     "timestamp": "2026-03-13T12:10:27.860747+00:00",
     "frame_index": 37,
     "gps": {
-      "latitude": 28.614323,
-      "longitude": 77.208711
+      "latitude": 21.254323,
+      "longitude": 81.628711
     },
     "detection": {
       "bbox": [
@@ -2924,8 +2924,8 @@
     "timestamp": "2026-03-13T12:10:31.100816+00:00",
     "frame_index": 38,
     "gps": {
-      "latitude": 28.614633,
-      "longitude": 77.209735
+      "latitude": 21.254633,
+      "longitude": 81.629735
     },
     "detection": {
       "bbox": [
@@ -2969,8 +2969,8 @@
     "timestamp": "2026-03-13T12:10:31.112983+00:00",
     "frame_index": 38,
     "gps": {
-      "latitude": 28.614695,
-      "longitude": 77.209361
+      "latitude": 21.254695,
+      "longitude": 81.629361
     },
     "detection": {
       "bbox": [
@@ -3014,8 +3014,8 @@
     "timestamp": "2026-03-13T12:10:34.330004+00:00",
     "frame_index": 39,
     "gps": {
-      "latitude": 28.61441,
-      "longitude": 77.208669
+      "latitude": 21.25441,
+      "longitude": 81.628669
     },
     "detection": {
       "bbox": [
@@ -3059,8 +3059,8 @@
     "timestamp": "2026-03-13T12:10:37.558862+00:00",
     "frame_index": 40,
     "gps": {
-      "latitude": 28.613906,
-      "longitude": 77.209171
+      "latitude": 21.253906,
+      "longitude": 81.629171
     },
     "detection": {
       "bbox": [
@@ -3104,8 +3104,8 @@
     "timestamp": "2026-03-13T12:10:40.626060+00:00",
     "frame_index": 41,
     "gps": {
-      "latitude": 28.614493,
-      "longitude": 77.208909
+      "latitude": 21.254493,
+      "longitude": 81.628909
     },
     "detection": {
       "bbox": [
@@ -3149,8 +3149,8 @@
     "timestamp": "2026-03-13T12:10:40.648888+00:00",
     "frame_index": 41,
     "gps": {
-      "latitude": 28.613756,
-      "longitude": 77.209164
+      "latitude": 21.253756,
+      "longitude": 81.629164
     },
     "detection": {
       "bbox": [
@@ -3194,8 +3194,8 @@
     "timestamp": "2026-03-13T12:10:44.435303+00:00",
     "frame_index": 42,
     "gps": {
-      "latitude": 28.614606,
-      "longitude": 77.209296
+      "latitude": 21.254606,
+      "longitude": 81.629296
     },
     "detection": {
       "bbox": [
@@ -3239,8 +3239,8 @@
     "timestamp": "2026-03-13T12:10:44.447605+00:00",
     "frame_index": 42,
     "gps": {
-      "latitude": 28.613336,
-      "longitude": 77.209038
+      "latitude": 21.253336,
+      "longitude": 81.629038
     },
     "detection": {
       "bbox": [
@@ -3284,8 +3284,8 @@
     "timestamp": "2026-03-13T12:10:48.088868+00:00",
     "frame_index": 43,
     "gps": {
-      "latitude": 28.614242,
-      "longitude": 77.208603
+      "latitude": 21.254242,
+      "longitude": 81.628603
     },
     "detection": {
       "bbox": [
@@ -3322,15 +3322,15 @@
     },
     "_last_seen": "2026-03-14T22:46:30.648427+00:00",
     "_closed": true,
-    "_closed_at": "2026-03-14T06:27:29.348266+00:00"
+    "_closed_at": "2026-03-14T23:37:21.400068+00:00"
   },
   {
     "pothole_id": "NETRA-D55C7DE8-956",
     "timestamp": "2026-03-13T12:10:51.608921+00:00",
     "frame_index": 44,
     "gps": {
-      "latitude": 28.614718,
-      "longitude": 77.209002
+      "latitude": 21.254718,
+      "longitude": 81.629002
     },
     "detection": {
       "bbox": [
@@ -3374,8 +3374,8 @@
     "timestamp": "2026-03-13T12:10:51.629775+00:00",
     "frame_index": 44,
     "gps": {
-      "latitude": 28.614162,
-      "longitude": 77.209365
+      "latitude": 21.254162,
+      "longitude": 81.629365
     },
     "detection": {
       "bbox": [
@@ -3419,8 +3419,8 @@
     "timestamp": "2026-03-13T12:10:55.085103+00:00",
     "frame_index": 45,
     "gps": {
-      "latitude": 28.613681,
-      "longitude": 77.207973
+      "latitude": 21.253681,
+      "longitude": 81.627973
     },
     "detection": {
       "bbox": [
@@ -3464,8 +3464,8 @@
     "timestamp": "2026-03-13T12:10:55.103185+00:00",
     "frame_index": 45,
     "gps": {
-      "latitude": 28.614095,
-      "longitude": 77.207849
+      "latitude": 21.254095,
+      "longitude": 81.627849
     },
     "detection": {
       "bbox": [
@@ -3509,8 +3509,8 @@
     "timestamp": "2026-03-13T12:10:58.679244+00:00",
     "frame_index": 46,
     "gps": {
-      "latitude": 28.614802,
-      "longitude": 77.209638
+      "latitude": 21.254802,
+      "longitude": 81.629638
     },
     "detection": {
       "bbox": [
@@ -3554,8 +3554,8 @@
     "timestamp": "2026-03-13T12:11:02.366298+00:00",
     "frame_index": 47,
     "gps": {
-      "latitude": 28.613949,
-      "longitude": 77.208521
+      "latitude": 21.253949,
+      "longitude": 81.628521
     },
     "detection": {
       "bbox": [
@@ -3599,8 +3599,8 @@
     "timestamp": "2026-03-13T12:11:02.376954+00:00",
     "frame_index": 47,
     "gps": {
-      "latitude": 28.61395,
-      "longitude": 77.208061
+      "latitude": 21.25395,
+      "longitude": 81.628061
     },
     "detection": {
       "bbox": [
@@ -3644,8 +3644,8 @@
     "timestamp": "2026-03-13T12:11:02.386955+00:00",
     "frame_index": 47,
     "gps": {
-      "latitude": 28.613593,
-      "longitude": 77.209009
+      "latitude": 21.253593,
+      "longitude": 81.629009
     },
     "detection": {
       "bbox": [
@@ -3689,8 +3689,8 @@
     "timestamp": "2026-03-13T12:11:05.763776+00:00",
     "frame_index": 48,
     "gps": {
-      "latitude": 28.613903,
-      "longitude": 77.208791
+      "latitude": 21.253903,
+      "longitude": 81.628791
     },
     "detection": {
       "bbox": [
@@ -3734,8 +3734,8 @@
     "timestamp": "2026-03-13T12:11:05.781496+00:00",
     "frame_index": 48,
     "gps": {
-      "latitude": 28.613712,
-      "longitude": 77.208294
+      "latitude": 21.253712,
+      "longitude": 81.628294
     },
     "detection": {
       "bbox": [
@@ -3779,8 +3779,8 @@
     "timestamp": "2026-03-13T12:11:08.706948+00:00",
     "frame_index": 49,
     "gps": {
-      "latitude": 28.613107,
-      "longitude": 77.208777
+      "latitude": 21.253107,
+      "longitude": 81.628777
     },
     "detection": {
       "bbox": [
@@ -3824,8 +3824,8 @@
     "timestamp": "2026-03-13T12:11:11.725487+00:00",
     "frame_index": 50,
     "gps": {
-      "latitude": 28.614811,
-      "longitude": 77.209853
+      "latitude": 21.254811,
+      "longitude": 81.629853
     },
     "detection": {
       "bbox": [
@@ -3869,8 +3869,8 @@
     "timestamp": "2026-03-13T12:11:14.814882+00:00",
     "frame_index": 51,
     "gps": {
-      "latitude": 28.614431,
-      "longitude": 77.208489
+      "latitude": 21.254431,
+      "longitude": 81.628489
     },
     "detection": {
       "bbox": [
@@ -3914,8 +3914,8 @@
     "timestamp": "2026-03-13T12:11:14.826719+00:00",
     "frame_index": 51,
     "gps": {
-      "latitude": 28.614353,
-      "longitude": 77.209065
+      "latitude": 21.254353,
+      "longitude": 81.629065
     },
     "detection": {
       "bbox": [
@@ -3959,8 +3959,8 @@
     "timestamp": "2026-03-13T12:11:17.966836+00:00",
     "frame_index": 52,
     "gps": {
-      "latitude": 28.612836,
-      "longitude": 77.208636
+      "latitude": 21.252836,
+      "longitude": 81.628636
     },
     "detection": {
       "bbox": [
@@ -4004,8 +4004,8 @@
     "timestamp": "2026-03-13T12:11:21.164918+00:00",
     "frame_index": 53,
     "gps": {
-      "latitude": 28.614915,
-      "longitude": 77.209412
+      "latitude": 21.254915,
+      "longitude": 81.629412
     },
     "detection": {
       "bbox": [
@@ -4049,8 +4049,8 @@
     "timestamp": "2026-03-13T12:11:21.187055+00:00",
     "frame_index": 53,
     "gps": {
-      "latitude": 28.61453,
-      "longitude": 77.209065
+      "latitude": 21.25453,
+      "longitude": 81.629065
     },
     "detection": {
       "bbox": [
@@ -4094,8 +4094,8 @@
     "timestamp": "2026-03-13T12:11:24.217605+00:00",
     "frame_index": 54,
     "gps": {
-      "latitude": 28.614242,
-      "longitude": 77.209068
+      "latitude": 21.254242,
+      "longitude": 81.629068
     },
     "detection": {
       "bbox": [
@@ -4132,15 +4132,15 @@
     },
     "_last_seen": "2026-03-14T22:52:42.459315+00:00",
     "_closed": true,
-    "_closed_at": "2026-03-14T22:59:55.432360+00:00"
+    "_closed_at": "2026-03-14T23:37:21.353782+00:00"
   },
   {
     "pothole_id": "NETRA-4A48EDC8-511",
     "timestamp": "2026-03-13T12:11:27.406673+00:00",
     "frame_index": 55,
     "gps": {
-      "latitude": 28.614465,
-      "longitude": 77.209155
+      "latitude": 21.254465,
+      "longitude": 81.629155
     },
     "detection": {
       "bbox": [
@@ -4184,8 +4184,8 @@
     "timestamp": "2026-03-13T12:11:27.417379+00:00",
     "frame_index": 55,
     "gps": {
-      "latitude": 28.613857,
-      "longitude": 77.210126
+      "latitude": 21.253857,
+      "longitude": 81.630126
     },
     "detection": {
       "bbox": [
@@ -4229,8 +4229,8 @@
     "timestamp": "2026-03-13T12:11:30.651677+00:00",
     "frame_index": 56,
     "gps": {
-      "latitude": 28.613811,
-      "longitude": 77.209352
+      "latitude": 21.253811,
+      "longitude": 81.629352
     },
     "detection": {
       "bbox": [
@@ -4252,12 +4252,12 @@
       "bbox_height_px": 87
     },
     "severity": {
-      "score": 0.6455,
-      "label": "Moderate",
+      "score": 0.6692,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.0804,
+        "area_norm": 0.5334,
         "depth_norm": 1.0,
-        "traffic_norm": 0.8694
+        "traffic_norm": 0.3299
       }
     },
     "loop_closure": {
@@ -4265,7 +4265,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T22:53:21.614203+00:00",
+    "_last_seen": "2026-03-14T23:35:47.336646+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T22:59:55.477165+00:00"
   },
@@ -4274,8 +4274,8 @@
     "timestamp": "2026-03-13T12:11:30.692596+00:00",
     "frame_index": 56,
     "gps": {
-      "latitude": 28.614353,
-      "longitude": 77.208415
+      "latitude": 21.254353,
+      "longitude": 81.628415
     },
     "detection": {
       "bbox": [
@@ -4319,8 +4319,8 @@
     "timestamp": "2026-03-13T12:11:33.774619+00:00",
     "frame_index": 57,
     "gps": {
-      "latitude": 28.614695,
-      "longitude": 77.208305
+      "latitude": 21.254695,
+      "longitude": 81.628305
     },
     "detection": {
       "bbox": [
@@ -4364,8 +4364,8 @@
     "timestamp": "2026-03-13T12:11:36.705754+00:00",
     "frame_index": 58,
     "gps": {
-      "latitude": 28.614839,
-      "longitude": 77.209467
+      "latitude": 21.254839,
+      "longitude": 81.629467
     },
     "detection": {
       "bbox": [
@@ -4409,8 +4409,8 @@
     "timestamp": "2026-03-13T12:11:39.848966+00:00",
     "frame_index": 59,
     "gps": {
-      "latitude": 28.613,
-      "longitude": 77.20994
+      "latitude": 21.253,
+      "longitude": 81.62994
     },
     "detection": {
       "bbox": [
@@ -4454,8 +4454,8 @@
     "timestamp": "2026-03-13T12:11:43.349596+00:00",
     "frame_index": 60,
     "gps": {
-      "latitude": 28.613148,
-      "longitude": 77.209035
+      "latitude": 21.253148,
+      "longitude": 81.629035
     },
     "detection": {
       "bbox": [
@@ -4499,8 +4499,8 @@
     "timestamp": "2026-03-13T12:11:46.568292+00:00",
     "frame_index": 61,
     "gps": {
-      "latitude": 28.614196,
-      "longitude": 77.209873
+      "latitude": 21.254196,
+      "longitude": 81.629873
     },
     "detection": {
       "bbox": [
@@ -4544,8 +4544,8 @@
     "timestamp": "2026-03-13T12:11:49.961306+00:00",
     "frame_index": 62,
     "gps": {
-      "latitude": 28.614896,
-      "longitude": 77.208868
+      "latitude": 21.254896,
+      "longitude": 81.628868
     },
     "detection": {
       "bbox": [
@@ -4589,8 +4589,8 @@
     "timestamp": "2026-03-13T12:11:53.762753+00:00",
     "frame_index": 63,
     "gps": {
-      "latitude": 28.613502,
-      "longitude": 77.208861
+      "latitude": 21.253502,
+      "longitude": 81.628861
     },
     "detection": {
       "bbox": [
@@ -4634,8 +4634,8 @@
     "timestamp": "2026-03-13T12:11:53.777093+00:00",
     "frame_index": 63,
     "gps": {
-      "latitude": 28.613313,
-      "longitude": 77.208851
+      "latitude": 21.253313,
+      "longitude": 81.628851
     },
     "detection": {
       "bbox": [
@@ -4679,8 +4679,8 @@
     "timestamp": "2026-03-13T12:12:00.174895+00:00",
     "frame_index": 65,
     "gps": {
-      "latitude": 28.614634,
-      "longitude": 77.209502
+      "latitude": 21.254634,
+      "longitude": 81.629502
     },
     "detection": {
       "bbox": [
@@ -4724,8 +4724,8 @@
     "timestamp": "2026-03-13T12:12:03.324640+00:00",
     "frame_index": 66,
     "gps": {
-      "latitude": 28.614107,
-      "longitude": 77.209596
+      "latitude": 21.254107,
+      "longitude": 81.629596
     },
     "detection": {
       "bbox": [
@@ -4769,8 +4769,8 @@
     "timestamp": "2026-03-13T12:12:03.340292+00:00",
     "frame_index": 66,
     "gps": {
-      "latitude": 28.614064,
-      "longitude": 77.208639
+      "latitude": 21.254064,
+      "longitude": 81.628639
     },
     "detection": {
       "bbox": [
@@ -4814,8 +4814,8 @@
     "timestamp": "2026-03-13T12:12:09.427555+00:00",
     "frame_index": 68,
     "gps": {
-      "latitude": 28.613258,
-      "longitude": 77.208645
+      "latitude": 21.253258,
+      "longitude": 81.628645
     },
     "detection": {
       "bbox": [
@@ -4859,8 +4859,8 @@
     "timestamp": "2026-03-13T12:12:12.890815+00:00",
     "frame_index": 69,
     "gps": {
-      "latitude": 28.613055,
-      "longitude": 77.208595
+      "latitude": 21.253055,
+      "longitude": 81.628595
     },
     "detection": {
       "bbox": [
@@ -4904,8 +4904,8 @@
     "timestamp": "2026-03-13T12:12:12.925543+00:00",
     "frame_index": 69,
     "gps": {
-      "latitude": 28.613244,
-      "longitude": 77.20942
+      "latitude": 21.253244,
+      "longitude": 81.62942
     },
     "detection": {
       "bbox": [
@@ -4949,8 +4949,8 @@
     "timestamp": "2026-03-13T12:12:18.990831+00:00",
     "frame_index": 71,
     "gps": {
-      "latitude": 28.613577,
-      "longitude": 77.209443
+      "latitude": 21.253577,
+      "longitude": 81.629443
     },
     "detection": {
       "bbox": [
@@ -4994,8 +4994,8 @@
     "timestamp": "2026-03-13T12:12:22.585361+00:00",
     "frame_index": 72,
     "gps": {
-      "latitude": 28.613535,
-      "longitude": 77.20874
+      "latitude": 21.253535,
+      "longitude": 81.62874
     },
     "detection": {
       "bbox": [
@@ -5032,15 +5032,15 @@
     },
     "_last_seen": "2026-03-14T22:47:02.926736+00:00",
     "_closed": true,
-    "_closed_at": "2026-03-14T22:56:20.064976+00:00"
+    "_closed_at": "2026-03-14T23:38:27.298374+00:00"
   },
   {
     "pothole_id": "NETRA-A89EB5F6-636",
     "timestamp": "2026-03-13T12:12:25.609803+00:00",
     "frame_index": 73,
     "gps": {
-      "latitude": 28.61423,
-      "longitude": 77.208
+      "latitude": 21.25423,
+      "longitude": 81.628
     },
     "detection": {
       "bbox": [
@@ -5084,8 +5084,8 @@
     "timestamp": "2026-03-13T12:12:25.628494+00:00",
     "frame_index": 73,
     "gps": {
-      "latitude": 28.613741,
-      "longitude": 77.209283
+      "latitude": 21.253741,
+      "longitude": 81.629283
     },
     "detection": {
       "bbox": [
@@ -5122,15 +5122,15 @@
     },
     "_last_seen": "2026-03-14T13:36:17.637903+00:00",
     "_closed": true,
-    "_closed_at": "2026-03-14T22:59:55.398057+00:00"
+    "_closed_at": "2026-03-14T23:37:21.412361+00:00"
   },
   {
     "pothole_id": "NETRA-20459A04-D2A",
     "timestamp": "2026-03-13T12:12:31.903755+00:00",
     "frame_index": 75,
     "gps": {
-      "latitude": 28.612943,
-      "longitude": 77.209706
+      "latitude": 21.252943,
+      "longitude": 81.629706
     },
     "detection": {
       "bbox": [
@@ -5174,8 +5174,8 @@
     "timestamp": "2026-03-13T12:12:38.056815+00:00",
     "frame_index": 77,
     "gps": {
-      "latitude": 28.615109,
-      "longitude": 77.209274
+      "latitude": 21.255109,
+      "longitude": 81.629274
     },
     "detection": {
       "bbox": [
@@ -5219,8 +5219,8 @@
     "timestamp": "2026-03-13T12:12:44.167139+00:00",
     "frame_index": 79,
     "gps": {
-      "latitude": 28.61406,
-      "longitude": 77.208984
+      "latitude": 21.25406,
+      "longitude": 81.628984
     },
     "detection": {
       "bbox": [
@@ -5264,8 +5264,8 @@
     "timestamp": "2026-03-13T12:12:47.161185+00:00",
     "frame_index": 80,
     "gps": {
-      "latitude": 28.614301,
-      "longitude": 77.209502
+      "latitude": 21.254301,
+      "longitude": 81.629502
     },
     "detection": {
       "bbox": [
@@ -5304,8 +5304,8 @@
     "timestamp": "2026-03-13T12:17:52.408881+00:00",
     "frame_index": 3,
     "gps": {
-      "latitude": 28.613675,
-      "longitude": 77.209771
+      "latitude": 21.253675,
+      "longitude": 81.629771
     },
     "detection": {
       "bbox": [
@@ -5349,8 +5349,8 @@
     "timestamp": "2026-03-13T12:17:54.675379+00:00",
     "frame_index": 4,
     "gps": {
-      "latitude": 28.613386,
-      "longitude": 77.208486
+      "latitude": 21.253386,
+      "longitude": 81.628486
     },
     "detection": {
       "bbox": [
@@ -5394,8 +5394,8 @@
     "timestamp": "2026-03-13T12:18:01.011013+00:00",
     "frame_index": 7,
     "gps": {
-      "latitude": 28.613859,
-      "longitude": 77.209679
+      "latitude": 21.253859,
+      "longitude": 81.629679
     },
     "detection": {
       "bbox": [
@@ -5439,8 +5439,8 @@
     "timestamp": "2026-03-13T12:18:03.130585+00:00",
     "frame_index": 8,
     "gps": {
-      "latitude": 28.61411,
-      "longitude": 77.208233
+      "latitude": 21.25411,
+      "longitude": 81.628233
     },
     "detection": {
       "bbox": [
@@ -5484,8 +5484,8 @@
     "timestamp": "2026-03-13T12:18:14.637870+00:00",
     "frame_index": 14,
     "gps": {
-      "latitude": 28.613479,
-      "longitude": 77.21021
+      "latitude": 21.253479,
+      "longitude": 81.63021
     },
     "detection": {
       "bbox": [
@@ -5529,8 +5529,8 @@
     "timestamp": "2026-03-13T12:18:16.399792+00:00",
     "frame_index": 15,
     "gps": {
-      "latitude": 28.614167,
-      "longitude": 77.208382
+      "latitude": 21.254167,
+      "longitude": 81.628382
     },
     "detection": {
       "bbox": [
@@ -5574,8 +5574,8 @@
     "timestamp": "2026-03-13T12:18:18.275261+00:00",
     "frame_index": 16,
     "gps": {
-      "latitude": 28.613311,
-      "longitude": 77.208556
+      "latitude": 21.253311,
+      "longitude": 81.628556
     },
     "detection": {
       "bbox": [
@@ -5619,8 +5619,8 @@
     "timestamp": "2026-03-13T12:18:18.283863+00:00",
     "frame_index": 16,
     "gps": {
-      "latitude": 28.614751,
-      "longitude": 77.209959
+      "latitude": 21.254751,
+      "longitude": 81.629959
     },
     "detection": {
       "bbox": [
@@ -5664,8 +5664,8 @@
     "timestamp": "2026-03-13T12:18:29.897390+00:00",
     "frame_index": 22,
     "gps": {
-      "latitude": 28.612722,
-      "longitude": 77.208551
+      "latitude": 21.252722,
+      "longitude": 81.628551
     },
     "detection": {
       "bbox": [
@@ -5709,8 +5709,8 @@
     "timestamp": "2026-03-13T12:18:35.742473+00:00",
     "frame_index": 25,
     "gps": {
-      "latitude": 28.613541,
-      "longitude": 77.208198
+      "latitude": 21.253541,
+      "longitude": 81.628198
     },
     "detection": {
       "bbox": [
@@ -5754,8 +5754,8 @@
     "timestamp": "2026-03-13T12:18:37.707809+00:00",
     "frame_index": 26,
     "gps": {
-      "latitude": 28.615069,
-      "longitude": 77.209416
+      "latitude": 21.255069,
+      "longitude": 81.629416
     },
     "detection": {
       "bbox": [
@@ -5798,8 +5798,8 @@
     "timestamp": "2026-03-13T12:18:39.760966+00:00",
     "frame_index": 27,
     "gps": {
-      "latitude": 28.61294,
-      "longitude": 77.208326
+      "latitude": 21.25294,
+      "longitude": 81.628326
     },
     "detection": {
       "bbox": [
@@ -5843,8 +5843,8 @@
     "timestamp": "2026-03-13T12:18:45.450567+00:00",
     "frame_index": 30,
     "gps": {
-      "latitude": 28.613199,
-      "longitude": 77.20888
+      "latitude": 21.253199,
+      "longitude": 81.62888
     },
     "detection": {
       "bbox": [
@@ -5888,8 +5888,8 @@
     "timestamp": "2026-03-13T12:18:55.447659+00:00",
     "frame_index": 35,
     "gps": {
-      "latitude": 28.614015,
-      "longitude": 77.208195
+      "latitude": 21.254015,
+      "longitude": 81.628195
     },
     "detection": {
       "bbox": [
@@ -5933,8 +5933,8 @@
     "timestamp": "2026-03-13T12:18:55.458359+00:00",
     "frame_index": 35,
     "gps": {
-      "latitude": 28.613523,
-      "longitude": 77.210069
+      "latitude": 21.253523,
+      "longitude": 81.630069
     },
     "detection": {
       "bbox": [
@@ -5978,8 +5978,8 @@
     "timestamp": "2026-03-13T12:18:57.820275+00:00",
     "frame_index": 36,
     "gps": {
-      "latitude": 28.612569,
-      "longitude": 77.208931
+      "latitude": 21.252569,
+      "longitude": 81.628931
     },
     "detection": {
       "bbox": [
@@ -6021,8 +6021,8 @@
     "timestamp": "2026-03-13T12:19:00.083350+00:00",
     "frame_index": 37,
     "gps": {
-      "latitude": 28.613761,
-      "longitude": 77.208451
+      "latitude": 21.253761,
+      "longitude": 81.628451
     },
     "detection": {
       "bbox": [
@@ -6066,8 +6066,8 @@
     "timestamp": "2026-03-13T12:19:00.093811+00:00",
     "frame_index": 37,
     "gps": {
-      "latitude": 28.612934,
-      "longitude": 77.209483
+      "latitude": 21.252934,
+      "longitude": 81.629483
     },
     "detection": {
       "bbox": [
@@ -6111,8 +6111,8 @@
     "timestamp": "2026-03-13T12:19:08.321126+00:00",
     "frame_index": 41,
     "gps": {
-      "latitude": 28.613924,
-      "longitude": 77.208654
+      "latitude": 21.253924,
+      "longitude": 81.628654
     },
     "detection": {
       "bbox": [
@@ -6156,8 +6156,8 @@
     "timestamp": "2026-03-13T12:19:14.722541+00:00",
     "frame_index": 44,
     "gps": {
-      "latitude": 28.61306,
-      "longitude": 77.209682
+      "latitude": 21.25306,
+      "longitude": 81.629682
     },
     "detection": {
       "bbox": [
@@ -6201,8 +6201,8 @@
     "timestamp": "2026-03-13T12:19:18.978561+00:00",
     "frame_index": 46,
     "gps": {
-      "latitude": 28.613743,
-      "longitude": 77.208925
+      "latitude": 21.253743,
+      "longitude": 81.628925
     },
     "detection": {
       "bbox": [
@@ -6246,8 +6246,8 @@
     "timestamp": "2026-03-13T12:19:18.992850+00:00",
     "frame_index": 46,
     "gps": {
-      "latitude": 28.61385,
-      "longitude": 77.209804
+      "latitude": 21.25385,
+      "longitude": 81.629804
     },
     "detection": {
       "bbox": [
@@ -6291,8 +6291,8 @@
     "timestamp": "2026-03-13T12:19:21.064499+00:00",
     "frame_index": 47,
     "gps": {
-      "latitude": 28.612923,
-      "longitude": 77.207844
+      "latitude": 21.252923,
+      "longitude": 81.627844
     },
     "detection": {
       "bbox": [
@@ -6336,8 +6336,8 @@
     "timestamp": "2026-03-13T12:19:23.109010+00:00",
     "frame_index": 48,
     "gps": {
-      "latitude": 28.613664,
-      "longitude": 77.208591
+      "latitude": 21.253664,
+      "longitude": 81.628591
     },
     "detection": {
       "bbox": [
@@ -6381,8 +6381,8 @@
     "timestamp": "2026-03-13T12:19:23.133405+00:00",
     "frame_index": 48,
     "gps": {
-      "latitude": 28.613495,
-      "longitude": 77.209959
+      "latitude": 21.253495,
+      "longitude": 81.629959
     },
     "detection": {
       "bbox": [
@@ -6426,8 +6426,8 @@
     "timestamp": "2026-03-13T12:19:29.579409+00:00",
     "frame_index": 51,
     "gps": {
-      "latitude": 28.614687,
-      "longitude": 77.209185
+      "latitude": 21.254687,
+      "longitude": 81.629185
     },
     "detection": {
       "bbox": [
@@ -6471,8 +6471,8 @@
     "timestamp": "2026-03-13T12:19:31.558247+00:00",
     "frame_index": 52,
     "gps": {
-      "latitude": 28.614158,
-      "longitude": 77.208137
+      "latitude": 21.254158,
+      "longitude": 81.628137
     },
     "detection": {
       "bbox": [
@@ -6516,8 +6516,8 @@
     "timestamp": "2026-03-13T12:19:31.568163+00:00",
     "frame_index": 52,
     "gps": {
-      "latitude": 28.614067,
-      "longitude": 77.210068
+      "latitude": 21.254067,
+      "longitude": 81.630068
     },
     "detection": {
       "bbox": [
@@ -6561,8 +6561,8 @@
     "timestamp": "2026-03-13T12:21:16.657032+00:00",
     "frame_index": 3,
     "gps": {
-      "latitude": 28.613833,
-      "longitude": 77.208303
+      "latitude": 21.253833,
+      "longitude": 81.628303
     },
     "detection": {
       "bbox": [
@@ -6606,8 +6606,8 @@
     "timestamp": "2026-03-13T12:21:16.682648+00:00",
     "frame_index": 3,
     "gps": {
-      "latitude": 28.613747,
-      "longitude": 77.209685
+      "latitude": 21.253747,
+      "longitude": 81.629685
     },
     "detection": {
       "bbox": [
@@ -6651,8 +6651,8 @@
     "timestamp": "2026-03-13T12:21:53.079860+00:00",
     "frame_index": 3,
     "gps": {
-      "latitude": 28.614182,
-      "longitude": 77.210284
+      "latitude": 21.254182,
+      "longitude": 81.630284
     },
     "detection": {
       "bbox": [
@@ -6696,8 +6696,8 @@
     "timestamp": "2026-03-13T12:22:19.326523+00:00",
     "frame_index": 9,
     "gps": {
-      "latitude": 28.614252,
-      "longitude": 77.208454
+      "latitude": 21.254252,
+      "longitude": 81.628454
     },
     "detection": {
       "bbox": [
@@ -6741,8 +6741,8 @@
     "timestamp": "2026-03-13T12:22:23.841814+00:00",
     "frame_index": 10,
     "gps": {
-      "latitude": 28.614215,
-      "longitude": 77.209472
+      "latitude": 21.254215,
+      "longitude": 81.629472
     },
     "detection": {
       "bbox": [
@@ -6786,8 +6786,8 @@
     "timestamp": "2026-03-13T12:22:28.523750+00:00",
     "frame_index": 11,
     "gps": {
-      "latitude": 28.614025,
-      "longitude": 77.209798
+      "latitude": 21.254025,
+      "longitude": 81.629798
     },
     "detection": {
       "bbox": [
@@ -6831,8 +6831,8 @@
     "timestamp": "2026-03-13T12:22:33.575425+00:00",
     "frame_index": 12,
     "gps": {
-      "latitude": 28.613257,
-      "longitude": 77.208959
+      "latitude": 21.253257,
+      "longitude": 81.628959
     },
     "detection": {
       "bbox": [
@@ -6876,8 +6876,8 @@
     "timestamp": "2026-03-13T12:22:45.796389+00:00",
     "frame_index": 15,
     "gps": {
-      "latitude": 28.614286,
-      "longitude": 77.210179
+      "latitude": 21.254286,
+      "longitude": 81.630179
     },
     "detection": {
       "bbox": [
@@ -6921,8 +6921,8 @@
     "timestamp": "2026-03-13T12:22:45.817398+00:00",
     "frame_index": 15,
     "gps": {
-      "latitude": 28.613522,
-      "longitude": 77.208007
+      "latitude": 21.253522,
+      "longitude": 81.628007
     },
     "detection": {
       "bbox": [
@@ -6966,8 +6966,8 @@
     "timestamp": "2026-03-13T12:22:49.213839+00:00",
     "frame_index": 16,
     "gps": {
-      "latitude": 28.613934,
-      "longitude": 77.209745
+      "latitude": 21.253934,
+      "longitude": 81.629745
     },
     "detection": {
       "bbox": [
@@ -7011,8 +7011,8 @@
     "timestamp": "2026-03-13T12:22:56.472220+00:00",
     "frame_index": 18,
     "gps": {
-      "latitude": 28.614483,
-      "longitude": 77.209608
+      "latitude": 21.254483,
+      "longitude": 81.629608
     },
     "detection": {
       "bbox": [
@@ -7034,12 +7034,12 @@
       "bbox_height_px": 191
     },
     "severity": {
-      "score": 0.4875,
+      "score": 0.6139,
       "label": "Moderate",
       "factors": {
-        "area_norm": 0.1515,
-        "depth_norm": 0.9246,
-        "traffic_norm": 0.2583
+        "area_norm": 0.1377,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.6629
       }
     },
     "loop_closure": {
@@ -7047,7 +7047,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T06:25:08.849981+00:00",
+    "_last_seen": "2026-03-14T23:37:21.342092+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T22:53:09.747778+00:00"
   },
@@ -7056,8 +7056,8 @@
     "timestamp": "2026-03-13T12:23:15.446732+00:00",
     "frame_index": 23,
     "gps": {
-      "latitude": 28.615002,
-      "longitude": 77.210182
+      "latitude": 21.255002,
+      "longitude": 81.630182
     },
     "detection": {
       "bbox": [
@@ -7101,8 +7101,8 @@
     "timestamp": "2026-03-13T12:23:22.614519+00:00",
     "frame_index": 25,
     "gps": {
-      "latitude": 28.613977,
-      "longitude": 77.209549
+      "latitude": 21.253977,
+      "longitude": 81.629549
     },
     "detection": {
       "bbox": [
@@ -7146,8 +7146,8 @@
     "timestamp": "2026-03-13T12:23:22.650129+00:00",
     "frame_index": 25,
     "gps": {
-      "latitude": 28.613448,
-      "longitude": 77.209777
+      "latitude": 21.253448,
+      "longitude": 81.629777
     },
     "detection": {
       "bbox": [
@@ -7191,8 +7191,8 @@
     "timestamp": "2026-03-13T12:23:25.737490+00:00",
     "frame_index": 26,
     "gps": {
-      "latitude": 28.612998,
-      "longitude": 77.209567
+      "latitude": 21.252998,
+      "longitude": 81.629567
     },
     "detection": {
       "bbox": [
@@ -7236,8 +7236,8 @@
     "timestamp": "2026-03-13T12:23:37.966097+00:00",
     "frame_index": 30,
     "gps": {
-      "latitude": 28.614376,
-      "longitude": 77.20759
+      "latitude": 21.254376,
+      "longitude": 81.62759
     },
     "detection": {
       "bbox": [
@@ -7279,8 +7279,8 @@
     "timestamp": "2026-03-13T12:23:41.038724+00:00",
     "frame_index": 31,
     "gps": {
-      "latitude": 28.615057,
-      "longitude": 77.208044
+      "latitude": 21.255057,
+      "longitude": 81.628044
     },
     "detection": {
       "bbox": [
@@ -7324,8 +7324,8 @@
     "timestamp": "2026-03-13T12:23:44.196632+00:00",
     "frame_index": 32,
     "gps": {
-      "latitude": 28.61395,
-      "longitude": 77.209964
+      "latitude": 21.25395,
+      "longitude": 81.629964
     },
     "detection": {
       "bbox": [
@@ -7369,8 +7369,8 @@
     "timestamp": "2026-03-13T12:23:50.528691+00:00",
     "frame_index": 34,
     "gps": {
-      "latitude": 28.613198,
-      "longitude": 77.208024
+      "latitude": 21.253198,
+      "longitude": 81.628024
     },
     "detection": {
       "bbox": [
@@ -7414,8 +7414,8 @@
     "timestamp": "2026-03-13T12:23:50.555610+00:00",
     "frame_index": 34,
     "gps": {
-      "latitude": 28.61403,
-      "longitude": 77.208431
+      "latitude": 21.25403,
+      "longitude": 81.628431
     },
     "detection": {
       "bbox": [
@@ -7459,8 +7459,8 @@
     "timestamp": "2026-03-13T12:23:53.736270+00:00",
     "frame_index": 35,
     "gps": {
-      "latitude": 28.613759,
-      "longitude": 77.209813
+      "latitude": 21.253759,
+      "longitude": 81.629813
     },
     "detection": {
       "bbox": [
@@ -7504,8 +7504,8 @@
     "timestamp": "2026-03-13T12:24:06.071709+00:00",
     "frame_index": 39,
     "gps": {
-      "latitude": 28.614884,
-      "longitude": 77.207818
+      "latitude": 21.254884,
+      "longitude": 81.627818
     },
     "detection": {
       "bbox": [
@@ -7546,8 +7546,8 @@
     "timestamp": "2026-03-13T12:24:12.439741+00:00",
     "frame_index": 41,
     "gps": {
-      "latitude": 28.613679,
-      "longitude": 77.208828
+      "latitude": 21.253679,
+      "longitude": 81.628828
     },
     "detection": {
       "bbox": [
@@ -7591,8 +7591,8 @@
     "timestamp": "2026-03-13T12:24:18.907847+00:00",
     "frame_index": 43,
     "gps": {
-      "latitude": 28.613367,
-      "longitude": 77.20753
+      "latitude": 21.253367,
+      "longitude": 81.62753
     },
     "detection": {
       "bbox": [
@@ -7634,8 +7634,8 @@
     "timestamp": "2026-03-13T12:24:23.136865+00:00",
     "frame_index": 44,
     "gps": {
-      "latitude": 28.61488,
-      "longitude": 77.208333
+      "latitude": 21.25488,
+      "longitude": 81.628333
     },
     "detection": {
       "bbox": [
@@ -7679,8 +7679,8 @@
     "timestamp": "2026-03-13T12:24:23.165576+00:00",
     "frame_index": 44,
     "gps": {
-      "latitude": 28.613938,
-      "longitude": 77.209018
+      "latitude": 21.253938,
+      "longitude": 81.629018
     },
     "detection": {
       "bbox": [
@@ -7724,8 +7724,8 @@
     "timestamp": "2026-03-13T12:24:30.026026+00:00",
     "frame_index": 46,
     "gps": {
-      "latitude": 28.614258,
-      "longitude": 77.208193
+      "latitude": 21.254258,
+      "longitude": 81.628193
     },
     "detection": {
       "bbox": [
@@ -7761,7 +7761,7 @@
       "action": "Log new pothole and create work order."
     },
     "_closed": true,
-    "_closed_at": "2026-03-14T06:26:17.507916+00:00",
+    "_closed_at": "2026-03-14T23:36:46.551873+00:00",
     "_last_seen": "2026-03-14T19:03:52.801903+00:00"
   },
   {
@@ -7769,8 +7769,8 @@
     "timestamp": "2026-03-13T12:24:36.770599+00:00",
     "frame_index": 48,
     "gps": {
-      "latitude": 28.614257,
-      "longitude": 77.207883
+      "latitude": 21.254257,
+      "longitude": 81.627883
     },
     "detection": {
       "bbox": [
@@ -7814,8 +7814,8 @@
     "timestamp": "2026-03-13T12:24:40.332949+00:00",
     "frame_index": 49,
     "gps": {
-      "latitude": 28.613041,
-      "longitude": 77.208944
+      "latitude": 21.253041,
+      "longitude": 81.628944
     },
     "detection": {
       "bbox": [
@@ -7859,8 +7859,8 @@
     "timestamp": "2026-03-13T12:24:50.614769+00:00",
     "frame_index": 52,
     "gps": {
-      "latitude": 28.61433,
-      "longitude": 77.209973
+      "latitude": 21.25433,
+      "longitude": 81.629973
     },
     "detection": {
       "bbox": [
@@ -7904,8 +7904,8 @@
     "timestamp": "2026-03-13T12:24:53.827937+00:00",
     "frame_index": 53,
     "gps": {
-      "latitude": 28.61452,
-      "longitude": 77.208068
+      "latitude": 21.25452,
+      "longitude": 81.628068
     },
     "detection": {
       "bbox": [
@@ -7949,8 +7949,8 @@
     "timestamp": "2026-03-13T12:25:09.571931+00:00",
     "frame_index": 58,
     "gps": {
-      "latitude": 28.613266,
-      "longitude": 77.209679
+      "latitude": 21.253266,
+      "longitude": 81.629679
     },
     "detection": {
       "bbox": [
@@ -7994,8 +7994,8 @@
     "timestamp": "2026-03-13T12:25:29.831304+00:00",
     "frame_index": 64,
     "gps": {
-      "latitude": 28.614751,
-      "longitude": 77.209515
+      "latitude": 21.254751,
+      "longitude": 81.629515
     },
     "detection": {
       "bbox": [
@@ -8039,8 +8039,8 @@
     "timestamp": "2026-03-13T12:25:34.272409+00:00",
     "frame_index": 65,
     "gps": {
-      "latitude": 28.61442,
-      "longitude": 77.209389
+      "latitude": 21.25442,
+      "longitude": 81.629389
     },
     "detection": {
       "bbox": [
@@ -8084,8 +8084,8 @@
     "timestamp": "2026-03-13T12:25:48.852640+00:00",
     "frame_index": 68,
     "gps": {
-      "latitude": 28.613943,
-      "longitude": 77.209435
+      "latitude": 21.253943,
+      "longitude": 81.629435
     },
     "detection": {
       "bbox": [
@@ -8129,8 +8129,8 @@
     "timestamp": "2026-03-13T12:26:30.312306+00:00",
     "frame_index": 2,
     "gps": {
-      "latitude": 28.612739,
-      "longitude": 77.209312
+      "latitude": 21.252739,
+      "longitude": 81.629312
     },
     "detection": {
       "bbox": [
@@ -8174,8 +8174,8 @@
     "timestamp": "2026-03-13T12:28:36.465056+00:00",
     "frame_index": 19,
     "gps": {
-      "latitude": 28.615141,
-      "longitude": 77.209655
+      "latitude": 21.255141,
+      "longitude": 81.629655
     },
     "detection": {
       "bbox": [
@@ -8219,8 +8219,8 @@
     "timestamp": "2026-03-13T12:28:44.547688+00:00",
     "frame_index": 20,
     "gps": {
-      "latitude": 28.612949,
-      "longitude": 77.20875
+      "latitude": 21.252949,
+      "longitude": 81.62875
     },
     "detection": {
       "bbox": [
@@ -8264,8 +8264,8 @@
     "timestamp": "2026-03-13T12:29:09.129458+00:00",
     "frame_index": 23,
     "gps": {
-      "latitude": 28.614496,
-      "longitude": 77.210181
+      "latitude": 21.254496,
+      "longitude": 81.630181
     },
     "detection": {
       "bbox": [
@@ -8309,8 +8309,8 @@
     "timestamp": "2026-03-13T12:29:17.668543+00:00",
     "frame_index": 24,
     "gps": {
-      "latitude": 28.613847,
-      "longitude": 77.208162
+      "latitude": 21.253847,
+      "longitude": 81.628162
     },
     "detection": {
       "bbox": [
@@ -8347,15 +8347,15 @@
     },
     "_last_seen": "2026-03-14T06:21:59.101222+00:00",
     "_closed": true,
-    "_closed_at": "2026-03-13T21:09:54.898531+00:00"
+    "_closed_at": "2026-03-14T23:37:21.423807+00:00"
   },
   {
     "pothole_id": "NETRA-11E461DD-B7E",
     "timestamp": "2026-03-13T12:29:56.789922+00:00",
     "frame_index": 29,
     "gps": {
-      "latitude": 28.614385,
-      "longitude": 77.208892
+      "latitude": 21.254385,
+      "longitude": 81.628892
     },
     "detection": {
       "bbox": [
@@ -8399,8 +8399,8 @@
     "timestamp": "2026-03-13T12:30:14.926943+00:00",
     "frame_index": 32,
     "gps": {
-      "latitude": 28.614989,
-      "longitude": 77.209335
+      "latitude": 21.254989,
+      "longitude": 81.629335
     },
     "detection": {
       "bbox": [
@@ -8444,8 +8444,8 @@
     "timestamp": "2026-03-13T12:30:35.119631+00:00",
     "frame_index": 36,
     "gps": {
-      "latitude": 28.61369,
-      "longitude": 77.208171
+      "latitude": 21.25369,
+      "longitude": 81.628171
     },
     "detection": {
       "bbox": [
@@ -8489,8 +8489,8 @@
     "timestamp": "2026-03-13T12:30:49.849502+00:00",
     "frame_index": 39,
     "gps": {
-      "latitude": 28.614761,
-      "longitude": 77.208612
+      "latitude": 21.254761,
+      "longitude": 81.628612
     },
     "detection": {
       "bbox": [
@@ -8512,12 +8512,12 @@
       "bbox_height_px": 83
     },
     "severity": {
-      "score": 0.5003,
-      "label": "Moderate",
+      "score": 0.7002,
+      "label": "Critical",
       "factors": {
-        "area_norm": 0.1194,
+        "area_norm": 0.2619,
         "depth_norm": 1.0,
-        "traffic_norm": 0.2341
+        "traffic_norm": 0.8341
       }
     },
     "loop_closure": {
@@ -8525,7 +8525,7 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T22:56:59.777895+00:00",
+    "_last_seen": "2026-03-14T23:36:46.528419+00:00",
     "_closed": true,
     "_closed_at": "2026-03-14T22:59:55.409159+00:00"
   },
@@ -8534,8 +8534,8 @@
     "timestamp": "2026-03-13T12:30:49.879086+00:00",
     "frame_index": 39,
     "gps": {
-      "latitude": 28.615076,
-      "longitude": 77.208661
+      "latitude": 21.255076,
+      "longitude": 81.628661
     },
     "detection": {
       "bbox": [
@@ -8572,15 +8572,15 @@
     },
     "_last_seen": "2026-03-14T14:04:29.776089+00:00",
     "_closed": true,
-    "_closed_at": "2026-03-13T17:34:10.359751+00:00"
+    "_closed_at": "2026-03-14T23:37:21.376994+00:00"
   },
   {
     "pothole_id": "NETRA-8B635BEA-97F",
     "timestamp": "2026-03-13T12:31:22.470903+00:00",
     "frame_index": 45,
     "gps": {
-      "latitude": 28.612443,
-      "longitude": 77.20911
+      "latitude": 21.252443,
+      "longitude": 81.62911
     },
     "detection": {
       "bbox": [
@@ -8624,8 +8624,8 @@
     "timestamp": "2026-03-13T12:31:37.887590+00:00",
     "frame_index": 48,
     "gps": {
-      "latitude": 28.614375,
-      "longitude": 77.209291
+      "latitude": 21.254375,
+      "longitude": 81.629291
     },
     "detection": {
       "bbox": [
@@ -8669,8 +8669,8 @@
     "timestamp": "2026-03-13T12:31:42.842836+00:00",
     "frame_index": 49,
     "gps": {
-      "latitude": 28.612828,
-      "longitude": 77.209518
+      "latitude": 21.252828,
+      "longitude": 81.629518
     },
     "detection": {
       "bbox": [
@@ -8714,8 +8714,8 @@
     "timestamp": "2026-03-13T12:31:47.939845+00:00",
     "frame_index": 50,
     "gps": {
-      "latitude": 28.61506,
-      "longitude": 77.208901
+      "latitude": 21.25506,
+      "longitude": 81.628901
     },
     "detection": {
       "bbox": [
@@ -8759,8 +8759,8 @@
     "timestamp": "2026-03-13T12:32:02.874817+00:00",
     "frame_index": 53,
     "gps": {
-      "latitude": 28.614825,
-      "longitude": 77.208774
+      "latitude": 21.254825,
+      "longitude": 81.628774
     },
     "detection": {
       "bbox": [
@@ -8804,8 +8804,8 @@
     "timestamp": "2026-03-13T12:32:07.583938+00:00",
     "frame_index": 54,
     "gps": {
-      "latitude": 28.614794,
-      "longitude": 77.209092
+      "latitude": 21.254794,
+      "longitude": 81.629092
     },
     "detection": {
       "bbox": [
@@ -8849,8 +8849,8 @@
     "timestamp": "2026-03-13T12:32:17.303195+00:00",
     "frame_index": 56,
     "gps": {
-      "latitude": 28.613474,
-      "longitude": 77.208416
+      "latitude": 21.253474,
+      "longitude": 81.628416
     },
     "detection": {
       "bbox": [
@@ -8894,8 +8894,8 @@
     "timestamp": "2026-03-13T12:32:22.708597+00:00",
     "frame_index": 57,
     "gps": {
-      "latitude": 28.614279,
-      "longitude": 77.208832
+      "latitude": 21.254279,
+      "longitude": 81.628832
     },
     "detection": {
       "bbox": [
@@ -8939,8 +8939,8 @@
     "timestamp": "2026-03-13T12:32:27.803801+00:00",
     "frame_index": 58,
     "gps": {
-      "latitude": 28.613179,
-      "longitude": 77.208339
+      "latitude": 21.253179,
+      "longitude": 81.628339
     },
     "detection": {
       "bbox": [
@@ -8984,8 +8984,8 @@
     "timestamp": "2026-03-13T12:33:07.259276+00:00",
     "frame_index": 65,
     "gps": {
-      "latitude": 28.61241,
-      "longitude": 77.209775
+      "latitude": 21.25241,
+      "longitude": 81.629775
     },
     "detection": {
       "bbox": [
@@ -9029,8 +9029,8 @@
     "timestamp": "2026-03-13T12:33:07.289081+00:00",
     "frame_index": 65,
     "gps": {
-      "latitude": 28.614442,
-      "longitude": 77.209036
+      "latitude": 21.254442,
+      "longitude": 81.629036
     },
     "detection": {
       "bbox": [
@@ -9074,8 +9074,8 @@
     "timestamp": "2026-03-13T12:33:07.321210+00:00",
     "frame_index": 65,
     "gps": {
-      "latitude": 28.614365,
-      "longitude": 77.208289
+      "latitude": 21.254365,
+      "longitude": 81.628289
     },
     "detection": {
       "bbox": [
@@ -9119,8 +9119,8 @@
     "timestamp": "2026-03-13T12:33:54.859621+00:00",
     "frame_index": 73,
     "gps": {
-      "latitude": 28.614507,
-      "longitude": 77.20867
+      "latitude": 21.254507,
+      "longitude": 81.62867
     },
     "detection": {
       "bbox": [
@@ -9164,8 +9164,8 @@
     "timestamp": "2026-03-13T12:34:10.378663+00:00",
     "frame_index": 76,
     "gps": {
-      "latitude": 28.612958,
-      "longitude": 77.209301
+      "latitude": 21.252958,
+      "longitude": 81.629301
     },
     "detection": {
       "bbox": [
@@ -9209,8 +9209,8 @@
     "timestamp": "2026-03-13T12:35:06.729666+00:00",
     "frame_index": 85,
     "gps": {
-      "latitude": 28.613694,
-      "longitude": 77.209064
+      "latitude": 21.253694,
+      "longitude": 81.629064
     },
     "detection": {
       "bbox": [
@@ -9254,8 +9254,8 @@
     "timestamp": "2026-03-13T12:35:30.880869+00:00",
     "frame_index": 88,
     "gps": {
-      "latitude": 28.614585,
-      "longitude": 77.209171
+      "latitude": 21.254585,
+      "longitude": 81.629171
     },
     "detection": {
       "bbox": [
@@ -9299,8 +9299,8 @@
     "timestamp": "2026-03-13T12:35:59.019724+00:00",
     "frame_index": 91,
     "gps": {
-      "latitude": 28.613238,
-      "longitude": 77.207751
+      "latitude": 21.253238,
+      "longitude": 81.627751
     },
     "detection": {
       "bbox": [
@@ -9344,8 +9344,8 @@
     "timestamp": "2026-03-13T12:36:30.965399+00:00",
     "frame_index": 94,
     "gps": {
-      "latitude": 28.614449,
-      "longitude": 77.207892
+      "latitude": 21.254449,
+      "longitude": 81.627892
     },
     "detection": {
       "bbox": [
@@ -9389,8 +9389,8 @@
     "timestamp": "2026-03-13T12:36:52.407893+00:00",
     "frame_index": 96,
     "gps": {
-      "latitude": 28.612856,
-      "longitude": 77.208879
+      "latitude": 21.252856,
+      "longitude": 81.628879
     },
     "detection": {
       "bbox": [
@@ -9434,8 +9434,8 @@
     "timestamp": "2026-03-13T12:36:52.449465+00:00",
     "frame_index": 96,
     "gps": {
-      "latitude": 28.613126,
-      "longitude": 77.209394
+      "latitude": 21.253126,
+      "longitude": 81.629394
     },
     "detection": {
       "bbox": [
@@ -9479,8 +9479,8 @@
     "timestamp": "2026-03-13T12:36:52.483902+00:00",
     "frame_index": 96,
     "gps": {
-      "latitude": 28.614449,
-      "longitude": 77.209904
+      "latitude": 21.254449,
+      "longitude": 81.629904
     },
     "detection": {
       "bbox": [
@@ -9524,8 +9524,8 @@
     "timestamp": "2026-03-13T12:37:06.001670+00:00",
     "frame_index": 98,
     "gps": {
-      "latitude": 28.614225,
-      "longitude": 77.210629
+      "latitude": 21.254225,
+      "longitude": 81.630629
     },
     "detection": {
       "bbox": [
@@ -9566,8 +9566,8 @@
     "timestamp": "2026-03-13T12:37:06.035745+00:00",
     "frame_index": 98,
     "gps": {
-      "latitude": 28.614797,
-      "longitude": 77.208082
+      "latitude": 21.254797,
+      "longitude": 81.628082
     },
     "detection": {
       "bbox": [
@@ -9602,15 +9602,17 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-14T22:53:03.134701+00:00"
+    "_last_seen": "2026-03-14T22:53:03.134701+00:00",
+    "_closed": true,
+    "_closed_at": "2026-03-14T23:38:27.321105+00:00"
   },
   {
     "pothole_id": "NETRA-6D40C02D-267",
     "timestamp": "2026-03-13T12:37:13.009514+00:00",
     "frame_index": 99,
     "gps": {
-      "latitude": 28.614629,
-      "longitude": 77.20898
+      "latitude": 21.254629,
+      "longitude": 81.62898
     },
     "detection": {
       "bbox": [
@@ -9654,8 +9656,8 @@
     "timestamp": "2026-03-13T12:37:19.719413+00:00",
     "frame_index": 100,
     "gps": {
-      "latitude": 28.612887,
-      "longitude": 77.208996
+      "latitude": 21.252887,
+      "longitude": 81.628996
     },
     "detection": {
       "bbox": [
@@ -9699,8 +9701,8 @@
     "timestamp": "2026-03-13T12:37:19.756490+00:00",
     "frame_index": 100,
     "gps": {
-      "latitude": 28.613395,
-      "longitude": 77.210323
+      "latitude": 21.253395,
+      "longitude": 81.630323
     },
     "detection": {
       "bbox": [
@@ -9744,8 +9746,8 @@
     "timestamp": "2026-03-13T12:37:27.006199+00:00",
     "frame_index": 101,
     "gps": {
-      "latitude": 28.613156,
-      "longitude": 77.209292
+      "latitude": 21.253156,
+      "longitude": 81.629292
     },
     "detection": {
       "bbox": [
@@ -9789,8 +9791,8 @@
     "timestamp": "2026-03-13T12:38:00.728559+00:00",
     "frame_index": 106,
     "gps": {
-      "latitude": 28.613323,
-      "longitude": 77.210012
+      "latitude": 21.253323,
+      "longitude": 81.630012
     },
     "detection": {
       "bbox": [
@@ -9834,8 +9836,8 @@
     "timestamp": "2026-03-13T12:38:52.675928+00:00",
     "frame_index": 113,
     "gps": {
-      "latitude": 28.614972,
-      "longitude": 77.209146
+      "latitude": 21.254972,
+      "longitude": 81.629146
     },
     "detection": {
       "bbox": [
@@ -9879,8 +9881,8 @@
     "timestamp": "2026-03-13T12:39:09.267323+00:00",
     "frame_index": 115,
     "gps": {
-      "latitude": 28.614033,
-      "longitude": 77.209221
+      "latitude": 21.254033,
+      "longitude": 81.629221
     },
     "detection": {
       "bbox": [
@@ -9924,8 +9926,8 @@
     "timestamp": "2026-03-13T12:39:26.121100+00:00",
     "frame_index": 117,
     "gps": {
-      "latitude": 28.612854,
-      "longitude": 77.210401
+      "latitude": 21.252854,
+      "longitude": 81.630401
     },
     "detection": {
       "bbox": [
@@ -9967,8 +9969,8 @@
     "timestamp": "2026-03-13T12:40:14.903856+00:00",
     "frame_index": 2,
     "gps": {
-      "latitude": 28.613536,
-      "longitude": 77.210301
+      "latitude": 21.253536,
+      "longitude": 81.630301
     },
     "detection": {
       "bbox": [
@@ -10012,8 +10014,8 @@
     "timestamp": "2026-03-13T12:40:17.631012+00:00",
     "frame_index": 7,
     "gps": {
-      "latitude": 28.612425,
-      "longitude": 77.208549
+      "latitude": 21.252425,
+      "longitude": 81.628549
     },
     "detection": {
       "bbox": [
@@ -10057,8 +10059,8 @@
     "timestamp": "2026-03-13T12:40:20.419827+00:00",
     "frame_index": 10,
     "gps": {
-      "latitude": 28.614494,
-      "longitude": 77.208564
+      "latitude": 21.254494,
+      "longitude": 81.628564
     },
     "detection": {
       "bbox": [
@@ -10102,8 +10104,8 @@
     "timestamp": "2026-03-13T12:40:23.804942+00:00",
     "frame_index": 14,
     "gps": {
-      "latitude": 28.613282,
-      "longitude": 77.20837
+      "latitude": 21.253282,
+      "longitude": 81.62837
     },
     "detection": {
       "bbox": [
@@ -10147,8 +10149,8 @@
     "timestamp": "2026-03-13T12:40:24.870665+00:00",
     "frame_index": 16,
     "gps": {
-      "latitude": 28.613845,
-      "longitude": 77.208706
+      "latitude": 21.253845,
+      "longitude": 81.628706
     },
     "detection": {
       "bbox": [
@@ -10192,8 +10194,8 @@
     "timestamp": "2026-03-13T12:40:27.836766+00:00",
     "frame_index": 20,
     "gps": {
-      "latitude": 28.612744,
-      "longitude": 77.208664
+      "latitude": 21.252744,
+      "longitude": 81.628664
     },
     "detection": {
       "bbox": [
@@ -10237,8 +10239,8 @@
     "timestamp": "2026-03-13T12:40:30.193314+00:00",
     "frame_index": 25,
     "gps": {
-      "latitude": 28.61362,
-      "longitude": 77.207686
+      "latitude": 21.25362,
+      "longitude": 81.627686
     },
     "detection": {
       "bbox": [
@@ -10282,8 +10284,8 @@
     "timestamp": "2026-03-13T12:40:30.214451+00:00",
     "frame_index": 25,
     "gps": {
-      "latitude": 28.615466,
-      "longitude": 77.208336
+      "latitude": 21.255466,
+      "longitude": 81.628336
     },
     "detection": {
       "bbox": [
@@ -10324,8 +10326,8 @@
     "timestamp": "2026-03-13T12:40:37.024614+00:00",
     "frame_index": 32,
     "gps": {
-      "latitude": 28.614641,
-      "longitude": 77.209906
+      "latitude": 21.254641,
+      "longitude": 81.629906
     },
     "detection": {
       "bbox": [
@@ -10369,8 +10371,8 @@
     "timestamp": "2026-03-13T12:40:38.234653+00:00",
     "frame_index": 34,
     "gps": {
-      "latitude": 28.613496,
-      "longitude": 77.209063
+      "latitude": 21.253496,
+      "longitude": 81.629063
     },
     "detection": {
       "bbox": [
@@ -10414,8 +10416,8 @@
     "timestamp": "2026-03-13T12:40:38.860471+00:00",
     "frame_index": 35,
     "gps": {
-      "latitude": 28.613186,
-      "longitude": 77.209922
+      "latitude": 21.253186,
+      "longitude": 81.629922
     },
     "detection": {
       "bbox": [
@@ -10459,8 +10461,8 @@
     "timestamp": "2026-03-13T12:40:39.477675+00:00",
     "frame_index": 36,
     "gps": {
-      "latitude": 28.614599,
-      "longitude": 77.208807
+      "latitude": 21.254599,
+      "longitude": 81.628807
     },
     "detection": {
       "bbox": [
@@ -10504,8 +10506,8 @@
     "timestamp": "2026-03-13T12:40:39.513785+00:00",
     "frame_index": 36,
     "gps": {
-      "latitude": 28.614987,
-      "longitude": 77.208992
+      "latitude": 21.254987,
+      "longitude": 81.628992
     },
     "detection": {
       "bbox": [
@@ -10549,8 +10551,8 @@
     "timestamp": "2026-03-13T12:40:44.622642+00:00",
     "frame_index": 42,
     "gps": {
-      "latitude": 28.614058,
-      "longitude": 77.207961
+      "latitude": 21.254058,
+      "longitude": 81.627961
     },
     "detection": {
       "bbox": [
@@ -10594,8 +10596,8 @@
     "timestamp": "2026-03-13T12:40:44.697433+00:00",
     "frame_index": 42,
     "gps": {
-      "latitude": 28.614047,
-      "longitude": 77.208075
+      "latitude": 21.254047,
+      "longitude": 81.628075
     },
     "detection": {
       "bbox": [
@@ -10639,8 +10641,8 @@
     "timestamp": "2026-03-13T12:40:45.326813+00:00",
     "frame_index": 43,
     "gps": {
-      "latitude": 28.612676,
-      "longitude": 77.209003
+      "latitude": 21.252676,
+      "longitude": 81.629003
     },
     "detection": {
       "bbox": [
@@ -10684,8 +10686,8 @@
     "timestamp": "2026-03-13T12:40:47.352443+00:00",
     "frame_index": 44,
     "gps": {
-      "latitude": 28.613517,
-      "longitude": 77.209526
+      "latitude": 21.253517,
+      "longitude": 81.629526
     },
     "detection": {
       "bbox": [
@@ -10729,8 +10731,8 @@
     "timestamp": "2026-03-13T12:40:48.042102+00:00",
     "frame_index": 45,
     "gps": {
-      "latitude": 28.613682,
-      "longitude": 77.209371
+      "latitude": 21.253682,
+      "longitude": 81.629371
     },
     "detection": {
       "bbox": [
@@ -10774,8 +10776,8 @@
     "timestamp": "2026-03-13T12:40:59.250234+00:00",
     "frame_index": 58,
     "gps": {
-      "latitude": 28.614884,
-      "longitude": 77.209083
+      "latitude": 21.254884,
+      "longitude": 81.629083
     },
     "detection": {
       "bbox": [
@@ -10819,8 +10821,8 @@
     "timestamp": "2026-03-13T12:40:59.295636+00:00",
     "frame_index": 58,
     "gps": {
-      "latitude": 28.612315,
-      "longitude": 77.209869
+      "latitude": 21.252315,
+      "longitude": 81.629869
     },
     "detection": {
       "bbox": [
@@ -10861,8 +10863,8 @@
     "timestamp": "2026-03-13T12:41:04.018401+00:00",
     "frame_index": 63,
     "gps": {
-      "latitude": 28.615081,
-      "longitude": 77.209526
+      "latitude": 21.255081,
+      "longitude": 81.629526
     },
     "detection": {
       "bbox": [
@@ -10906,8 +10908,8 @@
     "timestamp": "2026-03-13T12:41:09.437404+00:00",
     "frame_index": 69,
     "gps": {
-      "latitude": 28.613334,
-      "longitude": 77.208228
+      "latitude": 21.253334,
+      "longitude": 81.628228
     },
     "detection": {
       "bbox": [
@@ -10951,8 +10953,8 @@
     "timestamp": "2026-03-13T12:41:16.574601+00:00",
     "frame_index": 79,
     "gps": {
-      "latitude": 28.613926,
-      "longitude": 77.208241
+      "latitude": 21.253926,
+      "longitude": 81.628241
     },
     "detection": {
       "bbox": [
@@ -10991,8 +10993,8 @@
     "timestamp": "2026-03-13T12:42:49.013395+00:00",
     "frame_index": 6,
     "gps": {
-      "latitude": 28.614588,
-      "longitude": 77.20964
+      "latitude": 21.254588,
+      "longitude": 81.62964
     },
     "detection": {
       "bbox": [
@@ -11036,8 +11038,8 @@
     "timestamp": "2026-03-13T12:42:52.798598+00:00",
     "frame_index": 12,
     "gps": {
-      "latitude": 28.614673,
-      "longitude": 77.208157
+      "latitude": 21.254673,
+      "longitude": 81.628157
     },
     "detection": {
       "bbox": [
@@ -11081,8 +11083,8 @@
     "timestamp": "2026-03-13T12:42:57.584250+00:00",
     "frame_index": 21,
     "gps": {
-      "latitude": 28.615291,
-      "longitude": 77.208183
+      "latitude": 21.255291,
+      "longitude": 81.628183
     },
     "detection": {
       "bbox": [
@@ -11123,8 +11125,8 @@
     "timestamp": "2026-03-13T12:43:12.206606+00:00",
     "frame_index": 42,
     "gps": {
-      "latitude": 28.61278,
-      "longitude": 77.208383
+      "latitude": 21.25278,
+      "longitude": 81.628383
     },
     "detection": {
       "bbox": [
@@ -11168,8 +11170,8 @@
     "timestamp": "2026-03-13T12:43:39.395014+00:00",
     "frame_index": 84,
     "gps": {
-      "latitude": 28.613154,
-      "longitude": 77.208586
+      "latitude": 21.253154,
+      "longitude": 81.628586
     },
     "detection": {
       "bbox": [
@@ -11213,8 +11215,8 @@
     "timestamp": "2026-03-13T12:44:06.171380+00:00",
     "frame_index": 126,
     "gps": {
-      "latitude": 28.613604,
-      "longitude": 77.208281
+      "latitude": 21.253604,
+      "longitude": 81.628281
     },
     "detection": {
       "bbox": [
@@ -11258,8 +11260,8 @@
     "timestamp": "2026-03-13T12:44:13.812142+00:00",
     "frame_index": 138,
     "gps": {
-      "latitude": 28.614983,
-      "longitude": 77.208405
+      "latitude": 21.254983,
+      "longitude": 81.628405
     },
     "detection": {
       "bbox": [
@@ -11303,8 +11305,8 @@
     "timestamp": "2026-03-13T12:44:14.690711+00:00",
     "frame_index": 141,
     "gps": {
-      "latitude": 28.613299,
-      "longitude": 77.209785
+      "latitude": 21.253299,
+      "longitude": 81.629785
     },
     "detection": {
       "bbox": [
@@ -11348,8 +11350,8 @@
     "timestamp": "2026-03-13T12:44:22.456499+00:00",
     "frame_index": 153,
     "gps": {
-      "latitude": 28.614911,
-      "longitude": 77.208153
+      "latitude": 21.254911,
+      "longitude": 81.628153
     },
     "detection": {
       "bbox": [
@@ -11393,8 +11395,8 @@
     "timestamp": "2026-03-13T12:44:26.108784+00:00",
     "frame_index": 159,
     "gps": {
-      "latitude": 28.61492,
-      "longitude": 77.209234
+      "latitude": 21.25492,
+      "longitude": 81.629234
     },
     "detection": {
       "bbox": [
@@ -11438,8 +11440,8 @@
     "timestamp": "2026-03-13T12:44:34.608829+00:00",
     "frame_index": 174,
     "gps": {
-      "latitude": 28.61342,
-      "longitude": 77.208015
+      "latitude": 21.25342,
+      "longitude": 81.628015
     },
     "detection": {
       "bbox": [
@@ -11483,8 +11485,8 @@
     "timestamp": "2026-03-13T12:44:38.269733+00:00",
     "frame_index": 180,
     "gps": {
-      "latitude": 28.613252,
-      "longitude": 77.20875
+      "latitude": 21.253252,
+      "longitude": 81.62875
     },
     "detection": {
       "bbox": [
@@ -11528,8 +11530,8 @@
     "timestamp": "2026-03-13T12:44:40.898831+00:00",
     "frame_index": 183,
     "gps": {
-      "latitude": 28.612648,
-      "longitude": 77.208664
+      "latitude": 21.252648,
+      "longitude": 81.628664
     },
     "detection": {
       "bbox": [
@@ -11573,8 +11575,8 @@
     "timestamp": "2026-03-13T12:44:40.929179+00:00",
     "frame_index": 183,
     "gps": {
-      "latitude": 28.613635,
-      "longitude": 77.208707
+      "latitude": 21.253635,
+      "longitude": 81.628707
     },
     "detection": {
       "bbox": [
@@ -11618,8 +11620,8 @@
     "timestamp": "2026-03-13T12:44:41.616664+00:00",
     "frame_index": 186,
     "gps": {
-      "latitude": 28.614235,
-      "longitude": 77.209635
+      "latitude": 21.254235,
+      "longitude": 81.629635
     },
     "detection": {
       "bbox": [
@@ -11663,8 +11665,8 @@
     "timestamp": "2026-03-13T12:44:45.367270+00:00",
     "frame_index": 192,
     "gps": {
-      "latitude": 28.614678,
-      "longitude": 77.208894
+      "latitude": 21.254678,
+      "longitude": 81.628894
     },
     "detection": {
       "bbox": [
@@ -11708,8 +11710,8 @@
     "timestamp": "2026-03-13T12:44:48.073742+00:00",
     "frame_index": 195,
     "gps": {
-      "latitude": 28.613647,
-      "longitude": 77.210185
+      "latitude": 21.253647,
+      "longitude": 81.630185
     },
     "detection": {
       "bbox": [
@@ -11753,8 +11755,8 @@
     "timestamp": "2026-03-13T12:44:48.183144+00:00",
     "frame_index": 195,
     "gps": {
-      "latitude": 28.614925,
-      "longitude": 77.210019
+      "latitude": 21.254925,
+      "longitude": 81.630019
     },
     "detection": {
       "bbox": [
@@ -11796,8 +11798,8 @@
     "timestamp": "2026-03-13T12:44:55.819525+00:00",
     "frame_index": 207,
     "gps": {
-      "latitude": 28.612778,
-      "longitude": 77.208984
+      "latitude": 21.252778,
+      "longitude": 81.628984
     },
     "detection": {
       "bbox": [
@@ -11841,8 +11843,8 @@
     "timestamp": "2026-03-13T12:45:04.636936+00:00",
     "frame_index": 222,
     "gps": {
-      "latitude": 28.613535,
-      "longitude": 77.209709
+      "latitude": 21.253535,
+      "longitude": 81.629709
     },
     "detection": {
       "bbox": [
@@ -11886,8 +11888,8 @@
     "timestamp": "2026-03-13T12:45:11.415592+00:00",
     "frame_index": 231,
     "gps": {
-      "latitude": 28.613889,
-      "longitude": 77.207618
+      "latitude": 21.253889,
+      "longitude": 81.627618
     },
     "detection": {
       "bbox": [
@@ -11931,8 +11933,8 @@
     "timestamp": "2026-03-13T12:45:20.216742+00:00",
     "frame_index": 246,
     "gps": {
-      "latitude": 28.614753,
-      "longitude": 77.209753
+      "latitude": 21.254753,
+      "longitude": 81.629753
     },
     "detection": {
       "bbox": [
@@ -11976,8 +11978,8 @@
     "timestamp": "2026-03-13T12:45:54.176066+00:00",
     "frame_index": 300,
     "gps": {
-      "latitude": 28.613381,
-      "longitude": 77.210123
+      "latitude": 21.253381,
+      "longitude": 81.630123
     },
     "detection": {
       "bbox": [
@@ -12020,8 +12022,8 @@
     "timestamp": "2026-03-13T12:46:43.316310+00:00",
     "frame_index": 387,
     "gps": {
-      "latitude": 28.613711,
-      "longitude": 77.209542
+      "latitude": 21.253711,
+      "longitude": 81.629542
     },
     "detection": {
       "bbox": [
@@ -12065,8 +12067,8 @@
     "timestamp": "2026-03-13T12:46:59.057763+00:00",
     "frame_index": 411,
     "gps": {
-      "latitude": 28.612594,
-      "longitude": 77.210305
+      "latitude": 21.252594,
+      "longitude": 81.630305
     },
     "detection": {
       "bbox": [
@@ -12107,8 +12109,8 @@
     "timestamp": "2026-03-13T12:46:59.096728+00:00",
     "frame_index": 411,
     "gps": {
-      "latitude": 28.614489,
-      "longitude": 77.210035
+      "latitude": 21.254489,
+      "longitude": 81.630035
     },
     "detection": {
       "bbox": [
@@ -12150,8 +12152,8 @@
     "timestamp": "2026-03-13T12:47:09.531141+00:00",
     "frame_index": 426,
     "gps": {
-      "latitude": 28.614361,
-      "longitude": 77.20918
+      "latitude": 21.254361,
+      "longitude": 81.62918
     },
     "detection": {
       "bbox": [
@@ -12195,8 +12197,8 @@
     "timestamp": "2026-03-13T12:47:10.551842+00:00",
     "frame_index": 429,
     "gps": {
-      "latitude": 28.613479,
-      "longitude": 77.209414
+      "latitude": 21.253479,
+      "longitude": 81.629414
     },
     "detection": {
       "bbox": [
@@ -12240,8 +12242,8 @@
     "timestamp": "2026-03-13T12:47:24.460813+00:00",
     "frame_index": 450,
     "gps": {
-      "latitude": 28.612934,
-      "longitude": 77.208458
+      "latitude": 21.252934,
+      "longitude": 81.628458
     },
     "detection": {
       "bbox": [
@@ -12283,8 +12285,8 @@
     "timestamp": "2026-03-13T12:47:35.350668+00:00",
     "frame_index": 468,
     "gps": {
-      "latitude": 28.614977,
-      "longitude": 77.208255
+      "latitude": 21.254977,
+      "longitude": 81.628255
     },
     "detection": {
       "bbox": [
@@ -12328,8 +12330,8 @@
     "timestamp": "2026-03-13T12:47:42.782732+00:00",
     "frame_index": 480,
     "gps": {
-      "latitude": 28.614042,
-      "longitude": 77.209668
+      "latitude": 21.254042,
+      "longitude": 81.629668
     },
     "detection": {
       "bbox": [
@@ -12373,8 +12375,8 @@
     "timestamp": "2026-03-13T12:48:01.835916+00:00",
     "frame_index": 510,
     "gps": {
-      "latitude": 28.613784,
-      "longitude": 77.207737
+      "latitude": 21.253784,
+      "longitude": 81.627737
     },
     "detection": {
       "bbox": [
@@ -12418,8 +12420,8 @@
     "timestamp": "2026-03-13T12:48:41.783436+00:00",
     "frame_index": 573,
     "gps": {
-      "latitude": 28.613114,
-      "longitude": 77.208494
+      "latitude": 21.253114,
+      "longitude": 81.628494
     },
     "detection": {
       "bbox": [
@@ -12463,8 +12465,8 @@
     "timestamp": "2026-03-13T12:48:53.349686+00:00",
     "frame_index": 591,
     "gps": {
-      "latitude": 28.612789,
-      "longitude": 77.209186
+      "latitude": 21.252789,
+      "longitude": 81.629186
     },
     "detection": {
       "bbox": [
@@ -12506,8 +12508,8 @@
     "timestamp": "2026-03-13T12:49:15.495453+00:00",
     "frame_index": 624,
     "gps": {
-      "latitude": 28.614088,
-      "longitude": 77.207314
+      "latitude": 21.254088,
+      "longitude": 81.627314
     },
     "detection": {
       "bbox": [
@@ -12549,8 +12551,8 @@
     "timestamp": "2026-03-13T12:49:28.320838+00:00",
     "frame_index": 645,
     "gps": {
-      "latitude": 28.613657,
-      "longitude": 77.209991
+      "latitude": 21.253657,
+      "longitude": 81.629991
     },
     "detection": {
       "bbox": [
@@ -12594,8 +12596,8 @@
     "timestamp": "2026-03-13T12:49:43.637643+00:00",
     "frame_index": 666,
     "gps": {
-      "latitude": 28.613143,
-      "longitude": 77.209169
+      "latitude": 21.253143,
+      "longitude": 81.629169
     },
     "detection": {
       "bbox": [
@@ -12639,8 +12641,8 @@
     "timestamp": "2026-03-13T12:49:43.773216+00:00",
     "frame_index": 666,
     "gps": {
-      "latitude": 28.614798,
-      "longitude": 77.208955
+      "latitude": 21.254798,
+      "longitude": 81.628955
     },
     "detection": {
       "bbox": [
@@ -12684,8 +12686,8 @@
     "timestamp": "2026-03-13T12:49:43.870513+00:00",
     "frame_index": 666,
     "gps": {
-      "latitude": 28.615147,
-      "longitude": 77.208819
+      "latitude": 21.255147,
+      "longitude": 81.628819
     },
     "detection": {
       "bbox": [
@@ -12727,8 +12729,8 @@
     "timestamp": "2026-03-13T12:50:01.168183+00:00",
     "frame_index": 693,
     "gps": {
-      "latitude": 28.614178,
-      "longitude": 77.209167
+      "latitude": 21.254178,
+      "longitude": 81.629167
     },
     "detection": {
       "bbox": [
@@ -12772,8 +12774,8 @@
     "timestamp": "2026-03-13T12:50:09.015148+00:00",
     "frame_index": 705,
     "gps": {
-      "latitude": 28.614632,
-      "longitude": 77.210059
+      "latitude": 21.254632,
+      "longitude": 81.630059
     },
     "detection": {
       "bbox": [
@@ -12817,8 +12819,8 @@
     "timestamp": "2026-03-13T12:50:24.423437+00:00",
     "frame_index": 729,
     "gps": {
-      "latitude": 28.614807,
-      "longitude": 77.210135
+      "latitude": 21.254807,
+      "longitude": 81.630135
     },
     "detection": {
       "bbox": [
@@ -12862,8 +12864,8 @@
     "timestamp": "2026-03-13T12:51:02.938874+00:00",
     "frame_index": 786,
     "gps": {
-      "latitude": 28.613042,
-      "longitude": 77.208391
+      "latitude": 21.253042,
+      "longitude": 81.628391
     },
     "detection": {
       "bbox": [
@@ -12907,8 +12909,8 @@
     "timestamp": "2026-03-13T12:51:03.906022+00:00",
     "frame_index": 789,
     "gps": {
-      "latitude": 28.613997,
-      "longitude": 77.207443
+      "latitude": 21.253997,
+      "longitude": 81.627443
     },
     "detection": {
       "bbox": [
@@ -12950,8 +12952,8 @@
     "timestamp": "2026-03-13T12:51:18.747663+00:00",
     "frame_index": 810,
     "gps": {
-      "latitude": 28.613812,
-      "longitude": 77.208832
+      "latitude": 21.253812,
+      "longitude": 81.628832
     },
     "detection": {
       "bbox": [
@@ -12995,8 +12997,8 @@
     "timestamp": "2026-03-13T12:51:22.659170+00:00",
     "frame_index": 816,
     "gps": {
-      "latitude": 28.61493,
-      "longitude": 77.209811
+      "latitude": 21.25493,
+      "longitude": 81.629811
     },
     "detection": {
       "bbox": [
@@ -13038,8 +13040,8 @@
     "timestamp": "2026-03-13T12:51:38.143021+00:00",
     "frame_index": 840,
     "gps": {
-      "latitude": 28.614501,
-      "longitude": 77.208401
+      "latitude": 21.254501,
+      "longitude": 81.628401
     },
     "detection": {
       "bbox": [
@@ -13083,8 +13085,8 @@
     "timestamp": "2026-03-13T12:52:51.536912+00:00",
     "frame_index": 957,
     "gps": {
-      "latitude": 28.615492,
-      "longitude": 77.209758
+      "latitude": 21.255492,
+      "longitude": 81.629758
     },
     "detection": {
       "bbox": [
@@ -13125,8 +13127,8 @@
     "timestamp": "2026-03-13T12:53:18.414411+00:00",
     "frame_index": 999,
     "gps": {
-      "latitude": 28.614313,
-      "longitude": 77.208536
+      "latitude": 21.254313,
+      "longitude": 81.628536
     },
     "detection": {
       "bbox": [
@@ -13162,7 +13164,7 @@
       "action": "Log new pothole and create work order."
     },
     "_closed": true,
-    "_closed_at": "2026-03-14T22:47:01.063653+00:00",
+    "_closed_at": "2026-03-14T23:37:21.388664+00:00",
     "_last_seen": "2026-03-14T06:26:01.527187+00:00"
   },
   {
@@ -13170,8 +13172,8 @@
     "timestamp": "2026-03-13T13:00:20.125804+00:00",
     "frame_index": 15,
     "gps": {
-      "latitude": 28.614492,
-      "longitude": 77.209271
+      "latitude": 21.254492,
+      "longitude": 81.629271
     },
     "detection": {
       "bbox": [
@@ -13215,8 +13217,8 @@
     "timestamp": "2026-03-13T13:00:42.588607+00:00",
     "frame_index": 48,
     "gps": {
-      "latitude": 28.613377,
-      "longitude": 77.208368
+      "latitude": 21.253377,
+      "longitude": 81.628368
     },
     "detection": {
       "bbox": [
@@ -13260,8 +13262,8 @@
     "timestamp": "2026-03-13T13:01:07.212055+00:00",
     "frame_index": 87,
     "gps": {
-      "latitude": 28.612648,
-      "longitude": 77.208289
+      "latitude": 21.252648,
+      "longitude": 81.628289
     },
     "detection": {
       "bbox": [
@@ -13305,8 +13307,8 @@
     "timestamp": "2026-03-13T13:01:07.253614+00:00",
     "frame_index": 87,
     "gps": {
-      "latitude": 28.612516,
-      "longitude": 77.208801
+      "latitude": 21.252516,
+      "longitude": 81.628801
     },
     "detection": {
       "bbox": [
@@ -13350,8 +13352,8 @@
     "timestamp": "2026-03-13T13:01:37.744592+00:00",
     "frame_index": 135,
     "gps": {
-      "latitude": 28.614332,
-      "longitude": 77.207791
+      "latitude": 21.254332,
+      "longitude": 81.627791
     },
     "detection": {
       "bbox": [
@@ -13395,8 +13397,8 @@
     "timestamp": "2026-03-13T13:01:45.499785+00:00",
     "frame_index": 147,
     "gps": {
-      "latitude": 28.614259,
-      "longitude": 77.209373
+      "latitude": 21.254259,
+      "longitude": 81.629373
     },
     "detection": {
       "bbox": [
@@ -13440,8 +13442,8 @@
     "timestamp": "2026-03-13T13:02:25.247415+00:00",
     "frame_index": 210,
     "gps": {
-      "latitude": 28.614071,
-      "longitude": 77.209923
+      "latitude": 21.254071,
+      "longitude": 81.629923
     },
     "detection": {
       "bbox": [
@@ -13485,8 +13487,8 @@
     "timestamp": "2026-03-13T13:02:43.722962+00:00",
     "frame_index": 237,
     "gps": {
-      "latitude": 28.614709,
-      "longitude": 77.208753
+      "latitude": 21.254709,
+      "longitude": 81.628753
     },
     "detection": {
       "bbox": [
@@ -13530,8 +13532,8 @@
     "timestamp": "2026-03-13T13:02:44.759183+00:00",
     "frame_index": 240,
     "gps": {
-      "latitude": 28.613831,
-      "longitude": 77.209234
+      "latitude": 21.253831,
+      "longitude": 81.629234
     },
     "detection": {
       "bbox": [
@@ -13575,8 +13577,8 @@
     "timestamp": "2026-03-13T13:02:48.578950+00:00",
     "frame_index": 246,
     "gps": {
-      "latitude": 28.613307,
-      "longitude": 77.207655
+      "latitude": 21.253307,
+      "longitude": 81.627655
     },
     "detection": {
       "bbox": [
@@ -13620,8 +13622,8 @@
     "timestamp": "2026-03-13T13:03:52.085033+00:00",
     "frame_index": 354,
     "gps": {
-      "latitude": 28.615195,
-      "longitude": 77.209311
+      "latitude": 21.255195,
+      "longitude": 81.629311
     },
     "detection": {
       "bbox": [
@@ -13663,8 +13665,8 @@
     "timestamp": "2026-03-13T13:04:14.986040+00:00",
     "frame_index": 390,
     "gps": {
-      "latitude": 28.614022,
-      "longitude": 77.210268
+      "latitude": 21.254022,
+      "longitude": 81.630268
     },
     "detection": {
       "bbox": [
@@ -13708,8 +13710,8 @@
     "timestamp": "2026-03-13T13:04:15.905156+00:00",
     "frame_index": 393,
     "gps": {
-      "latitude": 28.614321,
-      "longitude": 77.2081
+      "latitude": 21.254321,
+      "longitude": 81.6281
     },
     "detection": {
       "bbox": [
@@ -13753,8 +13755,8 @@
     "timestamp": "2026-03-13T13:04:19.776591+00:00",
     "frame_index": 399,
     "gps": {
-      "latitude": 28.613777,
-      "longitude": 77.207916
+      "latitude": 21.253777,
+      "longitude": 81.627916
     },
     "detection": {
       "bbox": [
@@ -13798,8 +13800,8 @@
     "timestamp": "2026-03-13T13:04:26.794337+00:00",
     "frame_index": 408,
     "gps": {
-      "latitude": 28.614641,
-      "longitude": 77.209088
+      "latitude": 21.254641,
+      "longitude": 81.629088
     },
     "detection": {
       "bbox": [
@@ -13843,8 +13845,8 @@
     "timestamp": "2026-03-13T13:04:27.855881+00:00",
     "frame_index": 411,
     "gps": {
-      "latitude": 28.613501,
-      "longitude": 77.207664
+      "latitude": 21.253501,
+      "longitude": 81.627664
     },
     "detection": {
       "bbox": [
@@ -13886,8 +13888,8 @@
     "timestamp": "2026-03-13T13:04:30.807339+00:00",
     "frame_index": 414,
     "gps": {
-      "latitude": 28.615124,
-      "longitude": 77.209061
+      "latitude": 21.255124,
+      "longitude": 81.629061
     },
     "detection": {
       "bbox": [
@@ -13929,8 +13931,8 @@
     "timestamp": "2026-03-13T13:05:08.704308+00:00",
     "frame_index": 492,
     "gps": {
-      "latitude": 28.614085,
-      "longitude": 77.208834
+      "latitude": 21.254085,
+      "longitude": 81.628834
     },
     "detection": {
       "bbox": [
@@ -13974,8 +13976,8 @@
     "timestamp": "2026-03-13T13:05:09.281455+00:00",
     "frame_index": 495,
     "gps": {
-      "latitude": 28.612818,
-      "longitude": 77.209081
+      "latitude": 21.252818,
+      "longitude": 81.629081
     },
     "detection": {
       "bbox": [
@@ -14019,8 +14021,8 @@
     "timestamp": "2026-03-13T13:05:42.610392+00:00",
     "frame_index": 573,
     "gps": {
-      "latitude": 28.614981,
-      "longitude": 77.208632
+      "latitude": 21.254981,
+      "longitude": 81.628632
     },
     "detection": {
       "bbox": [
@@ -14064,8 +14066,8 @@
     "timestamp": "2026-03-13T13:06:05.734492+00:00",
     "frame_index": 606,
     "gps": {
-      "latitude": 28.612405,
-      "longitude": 77.210517
+      "latitude": 21.252405,
+      "longitude": 81.630517
     },
     "detection": {
       "bbox": [
@@ -14106,8 +14108,8 @@
     "timestamp": "2026-03-13T13:06:16.144178+00:00",
     "frame_index": 618,
     "gps": {
-      "latitude": 28.613599,
-      "longitude": 77.210457
+      "latitude": 21.253599,
+      "longitude": 81.630457
     },
     "detection": {
       "bbox": [
@@ -14149,8 +14151,8 @@
     "timestamp": "2026-03-13T13:06:27.538395+00:00",
     "frame_index": 630,
     "gps": {
-      "latitude": 28.614778,
-      "longitude": 77.208369
+      "latitude": 21.254778,
+      "longitude": 81.628369
     },
     "detection": {
       "bbox": [
@@ -14194,8 +14196,8 @@
     "timestamp": "2026-03-13T13:06:27.593518+00:00",
     "frame_index": 630,
     "gps": {
-      "latitude": 28.613823,
-      "longitude": 77.210329
+      "latitude": 21.253823,
+      "longitude": 81.630329
     },
     "detection": {
       "bbox": [
@@ -14238,8 +14240,8 @@
     "timestamp": "2026-03-13T13:06:50.780065+00:00",
     "frame_index": 654,
     "gps": {
-      "latitude": 28.613789,
-      "longitude": 77.210013
+      "latitude": 21.253789,
+      "longitude": 81.630013
     },
     "detection": {
       "bbox": [
@@ -14281,8 +14283,8 @@
     "timestamp": "2026-03-13T13:07:13.291159+00:00",
     "frame_index": 687,
     "gps": {
-      "latitude": 28.614623,
-      "longitude": 77.210411
+      "latitude": 21.254623,
+      "longitude": 81.630411
     },
     "detection": {
       "bbox": [
@@ -14324,8 +14326,8 @@
     "timestamp": "2026-03-13T13:07:13.330499+00:00",
     "frame_index": 687,
     "gps": {
-      "latitude": 28.613574,
-      "longitude": 77.208631
+      "latitude": 21.253574,
+      "longitude": 81.628631
     },
     "detection": {
       "bbox": [
@@ -14369,8 +14371,8 @@
     "timestamp": "2026-03-13T13:07:22.336962+00:00",
     "frame_index": 702,
     "gps": {
-      "latitude": 28.61343,
-      "longitude": 77.207904
+      "latitude": 21.25343,
+      "longitude": 81.627904
     },
     "detection": {
       "bbox": [
@@ -14414,8 +14416,8 @@
     "timestamp": "2026-03-13T13:07:24.543044+00:00",
     "frame_index": 708,
     "gps": {
-      "latitude": 28.614782,
-      "longitude": 77.208265
+      "latitude": 21.254782,
+      "longitude": 81.628265
     },
     "detection": {
       "bbox": [
@@ -14459,8 +14461,8 @@
     "timestamp": "2026-03-13T13:07:35.781932+00:00",
     "frame_index": 738,
     "gps": {
-      "latitude": 28.61532,
-      "longitude": 77.209164
+      "latitude": 21.25532,
+      "longitude": 81.629164
     },
     "detection": {
       "bbox": [
@@ -14502,8 +14504,8 @@
     "timestamp": "2026-03-13T13:07:53.679176+00:00",
     "frame_index": 780,
     "gps": {
-      "latitude": 28.614434,
-      "longitude": 77.208173
+      "latitude": 21.254434,
+      "longitude": 81.628173
     },
     "detection": {
       "bbox": [
@@ -14547,8 +14549,8 @@
     "timestamp": "2026-03-13T13:07:54.332235+00:00",
     "frame_index": 783,
     "gps": {
-      "latitude": 28.613876,
-      "longitude": 77.20778
+      "latitude": 21.253876,
+      "longitude": 81.62778
     },
     "detection": {
       "bbox": [
@@ -14590,8 +14592,8 @@
     "timestamp": "2026-03-13T13:07:56.203160+00:00",
     "frame_index": 786,
     "gps": {
-      "latitude": 28.613264,
-      "longitude": 77.210352
+      "latitude": 21.253264,
+      "longitude": 81.630352
     },
     "detection": {
       "bbox": [
@@ -14635,8 +14637,8 @@
     "timestamp": "2026-03-13T13:08:18.544503+00:00",
     "frame_index": 846,
     "gps": {
-      "latitude": 28.615328,
-      "longitude": 77.209413
+      "latitude": 21.255328,
+      "longitude": 81.629413
     },
     "detection": {
       "bbox": [
@@ -14678,8 +14680,8 @@
     "timestamp": "2026-03-13T13:08:22.820362+00:00",
     "frame_index": 858,
     "gps": {
-      "latitude": 28.612672,
-      "longitude": 77.209535
+      "latitude": 21.252672,
+      "longitude": 81.629535
     },
     "detection": {
       "bbox": [
@@ -14723,8 +14725,8 @@
     "timestamp": "2026-03-13T13:09:02.650521+00:00",
     "frame_index": 6,
     "gps": {
-      "latitude": 28.61283,
-      "longitude": 77.209381
+      "latitude": 21.25283,
+      "longitude": 81.629381
     },
     "detection": {
       "bbox": [
@@ -14768,8 +14770,8 @@
     "timestamp": "2026-03-13T13:09:03.796735+00:00",
     "frame_index": 9,
     "gps": {
-      "latitude": 28.612585,
-      "longitude": 77.209216
+      "latitude": 21.252585,
+      "longitude": 81.629216
     },
     "detection": {
       "bbox": [
@@ -14813,8 +14815,8 @@
     "timestamp": "2026-03-13T13:09:15.284882+00:00",
     "frame_index": 24,
     "gps": {
-      "latitude": 28.61523,
-      "longitude": 77.208046
+      "latitude": 21.25523,
+      "longitude": 81.628046
     },
     "detection": {
       "bbox": [
@@ -14855,8 +14857,8 @@
     "timestamp": "2026-03-13T13:09:36.249675+00:00",
     "frame_index": 72,
     "gps": {
-      "latitude": 28.613059,
-      "longitude": 77.210385
+      "latitude": 21.253059,
+      "longitude": 81.630385
     },
     "detection": {
       "bbox": [
@@ -14897,8 +14899,8 @@
     "timestamp": "2026-03-13T13:09:43.365968+00:00",
     "frame_index": 93,
     "gps": {
-      "latitude": 28.614397,
-      "longitude": 77.210046
+      "latitude": 21.254397,
+      "longitude": 81.630046
     },
     "detection": {
       "bbox": [
@@ -14942,8 +14944,8 @@
     "timestamp": "2026-03-13T13:09:45.156113+00:00",
     "frame_index": 96,
     "gps": {
-      "latitude": 28.613375,
-      "longitude": 77.209541
+      "latitude": 21.253375,
+      "longitude": 81.629541
     },
     "detection": {
       "bbox": [
@@ -14987,8 +14989,8 @@
     "timestamp": "2026-03-13T13:10:12.857523+00:00",
     "frame_index": 174,
     "gps": {
-      "latitude": 28.612871,
-      "longitude": 77.209959
+      "latitude": 21.252871,
+      "longitude": 81.629959
     },
     "detection": {
       "bbox": [
@@ -15030,8 +15032,8 @@
     "timestamp": "2026-03-13T13:11:39.779583+00:00",
     "frame_index": 390,
     "gps": {
-      "latitude": 28.615451,
-      "longitude": 77.209451
+      "latitude": 21.255451,
+      "longitude": 81.629451
     },
     "detection": {
       "bbox": [
@@ -15072,8 +15074,8 @@
     "timestamp": "2026-03-13T13:12:13.523533+00:00",
     "frame_index": 474,
     "gps": {
-      "latitude": 28.613409,
-      "longitude": 77.209906
+      "latitude": 21.253409,
+      "longitude": 81.629906
     },
     "detection": {
       "bbox": [
@@ -15117,8 +15119,8 @@
     "timestamp": "2026-03-13T13:12:27.073134+00:00",
     "frame_index": 513,
     "gps": {
-      "latitude": 28.614407,
-      "longitude": 77.208776
+      "latitude": 21.254407,
+      "longitude": 81.628776
     },
     "detection": {
       "bbox": [
@@ -15162,8 +15164,8 @@
     "timestamp": "2026-03-13T13:12:35.783622+00:00",
     "frame_index": 537,
     "gps": {
-      "latitude": 28.612809,
-      "longitude": 77.207676
+      "latitude": 21.252809,
+      "longitude": 81.627676
     },
     "detection": {
       "bbox": [
@@ -15204,8 +15206,8 @@
     "timestamp": "2026-03-13T13:13:05.564242+00:00",
     "frame_index": 612,
     "gps": {
-      "latitude": 28.613084,
-      "longitude": 77.209505
+      "latitude": 21.253084,
+      "longitude": 81.629505
     },
     "detection": {
       "bbox": [
@@ -15249,8 +15251,8 @@
     "timestamp": "2026-03-13T13:13:08.916705+00:00",
     "frame_index": 621,
     "gps": {
-      "latitude": 28.615452,
-      "longitude": 77.209131
+      "latitude": 21.255452,
+      "longitude": 81.629131
     },
     "detection": {
       "bbox": [
@@ -15293,8 +15295,8 @@
     "timestamp": "2026-03-13T13:13:26.655684+00:00",
     "frame_index": 660,
     "gps": {
-      "latitude": 28.612543,
-      "longitude": 77.208532
+      "latitude": 21.252543,
+      "longitude": 81.628532
     },
     "detection": {
       "bbox": [
@@ -15336,8 +15338,8 @@
     "timestamp": "2026-03-13T13:13:27.307166+00:00",
     "frame_index": 663,
     "gps": {
-      "latitude": 28.61319,
-      "longitude": 77.20817
+      "latitude": 21.25319,
+      "longitude": 81.62817
     },
     "detection": {
       "bbox": [
@@ -15379,8 +15381,8 @@
     "timestamp": "2026-03-13T13:13:31.616683+00:00",
     "frame_index": 672,
     "gps": {
-      "latitude": 28.614543,
-      "longitude": 77.20793
+      "latitude": 21.254543,
+      "longitude": 81.62793
     },
     "detection": {
       "bbox": [
@@ -15422,8 +15424,8 @@
     "timestamp": "2026-03-13T13:13:38.634230+00:00",
     "frame_index": 690,
     "gps": {
-      "latitude": 28.612876,
-      "longitude": 77.208031
+      "latitude": 21.252876,
+      "longitude": 81.628031
     },
     "detection": {
       "bbox": [
@@ -15465,8 +15467,8 @@
     "timestamp": "2026-03-13T13:13:41.374622+00:00",
     "frame_index": 699,
     "gps": {
-      "latitude": 28.612793,
-      "longitude": 77.208771
+      "latitude": 21.252793,
+      "longitude": 81.628771
     },
     "detection": {
       "bbox": [
@@ -15508,8 +15510,8 @@
     "timestamp": "2026-03-13T13:13:49.967359+00:00",
     "frame_index": 723,
     "gps": {
-      "latitude": 28.613396,
-      "longitude": 77.20768
+      "latitude": 21.253396,
+      "longitude": 81.62768
     },
     "detection": {
       "bbox": [
@@ -15552,8 +15554,8 @@
     "timestamp": "2026-03-13T13:14:10.349654+00:00",
     "frame_index": 774,
     "gps": {
-      "latitude": 28.614268,
-      "longitude": 77.207444
+      "latitude": 21.254268,
+      "longitude": 81.627444
     },
     "detection": {
       "bbox": [
@@ -15595,8 +15597,8 @@
     "timestamp": "2026-03-13T13:14:15.418262+00:00",
     "frame_index": 789,
     "gps": {
-      "latitude": 28.613311,
-      "longitude": 77.209888
+      "latitude": 21.253311,
+      "longitude": 81.629888
     },
     "detection": {
       "bbox": [
@@ -15640,8 +15642,8 @@
     "timestamp": "2026-03-13T13:14:37.502591+00:00",
     "frame_index": 849,
     "gps": {
-      "latitude": 28.612158,
-      "longitude": 77.208101
+      "latitude": 21.252158,
+      "longitude": 81.628101
     },
     "detection": {
       "bbox": [
@@ -15682,8 +15684,8 @@
     "timestamp": "2026-03-13T13:14:39.710582+00:00",
     "frame_index": 855,
     "gps": {
-      "latitude": 28.614111,
-      "longitude": 77.210186
+      "latitude": 21.254111,
+      "longitude": 81.630186
     },
     "detection": {
       "bbox": [
@@ -15727,8 +15729,8 @@
     "timestamp": "2026-03-13T13:16:14.467917+00:00",
     "frame_index": 18,
     "gps": {
-      "latitude": 28.613893,
-      "longitude": 77.210682
+      "latitude": 21.253893,
+      "longitude": 81.630682
     },
     "detection": {
       "bbox": [
@@ -15769,8 +15771,8 @@
     "timestamp": "2026-03-13T13:16:15.427017+00:00",
     "frame_index": 36,
     "gps": {
-      "latitude": 28.614555,
-      "longitude": 77.209806
+      "latitude": 21.254555,
+      "longitude": 81.629806
     },
     "detection": {
       "bbox": [
@@ -15814,8 +15816,8 @@
     "timestamp": "2026-03-13T13:16:15.958341+00:00",
     "frame_index": 45,
     "gps": {
-      "latitude": 28.613769,
-      "longitude": 77.208037
+      "latitude": 21.253769,
+      "longitude": 81.628037
     },
     "detection": {
       "bbox": [
@@ -15859,8 +15861,8 @@
     "timestamp": "2026-03-13T13:16:16.328286+00:00",
     "frame_index": 51,
     "gps": {
-      "latitude": 28.613452,
-      "longitude": 77.208687
+      "latitude": 21.253452,
+      "longitude": 81.628687
     },
     "detection": {
       "bbox": [
@@ -15896,7 +15898,7 @@
       "action": "Log new pothole and create work order."
     },
     "_closed": true,
-    "_closed_at": "2026-03-14T22:56:34.655485+00:00",
+    "_closed_at": "2026-03-14T23:38:27.343652+00:00",
     "_last_seen": "2026-03-14T22:56:24.464037+00:00"
   },
   {
@@ -15904,8 +15906,8 @@
     "timestamp": "2026-03-13T13:16:16.891359+00:00",
     "frame_index": 60,
     "gps": {
-      "latitude": 28.614414,
-      "longitude": 77.209505
+      "latitude": 21.254414,
+      "longitude": 81.629505
     },
     "detection": {
       "bbox": [
@@ -15949,8 +15951,8 @@
     "timestamp": "2026-03-13T13:16:17.410234+00:00",
     "frame_index": 69,
     "gps": {
-      "latitude": 28.61499,
-      "longitude": 77.209495
+      "latitude": 21.25499,
+      "longitude": 81.629495
     },
     "detection": {
       "bbox": [
@@ -15994,8 +15996,8 @@
     "timestamp": "2026-03-13T13:16:18.010199+00:00",
     "frame_index": 78,
     "gps": {
-      "latitude": 28.61386,
-      "longitude": 77.208025
+      "latitude": 21.25386,
+      "longitude": 81.628025
     },
     "detection": {
       "bbox": [
@@ -16037,8 +16039,8 @@
     "timestamp": "2026-03-13T13:16:23.194481+00:00",
     "frame_index": 198,
     "gps": {
-      "latitude": 28.615247,
-      "longitude": 77.208903
+      "latitude": 21.255247,
+      "longitude": 81.628903
     },
     "detection": {
       "bbox": [
@@ -16082,8 +16084,8 @@
     "timestamp": "2026-03-13T13:16:23.425589+00:00",
     "frame_index": 201,
     "gps": {
-      "latitude": 28.613092,
-      "longitude": 77.209846
+      "latitude": 21.253092,
+      "longitude": 81.629846
     },
     "detection": {
       "bbox": [
@@ -16105,12 +16107,12 @@
       "bbox_height_px": 31
     },
     "severity": {
-      "score": 0.3941,
+      "score": 0.6067,
       "label": "Moderate",
       "factors": {
-        "area_norm": 0.0544,
-        "depth_norm": 0.7764,
-        "traffic_norm": 0.2581
+        "area_norm": 0.0103,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.8126
       }
     },
     "loop_closure": {
@@ -16118,15 +16120,15 @@
       "baseline_id": null,
       "action": "Log new pothole and create work order."
     },
-    "_last_seen": "2026-03-13T21:10:58.053555+00:00"
+    "_last_seen": "2026-03-14T23:38:27.332534+00:00"
   },
   {
     "pothole_id": "NETRA-FB238438-71E",
     "timestamp": "2026-03-13T13:16:29.108266+00:00",
     "frame_index": 321,
     "gps": {
-      "latitude": 28.612987,
-      "longitude": 77.208858
+      "latitude": 21.252987,
+      "longitude": 81.628858
     },
     "detection": {
       "bbox": [
@@ -16170,8 +16172,8 @@
     "timestamp": "2026-03-13T13:16:30.081493+00:00",
     "frame_index": 354,
     "gps": {
-      "latitude": 28.613486,
-      "longitude": 77.207502
+      "latitude": 21.253486,
+      "longitude": 81.627502
     },
     "detection": {
       "bbox": [
@@ -16214,8 +16216,8 @@
     "timestamp": "2026-03-13T13:16:30.458885+00:00",
     "frame_index": 366,
     "gps": {
-      "latitude": 28.614264,
-      "longitude": 77.210056
+      "latitude": 21.254264,
+      "longitude": 81.630056
     },
     "detection": {
       "bbox": [
@@ -16259,8 +16261,8 @@
     "timestamp": "2026-03-13T13:16:32.805906+00:00",
     "frame_index": 402,
     "gps": {
-      "latitude": 28.613845,
-      "longitude": 77.207178
+      "latitude": 21.253845,
+      "longitude": 81.627178
     },
     "detection": {
       "bbox": [
@@ -16301,8 +16303,8 @@
     "timestamp": "2026-03-13T13:16:32.831449+00:00",
     "frame_index": 402,
     "gps": {
-      "latitude": 28.613013,
-      "longitude": 77.208195
+      "latitude": 21.253013,
+      "longitude": 81.628195
     },
     "detection": {
       "bbox": [
@@ -16344,8 +16346,8 @@
     "timestamp": "2026-03-13T13:16:34.766951+00:00",
     "frame_index": 432,
     "gps": {
-      "latitude": 28.613289,
-      "longitude": 77.208123
+      "latitude": 21.253289,
+      "longitude": 81.628123
     },
     "detection": {
       "bbox": [
@@ -16389,8 +16391,8 @@
     "timestamp": "2026-03-13T13:16:35.301058+00:00",
     "frame_index": 441,
     "gps": {
-      "latitude": 28.61374,
-      "longitude": 77.207631
+      "latitude": 21.25374,
+      "longitude": 81.627631
     },
     "detection": {
       "bbox": [
@@ -16434,8 +16436,8 @@
     "timestamp": "2026-03-13T13:16:43.362489+00:00",
     "frame_index": 606,
     "gps": {
-      "latitude": 28.614045,
-      "longitude": 77.208308
+      "latitude": 21.254045,
+      "longitude": 81.628308
     },
     "detection": {
       "bbox": [
@@ -16479,8 +16481,8 @@
     "timestamp": "2026-03-13T13:16:44.088218+00:00",
     "frame_index": 621,
     "gps": {
-      "latitude": 28.612838,
-      "longitude": 77.208186
+      "latitude": 21.252838,
+      "longitude": 81.628186
     },
     "detection": {
       "bbox": [
@@ -16524,8 +16526,8 @@
     "timestamp": "2026-03-13T13:16:45.948125+00:00",
     "frame_index": 651,
     "gps": {
-      "latitude": 28.613056,
-      "longitude": 77.209232
+      "latitude": 21.253056,
+      "longitude": 81.629232
     },
     "detection": {
       "bbox": [
@@ -16569,8 +16571,8 @@
     "timestamp": "2026-03-13T13:16:53.707286+00:00",
     "frame_index": 792,
     "gps": {
-      "latitude": 28.614881,
-      "longitude": 77.208022
+      "latitude": 21.254881,
+      "longitude": 81.628022
     },
     "detection": {
       "bbox": [
@@ -16614,8 +16616,8 @@
     "timestamp": "2026-03-13T13:16:54.436509+00:00",
     "frame_index": 804,
     "gps": {
-      "latitude": 28.613865,
-      "longitude": 77.207891
+      "latitude": 21.253865,
+      "longitude": 81.627891
     },
     "detection": {
       "bbox": [
@@ -16659,8 +16661,8 @@
     "timestamp": "2026-03-13T13:16:59.661915+00:00",
     "frame_index": 915,
     "gps": {
-      "latitude": 28.613952,
-      "longitude": 77.20986
+      "latitude": 21.253952,
+      "longitude": 81.62986
     },
     "detection": {
       "bbox": [
@@ -16704,8 +16706,8 @@
     "timestamp": "2026-03-13T13:18:30.638107+00:00",
     "frame_index": 15,
     "gps": {
-      "latitude": 28.612525,
-      "longitude": 77.208331
+      "latitude": 21.252525,
+      "longitude": 81.628331
     },
     "detection": {
       "bbox": [
@@ -16749,8 +16751,8 @@
     "timestamp": "2026-03-13T13:18:32.186455+00:00",
     "frame_index": 30,
     "gps": {
-      "latitude": 28.613023,
-      "longitude": 77.209776
+      "latitude": 21.253023,
+      "longitude": 81.629776
     },
     "detection": {
       "bbox": [
@@ -16793,8 +16795,8 @@
     "timestamp": "2026-03-13T13:20:10.651710+00:00",
     "frame_index": 57,
     "gps": {
-      "latitude": 28.614213,
-      "longitude": 77.207543
+      "latitude": 21.254213,
+      "longitude": 81.627543
     },
     "detection": {
       "bbox": [
@@ -16838,8 +16840,8 @@
     "timestamp": "2026-03-13T13:20:20.749385+00:00",
     "frame_index": 177,
     "gps": {
-      "latitude": 28.614077,
-      "longitude": 77.207712
+      "latitude": 21.254077,
+      "longitude": 81.627712
     },
     "detection": {
       "bbox": [
@@ -16881,8 +16883,8 @@
     "timestamp": "2026-03-13T13:20:21.544943+00:00",
     "frame_index": 186,
     "gps": {
-      "latitude": 28.615139,
-      "longitude": 77.207862
+      "latitude": 21.255139,
+      "longitude": 81.627862
     },
     "detection": {
       "bbox": [
@@ -16924,8 +16926,8 @@
     "timestamp": "2026-03-13T13:20:23.390812+00:00",
     "frame_index": 201,
     "gps": {
-      "latitude": 28.613279,
-      "longitude": 77.209518
+      "latitude": 21.253279,
+      "longitude": 81.629518
     },
     "detection": {
       "bbox": [
@@ -16969,8 +16971,8 @@
     "timestamp": "2026-03-13T13:20:23.767924+00:00",
     "frame_index": 204,
     "gps": {
-      "latitude": 28.612683,
-      "longitude": 77.208158
+      "latitude": 21.252683,
+      "longitude": 81.628158
     },
     "detection": {
       "bbox": [
@@ -17012,8 +17014,8 @@
     "timestamp": "2026-03-13T13:20:24.150674+00:00",
     "frame_index": 207,
     "gps": {
-      "latitude": 28.614611,
-      "longitude": 77.207732
+      "latitude": 21.254611,
+      "longitude": 81.627732
     },
     "detection": {
       "bbox": [
@@ -17055,8 +17057,8 @@
     "timestamp": "2026-03-13T13:20:25.391639+00:00",
     "frame_index": 219,
     "gps": {
-      "latitude": 28.613867,
-      "longitude": 77.208565
+      "latitude": 21.253867,
+      "longitude": 81.628565
     },
     "detection": {
       "bbox": [
@@ -17093,15 +17095,15 @@
     },
     "_last_seen": "2026-03-14T06:28:10.801781+00:00",
     "_closed": true,
-    "_closed_at": "2026-03-14T06:28:02.974612+00:00"
+    "_closed_at": "2026-03-14T23:38:27.309547+00:00"
   },
   {
     "pothole_id": "NETRA-926ECFFE-07D",
     "timestamp": "2026-03-13T13:20:39.860379+00:00",
     "frame_index": 393,
     "gps": {
-      "latitude": 28.612614,
-      "longitude": 77.209775
+      "latitude": 21.252614,
+      "longitude": 81.629775
     },
     "detection": {
       "bbox": [
@@ -17143,8 +17145,8 @@
     "timestamp": "2026-03-13T13:20:59.811785+00:00",
     "frame_index": 597,
     "gps": {
-      "latitude": 28.612542,
-      "longitude": 77.209449
+      "latitude": 21.252542,
+      "longitude": 81.629449
     },
     "detection": {
       "bbox": [
@@ -17185,8 +17187,8 @@
     "timestamp": "2026-03-13T13:21:03.050087+00:00",
     "frame_index": 633,
     "gps": {
-      "latitude": 28.615148,
-      "longitude": 77.208253
+      "latitude": 21.255148,
+      "longitude": 81.628253
     },
     "detection": {
       "bbox": [
@@ -17230,8 +17232,8 @@
     "timestamp": "2026-03-13T13:21:07.967381+00:00",
     "frame_index": 672,
     "gps": {
-      "latitude": 28.614679,
-      "longitude": 77.20804
+      "latitude": 21.254679,
+      "longitude": 81.62804
     },
     "detection": {
       "bbox": [
@@ -17275,8 +17277,8 @@
     "timestamp": "2026-03-13T13:21:09.053917+00:00",
     "frame_index": 681,
     "gps": {
-      "latitude": 28.612415,
-      "longitude": 77.208143
+      "latitude": 21.252415,
+      "longitude": 81.628143
     },
     "detection": {
       "bbox": [
@@ -17317,8 +17319,8 @@
     "timestamp": "2026-03-13T13:21:10.928274+00:00",
     "frame_index": 699,
     "gps": {
-      "latitude": 28.612941,
-      "longitude": 77.208639
+      "latitude": 21.252941,
+      "longitude": 81.628639
     },
     "detection": {
       "bbox": [
@@ -17362,8 +17364,8 @@
     "timestamp": "2026-03-13T13:21:11.918496+00:00",
     "frame_index": 711,
     "gps": {
-      "latitude": 28.614458,
-      "longitude": 77.21028
+      "latitude": 21.254458,
+      "longitude": 81.63028
     },
     "detection": {
       "bbox": [
@@ -17407,8 +17409,8 @@
     "timestamp": "2026-03-13T13:21:18.592363+00:00",
     "frame_index": 810,
     "gps": {
-      "latitude": 28.614933,
-      "longitude": 77.209688
+      "latitude": 21.254933,
+      "longitude": 81.629688
     },
     "detection": {
       "bbox": [
@@ -17452,8 +17454,8 @@
     "timestamp": "2026-03-13T13:21:19.431301+00:00",
     "frame_index": 825,
     "gps": {
-      "latitude": 28.612531,
-      "longitude": 77.209586
+      "latitude": 21.252531,
+      "longitude": 81.629586
     },
     "detection": {
       "bbox": [
@@ -17497,8 +17499,8 @@
     "timestamp": "2026-03-13T13:21:20.622534+00:00",
     "frame_index": 846,
     "gps": {
-      "latitude": 28.615591,
-      "longitude": 77.20865
+      "latitude": 21.255591,
+      "longitude": 81.62865
     },
     "detection": {
       "bbox": [
@@ -17540,8 +17542,8 @@
     "timestamp": "2026-03-13T13:21:20.660622+00:00",
     "frame_index": 846,
     "gps": {
-      "latitude": 28.613195,
-      "longitude": 77.210428
+      "latitude": 21.253195,
+      "longitude": 81.630428
     },
     "detection": {
       "bbox": [
@@ -17584,8 +17586,8 @@
     "timestamp": "2026-03-13T13:27:57.028971+00:00",
     "frame_index": 15,
     "gps": {
-      "latitude": 28.61508,
-      "longitude": 77.208405
+      "latitude": 21.25508,
+      "longitude": 81.628405
     },
     "detection": {
       "bbox": [
@@ -17628,8 +17630,8 @@
     "timestamp": "2026-03-13T13:28:24.794267+00:00",
     "frame_index": 189,
     "gps": {
-      "latitude": 28.614293,
-      "longitude": 77.21049
+      "latitude": 21.254293,
+      "longitude": 81.63049
     },
     "detection": {
       "bbox": [
@@ -17671,8 +17673,8 @@
     "timestamp": "2026-03-13T13:28:25.157984+00:00",
     "frame_index": 192,
     "gps": {
-      "latitude": 28.614102,
-      "longitude": 77.210431
+      "latitude": 21.254102,
+      "longitude": 81.630431
     },
     "detection": {
       "bbox": [
@@ -17714,8 +17716,8 @@
     "timestamp": "2026-03-13T13:28:26.515041+00:00",
     "frame_index": 201,
     "gps": {
-      "latitude": 28.614961,
-      "longitude": 77.210469
+      "latitude": 21.254961,
+      "longitude": 81.630469
     },
     "detection": {
       "bbox": [
@@ -17756,8 +17758,8 @@
     "timestamp": "2026-03-13T13:28:34.304628+00:00",
     "frame_index": 264,
     "gps": {
-      "latitude": 28.613387,
-      "longitude": 77.209125
+      "latitude": 21.253387,
+      "longitude": 81.629125
     },
     "detection": {
       "bbox": [
@@ -17801,8 +17803,8 @@
     "timestamp": "2026-03-13T13:28:48.936063+00:00",
     "frame_index": 402,
     "gps": {
-      "latitude": 28.612443,
-      "longitude": 77.209335
+      "latitude": 21.252443,
+      "longitude": 81.629335
     },
     "detection": {
       "bbox": [
@@ -17844,8 +17846,8 @@
     "timestamp": "2026-03-13T13:28:49.066105+00:00",
     "frame_index": 402,
     "gps": {
-      "latitude": 28.615143,
-      "longitude": 77.208488
+      "latitude": 21.255143,
+      "longitude": 81.628488
     },
     "detection": {
       "bbox": [
@@ -17887,8 +17889,8 @@
     "timestamp": "2026-03-13T13:28:50.225463+00:00",
     "frame_index": 411,
     "gps": {
-      "latitude": 28.61267,
-      "longitude": 77.208001
+      "latitude": 21.25267,
+      "longitude": 81.628001
     },
     "detection": {
       "bbox": [
@@ -17930,8 +17932,8 @@
     "timestamp": "2026-03-13T13:28:50.735905+00:00",
     "frame_index": 414,
     "gps": {
-      "latitude": 28.612677,
-      "longitude": 77.208405
+      "latitude": 21.252677,
+      "longitude": 81.628405
     },
     "detection": {
       "bbox": [
@@ -17973,8 +17975,8 @@
     "timestamp": "2026-03-13T13:29:08.428987+00:00",
     "frame_index": 552,
     "gps": {
-      "latitude": 28.614388,
-      "longitude": 77.20802
+      "latitude": 21.254388,
+      "longitude": 81.62802
     },
     "detection": {
       "bbox": [
@@ -18018,8 +18020,8 @@
     "timestamp": "2026-03-13T13:29:15.386987+00:00",
     "frame_index": 615,
     "gps": {
-      "latitude": 28.614528,
-      "longitude": 77.210411
+      "latitude": 21.254528,
+      "longitude": 81.630411
     },
     "detection": {
       "bbox": [
@@ -18060,8 +18062,8 @@
     "timestamp": "2026-03-13T13:29:28.326983+00:00",
     "frame_index": 708,
     "gps": {
-      "latitude": 28.613331,
-      "longitude": 77.210814
+      "latitude": 21.253331,
+      "longitude": 81.630814
     },
     "detection": {
       "bbox": [
@@ -18102,8 +18104,8 @@
     "timestamp": "2026-03-13T13:29:33.456402+00:00",
     "frame_index": 756,
     "gps": {
-      "latitude": 28.612896,
-      "longitude": 77.209817
+      "latitude": 21.252896,
+      "longitude": 81.629817
     },
     "detection": {
       "bbox": [
@@ -18147,8 +18149,8 @@
     "timestamp": "2026-03-13T13:29:46.700728+00:00",
     "frame_index": 864,
     "gps": {
-      "latitude": 28.613926,
-      "longitude": 77.210443
+      "latitude": 21.253926,
+      "longitude": 81.630443
     },
     "detection": {
       "bbox": [
@@ -18190,8 +18192,8 @@
     "timestamp": "2026-03-13T13:33:31.809440+00:00",
     "frame_index": 195,
     "gps": {
-      "latitude": 28.613594,
-      "longitude": 77.208904
+      "latitude": 21.253594,
+      "longitude": 81.628904
     },
     "detection": {
       "bbox": [
@@ -18235,8 +18237,8 @@
     "timestamp": "2026-03-13T13:33:32.786477+00:00",
     "frame_index": 201,
     "gps": {
-      "latitude": 28.612903,
-      "longitude": 77.209594
+      "latitude": 21.252903,
+      "longitude": 81.629594
     },
     "detection": {
       "bbox": [
@@ -18278,8 +18280,8 @@
     "timestamp": "2026-03-13T13:33:34.773451+00:00",
     "frame_index": 216,
     "gps": {
-      "latitude": 28.613705,
-      "longitude": 77.210296
+      "latitude": 21.253705,
+      "longitude": 81.630296
     },
     "detection": {
       "bbox": [
@@ -18321,8 +18323,8 @@
     "timestamp": "2026-03-13T13:33:57.865244+00:00",
     "frame_index": 420,
     "gps": {
-      "latitude": 28.615177,
-      "longitude": 77.209187
+      "latitude": 21.255177,
+      "longitude": 81.629187
     },
     "detection": {
       "bbox": [
@@ -18364,8 +18366,8 @@
     "timestamp": "2026-03-13T13:34:18.851059+00:00",
     "frame_index": 591,
     "gps": {
-      "latitude": 28.615023,
-      "longitude": 77.208793
+      "latitude": 21.255023,
+      "longitude": 81.628793
     },
     "detection": {
       "bbox": [
@@ -18409,8 +18411,8 @@
     "timestamp": "2026-03-13T13:34:20.123803+00:00",
     "frame_index": 603,
     "gps": {
-      "latitude": 28.613049,
-      "longitude": 77.20768
+      "latitude": 21.253049,
+      "longitude": 81.62768
     },
     "detection": {
       "bbox": [
@@ -18452,8 +18454,8 @@
     "timestamp": "2026-03-13T13:34:21.424363+00:00",
     "frame_index": 615,
     "gps": {
-      "latitude": 28.613021,
-      "longitude": 77.209394
+      "latitude": 21.253021,
+      "longitude": 81.629394
     },
     "detection": {
       "bbox": [
@@ -18497,8 +18499,8 @@
     "timestamp": "2026-03-13T13:34:49.568359+00:00",
     "frame_index": 837,
     "gps": {
-      "latitude": 28.615299,
-      "longitude": 77.208444
+      "latitude": 21.255299,
+      "longitude": 81.628444
     },
     "detection": {
       "bbox": [
@@ -18539,8 +18541,8 @@
     "timestamp": "2026-03-13T13:34:54.320605+00:00",
     "frame_index": 879,
     "gps": {
-      "latitude": 28.612632,
-      "longitude": 77.208547
+      "latitude": 21.252632,
+      "longitude": 81.628547
     },
     "detection": {
       "bbox": [
@@ -18584,8 +18586,8 @@
     "timestamp": "2026-03-13T13:34:57.836601+00:00",
     "frame_index": 912,
     "gps": {
-      "latitude": 28.615095,
-      "longitude": 77.210273
+      "latitude": 21.255095,
+      "longitude": 81.630273
     },
     "detection": {
       "bbox": [
@@ -18626,8 +18628,8 @@
     "timestamp": "2026-03-13T13:41:26.509514+00:00",
     "frame_index": 51,
     "gps": {
-      "latitude": 28.613041,
-      "longitude": 77.210494
+      "latitude": 21.253041,
+      "longitude": 81.630494
     },
     "detection": {
       "bbox": [
@@ -18671,8 +18673,8 @@
     "timestamp": "2026-03-13T13:41:56.393291+00:00",
     "frame_index": 258,
     "gps": {
-      "latitude": 28.613177,
-      "longitude": 77.209735
+      "latitude": 21.253177,
+      "longitude": 81.629735
     },
     "detection": {
       "bbox": [
@@ -18716,8 +18718,8 @@
     "timestamp": "2026-03-13T13:42:16.654355+00:00",
     "frame_index": 435,
     "gps": {
-      "latitude": 28.612677,
-      "longitude": 77.20969
+      "latitude": 21.252677,
+      "longitude": 81.62969
     },
     "detection": {
       "bbox": [
@@ -18759,8 +18761,8 @@
     "timestamp": "2026-03-13T13:42:40.190441+00:00",
     "frame_index": 633,
     "gps": {
-      "latitude": 28.614756,
-      "longitude": 77.207904
+      "latitude": 21.254756,
+      "longitude": 81.627904
     },
     "detection": {
       "bbox": [
@@ -18802,8 +18804,8 @@
     "timestamp": "2026-03-13T13:42:43.849985+00:00",
     "frame_index": 657,
     "gps": {
-      "latitude": 28.613235,
-      "longitude": 77.21013
+      "latitude": 21.253235,
+      "longitude": 81.63013
     },
     "detection": {
       "bbox": [
@@ -18845,8 +18847,8 @@
     "timestamp": "2026-03-13T13:42:47.681823+00:00",
     "frame_index": 681,
     "gps": {
-      "latitude": 28.615069,
-      "longitude": 77.209945
+      "latitude": 21.255069,
+      "longitude": 81.629945
     },
     "detection": {
       "bbox": [
@@ -18887,8 +18889,8 @@
     "timestamp": "2026-03-13T13:42:55.055834+00:00",
     "frame_index": 747,
     "gps": {
-      "latitude": 28.613956,
-      "longitude": 77.207942
+      "latitude": 21.253956,
+      "longitude": 81.627942
     },
     "detection": {
       "bbox": [
@@ -18932,8 +18934,8 @@
     "timestamp": "2026-03-13T14:12:28.110210+00:00",
     "frame_index": 327,
     "gps": {
-      "latitude": 28.615333,
-      "longitude": 77.209625
+      "latitude": 21.255333,
+      "longitude": 81.629625
     },
     "detection": {
       "bbox": [
@@ -18975,8 +18977,8 @@
     "timestamp": "2026-03-13T14:12:29.998129+00:00",
     "frame_index": 348,
     "gps": {
-      "latitude": 28.615483,
-      "longitude": 77.208834
+      "latitude": 21.255483,
+      "longitude": 81.628834
     },
     "detection": {
       "bbox": [
@@ -19018,8 +19020,8 @@
     "timestamp": "2026-03-13T14:21:23.312019+00:00",
     "frame_index": 129,
     "gps": {
-      "latitude": 28.612081,
-      "longitude": 77.209067
+      "latitude": 21.252081,
+      "longitude": 81.629067
     },
     "detection": {
       "bbox": [
@@ -19060,8 +19062,8 @@
     "timestamp": "2026-03-13T14:22:46.373303+00:00",
     "frame_index": 459,
     "gps": {
-      "latitude": 28.61376,
-      "longitude": 77.210155
+      "latitude": 21.25376,
+      "longitude": 81.630155
     },
     "detection": {
       "bbox": [
@@ -19105,8 +19107,8 @@
     "timestamp": "2026-03-13T14:29:14.518760+00:00",
     "frame_index": 126,
     "gps": {
-      "latitude": 28.61289,
-      "longitude": 77.209201
+      "latitude": 21.25289,
+      "longitude": 81.629201
     },
     "detection": {
       "bbox": [
@@ -19150,8 +19152,8 @@
     "timestamp": "2026-03-13T14:29:46.348394+00:00",
     "frame_index": 204,
     "gps": {
-      "latitude": 28.615522,
-      "longitude": 77.209612
+      "latitude": 21.255522,
+      "longitude": 81.629612
     },
     "detection": {
       "bbox": [
@@ -19192,8 +19194,8 @@
     "timestamp": "2026-03-13T14:31:26.773082+00:00",
     "frame_index": 474,
     "gps": {
-      "latitude": 28.614998,
-      "longitude": 77.207954
+      "latitude": 21.254998,
+      "longitude": 81.627954
     },
     "detection": {
       "bbox": [
@@ -19234,8 +19236,8 @@
     "timestamp": "2026-03-13T14:31:51.723675+00:00",
     "frame_index": 534,
     "gps": {
-      "latitude": 28.613045,
-      "longitude": 77.210029
+      "latitude": 21.253045,
+      "longitude": 81.630029
     },
     "detection": {
       "bbox": [
@@ -19277,8 +19279,8 @@
     "timestamp": "2026-03-13T16:22:45.857620+00:00",
     "frame_index": 6,
     "gps": {
-      "latitude": 28.614109,
-      "longitude": 77.209488
+      "latitude": 21.254109,
+      "longitude": 81.629488
     },
     "detection": {
       "bbox": [
@@ -19322,8 +19324,8 @@
     "timestamp": "2026-03-13T16:22:54.268584+00:00",
     "frame_index": 25,
     "gps": {
-      "latitude": 28.614917,
-      "longitude": 77.21025
+      "latitude": 21.254917,
+      "longitude": 81.63025
     },
     "detection": {
       "bbox": [
@@ -19366,8 +19368,8 @@
     "timestamp": "2026-03-13T16:22:55.109513+00:00",
     "frame_index": 27,
     "gps": {
-      "latitude": 28.615012,
-      "longitude": 77.208521
+      "latitude": 21.255012,
+      "longitude": 81.628521
     },
     "detection": {
       "bbox": [
@@ -19411,8 +19413,8 @@
     "timestamp": "2026-03-13T16:22:56.883673+00:00",
     "frame_index": 31,
     "gps": {
-      "latitude": 28.612404,
-      "longitude": 77.208923
+      "latitude": 21.252404,
+      "longitude": 81.628923
     },
     "detection": {
       "bbox": [
@@ -19456,8 +19458,8 @@
     "timestamp": "2026-03-13T16:22:57.449653+00:00",
     "frame_index": 32,
     "gps": {
-      "latitude": 28.612505,
-      "longitude": 77.209697
+      "latitude": 21.252505,
+      "longitude": 81.629697
     },
     "detection": {
       "bbox": [
@@ -19499,8 +19501,8 @@
     "timestamp": "2026-03-13T16:22:57.865671+00:00",
     "frame_index": 33,
     "gps": {
-      "latitude": 28.613936,
-      "longitude": 77.210203
+      "latitude": 21.253936,
+      "longitude": 81.630203
     },
     "detection": {
       "bbox": [
@@ -19544,8 +19546,8 @@
     "timestamp": "2026-03-13T16:23:09.747774+00:00",
     "frame_index": 56,
     "gps": {
-      "latitude": 28.612783,
-      "longitude": 77.209657
+      "latitude": 21.252783,
+      "longitude": 81.629657
     },
     "detection": {
       "bbox": [
@@ -19589,8 +19591,8 @@
     "timestamp": "2026-03-13T16:23:15.385343+00:00",
     "frame_index": 67,
     "gps": {
-      "latitude": 28.612692,
-      "longitude": 77.208801
+      "latitude": 21.252692,
+      "longitude": 81.628801
     },
     "detection": {
       "bbox": [
@@ -19634,8 +19636,8 @@
     "timestamp": "2026-03-13T16:23:34.556935+00:00",
     "frame_index": 108,
     "gps": {
-      "latitude": 28.614814,
-      "longitude": 77.209352
+      "latitude": 21.254814,
+      "longitude": 81.629352
     },
     "detection": {
       "bbox": [
@@ -19679,8 +19681,8 @@
     "timestamp": "2026-03-13T16:23:37.554959+00:00",
     "frame_index": 115,
     "gps": {
-      "latitude": 28.615276,
-      "longitude": 77.208644
+      "latitude": 21.255276,
+      "longitude": 81.628644
     },
     "detection": {
       "bbox": [
@@ -19724,8 +19726,8 @@
     "timestamp": "2026-03-13T16:23:39.639917+00:00",
     "frame_index": 120,
     "gps": {
-      "latitude": 28.614639,
-      "longitude": 77.210199
+      "latitude": 21.254639,
+      "longitude": 81.630199
     },
     "detection": {
       "bbox": [
@@ -19768,8 +19770,8 @@
     "timestamp": "2026-03-13T16:23:56.964016+00:00",
     "frame_index": 159,
     "gps": {
-      "latitude": 28.613115,
-      "longitude": 77.207763
+      "latitude": 21.253115,
+      "longitude": 81.627763
     },
     "detection": {
       "bbox": [
@@ -19811,8 +19813,8 @@
     "timestamp": "2026-03-13T16:24:16.762847+00:00",
     "frame_index": 199,
     "gps": {
-      "latitude": 28.615794,
-      "longitude": 77.208076
+      "latitude": 21.255794,
+      "longitude": 81.628076
     },
     "detection": {
       "bbox": [
@@ -19853,8 +19855,8 @@
     "timestamp": "2026-03-13T16:24:23.879967+00:00",
     "frame_index": 214,
     "gps": {
-      "latitude": 28.614208,
-      "longitude": 77.209975
+      "latitude": 21.254208,
+      "longitude": 81.629975
     },
     "detection": {
       "bbox": [
@@ -19896,8 +19898,8 @@
     "timestamp": "2026-03-13T16:24:24.771034+00:00",
     "frame_index": 216,
     "gps": {
-      "latitude": 28.613065,
-      "longitude": 77.207965
+      "latitude": 21.253065,
+      "longitude": 81.627965
     },
     "detection": {
       "bbox": [
@@ -19941,8 +19943,8 @@
     "timestamp": "2026-03-13T16:24:27.260270+00:00",
     "frame_index": 221,
     "gps": {
-      "latitude": 28.615367,
-      "longitude": 77.208803
+      "latitude": 21.255367,
+      "longitude": 81.628803
     },
     "detection": {
       "bbox": [
@@ -19984,8 +19986,8 @@
     "timestamp": "2026-03-13T16:25:49.664268+00:00",
     "frame_index": 410,
     "gps": {
-      "latitude": 28.613935,
-      "longitude": 77.208344
+      "latitude": 21.253935,
+      "longitude": 81.628344
     },
     "detection": {
       "bbox": [
@@ -20029,8 +20031,8 @@
     "timestamp": "2026-03-13T16:25:51.162727+00:00",
     "frame_index": 413,
     "gps": {
-      "latitude": 28.615389,
-      "longitude": 77.20803
+      "latitude": 21.255389,
+      "longitude": 81.62803
     },
     "detection": {
       "bbox": [
@@ -20071,8 +20073,8 @@
     "timestamp": "2026-03-13T16:25:54.624252+00:00",
     "frame_index": 420,
     "gps": {
-      "latitude": 28.613914,
-      "longitude": 77.210575
+      "latitude": 21.253914,
+      "longitude": 81.630575
     },
     "detection": {
       "bbox": [
@@ -20114,8 +20116,8 @@
     "timestamp": "2026-03-13T16:25:54.699392+00:00",
     "frame_index": 420,
     "gps": {
-      "latitude": 28.612366,
-      "longitude": 77.208826
+      "latitude": 21.252366,
+      "longitude": 81.628826
     },
     "detection": {
       "bbox": [
@@ -20156,8 +20158,8 @@
     "timestamp": "2026-03-13T16:25:58.238338+00:00",
     "frame_index": 427,
     "gps": {
-      "latitude": 28.613684,
-      "longitude": 77.210511
+      "latitude": 21.253684,
+      "longitude": 81.630511
     },
     "detection": {
       "bbox": [
@@ -20199,8 +20201,8 @@
     "timestamp": "2026-03-13T16:26:14.088247+00:00",
     "frame_index": 462,
     "gps": {
-      "latitude": 28.61327,
-      "longitude": 77.207461
+      "latitude": 21.25327,
+      "longitude": 81.627461
     },
     "detection": {
       "bbox": [
@@ -20242,8 +20244,8 @@
     "timestamp": "2026-03-13T16:26:26.696121+00:00",
     "frame_index": 489,
     "gps": {
-      "latitude": 28.615347,
-      "longitude": 77.209278
+      "latitude": 21.255347,
+      "longitude": 81.629278
     },
     "detection": {
       "bbox": [
@@ -20284,8 +20286,8 @@
     "timestamp": "2026-03-13T16:26:32.625748+00:00",
     "frame_index": 503,
     "gps": {
-      "latitude": 28.614779,
-      "longitude": 77.207517
+      "latitude": 21.254779,
+      "longitude": 81.627517
     },
     "detection": {
       "bbox": [
@@ -20327,8 +20329,8 @@
     "timestamp": "2026-03-13T16:26:33.461622+00:00",
     "frame_index": 505,
     "gps": {
-      "latitude": 28.615355,
-      "longitude": 77.20904
+      "latitude": 21.255355,
+      "longitude": 81.62904
     },
     "detection": {
       "bbox": [
@@ -20370,8 +20372,8 @@
     "timestamp": "2026-03-13T16:26:48.236294+00:00",
     "frame_index": 539,
     "gps": {
-      "latitude": 28.61458,
-      "longitude": 77.210564
+      "latitude": 21.25458,
+      "longitude": 81.630564
     },
     "detection": {
       "bbox": [
@@ -20412,8 +20414,8 @@
     "timestamp": "2026-03-13T16:27:08.183821+00:00",
     "frame_index": 582,
     "gps": {
-      "latitude": 28.614184,
-      "longitude": 77.208523
+      "latitude": 21.254184,
+      "longitude": 81.628523
     },
     "detection": {
       "bbox": [
@@ -20457,8 +20459,8 @@
     "timestamp": "2026-03-13T16:27:29.640375+00:00",
     "frame_index": 626,
     "gps": {
-      "latitude": 28.612967,
-      "longitude": 77.207945
+      "latitude": 21.252967,
+      "longitude": 81.627945
     },
     "detection": {
       "bbox": [
@@ -20499,8 +20501,8 @@
     "timestamp": "2026-03-13T16:27:53.208834+00:00",
     "frame_index": 669,
     "gps": {
-      "latitude": 28.613982,
-      "longitude": 77.207842
+      "latitude": 21.253982,
+      "longitude": 81.627842
     },
     "detection": {
       "bbox": [
@@ -20544,8 +20546,8 @@
     "timestamp": "2026-03-13T16:27:58.974774+00:00",
     "frame_index": 679,
     "gps": {
-      "latitude": 28.615023,
-      "longitude": 77.209765
+      "latitude": 21.255023,
+      "longitude": 81.629765
     },
     "detection": {
       "bbox": [
@@ -20589,8 +20591,8 @@
     "timestamp": "2026-03-13T16:28:07.999868+00:00",
     "frame_index": 694,
     "gps": {
-      "latitude": 28.614762,
-      "longitude": 77.208855
+      "latitude": 21.254762,
+      "longitude": 81.628855
     },
     "detection": {
       "bbox": [
@@ -20634,8 +20636,8 @@
     "timestamp": "2026-03-13T16:28:22.975981+00:00",
     "frame_index": 728,
     "gps": {
-      "latitude": 28.615349,
-      "longitude": 77.210113
+      "latitude": 21.255349,
+      "longitude": 81.630113
     },
     "detection": {
       "bbox": [
@@ -20676,8 +20678,8 @@
     "timestamp": "2026-03-13T16:28:59.510995+00:00",
     "frame_index": 810,
     "gps": {
-      "latitude": 28.614364,
-      "longitude": 77.20748
+      "latitude": 21.254364,
+      "longitude": 81.62748
     },
     "detection": {
       "bbox": [
@@ -20720,8 +20722,8 @@
     "timestamp": "2026-03-13T16:29:02.503550+00:00",
     "frame_index": 817,
     "gps": {
-      "latitude": 28.613299,
-      "longitude": 77.210246
+      "latitude": 21.253299,
+      "longitude": 81.630246
     },
     "detection": {
       "bbox": [
@@ -20765,8 +20767,8 @@
     "timestamp": "2026-03-13T16:30:10.295563+00:00",
     "frame_index": 988,
     "gps": {
-      "latitude": 28.614551,
-      "longitude": 77.209909
+      "latitude": 21.254551,
+      "longitude": 81.629909
     },
     "detection": {
       "bbox": [
@@ -20810,8 +20812,8 @@
     "timestamp": "2026-03-13T16:34:06.931042+00:00",
     "frame_index": 129,
     "gps": {
-      "latitude": 28.61324,
-      "longitude": 77.209071
+      "latitude": 21.25324,
+      "longitude": 81.629071
     },
     "detection": {
       "bbox": [
@@ -20855,8 +20857,8 @@
     "timestamp": "2026-03-13T16:34:10.404956+00:00",
     "frame_index": 141,
     "gps": {
-      "latitude": 28.612419,
-      "longitude": 77.20923
+      "latitude": 21.252419,
+      "longitude": 81.62923
     },
     "detection": {
       "bbox": [
@@ -20899,8 +20901,8 @@
     "timestamp": "2026-03-13T16:34:25.102791+00:00",
     "frame_index": 195,
     "gps": {
-      "latitude": 28.615253,
-      "longitude": 77.208329
+      "latitude": 21.255253,
+      "longitude": 81.628329
     },
     "detection": {
       "bbox": [
@@ -20941,8 +20943,8 @@
     "timestamp": "2026-03-13T16:34:25.764638+00:00",
     "frame_index": 198,
     "gps": {
-      "latitude": 28.614934,
-      "longitude": 77.20873
+      "latitude": 21.254934,
+      "longitude": 81.62873
     },
     "detection": {
       "bbox": [
@@ -20984,8 +20986,8 @@
     "timestamp": "2026-03-13T16:36:30.350361+00:00",
     "frame_index": 681,
     "gps": {
-      "latitude": 28.614702,
-      "longitude": 77.209607
+      "latitude": 21.254702,
+      "longitude": 81.629607
     },
     "detection": {
       "bbox": [
@@ -21029,8 +21031,8 @@
     "timestamp": "2026-03-13T16:36:44.726261+00:00",
     "frame_index": 735,
     "gps": {
-      "latitude": 28.614138,
-      "longitude": 77.208023
+      "latitude": 21.254138,
+      "longitude": 81.628023
     },
     "detection": {
       "bbox": [
@@ -21074,8 +21076,8 @@
     "timestamp": "2026-03-13T16:37:39.233594+00:00",
     "frame_index": 963,
     "gps": {
-      "latitude": 28.613159,
-      "longitude": 77.20766
+      "latitude": 21.253159,
+      "longitude": 81.62766
     },
     "detection": {
       "bbox": [
@@ -21119,8 +21121,8 @@
     "timestamp": "2026-03-13T16:41:42.756222+00:00",
     "frame_index": 129,
     "gps": {
-      "latitude": 28.612598,
-      "longitude": 77.208115
+      "latitude": 21.252598,
+      "longitude": 81.628115
     },
     "detection": {
       "bbox": [
@@ -21161,8 +21163,8 @@
     "timestamp": "2026-03-13T16:42:32.168936+00:00",
     "frame_index": 252,
     "gps": {
-      "latitude": 28.613135,
-      "longitude": 77.210318
+      "latitude": 21.253135,
+      "longitude": 81.630318
     },
     "detection": {
       "bbox": [
@@ -21205,8 +21207,8 @@
     "timestamp": "2026-03-13T16:43:54.404873+00:00",
     "frame_index": 474,
     "gps": {
-      "latitude": 28.612747,
-      "longitude": 77.210265
+      "latitude": 21.252747,
+      "longitude": 81.630265
     },
     "detection": {
       "bbox": [
@@ -21247,8 +21249,8 @@
     "timestamp": "2026-03-13T17:32:37.484264+00:00",
     "frame_index": 48,
     "gps": {
-      "latitude": 28.612954,
-      "longitude": 77.210197
+      "latitude": 21.252954,
+      "longitude": 81.630197
     },
     "detection": {
       "bbox": [
@@ -21289,8 +21291,8 @@
     "timestamp": "2026-03-13T17:33:43.512554+00:00",
     "frame_index": 151,
     "gps": {
-      "latitude": 28.613692,
-      "longitude": 77.207325
+      "latitude": 21.253692,
+      "longitude": 81.627325
     },
     "detection": {
       "bbox": [
@@ -21331,8 +21333,8 @@
     "timestamp": "2026-03-13T17:34:11.800949+00:00",
     "frame_index": 193,
     "gps": {
-      "latitude": 28.614428,
-      "longitude": 77.207725
+      "latitude": 21.254428,
+      "longitude": 81.627725
     },
     "detection": {
       "bbox": [
@@ -21375,8 +21377,8 @@
     "timestamp": "2026-03-13T17:35:39.030958+00:00",
     "frame_index": 347,
     "gps": {
-      "latitude": 28.614617,
-      "longitude": 77.208363
+      "latitude": 21.254617,
+      "longitude": 81.628363
     },
     "detection": {
       "bbox": [
@@ -21418,8 +21420,8 @@
     "timestamp": "2026-03-13T17:36:04.346476+00:00",
     "frame_index": 389,
     "gps": {
-      "latitude": 28.615658,
-      "longitude": 77.208894
+      "latitude": 21.255658,
+      "longitude": 81.628894
     },
     "detection": {
       "bbox": [
@@ -21460,8 +21462,8 @@
     "timestamp": "2026-03-13T17:36:18.358207+00:00",
     "frame_index": 412,
     "gps": {
-      "latitude": 28.614511,
-      "longitude": 77.210852
+      "latitude": 21.254511,
+      "longitude": 81.630852
     },
     "detection": {
       "bbox": [
@@ -21502,8 +21504,8 @@
     "timestamp": "2026-03-13T17:36:20.574689+00:00",
     "frame_index": 415,
     "gps": {
-      "latitude": 28.614922,
-      "longitude": 77.207325
+      "latitude": 21.254922,
+      "longitude": 81.627325
     },
     "detection": {
       "bbox": [
@@ -21545,8 +21547,8 @@
     "timestamp": "2026-03-13T17:37:50.771284+00:00",
     "frame_index": 567,
     "gps": {
-      "latitude": 28.615371,
-      "longitude": 77.208909
+      "latitude": 21.255371,
+      "longitude": 81.628909
     },
     "detection": {
       "bbox": [
@@ -21587,8 +21589,8 @@
     "timestamp": "2026-03-13T17:37:56.532544+00:00",
     "frame_index": 576,
     "gps": {
-      "latitude": 28.612112,
-      "longitude": 77.209757
+      "latitude": 21.252112,
+      "longitude": 81.629757
     },
     "detection": {
       "bbox": [
@@ -21629,8 +21631,8 @@
     "timestamp": "2026-03-13T17:38:00.140595+00:00",
     "frame_index": 582,
     "gps": {
-      "latitude": 28.614264,
-      "longitude": 77.210344
+      "latitude": 21.254264,
+      "longitude": 81.630344
     },
     "detection": {
       "bbox": [
@@ -21671,8 +21673,8 @@
     "timestamp": "2026-03-13T17:38:20.349594+00:00",
     "frame_index": 617,
     "gps": {
-      "latitude": 28.612156,
-      "longitude": 77.20926
+      "latitude": 21.252156,
+      "longitude": 81.62926
     },
     "detection": {
       "bbox": [
@@ -21713,8 +21715,8 @@
     "timestamp": "2026-03-13T17:39:04.397517+00:00",
     "frame_index": 755,
     "gps": {
-      "latitude": 28.613154,
-      "longitude": 77.207904
+      "latitude": 21.253154,
+      "longitude": 81.627904
     },
     "detection": {
       "bbox": [
@@ -21758,8 +21760,8 @@
     "timestamp": "2026-03-13T17:44:54.284090+00:00",
     "frame_index": 0,
     "gps": {
-      "latitude": 28.612924,
-      "longitude": 77.210067
+      "latitude": 21.252924,
+      "longitude": 81.630067
     },
     "detection": {
       "bbox": [
@@ -21801,8 +21803,8 @@
     "timestamp": "2026-03-13T20:35:13.378055+00:00",
     "frame_index": 0,
     "gps": {
-      "latitude": 28.613104,
-      "longitude": 77.210896
+      "latitude": 21.253104,
+      "longitude": 81.630896
     },
     "detection": {
       "bbox": [
@@ -21843,8 +21845,8 @@
     "timestamp": "2026-03-13T20:36:57.712340+00:00",
     "frame_index": 297,
     "gps": {
-      "latitude": 28.612774,
-      "longitude": 77.208051
+      "latitude": 21.252774,
+      "longitude": 81.628051
     },
     "detection": {
       "bbox": [
@@ -21886,8 +21888,8 @@
     "timestamp": "2026-03-13T20:50:46.674095+00:00",
     "frame_index": 48,
     "gps": {
-      "latitude": 28.615177,
-      "longitude": 77.210184
+      "latitude": 21.255177,
+      "longitude": 81.630184
     },
     "detection": {
       "bbox": [
@@ -21928,8 +21930,8 @@
     "timestamp": "2026-03-13T20:50:47.591764+00:00",
     "frame_index": 51,
     "gps": {
-      "latitude": 28.612451,
-      "longitude": 77.209918
+      "latitude": 21.252451,
+      "longitude": 81.629918
     },
     "detection": {
       "bbox": [
@@ -21970,8 +21972,8 @@
     "timestamp": "2026-03-13T20:51:14.184853+00:00",
     "frame_index": 186,
     "gps": {
-      "latitude": 28.613715,
-      "longitude": 77.207532
+      "latitude": 21.253715,
+      "longitude": 81.627532
     },
     "detection": {
       "bbox": [
@@ -22012,8 +22014,8 @@
     "timestamp": "2026-03-13T20:51:43.585133+00:00",
     "frame_index": 321,
     "gps": {
-      "latitude": 28.615956,
-      "longitude": 77.208004
+      "latitude": 21.255956,
+      "longitude": 81.628004
     },
     "detection": {
       "bbox": [
@@ -22054,8 +22056,8 @@
     "timestamp": "2026-03-13T20:52:53.168637+00:00",
     "frame_index": 702,
     "gps": {
-      "latitude": 28.615079,
-      "longitude": 77.209151
+      "latitude": 21.255079,
+      "longitude": 81.629151
     },
     "detection": {
       "bbox": [
@@ -22097,8 +22099,8 @@
     "timestamp": "2026-03-13T20:53:06.187103+00:00",
     "frame_index": 792,
     "gps": {
-      "latitude": 28.613467,
-      "longitude": 77.210537
+      "latitude": 21.253467,
+      "longitude": 81.630537
     },
     "detection": {
       "bbox": [
@@ -22139,8 +22141,8 @@
     "timestamp": "2026-03-13T21:06:50.951795+00:00",
     "frame_index": 51,
     "gps": {
-      "latitude": 28.614325,
-      "longitude": 77.209728
+      "latitude": 21.254325,
+      "longitude": 81.629728
     },
     "detection": {
       "bbox": [
@@ -22184,8 +22186,8 @@
     "timestamp": "2026-03-13T21:06:51.024837+00:00",
     "frame_index": 51,
     "gps": {
-      "latitude": 28.613083,
-      "longitude": 77.208284
+      "latitude": 21.253083,
+      "longitude": 81.628284
     },
     "detection": {
       "bbox": [
@@ -22229,8 +22231,8 @@
     "timestamp": "2026-03-13T21:07:26.616272+00:00",
     "frame_index": 39,
     "gps": {
-      "latitude": 28.615397,
-      "longitude": 77.208699
+      "latitude": 21.255397,
+      "longitude": 81.628699
     },
     "detection": {
       "bbox": [
@@ -22273,8 +22275,8 @@
     "timestamp": "2026-03-13T21:08:14.962624+00:00",
     "frame_index": 210,
     "gps": {
-      "latitude": 28.615558,
-      "longitude": 77.209014
+      "latitude": 21.255558,
+      "longitude": 81.629014
     },
     "detection": {
       "bbox": [
@@ -22315,8 +22317,8 @@
     "timestamp": "2026-03-13T21:08:27.618423+00:00",
     "frame_index": 255,
     "gps": {
-      "latitude": 28.61396,
-      "longitude": 77.210097
+      "latitude": 21.25396,
+      "longitude": 81.630097
     },
     "detection": {
       "bbox": [
@@ -22358,8 +22360,8 @@
     "timestamp": "2026-03-13T21:08:42.785591+00:00",
     "frame_index": 324,
     "gps": {
-      "latitude": 28.614621,
-      "longitude": 77.207874
+      "latitude": 21.254621,
+      "longitude": 81.627874
     },
     "detection": {
       "bbox": [
@@ -22400,8 +22402,8 @@
     "timestamp": "2026-03-13T21:08:59.422629+00:00",
     "frame_index": 396,
     "gps": {
-      "latitude": 28.612767,
-      "longitude": 77.209993
+      "latitude": 21.252767,
+      "longitude": 81.629993
     },
     "detection": {
       "bbox": [
@@ -22442,8 +22444,8 @@
     "timestamp": "2026-03-13T21:09:11.199389+00:00",
     "frame_index": 438,
     "gps": {
-      "latitude": 28.615013,
-      "longitude": 77.207746
+      "latitude": 21.255013,
+      "longitude": 81.627746
     },
     "detection": {
       "bbox": [
@@ -22484,8 +22486,8 @@
     "timestamp": "2026-03-13T21:10:45.249828+00:00",
     "frame_index": 792,
     "gps": {
-      "latitude": 28.612558,
-      "longitude": 77.20905
+      "latitude": 21.252558,
+      "longitude": 81.62905
     },
     "detection": {
       "bbox": [
@@ -22527,8 +22529,8 @@
     "timestamp": "2026-03-13T21:11:31.933427+00:00",
     "frame_index": 993,
     "gps": {
-      "latitude": 28.615218,
-      "longitude": 77.209904
+      "latitude": 21.255218,
+      "longitude": 81.629904
     },
     "detection": {
       "bbox": [
@@ -22569,8 +22571,8 @@
     "timestamp": "2026-03-14T06:15:44.476232+00:00",
     "frame_index": 351,
     "gps": {
-      "latitude": 28.612183,
-      "longitude": 77.207596
+      "latitude": 21.252183,
+      "longitude": 81.627596
     },
     "detection": {
       "bbox": [
@@ -22611,8 +22613,8 @@
     "timestamp": "2026-03-14T06:21:05.714197+00:00",
     "frame_index": 78,
     "gps": {
-      "latitude": 28.612576,
-      "longitude": 77.208005
+      "latitude": 21.252576,
+      "longitude": 81.628005
     },
     "detection": {
       "bbox": [
@@ -22653,8 +22655,8 @@
     "timestamp": "2026-03-14T06:22:01.715114+00:00",
     "frame_index": 102,
     "gps": {
-      "latitude": 28.612335,
-      "longitude": 77.208459
+      "latitude": 21.252335,
+      "longitude": 81.628459
     },
     "detection": {
       "bbox": [
@@ -22695,8 +22697,8 @@
     "timestamp": "2026-03-14T06:25:31.920664+00:00",
     "frame_index": 204,
     "gps": {
-      "latitude": 28.615742,
-      "longitude": 77.20848
+      "latitude": 21.255742,
+      "longitude": 81.62848
     },
     "detection": {
       "bbox": [
@@ -22737,8 +22739,8 @@
     "timestamp": "2026-03-14T06:26:08.565874+00:00",
     "frame_index": 354,
     "gps": {
-      "latitude": 28.614489,
-      "longitude": 77.207532
+      "latitude": 21.254489,
+      "longitude": 81.627532
     },
     "detection": {
       "bbox": [
@@ -22781,8 +22783,8 @@
     "timestamp": "2026-03-14T06:26:51.675089+00:00",
     "frame_index": 519,
     "gps": {
-      "latitude": 28.615329,
-      "longitude": 77.209764
+      "latitude": 21.255329,
+      "longitude": 81.629764
     },
     "detection": {
       "bbox": [
@@ -22823,8 +22825,8 @@
     "timestamp": "2026-03-14T06:27:05.276845+00:00",
     "frame_index": 573,
     "gps": {
-      "latitude": 28.613595,
-      "longitude": 77.210572
+      "latitude": 21.253595,
+      "longitude": 81.630572
     },
     "detection": {
       "bbox": [
@@ -22865,8 +22867,8 @@
     "timestamp": "2026-03-14T06:27:09.559124+00:00",
     "frame_index": 588,
     "gps": {
-      "latitude": 28.614399,
-      "longitude": 77.210569
+      "latitude": 21.254399,
+      "longitude": 81.630569
     },
     "detection": {
       "bbox": [
@@ -22909,8 +22911,8 @@
     "timestamp": "2026-03-14T06:27:46.110168+00:00",
     "frame_index": 711,
     "gps": {
-      "latitude": 28.615665,
-      "longitude": 77.209356
+      "latitude": 21.255665,
+      "longitude": 81.629356
     },
     "detection": {
       "bbox": [
@@ -22951,8 +22953,8 @@
     "timestamp": "2026-03-14T06:28:14.740629+00:00",
     "frame_index": 822,
     "gps": {
-      "latitude": 28.612842,
-      "longitude": 77.208496
+      "latitude": 21.252842,
+      "longitude": 81.628496
     },
     "detection": {
       "bbox": [
@@ -22995,8 +22997,8 @@
     "timestamp": "2026-03-14T22:46:13.767248+00:00",
     "frame_index": 6,
     "gps": {
-      "latitude": 28.615547,
-      "longitude": 77.208132
+      "latitude": 21.255547,
+      "longitude": 81.628132
     },
     "detection": {
       "bbox": [
@@ -23037,8 +23039,8 @@
     "timestamp": "2026-03-14T22:46:13.869494+00:00",
     "frame_index": 6,
     "gps": {
-      "latitude": 28.612477,
-      "longitude": 77.210072
+      "latitude": 21.252477,
+      "longitude": 81.630072
     },
     "detection": {
       "bbox": [
@@ -23079,8 +23081,8 @@
     "timestamp": "2026-03-14T22:46:21.925153+00:00",
     "frame_index": 12,
     "gps": {
-      "latitude": 28.61336,
-      "longitude": 77.207316
+      "latitude": 21.25336,
+      "longitude": 81.627316
     },
     "detection": {
       "bbox": [
@@ -23121,8 +23123,8 @@
     "timestamp": "2026-03-14T22:46:35.001954+00:00",
     "frame_index": 30,
     "gps": {
-      "latitude": 28.614191,
-      "longitude": 77.207811
+      "latitude": 21.254191,
+      "longitude": 81.627811
     },
     "detection": {
       "bbox": [
@@ -23164,8 +23166,8 @@
     "timestamp": "2026-03-14T22:46:52.305867+00:00",
     "frame_index": 57,
     "gps": {
-      "latitude": 28.614522,
-      "longitude": 77.207756
+      "latitude": 21.254522,
+      "longitude": 81.627756
     },
     "detection": {
       "bbox": [
@@ -23206,8 +23208,8 @@
     "timestamp": "2026-03-14T22:52:38.407917+00:00",
     "frame_index": 15,
     "gps": {
-      "latitude": 28.613815,
-      "longitude": 77.210531
+      "latitude": 21.253815,
+      "longitude": 81.630531
     },
     "detection": {
       "bbox": [
@@ -23248,8 +23250,8 @@
     "timestamp": "2026-03-14T22:52:46.612147+00:00",
     "frame_index": 27,
     "gps": {
-      "latitude": 28.615201,
-      "longitude": 77.209786
+      "latitude": 21.255201,
+      "longitude": 81.629786
     },
     "detection": {
       "bbox": [
@@ -23290,8 +23292,8 @@
     "timestamp": "2026-03-14T22:53:27.792775+00:00",
     "frame_index": 87,
     "gps": {
-      "latitude": 28.612404,
-      "longitude": 77.207994
+      "latitude": 21.252404,
+      "longitude": 81.627994
     },
     "detection": {
       "bbox": [
@@ -23332,8 +23334,8 @@
     "timestamp": "2026-03-14T22:56:26.232603+00:00",
     "frame_index": 18,
     "gps": {
-      "latitude": 28.615234,
-      "longitude": 77.209413
+      "latitude": 21.255234,
+      "longitude": 81.629413
     },
     "detection": {
       "bbox": [
@@ -23374,8 +23376,8 @@
     "timestamp": "2026-03-14T22:56:32.602927+00:00",
     "frame_index": 27,
     "gps": {
-      "latitude": 28.613358,
-      "longitude": 77.209693
+      "latitude": 21.253358,
+      "longitude": 81.629693
     },
     "detection": {
       "bbox": [
@@ -23416,8 +23418,8 @@
     "timestamp": "2026-03-14T22:56:36.680892+00:00",
     "frame_index": 33,
     "gps": {
-      "latitude": 28.614146,
-      "longitude": 77.20746
+      "latitude": 21.254146,
+      "longitude": 81.62746
     },
     "detection": {
       "bbox": [
@@ -23458,8 +23460,8 @@
     "timestamp": "2026-03-14T22:57:01.210669+00:00",
     "frame_index": 87,
     "gps": {
-      "latitude": 28.613253,
-      "longitude": 77.210599
+      "latitude": 21.253253,
+      "longitude": 81.630599
     },
     "detection": {
       "bbox": [
@@ -23500,8 +23502,8 @@
     "timestamp": "2026-03-14T22:57:10.498587+00:00",
     "frame_index": 132,
     "gps": {
-      "latitude": 28.615549,
-      "longitude": 77.208908
+      "latitude": 21.255549,
+      "longitude": 81.628908
     },
     "detection": {
       "bbox": [
@@ -23535,6 +23537,1307 @@
       "status": "NEW",
       "baseline_id": null,
       "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-7A7A4EA3-031",
+    "timestamp": "2026-03-14T23:47:58.118311+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251565,
+      "longitude": 81.629179
+    },
+    "detection": {
+      "bbox": [
+        0,
+        505,
+        61,
+        611
+      ],
+      "confidence": 0.8646,
+      "area_px": 5113,
+      "track_id": 1,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 106,
+      "bbox_width_px": 61,
+      "bbox_height_px": 107
+    },
+    "severity": {
+      "score": 0.5441,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0639,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.4868
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "_closed": true,
+    "_closed_at": "2026-03-14T23:47:58.260904+00:00"
+  },
+  {
+    "pothole_id": "NETRA-1C1FB9B2-A7D",
+    "timestamp": "2026-03-14T23:47:58.131356+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251937,
+      "longitude": 81.629952
+    },
+    "detection": {
+      "bbox": [
+        0,
+        372,
+        71,
+        419
+      ],
+      "confidence": 0.8423,
+      "area_px": 2621,
+      "track_id": 2,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 70,
+      "bbox_width_px": 71,
+      "bbox_height_px": 47
+    },
+    "severity": {
+      "score": 0.4903,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0328,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.3151
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "_closed": true,
+    "_closed_at": "2026-03-15T00:22:05.579970+00:00"
+  },
+  {
+    "pothole_id": "NETRA-2289F316-640",
+    "timestamp": "2026-03-14T23:47:58.142795+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250922,
+      "longitude": 81.629828
+    },
+    "detection": {
+      "bbox": [
+        293,
+        433,
+        398,
+        483
+      ],
+      "confidence": 0.8337,
+      "area_px": 4211,
+      "track_id": 3,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 104,
+      "bbox_width_px": 105,
+      "bbox_height_px": 51
+    },
+    "severity": {
+      "score": 0.5926,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.2006,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.4896
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "_last_seen": "2026-03-15T00:26:36.729577+00:00"
+  },
+  {
+    "pothole_id": "NETRA-B2304BAE-DE7",
+    "timestamp": "2026-03-14T23:47:58.155966+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251381,
+      "longitude": 81.629788
+    },
+    "detection": {
+      "bbox": [
+        296,
+        348,
+        381,
+        376
+      ],
+      "confidence": 0.8329,
+      "area_px": 1941,
+      "track_id": 4,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 84,
+      "bbox_width_px": 85,
+      "bbox_height_px": 29
+    },
+    "severity": {
+      "score": 0.6773,
+      "label": "Critical",
+      "factors": {
+        "area_norm": 0.1837,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.8518
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "_last_seen": "2026-03-15T00:22:05.568057+00:00"
+  },
+  {
+    "pothole_id": "NETRA-3362D5D4-10A",
+    "timestamp": "2026-03-14T23:47:58.171080+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250993,
+      "longitude": 81.629425
+    },
+    "detection": {
+      "bbox": [
+        75,
+        352,
+        145,
+        377
+      ],
+      "confidence": 0.8282,
+      "area_px": 1393,
+      "track_id": 5,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 70,
+      "bbox_width_px": 71,
+      "bbox_height_px": 25
+    },
+    "severity": {
+      "score": 0.5562,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.2619,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.258
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "_last_seen": "2026-03-15T00:22:05.555881+00:00"
+  },
+  {
+    "pothole_id": "NETRA-9F5A136F-5F4",
+    "timestamp": "2026-03-14T23:47:58.183972+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251209,
+      "longitude": 81.629954
+    },
+    "detection": {
+      "bbox": [
+        25,
+        328,
+        59,
+        341
+      ],
+      "confidence": 0.8231,
+      "area_px": 359,
+      "track_id": 6,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 34,
+      "bbox_width_px": 35,
+      "bbox_height_px": 13
+    },
+    "severity": {
+      "score": 0.4934,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0045,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.3673
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-AD512FE3-97D",
+    "timestamp": "2026-03-14T23:47:58.195505+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250577,
+      "longitude": 81.629773
+    },
+    "detection": {
+      "bbox": [
+        82,
+        312,
+        105,
+        321
+      ],
+      "confidence": 0.7999,
+      "area_px": 159,
+      "track_id": 7,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 22,
+      "bbox_width_px": 23,
+      "bbox_height_px": 9
+    },
+    "severity": {
+      "score": 0.4846,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.002,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.3356
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-1DA4CDBC-B3E",
+    "timestamp": "2026-03-14T23:47:58.208684+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.252016,
+      "longitude": 81.629503
+    },
+    "detection": {
+      "bbox": [
+        35,
+        406,
+        158,
+        471
+      ],
+      "confidence": 0.7958,
+      "area_px": 6293,
+      "track_id": 8,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 122,
+      "bbox_width_px": 123,
+      "bbox_height_px": 65
+    },
+    "severity": {
+      "score": 0.5304,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0787,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.4114
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-18B6B95C-46B",
+    "timestamp": "2026-03-14T23:47:58.222843+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251455,
+      "longitude": 81.629433
+    },
+    "detection": {
+      "bbox": [
+        185,
+        386,
+        260,
+        420
+      ],
+      "confidence": 0.7921,
+      "area_px": 2061,
+      "track_id": 9,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 74,
+      "bbox_width_px": 75,
+      "bbox_height_px": 35
+    },
+    "severity": {
+      "score": 0.5414,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0258,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5295
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-676AF0CF-4F7",
+    "timestamp": "2026-03-14T23:47:58.236401+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.25107,
+      "longitude": 81.630027
+    },
+    "detection": {
+      "bbox": [
+        175,
+        325,
+        220,
+        342
+      ],
+      "confidence": 0.7645,
+      "area_px": 613,
+      "track_id": 10,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 44,
+      "bbox_width_px": 45,
+      "bbox_height_px": 17
+    },
+    "severity": {
+      "score": 0.507,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0077,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.4173
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-0277FE08-F08",
+    "timestamp": "2026-03-14T23:47:58.249247+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250314,
+      "longitude": 81.629571
+    },
+    "detection": {
+      "bbox": [
+        274,
+        385,
+        347,
+        414
+      ],
+      "confidence": 0.7429,
+      "area_px": 1663,
+      "track_id": 11,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 72,
+      "bbox_width_px": 73,
+      "bbox_height_px": 29
+    },
+    "severity": {
+      "score": 0.5521,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0208,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5792
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-67F9667F-0E5",
+    "timestamp": "2026-03-14T23:47:58.272673+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250734,
+      "longitude": 81.629378
+    },
+    "detection": {
+      "bbox": [
+        216,
+        338,
+        249,
+        351
+      ],
+      "confidence": 0.7189,
+      "area_px": 339,
+      "track_id": 13,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 32,
+      "bbox_width_px": 33,
+      "bbox_height_px": 13
+    },
+    "severity": {
+      "score": 0.5631,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0042,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.6466
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-616644BB-23F",
+    "timestamp": "2026-03-14T23:47:58.285627+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251313,
+      "longitude": 81.629712
+    },
+    "detection": {
+      "bbox": [
+        233,
+        293,
+        263,
+        304
+      ],
+      "confidence": 0.7142,
+      "area_px": 275,
+      "track_id": 14,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 30,
+      "bbox_width_px": 31,
+      "bbox_height_px": 11
+    },
+    "severity": {
+      "score": 0.6094,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0034,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.8327
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-10DAAF7F-5B9",
+    "timestamp": "2026-03-14T23:47:58.298911+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250587,
+      "longitude": 81.629526
+    },
+    "detection": {
+      "bbox": [
+        258,
+        360,
+        306,
+        377
+      ],
+      "confidence": 0.6921,
+      "area_px": 665,
+      "track_id": 15,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 48,
+      "bbox_width_px": 49,
+      "bbox_height_px": 17
+    },
+    "severity": {
+      "score": 0.5726,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0083,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.6787
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-F88E5507-BE2",
+    "timestamp": "2026-03-14T23:47:58.310631+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251342,
+      "longitude": 81.628688
+    },
+    "detection": {
+      "bbox": [
+        329,
+        323,
+        367,
+        342
+      ],
+      "confidence": 0.6458,
+      "area_px": 583,
+      "track_id": 16,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 38,
+      "bbox_width_px": 39,
+      "bbox_height_px": 19
+    },
+    "severity": {
+      "score": 0.5309,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0073,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5132
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-17748D1F-BC9",
+    "timestamp": "2026-03-14T23:47:58.323414+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251612,
+      "longitude": 81.62934
+    },
+    "detection": {
+      "bbox": [
+        135,
+        296,
+        158,
+        304
+      ],
+      "confidence": 0.6188,
+      "area_px": 159,
+      "track_id": 17,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 22,
+      "bbox_width_px": 23,
+      "bbox_height_px": 9
+    },
+    "severity": {
+      "score": 0.619,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.002,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.8732
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-5BFBD280-C15",
+    "timestamp": "2026-03-14T23:47:58.336268+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251325,
+      "longitude": 81.629041
+    },
+    "detection": {
+      "bbox": [
+        259,
+        312,
+        317,
+        330
+      ],
+      "confidence": 0.5692,
+      "area_px": 890,
+      "track_id": 18,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 58,
+      "bbox_width_px": 59,
+      "bbox_height_px": 19
+    },
+    "severity": {
+      "score": 0.5715,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0111,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.6705
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-EFDCDA5D-DD0",
+    "timestamp": "2026-03-14T23:47:58.349335+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.2509,
+      "longitude": 81.62969
+    },
+    "detection": {
+      "bbox": [
+        215,
+        358,
+        254,
+        376
+      ],
+      "confidence": 0.5547,
+      "area_px": 583,
+      "track_id": 19,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 38,
+      "bbox_width_px": 39,
+      "bbox_height_px": 19
+    },
+    "severity": {
+      "score": 0.5302,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0073,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5107
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-13D41254-708",
+    "timestamp": "2026-03-14T23:47:58.361678+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.25173,
+      "longitude": 81.630092
+    },
+    "detection": {
+      "bbox": [
+        242,
+        305,
+        261,
+        312
+      ],
+      "confidence": 0.5291,
+      "area_px": 106,
+      "track_id": 20,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 18,
+      "bbox_width_px": 19,
+      "bbox_height_px": 7
+    },
+    "severity": {
+      "score": 0.4624,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0013,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.2479
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-F0285BB0-0DA",
+    "timestamp": "2026-03-14T23:47:58.373984+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250851,
+      "longitude": 81.630254
+    },
+    "detection": {
+      "bbox": [
+        135,
+        310,
+        197,
+        333
+      ],
+      "confidence": 0.5281,
+      "area_px": 1147,
+      "track_id": 21,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 62,
+      "bbox_width_px": 63,
+      "bbox_height_px": 23
+    },
+    "severity": {
+      "score": 0.5384,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0143,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5337
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-76DBAEB8-C4F",
+    "timestamp": "2026-03-14T23:47:58.386331+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251007,
+      "longitude": 81.629914
+    },
+    "detection": {
+      "bbox": [
+        312,
+        313,
+        342,
+        320
+      ],
+      "confidence": 0.5147,
+      "area_px": 179,
+      "track_id": 22,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 30,
+      "bbox_width_px": 31,
+      "bbox_height_px": 7
+    },
+    "severity": {
+      "score": 0.5152,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0039,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.4556
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "_last_seen": "2026-03-14T23:47:58.536291+00:00"
+  },
+  {
+    "pothole_id": "NETRA-F6152622-B11",
+    "timestamp": "2026-03-14T23:47:58.399729+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250824,
+      "longitude": 81.629629
+    },
+    "detection": {
+      "bbox": [
+        335,
+        300,
+        362,
+        308
+      ],
+      "confidence": 0.4548,
+      "area_px": 191,
+      "track_id": 23,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 26,
+      "bbox_width_px": 27,
+      "bbox_height_px": 9
+    },
+    "severity": {
+      "score": 0.5053,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0053,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.4139
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    },
+    "_last_seen": "2026-03-14T23:47:58.439594+00:00"
+  },
+  {
+    "pothole_id": "NETRA-A785FDBF-51E",
+    "timestamp": "2026-03-14T23:47:58.412841+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.252255,
+      "longitude": 81.629622
+    },
+    "detection": {
+      "bbox": [
+        27,
+        313,
+        52,
+        323
+      ],
+      "confidence": 0.4032,
+      "area_px": 217,
+      "track_id": 24,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 24,
+      "bbox_width_px": 25,
+      "bbox_height_px": 11
+    },
+    "severity": {
+      "score": 0.5191,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0027,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.4728
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-97DF966B-090",
+    "timestamp": "2026-03-14T23:47:58.425808+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250581,
+      "longitude": 81.628947
+    },
+    "detection": {
+      "bbox": [
+        235,
+        297,
+        264,
+        310
+      ],
+      "confidence": 0.3984,
+      "area_px": 291,
+      "track_id": 25,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 28,
+      "bbox_width_px": 29,
+      "bbox_height_px": 13
+    },
+    "severity": {
+      "score": 0.6141,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0036,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.8512
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-D4D4DDAF-732",
+    "timestamp": "2026-03-14T23:47:58.453033+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250704,
+      "longitude": 81.629084
+    },
+    "detection": {
+      "bbox": [
+        193,
+        287,
+        221,
+        296
+      ],
+      "confidence": 0.3776,
+      "area_px": 201,
+      "track_id": 27,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 28,
+      "bbox_width_px": 29,
+      "bbox_height_px": 9
+    },
+    "severity": {
+      "score": 0.6154,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0025,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.8581
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-DF43CF6D-32E",
+    "timestamp": "2026-03-14T23:47:58.466180+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251454,
+      "longitude": 81.630238
+    },
+    "detection": {
+      "bbox": [
+        278,
+        326,
+        308,
+        335
+      ],
+      "confidence": 0.3464,
+      "area_px": 223,
+      "track_id": 28,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 30,
+      "bbox_width_px": 31,
+      "bbox_height_px": 9
+    },
+    "severity": {
+      "score": 0.5453,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0028,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.5773
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-6BECA37A-81A",
+    "timestamp": "2026-03-14T23:47:58.479643+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.25102,
+      "longitude": 81.629131
+    },
+    "detection": {
+      "bbox": [
+        246,
+        278,
+        269,
+        287
+      ],
+      "confidence": 0.3379,
+      "area_px": 159,
+      "track_id": 29,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 22,
+      "bbox_width_px": 23,
+      "bbox_height_px": 9
+    },
+    "severity": {
+      "score": 0.5173,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.002,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.4662
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-4FDDDE45-37D",
+    "timestamp": "2026-03-14T23:47:58.503027+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251106,
+      "longitude": 81.6296
+    },
+    "detection": {
+      "bbox": [
+        383,
+        339,
+        398,
+        347
+      ],
+      "confidence": 0.3263,
+      "area_px": 105,
+      "track_id": 30,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 14,
+      "bbox_width_px": 15,
+      "bbox_height_px": 9
+    },
+    "severity": {
+      "score": 0.5715,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0013,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.6843
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-D0A9393F-F2B",
+    "timestamp": "2026-03-14T23:47:58.516311+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.251161,
+      "longitude": 81.629747
+    },
+    "detection": {
+      "bbox": [
+        289,
+        302,
+        326,
+        315
+      ],
+      "confidence": 0.292,
+      "area_px": 385,
+      "track_id": 31,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 36,
+      "bbox_width_px": 37,
+      "bbox_height_px": 13
+    },
+    "severity": {
+      "score": 0.4979,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0048,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.385
+      }
+    },
+    "loop_closure": {
+      "status": "NEW",
+      "baseline_id": null,
+      "action": "Log new pothole and create work order."
+    }
+  },
+  {
+    "pothole_id": "NETRA-AEA5EC14-1EB",
+    "timestamp": "2026-03-14T23:47:58.550068+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.250585,
+      "longitude": 81.630314
+    },
+    "detection": {
+      "bbox": [
+        116,
+        306,
+        142,
+        315
+      ],
+      "confidence": 0.274,
+      "area_px": 191,
+      "track_id": 33,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 26,
+      "bbox_width_px": 27,
+      "bbox_height_px": 9
+    },
+    "severity": {
+      "score": 0.6194,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0024,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.8744
+      }
+    }
+  },
+  {
+    "pothole_id": "NETRA-8DD0EAB3-861",
+    "timestamp": "2026-03-15T00:26:36.741308+00:00",
+    "frame_index": 0,
+    "gps": {
+      "latitude": 21.25141,
+      "longitude": 81.629597
+    },
+    "detection": {
+      "bbox": [
+        58,
+        174,
+        207,
+        226
+      ],
+      "confidence": 0.4741,
+      "area_px": 6215,
+      "track_id": 2,
+      "track_hits": 1
+    },
+    "depth": {
+      "max_depth_rel": 1.0,
+      "mean_depth_rel": 1.0,
+      "diameter_px": 148,
+      "bbox_width_px": 149,
+      "bbox_height_px": 53
+    },
+    "severity": {
+      "score": 0.5277,
+      "label": "Moderate",
+      "factors": {
+        "area_norm": 0.0777,
+        "depth_norm": 1.0,
+        "traffic_norm": 0.402
+      }
     }
   }
 ]

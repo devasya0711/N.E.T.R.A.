@@ -13,7 +13,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const Pothole  = require("./models/Pothole");
 
-const TARGET = 350;
+const TARGET = 97;
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 function rand(a, b) { return Math.random() * (b - a) + a; }

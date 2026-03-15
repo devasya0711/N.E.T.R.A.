@@ -258,26 +258,64 @@ export default function PredictiveEnginePage() {
             </div>
           </div>
 
-          {/* Mini-map placeholder */}
+          {/* AI Engine Vitals */}
           <div className="netra-panel p-5">
-            <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">Threat Vectors Map</h3>
-            <div className="w-full h-48 bg-slate-100 rounded-lg flex flex-col items-center justify-center text-center border overflow-hidden relative border-slate-200 group">
-              {/* Dummy map illustration */}
-              <div className="absolute inset-0 opacity-[0.15] mix-blend-multiply flex items-center justify-center">
-                 <svg className="w-[150%] h-[150%] text-slate-400" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5">
-                   <path d="M10 50 Q 30 20 60 40 T 90 30" />
-                   <path d="M20 80 Q 50 60 70 80 T 100 50" />
-                   <circle cx="60" cy="40" r="3" fill="#ef4444" className="animate-ping" />
-                   <circle cx="70" cy="80" r="2" fill="#eab308" className="animate-ping" style={{ animationDelay: '1s' }} />
-                 </svg>
+            <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-4 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              AI Engine Vitals
+            </h3>
+            <div className="space-y-4">
+              {/* Corridors Scanned */}
+              <div>
+                <div className="flex justify-between text-[11px] mb-1.5">
+                  <span className="text-slate-500 font-semibold">Corridors Scanned</span>
+                  <span className="text-slate-800 font-bold">18 / 20</span>
+                </div>
+                <div className="w-full bg-slate-100 rounded-full h-1.5">
+                  <div className="bg-gradient-to-r from-blue-500 to-indigo-500 h-1.5 rounded-full transition-all duration-1000" style={{ width: '90%' }} />
+                </div>
               </div>
-              <MapPinIcon className="w-8 h-8 text-slate-400 mb-2 relative z-10 group-hover:text-blue-500 transition-colors" />
-              <p className="text-[11px] font-semibold text-slate-500 max-w-[180px] relative z-10 group-hover:text-slate-700 transition-colors">
-                Interactive forecasting map visualization requires WebGL extension.
-              </p>
-              <Link to="/dashboard/livemap" className="mt-3 text-[10px] font-bold text-blue-600 hover:underline relative z-10">
-                View Risk Heatmap instead →
-              </Link>
+              {/* Model Uptime */}
+              <div>
+                <div className="flex justify-between text-[11px] mb-1.5">
+                  <span className="text-slate-500 font-semibold">Model Uptime</span>
+                  <span className="text-emerald-600 font-bold">99.7%</span>
+                </div>
+                <div className="w-full bg-slate-100 rounded-full h-1.5">
+                  <div className="bg-gradient-to-r from-emerald-400 to-emerald-500 h-1.5 rounded-full transition-all duration-1000" style={{ width: '99.7%' }} />
+                </div>
+              </div>
+              {/* Avg Inference Latency */}
+              <div>
+                <div className="flex justify-between text-[11px] mb-1.5">
+                  <span className="text-slate-500 font-semibold">Avg Inference Latency</span>
+                  <span className="text-slate-800 font-bold">42ms</span>
+                </div>
+                <div className="w-full bg-slate-100 rounded-full h-1.5">
+                  <div className="bg-gradient-to-r from-amber-400 to-orange-400 h-1.5 rounded-full transition-all duration-1000" style={{ width: '18%' }} />
+                </div>
+              </div>
+              {/* Alerts Generated Today */}
+              <div>
+                <div className="flex justify-between text-[11px] mb-1.5">
+                  <span className="text-slate-500 font-semibold">Alerts Generated Today</span>
+                  <span className="text-slate-800 font-bold">4</span>
+                </div>
+                <div className="w-full bg-slate-100 rounded-full h-1.5">
+                  <div className="bg-gradient-to-r from-red-400 to-rose-500 h-1.5 rounded-full transition-all duration-1000" style={{ width: '40%' }} />
+                </div>
+              </div>
+              {/* Live Engine Pulse */}
+              <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="relative w-3 h-3">
+                    <div className="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-75" />
+                    <div className="relative w-3 h-3 rounded-full bg-emerald-500" />
+                  </div>
+                  <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest">Engine Online</span>
+                </div>
+                <span className="text-[10px] text-slate-400 font-mono">v2.5-seg</span>
+              </div>
             </div>
           </div>
 

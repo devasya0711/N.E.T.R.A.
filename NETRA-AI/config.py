@@ -67,8 +67,8 @@ SEG_COLOR_PALETTE = [           # BGR — single uniform blue for all masks
 # ──────────────────────────────────────────────────────────────
 # GPS Mock
 # ──────────────────────────────────────────────────────────────
-MOCK_GPS_LAT_BASE = 28.6139    # New Delhi latitude
-MOCK_GPS_LON_BASE = 77.2090    # New Delhi longitude
+MOCK_GPS_LAT_BASE = 21.2514    # Raipur, Chhattisgarh latitude
+MOCK_GPS_LON_BASE = 81.6296    # Raipur, Chhattisgarh longitude
 GPS_MATCH_RADIUS_M = 10.0      # metres – radius for loop closure
 
 # ──────────────────────────────────────────────────────────────

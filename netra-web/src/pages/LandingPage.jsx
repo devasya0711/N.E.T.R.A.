@@ -270,11 +270,12 @@ export default function LandingPage() {
           </div>
           <div className="relative rounded-2xl overflow-hidden shadow-lg bg-black" style={{ border: '1px solid rgba(255,255,255,0.4)' }}>
             <video
-              controls
+              autoPlay
+              muted
+              loop
               playsInline
-              preload="metadata"
-              className="w-full aspect-video"
-              src="/pothole-hackathon.mp4"
+              className="w-full aspect-video pointer-events-none"
+              src="/annotatedreal_video.webm"
             />
           </div>
         </div>
