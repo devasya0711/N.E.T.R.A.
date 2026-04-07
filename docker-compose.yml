@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: ./netra-api
+      dockerfile: Dockerfile
+    container_name: netra-api-server
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./netra-api/.env
+    volumes:
+      # Mount the AI output folder so the Express server can serve static images/videos
+      - ./NETRA-AI/output:/NETRA-AI/output
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./netra-web
+      dockerfile: Dockerfile
+    container_name: netra-web-frontend
+    ports:
+      # Mapping your standard 5173 localhost to Nginx's internal 80
+      - "5173:80"
+    restart: unless-stopped
+
+  # Note: A MongoDB service is omitted because netra-api/.env points to MongoDB Atlas in the cloud.
+  # The AI pipeline (NETRA-AI) remains external/optional as it generates static files independently.
