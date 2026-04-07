@@ -167,8 +167,8 @@ export default function PreLoader({ onComplete }) {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{
-              duration: LETTERS.length * 0.35 + 0.6,
-              ease: [0.16, 1, 0.3, 1],
+              duration: LETTERS.length * 0.35 + 0.25,
+              ease: "linear",
             }}
             className="absolute bottom-8 left-1/2 -translate-x-1/2 h-0.5 w-48 origin-left"
             style={{

@@ -108,13 +108,12 @@ export default function FloatingChatbot() {
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-indigo-700 to-blue-600 px-5 py-4 flex items-center gap-3">
+          <div className="bg-gradient-to-r from-blue-800 to-blue-600 px-5 py-4 flex items-center gap-3">
             <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
               <BotIcon />
             </div>
             <div className="flex-1">
               <h4 className="text-sm font-bold text-white leading-tight">N.E.T.R.A. AI Assistant</h4>
-              <p className="text-[10px] text-indigo-100 font-medium">Powered by Google Gemini</p>
             </div>
             <button
               onClick={() => setOpen(false)}
@@ -133,7 +132,7 @@ export default function FloatingChatbot() {
                 <div
                   className={`max-w-[85%] px-3.5 py-2.5 rounded-2xl text-[13px] leading-relaxed shadow-sm ${
                     m.role === "user"
-                      ? "bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-br-md"
+                      ? "bg-gradient-to-r from-blue-800 to-blue-600 text-white rounded-br-md"
                       : "bg-white text-slate-700 border border-slate-200 rounded-bl-md"
                   }`}
                 >
@@ -145,9 +144,9 @@ export default function FloatingChatbot() {
             {loading && (
               <div className="flex justify-start">
                 <div className="bg-white border border-slate-200 rounded-2xl rounded-bl-md px-4 py-3 shadow-sm flex items-center gap-1.5">
-                  <span className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
-                  <span className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
-                  <span className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
+                  <span className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }} />
+                  <span className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }} />
+                  <span className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }} />
                 </div>
               </div>
             )}
@@ -165,13 +164,13 @@ export default function FloatingChatbot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about potholes, reports, analytics…"
-              className="flex-1 bg-slate-100 border-0 rounded-xl px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-300 transition"
+              className="flex-1 bg-slate-100 border-0 rounded-xl px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
               disabled={loading}
             />
             <button
               type="submit"
               disabled={loading || !input.trim()}
-              className="w-9 h-9 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white flex items-center justify-center shrink-0 hover:shadow-md disabled:opacity-40 transition-all"
+              className="w-9 h-9 rounded-xl bg-gradient-to-r from-blue-800 to-blue-600 text-white flex items-center justify-center shrink-0 hover:shadow-md disabled:opacity-40 transition-all"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
@@ -187,7 +186,7 @@ export default function FloatingChatbot() {
         className={`fixed bottom-6 right-6 z-[9999] w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${
           open
             ? "bg-slate-700 hover:bg-slate-800 rotate-0"
-            : "bg-gradient-to-r from-indigo-600 to-blue-600 hover:shadow-xl hover:scale-105"
+            : "bg-gradient-to-r from-blue-800 to-blue-600 hover:shadow-xl hover:scale-105"
         }`}
         aria-label="Toggle AI Chatbot"
       >
@@ -198,10 +197,7 @@ export default function FloatingChatbot() {
         ) : (
           <BotIcon />
         )}
-        {/* Pulse ring when closed */}
-        {!open && (
-          <span className="absolute inset-0 rounded-full bg-indigo-400 animate-ping opacity-20" />
-        )}
+
       </button>
     </>
   );

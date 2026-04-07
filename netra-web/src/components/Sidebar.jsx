@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useRole } from "../context/RoleContext";
 
 // ── Icon helpers ──────────────────────────────────────────────────────────────
@@ -177,6 +177,8 @@ const CITIZEN_NAV = [
 export default function Sidebar() {
   const { role, isAdmin, setRole } = useRole();
   const navGroups = isAdmin ? ADMIN_NAV : CITIZEN_NAV;
+  const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <aside className="fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 flex flex-col z-30 overflow-y-auto"
@@ -208,19 +210,21 @@ export default function Sidebar() {
             <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-3 mb-1">
               {group.group}
             </p>
-            {group.items.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                end={item.end || false}
-                className={({ isActive }) =>
-                  `nav-link py-2 ${isActive ? "active" : ""}`
-                }
-              >
-                {item.icon}
-                <span>{item.label}</span>
-              </NavLink>
-            ))}
+            {group.items.map((item) => {
+              const isActive = item.end
+                ? location.pathname === item.to
+                : location.pathname === item.to || location.pathname.startsWith(item.to + "/");
+              return (
+                <button
+                  key={item.to}
+                  onClick={() => navigate(item.to)}
+                  className={`nav-link py-2 w-full text-left appearance-none bg-transparent ${isActive ? "active" : ""}`}
+                >
+                  {item.icon}
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
           </div>
         ))}
       </nav>

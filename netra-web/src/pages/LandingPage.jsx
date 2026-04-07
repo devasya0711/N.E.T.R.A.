@@ -109,7 +109,7 @@ export default function LandingPage() {
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: 0.45 }}
+          style={{ opacity: 0.45, transform: "scale(1.15) translate(1%, 1%)" }}
           src="/pothole-hackathon.mp4"
         />
         {/* Gradient overlay for text readability */}

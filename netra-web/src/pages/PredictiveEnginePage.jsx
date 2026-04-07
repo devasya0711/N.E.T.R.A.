@@ -95,7 +95,7 @@ export default function PredictiveEnginePage() {
       {/* ── Page Header ──────────────────────────────────────────── */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-[10px] font-black uppercase tracking-widest mb-3">
+          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-800 text-[10px] font-black uppercase tracking-widest mb-3">
             <TrendingUpIcon /> Pre-Release Beta
           </div>
           <h1 className="text-xl font-black text-slate-800 tracking-tight">Predictive Early-Warning Engine</h1>
@@ -170,7 +170,7 @@ export default function PredictiveEnginePage() {
           <div className="netra-panel">
             <div className="p-5 border-b border-slate-100 bg-white flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center">
                   <AlertTriangleIcon />
                 </div>
                 <div>
@@ -178,7 +178,7 @@ export default function PredictiveEnginePage() {
                   <p className="text-[11px] text-slate-500">AI-generated work orders anticipating structural failures before they occur</p>
                 </div>
               </div>
-              <button className="px-3 py-1.5 bg-indigo-50 text-indigo-700 rounded text-xs font-bold hover:bg-indigo-100 transition-colors">
+              <button className="px-3 py-1.5 bg-blue-50 text-blue-800 rounded text-xs font-bold hover:bg-blue-100 transition-colors">
                 Export Forecasting Report
               </button>
             </div>
@@ -199,7 +199,7 @@ export default function PredictiveEnginePage() {
                   {/* Details */}
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[10px] font-mono text-indigo-500 font-bold bg-indigo-50 px-1.5 py-0.5 rounded">{alert.id}</span>
+                      <span className="text-[10px] font-mono text-blue-800 font-bold bg-blue-100 px-1.5 py-0.5 rounded">{alert.id}</span>
                       <h4 className="text-xs font-bold text-slate-800">{alert.region}</h4>
                     </div>
                     <p className="text-xs text-slate-600 leading-relaxed max-w-lg mb-2">
@@ -232,7 +232,7 @@ export default function PredictiveEnginePage() {
             
             <div className="space-y-5 relative z-10">
               <div>
-                <p className="text-[10px] text-indigo-200 uppercase tracking-widest font-black mb-1">Forecasted Savings (YTD)</p>
+                <p className="text-[10px] text-blue-200 uppercase tracking-widest font-black mb-1">Forecasted Savings (YTD)</p>
                 <div className="flex items-baseline gap-2">
                   <p className="text-3xl font-black text-white">₹4.2M</p>
                   <p className="text-xs text-emerald-400 font-bold">+18% vs reactive</p>
@@ -242,18 +242,18 @@ export default function PredictiveEnginePage() {
               <div className="h-px w-full bg-white/10" />
               
               <div>
-                <p className="text-[10px] text-indigo-200 uppercase tracking-widest font-black mb-1">Accidents Prevented</p>
+                <p className="text-[10px] text-blue-200 uppercase tracking-widest font-black mb-1">Accidents Prevented</p>
                 <p className="text-xl font-bold text-white">Est. 12-15</p>
               </div>
               
               <div className="h-px w-full bg-white/10" />
 
               <div>
-                <p className="text-[10px] text-indigo-200 uppercase tracking-widest font-black mb-1">Predictive Accuracy</p>
+                <p className="text-[10px] text-blue-200 uppercase tracking-widest font-black mb-1">Predictive Accuracy</p>
                 <div className="w-full bg-white/10 rounded-full h-1.5 mt-2 mb-1">
                   <div className="bg-emerald-400 h-1.5 rounded-full" style={{ width: '87%' }}></div>
                 </div>
-                <p className="text-[10px] text-indigo-100 font-mono">Model Confidence: 87.4%</p>
+                <p className="text-[10px] text-blue-100 font-mono">Model Confidence: 87.4%</p>
               </div>
             </div>
           </div>
@@ -272,7 +272,7 @@ export default function PredictiveEnginePage() {
                   <span className="text-slate-800 font-bold">18 / 20</span>
                 </div>
                 <div className="w-full bg-slate-100 rounded-full h-1.5">
-                  <div className="bg-gradient-to-r from-blue-500 to-indigo-500 h-1.5 rounded-full transition-all duration-1000" style={{ width: '90%' }} />
+                  <div className="bg-gradient-to-r from-sky-400 to-blue-600 h-1.5 rounded-full transition-all duration-1000" style={{ width: '90%' }} />
                 </div>
               </div>
               {/* Model Uptime */}

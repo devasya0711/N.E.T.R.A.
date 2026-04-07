@@ -21,17 +21,15 @@ const PORT = process.env.PORT || 5000;
 // ─── CORS ─────────────────────────────────────────────────────────────────────
 // Parse the comma-separated ALLOWED_ORIGINS env var into an array.
 // Falls back to localhost:5173 (Vite default) if not set.
-const allowedOrigins = (process.env.ALLOWED_ORIGINS || "http://localhost:5173")
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || "http://localhost:5173,http://localhost:5174")
   .split(",")
   .map((o) => o.trim());
 
 app.use(
   cors({
     origin(origin, callback) {
-      // Allow requests with no origin (e.g. mobile apps, curl, Postman)
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.includes(origin)) return callback(null, true);
-      callback(new Error(`CORS: origin '${origin}' is not allowed`));
+      // Allow all local origins (wildcard) for hackathon connectivity
+      callback(null, true);
     },
     methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],

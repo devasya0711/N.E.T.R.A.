@@ -46,7 +46,7 @@ export default function SensorFleetPage() {
           { label: "Total Sensors", value: counts.all, color: "#1e3a8a" },
           { label: "Online", value: counts.online, color: "#059669" },
           { label: "Avg Uptime", value: `${avgUptime}%`, color: "#0369a1" },
-          { label: "Frames Processed", value: totalFrames.toLocaleString(), color: "#7c3aed" },
+          { label: "Frames Processed", value: totalFrames.toLocaleString(), color: "#0891b2" },
         ].map((k) => (
           <div key={k.label} className="netra-panel p-5">
             <div className="flex items-start justify-between">

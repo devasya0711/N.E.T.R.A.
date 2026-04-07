@@ -78,7 +78,7 @@ export default function ReportQueuePage() {
           { label: "Pending Review", value: counts.pending, color: "#f59e0b" },
           { label: "Verified", value: counts.verified, color: "#059669" },
           { label: "Rejected", value: counts.rejected, color: "#ef4444" },
-          { label: "Merged", value: counts.merged, color: "#7c3aed" },
+          { label: "Merged", value: counts.merged, color: "#0891b2" },
         ].map((k) => (
           <div key={k.label} className="netra-panel p-4 text-center">
             <p className="text-2xl font-black" style={{ color: k.color }}>{k.value}</p>
@@ -130,7 +130,7 @@ export default function ReportQueuePage() {
                   <button onClick={() => handleAction(report.id, "verified")} className="px-2.5 py-1 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-colors">
                     ✓ Verify
                   </button>
-                  <button onClick={() => handleAction(report.id, "merged")} className="px-2.5 py-1 rounded text-[10px] font-bold bg-violet-50 text-violet-700 border border-violet-200 hover:bg-violet-100 transition-colors">
+                  <button onClick={() => handleAction(report.id, "merged")} className="px-2.5 py-1 rounded text-[10px] font-bold bg-cyan-50 text-cyan-700 border border-cyan-200 hover:bg-cyan-100 transition-colors">
                     ⊕ Merge
                   </button>
                   <button onClick={() => handleAction(report.id, "rejected")} className="px-2.5 py-1 rounded text-[10px] font-bold bg-red-50 text-red-700 border border-red-200 hover:bg-red-100 transition-colors">
@@ -139,7 +139,7 @@ export default function ReportQueuePage() {
                 </div>
               ) : (
                 <span className={`text-[10px] font-bold uppercase shrink-0 ${
-                  action === "verified" ? "text-emerald-600" : action === "rejected" ? "text-red-500" : "text-violet-600"
+                  action === "verified" ? "text-emerald-600" : action === "rejected" ? "text-red-500" : "text-cyan-700"
                 }`}>
                   {action}
                 </span>

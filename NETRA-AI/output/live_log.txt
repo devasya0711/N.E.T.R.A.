@@ -3,20 +3,82 @@ Model summary (fused): 73 layers, 11,125,971 parameters, 0 gradients, 28.4 GFLOP
 [NETRA][DepthEstimator] MiDaS unavailable, using zero-depth fallback: It looks like there is no internet connection and the repo could not be found in the cache (/Users/devas_007/.cache/torch/hub)
 [NETRA] All modules ready.
 
-[NETRA] Processing source: /Users/devas_007/Downloads/N.E.T.R.A.-master 2/netra-api/uploads/video-1773534394860.jpeg  (30 FPS, is_image=True)
+[NETRA] Processing source: /Users/devas_007/Downloads/N.E.T.R.A.-master 2/netra-api/uploads/video-1775567277812.jpg  (30 FPS, is_image=True)
 
-  ✦ NETRA-6FCD00A0-46E  Severity: Moderate (0.59)  GPS: (21.2508, 81.6298)  Loop: PERSISTS  [Unique: 1]
-  ✦ NETRA-8DD0EAB3-861  Severity: Moderate (0.53)  GPS: (21.2514, 81.6296)  Loop: NEW  [Unique: 2]
+  ✦ NETRA-E8EBFAEF-B38  Severity: Moderate (0.57)  GPS: (21.2515, 81.6301)  Loop: NEW  [Unique: 1]
+  ✦ NETRA-AD6913E5-DB5  Severity: Moderate (0.54)  GPS: (21.2518, 81.6296)  Loop: REPAIRED  [Unique: 2]
+  ✦ NETRA-01F1D565-4D6  Severity: Moderate (0.58)  GPS: (21.2512, 81.6295)  Loop: REPAIRED  [Unique: 3]
+  ✦ NETRA-D2AB3165-84E  Severity: Moderate (0.59)  GPS: (21.2512, 81.6297)  Loop: PERSISTS  [Unique: 4]
+  ✦ NETRA-6860C92F-AB4  Severity: Moderate (0.52)  GPS: (21.2511, 81.6290)  Loop: NEW  [Unique: 5]
+  ✦ NETRA-B6339E67-0AD  Severity: Moderate (0.53)  GPS: (21.2518, 81.6296)  Loop: NEW  [Unique: 6]
+  ✦ NETRA-AD0B3D24-9B5  Severity: Moderate (0.49)  GPS: (21.2513, 81.6296)  Loop: REPAIRED  [Unique: 7]
+  ✦ NETRA-27616A49-8C4  Severity: Moderate (0.49)  GPS: (21.2511, 81.6305)  Loop: PERSISTS  [Unique: 8]
+  ✦ NETRA-26B375AB-21E  Severity: Moderate (0.62)  GPS: (21.2500, 81.6304)  Loop: NEW  [Unique: 9]
+  ✦ NETRA-5353F3E6-4C9  Severity: Moderate (0.61)  GPS: (21.2513, 81.6296)  Loop: REPAIRED  [Unique: 10]
+  ✦ NETRA-42C53C12-CD9  Severity: Moderate (0.46)  GPS: (21.2518, 81.6306)  Loop: NEW  [Unique: 11]
+  ✦ NETRA-A31D883C-497  Severity: Moderate (0.57)  GPS: (21.2505, 81.6301)  Loop: REPAIRED  [Unique: 12]
+  ✦ NETRA-D01B7BD8-829  Severity: Moderate (0.53)  GPS: (21.2503, 81.6303)  Loop: NEW  [Unique: 13]
+  ✦ NETRA-4AE2689B-CFB  Severity: Moderate (0.62)  GPS: (21.2522, 81.6297)  Loop: PERSISTS  [Unique: 14]
+  ✦ NETRA-9C14618F-69F  Severity: Moderate (0.62)  GPS: (21.2520, 81.6298)  Loop: REPAIRED  [Unique: 15]
+  ✦ NETRA-02F91010-B82  Severity: Moderate (0.51)  GPS: (21.2517, 81.6300)  Loop: PERSISTS  [Unique: 16]
+  ✦ NETRA-15599733-2E7  Severity: Moderate (0.59)  GPS: (21.2524, 81.6297)  Loop: REPAIRED  [Unique: 17]
+  ✦ NETRA-0E30B719-097  Severity: Moderate (0.60)  GPS: (21.2515, 81.6286)  Loop: NEW  [Unique: 18]
+  ✦ NETRA-2198A18C-88E  Severity: Moderate (0.61)  GPS: (21.2508, 81.6297)  Loop: PERSISTS  [Unique: 19]
+  ✦ NETRA-ACF3D06D-B02  Severity: Moderate (0.47)  GPS: (21.2507, 81.6299)  Loop: NEW  [Unique: 20]
+  ✦ NETRA-E1CAA241-B90  Severity: Moderate (0.48)  GPS: (21.2510, 81.6286)  Loop: PERSISTS  [Unique: 21]
+  ✦ NETRA-7177E5D1-07C  Severity: Moderate (0.55)  GPS: (21.2509, 81.6292)  Loop: REPAIRED  [Unique: 22]
+  ✦ NETRA-1BA75522-85D  Severity: Moderate (0.58)  GPS: (21.2516, 81.6295)  Loop: REPAIRED  [Unique: 23]
+  ✦ NETRA-C71EA6EE-61D  Severity: Moderate (0.62)  GPS: (21.2516, 81.6297)  Loop: REPAIRED  [Unique: 24]
+  ✦ NETRA-ED9B897C-7E0  Severity: Moderate (0.49)  GPS: (21.2502, 81.6303)  Loop: NEW  [Unique: 25]
+  ✦ NETRA-D12118B6-712  Severity: Moderate (0.58)  GPS: (21.2506, 81.6300)  Loop: REPAIRED  [Unique: 26]
+  ✦ NETRA-87E8A5F6-4D4  Severity: Moderate (0.51)  GPS: (21.2506, 81.6300)  Loop: REPAIRED  [Unique: 27]
+  ✦ NETRA-4EF1D158-EF0  Severity: Moderate (0.49)  GPS: (21.2514, 81.6302)  Loop: PERSISTS  [Unique: 28]
+  ✦ NETRA-6F66118D-E4B  Severity: Moderate (0.59)  GPS: (21.2514, 81.6296)  Loop: REPAIRED  [Unique: 29]
+  ✦ NETRA-D6B89766-B63  Severity: Moderate (0.61)  GPS: (21.2527, 81.6291)  Loop: NEW  [Unique: 30]
+  ✦ NETRA-88A81B4B-C86  Severity: Moderate (0.46)  GPS: (21.2512, 81.6300)  Loop: PERSISTS  [Unique: 31]
+  ✦ NETRA-E13D4416-F07  Severity: Moderate (0.58)  GPS: (21.2516, 81.6292)  Loop: REPAIRED  [Unique: 32]
+  ✦ NETRA-E54B296F-3F2  Severity: Moderate (0.50)  GPS: (21.2507, 81.6288)  Loop: NEW  [Unique: 33]
 [NETRA] Saved annotated image to: /Users/devas_007/Downloads/N.E.T.R.A.-master 2/NETRA-AI/output/annotated_image.jpg
 
 ============================================================
   NETRA Session Complete
-  Unique potholes detected : 2
-  Total frame observations : 2
+  Unique potholes detected : 33
+  Total frame observations : 33
   Unique records  → /Users/devas_007/Downloads/N.E.T.R.A.-master 2/NETRA-AI/output/unique_potholes.json
   Full session    → /Users/devas_007/Downloads/N.E.T.R.A.-master 2/NETRA-AI/output/session_detections.json
 ============================================================
 Syncing /Users/devas_007/Downloads/N.E.T.R.A.-master 2/NETRA-AI/output/unique_potholes.json to http://localhost:5000/api/potholes ...
-[✓] Synced NETRA-6FCD00A0-46E
-[✓] Synced NETRA-8DD0EAB3-861
-Successfully synced 2/2 records.
+[✓] Synced NETRA-E8EBFAEF-B38
+[✓] Synced NETRA-AD6913E5-DB5
+[✓] Synced NETRA-01F1D565-4D6
+[✓] Synced NETRA-D2AB3165-84E
+[✓] Synced NETRA-6860C92F-AB4
+[✓] Synced NETRA-B6339E67-0AD
+[✓] Synced NETRA-AD0B3D24-9B5
+[✓] Synced NETRA-27616A49-8C4
+[✓] Synced NETRA-26B375AB-21E
+[✓] Synced NETRA-5353F3E6-4C9
+[✓] Synced NETRA-42C53C12-CD9
+[✓] Synced NETRA-A31D883C-497
+[✓] Synced NETRA-D01B7BD8-829
+[✓] Synced NETRA-4AE2689B-CFB
+[✓] Synced NETRA-9C14618F-69F
+[✓] Synced NETRA-02F91010-B82
+[✓] Synced NETRA-15599733-2E7
+[✓] Synced NETRA-0E30B719-097
+[✓] Synced NETRA-2198A18C-88E
+[✓] Synced NETRA-ACF3D06D-B02
+[✓] Synced NETRA-E1CAA241-B90
+[✓] Synced NETRA-7177E5D1-07C
+[✓] Synced NETRA-1BA75522-85D
+[✓] Synced NETRA-C71EA6EE-61D
+[✓] Synced NETRA-ED9B897C-7E0
+[✓] Synced NETRA-D12118B6-712
+[✓] Synced NETRA-87E8A5F6-4D4
+[✓] Synced NETRA-4EF1D158-EF0
+[✓] Synced NETRA-6F66118D-E4B
+[✓] Synced NETRA-D6B89766-B63
+[✓] Synced NETRA-88A81B4B-C86
+[✓] Synced NETRA-E13D4416-F07
+[✓] Synced NETRA-E54B296F-3F2
+Successfully synced 33/33 records.

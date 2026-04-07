@@ -178,7 +178,7 @@ export default function ResolutionPage() {
           <div className="flex items-center gap-4 text-[11px] font-semibold">
             <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm" style={{ background: "linear-gradient(135deg, #1e3a8a, #3b82f6)" }} /> Filed</span>
             <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm" style={{ background: "linear-gradient(135deg, #059669, #34d399)" }} /> Verified</span>
-            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm" style={{ background: "linear-gradient(135deg, #7c3aed, #a78bfa)" }} /> Escalated</span>
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-sm" style={{ background: "linear-gradient(135deg, #0891b2, #22d3ee)" }} /> Escalated</span>
           </div>
         </div>
         <ResponsiveContainer width="100%" height={300}>
@@ -193,8 +193,8 @@ export default function ResolutionPage() {
                 <stop offset="100%" stopColor="#059669" stopOpacity={0.85} />
               </linearGradient>
               <linearGradient id="gradEscalated" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#a78bfa" stopOpacity={0.95} />
-                <stop offset="100%" stopColor="#7c3aed" stopOpacity={0.85} />
+                <stop offset="0%" stopColor="#22d3ee" stopOpacity={0.95} />
+                <stop offset="100%" stopColor="#0891b2" stopOpacity={0.85} />
               </linearGradient>
             </defs>
             <XAxis
