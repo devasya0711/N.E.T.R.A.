@@ -5,17 +5,17 @@
 
 "use strict";
 
-const express   = require("express");
-const mongoose  = require("mongoose");
-const cors      = require("cors");
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
 require("dotenv").config();
 
-const potholeRoutes  = require("./routes/potholeRoutes");
+const potholeRoutes = require("./routes/potholeRoutes");
 const { errorHandler, notFound } = require("./middleware/errorHandler");
 const { startSyncJob } = require('./cron/cpgramsSync'); // CPGRAMS syncing job
 
 // ─── App ──────────────────────────────────────────────────────────────────────
-const app  = express();
+const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ─── CORS ─────────────────────────────────────────────────────────────────────
@@ -76,10 +76,9 @@ mongoose
   .then(() => {
     console.log(`✅  MongoDB connected → ${MONGO_URI.replace(/\/\/.*@/, "//***@")}`);
     startSyncJob();
-    app.listen(PORT, () => {
-      console.log(`🚀  N.E.T.R.A. API listening on http://localhost:${PORT}`);
-      console.log(`   Health check → http://localhost:${PORT}/health`);
-      console.log(`   Potholes API → http://localhost:${PORT}/api/potholes`);
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`🚀 N.E.T.R.A. API listening on port ${PORT}`);
+      console.log(`   Health check → http://0.0.0.0:${PORT}/health`);
     });
   })
   .catch((err) => {
