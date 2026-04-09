@@ -42,6 +42,19 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage: storage });
 
+function getPublicOrigin(req) {
+  if (process.env.PUBLIC_API_ORIGIN && process.env.PUBLIC_API_ORIGIN.trim()) {
+    return process.env.PUBLIC_API_ORIGIN.trim().replace(/\/$/, "");
+  }
+
+  const forwardedProto = req.get("x-forwarded-proto");
+  const forwardedHost = req.get("x-forwarded-host");
+  const host = forwardedHost || req.get("host");
+  const protocol = forwardedProto || req.protocol || "https";
+
+  return `${protocol}://${host}`;
+}
+
 function resolvePythonCommand(aiDir) {
   if (process.env.PYTHON_PATH && process.env.PYTHON_PATH.trim()) {
     return process.env.PYTHON_PATH.trim();
@@ -690,6 +703,7 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
   const videoPath = path.resolve(req.file.path);
   // NETRA-AI directory relative to netra-api
   const aiDir = path.resolve(__dirname, "../../NETRA-AI");
+  const publicOrigin = getPublicOrigin(req);
   
   const isImage = /\.(jpg|jpeg|png|bmp)$/i.test(req.file.originalname);
   const liveMetaPath = path.resolve(aiDir, "output/live_meta.json");
@@ -723,6 +737,9 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
 
   // Spawn the python process with a cross-platform interpreter path.
   const pythonPath = resolvePythonCommand(aiDir);
+  const internalApiUrl =
+    (process.env.INTERNAL_API_URL && process.env.INTERNAL_API_URL.trim()) ||
+    `http://127.0.0.1:${process.env.PORT || 5000}/api/potholes`;
   const aiProcess = spawn(pythonPath, [
     "-u",
     "pipeline.py",
@@ -736,7 +753,7 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
     // Add environment variable for API URL to point to this exact server
     env: {
       ...process.env,
-      API_URL: `http://localhost:${process.env.PORT || 5000}/api/potholes`
+      API_URL: internalApiUrl
     }
   });
 
@@ -807,8 +824,8 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
         log: outputLog,
         totalPotholes: totalDetected,
         potholesList: potholesList,
-        csvUrl: `http://localhost:${process.env.PORT || 5000}/outputs/unique_potholes.csv?t=${Date.now()}`,
-        outputUrl: `http://localhost:${process.env.PORT || 5000}${resultPath}?t=${Date.now()}`
+        csvUrl: `${publicOrigin}/outputs/unique_potholes.csv?t=${Date.now()}`,
+        outputUrl: `${publicOrigin}${resultPath}?t=${Date.now()}`
       });
     } else {
       res.status(500).json({ success: false, message: `AI process failed with code ${code}`, log: outputLog });
