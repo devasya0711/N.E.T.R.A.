@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api/potholes";
+const API_BASE = import.meta.env.VITE_API_URL || "https://netra-api-w3td.onrender.com/api/potholes";
 
 async function request(path, options = {}) {
   const res = await fetch(`${API_BASE}${path}`, {

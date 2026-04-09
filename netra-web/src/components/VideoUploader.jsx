@@ -3,7 +3,7 @@ import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import { useStats } from "../hooks/usePotholes";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api/potholes";
+const API_BASE = import.meta.env.VITE_API_URL || "https://netra-api-w3td.onrender.com/api/potholes";
 
 /* ─── Icon Components ───────────────────────────────────────────────────── */
 const UploadCloudIcon = () => (
