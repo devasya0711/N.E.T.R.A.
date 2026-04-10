@@ -66,6 +66,12 @@ function writeAnalysisResult(runId, payload) {
   fs.writeFileSync(getAnalysisResultPath(runId), JSON.stringify(payload, null, 0));
 }
 
+function parsePositiveInt(value, fallback) {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed) || parsed <= 0) return fallback;
+  return Math.floor(parsed);
+}
+
 function resolvePythonCommand(aiDir) {
   if (process.env.PYTHON_PATH && process.env.PYTHON_PATH.trim()) {
     return process.env.PYTHON_PATH.trim();
@@ -803,6 +809,8 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
 
   let outputLog = "";
   const liveLogFile = path.resolve(aiDir, "output/live_log.txt");
+  const maxAiRuntimeMs = parsePositiveInt(process.env.AI_MAX_RUNTIME_MS, 8 * 60 * 1000);
+  let finished = false;
   fs.writeFileSync(liveLogFile, ""); // Reset log for new run
 
   res.status(202).json({
@@ -812,7 +820,27 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
     message: "Analysis queued. Poll /analysis-result/:runId for completion.",
   });
 
+  const watchdog = setTimeout(() => {
+    if (finished) return;
+    const timeoutMsg = `AI processing exceeded ${Math.round(maxAiRuntimeMs / 1000)}s timeout.`;
+    outputLog += `${timeoutMsg}\n`;
+    fs.appendFileSync(liveLogFile, `${timeoutMsg}\n`);
+    writeAnalysisResult(runId, {
+      runId,
+      status: "error",
+      message: timeoutMsg,
+      log: outputLog,
+      updatedAt: new Date().toISOString(),
+    });
+
+    try {
+      aiProcess.kill("SIGKILL");
+    } catch (_err) {}
+  }, maxAiRuntimeMs);
+
   aiProcess.on("error", (err) => {
+    finished = true;
+    clearTimeout(watchdog);
     console.error(`[NETRA-API] Failed to start AI process: ${err.message}`);
     outputLog += `${err.message}\n`;
     fs.appendFileSync(liveLogFile, `${err.message}\n`);
@@ -838,6 +866,8 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
   });
 
   aiProcess.on("close", (code) => {
+    finished = true;
+    clearTimeout(watchdog);
     console.log(`[NETRA-API] AI Process exited with code ${code}`);
     // Clean up the uploaded file
     fs.unlink(videoPath, (err) => {

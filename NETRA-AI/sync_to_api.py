@@ -4,6 +4,8 @@ import requests
 import time
 
 API_URL = os.getenv("API_URL", "http://localhost:5000/api/potholes")
+REQUEST_TIMEOUT_SECONDS = float(os.getenv("SYNC_API_TIMEOUT_SECONDS", "6"))
+MAX_RETRIES = int(os.getenv("SYNC_API_MAX_RETRIES", "1"))
 
 def sync_potholes(json_path="output/unique_potholes.json"):
     print(f"Syncing {json_path} to {API_URL} ...")
@@ -56,15 +58,22 @@ def sync_potholes(json_path="output/unique_potholes.json"):
             "status": "Submitted"
         }
 
-        try:
-            resp = requests.post(API_URL, json=payload)
-            if resp.status_code in [200, 201]:
-                print(f"[✓] Synced {pothole_id}")
-                success_count += 1
-            else:
+        sent = False
+        for attempt in range(1, MAX_RETRIES + 2):
+            try:
+                resp = requests.post(API_URL, json=payload, timeout=REQUEST_TIMEOUT_SECONDS)
+                if resp.status_code in [200, 201, 409]:
+                    print(f"[✓] Synced {pothole_id}")
+                    success_count += 1
+                    sent = True
+                    break
                 print(f"[✗] Failed to sync {pothole_id}: {resp.status_code} - {resp.text}")
-        except Exception as e:
-            print(f"[✗] Error sending {pothole_id}: {e}")
+            except requests.RequestException as e:
+                print(f"[✗] Error sending {pothole_id} (attempt {attempt}): {e}")
+            time.sleep(min(0.75, attempt * 0.2))
+
+        if not sent:
+            print(f"[!] Skipped {pothole_id} after retries")
 
     print(f"Successfully synced {success_count}/{len(data)} records.")
 

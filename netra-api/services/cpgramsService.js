@@ -9,6 +9,7 @@ const fetch = require('node-fetch');
 
 const CPGRAMS_API_BASE = "https://pgportal.gov.in/api/v1"; // Example base URL based on docs
 const API_KEY = process.env.CPGRAMS_API_KEY;
+const CPGRAMS_TIMEOUT_MS = Number(process.env.CPGRAMS_TIMEOUT_MS || 7000);
 
 // To prevent spamming the live government portal during testing/demos
 const TEST_MODE = process.env.NODE_ENV !== "production" || process.env.CPGRAMS_TEST_MODE === "true";
@@ -58,15 +59,23 @@ async function fileComplaint(potholeData) {
 
   // Real API Call (Protected by TEST_MODE)
   try {
-    const response = await fetch(`${CPGRAMS_API_BASE}/grievance/submit`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${API_KEY}`,
-        // 'X-API-KEY': API_KEY // Some APIs use this instead
-      },
-      body: JSON.stringify(payload)
-    });
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), CPGRAMS_TIMEOUT_MS);
+    let response;
+    try {
+      response = await fetch(`${CPGRAMS_API_BASE}/grievance/submit`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${API_KEY}`,
+          // 'X-API-KEY': API_KEY // Some APIs use this instead
+        },
+        body: JSON.stringify(payload),
+        signal: controller.signal
+      });
+    } finally {
+      clearTimeout(timer);
+    }
 
     if (!response.ok) {
         throw new Error(`CPGRAMS API responded with status: ${response.status}`);
@@ -99,12 +108,20 @@ async function getGrievanceStatus(grievanceId) {
   }
 
   try {
-    const response = await fetch(`${CPGRAMS_API_BASE}/grievance/status/${grievanceId}`, {
-      method: 'GET',
-      headers: {
-        'Authorization': `Bearer ${API_KEY}`,
-      }
-    });
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), CPGRAMS_TIMEOUT_MS);
+    let response;
+    try {
+      response = await fetch(`${CPGRAMS_API_BASE}/grievance/status/${grievanceId}`, {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${API_KEY}`,
+        },
+        signal: controller.signal
+      });
+    } finally {
+      clearTimeout(timer);
+    }
 
     if (!response.ok) return null;
 
