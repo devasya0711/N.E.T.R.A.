@@ -1,4 +1,22 @@
 services:
+  ai:
+    build:
+      context: ./NETRA-AI
+      dockerfile: Dockerfile
+    container_name: netra-ai-service
+    ports:
+      - "8000:8000"
+    environment:
+      INTERNAL_API_URL: http://api:5000/api/potholes
+      AI_MAX_RUNTIME_MS: 1200000
+      TORCH_HOME: /app/.torch_cache
+      YOLO_CONFIG_DIR: /tmp/Ultralytics
+    volumes:
+      - ./NETRA-AI/output:/app/output
+      - ./NETRA-AI/input:/app/input
+      - ./NETRA-AI/.torch_cache:/app/.torch_cache
+    restart: unless-stopped
+
   api:
     build:
       context: ./netra-api
@@ -8,9 +26,14 @@ services:
       - "5000:5000"
     env_file:
       - ./netra-api/.env
+    environment:
+      AI_SERVICE_URL: http://ai:8000
+      INTERNAL_API_URL: http://api:5000/api/potholes
     volumes:
       # Mount the AI output folder so the Express server can serve static images/videos
       - ./NETRA-AI/output:/NETRA-AI/output
+    depends_on:
+      - ai
     restart: unless-stopped
 
   web:
@@ -24,4 +47,4 @@ services:
     restart: unless-stopped
 
   # Note: A MongoDB service is omitted because netra-api/.env points to MongoDB Atlas in the cloud.
-  # The AI pipeline (NETRA-AI) remains external/optional as it generates static files independently.
+  # MongoDB is still external via Atlas.

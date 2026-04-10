@@ -57,6 +57,23 @@ function getPublicOrigin(req) {
   return `${protocol}://${host}`;
 }
 
+function getAiServiceBaseUrl() {
+  const raw = process.env.AI_SERVICE_URL;
+  if (!raw || !raw.trim()) return "";
+  return raw.trim().replace(/\/$/, "");
+}
+
+function isExternalAiEnabled() {
+  return Boolean(getAiServiceBaseUrl());
+}
+
+function getInternalApiUrl() {
+  return (
+    (process.env.INTERNAL_API_URL && process.env.INTERNAL_API_URL.trim()) ||
+    `http://127.0.0.1:${process.env.PORT || 5000}/api/potholes`
+  );
+}
+
 function getAnalysisResultPath(runId) {
   return path.resolve(AI_OUTPUT_DIR, `analysis_result_${runId}.json`);
 }
@@ -554,16 +571,67 @@ router.post("/simulate", async (_req, res, next) => {
 // Retrieve a single pothole by its potholeId string (e.g. NETRA-2025-00001)
 // or by MongoDB _id.
 // ─────────────────────────────────────────────────────────────────────────────
-router.get("/live-frame", (req, res) => {
-    const liveFramePath = path.resolve(__dirname, "../../NETRA-AI/output/live_frame.jpg");
-    res.sendFile(liveFramePath, { headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } }, (err) => {
+router.get("/live-frame", async (req, res) => {
+  if (isExternalAiEnabled()) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 8000);
+    try {
+      const upstream = await fetch(`${getAiServiceBaseUrl()}/live-frame?t=${Date.now()}`, {
+        signal: controller.signal,
+      });
+      if (!upstream.ok) return res.status(204).end();
+      const bytes = Buffer.from(await upstream.arrayBuffer());
+      return res
+        .set("Content-Type", upstream.headers.get("content-type") || "image/jpeg")
+        .set("Cache-Control", "no-cache, no-store, must-revalidate")
+        .send(bytes);
+    } catch (_err) {
+      return res.status(204).end();
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  const liveFramePath = path.resolve(__dirname, "../../NETRA-AI/output/live_frame.jpg");
+  res.sendFile(
+    liveFramePath,
+    {
+      headers: {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        Pragma: "no-cache",
+        Expires: "0",
+      },
+    },
+    (err) => {
       if (err) {
         res.status(204).end();
       }
-    });
-  });
+    }
+  );
+});
 
-router.get("/live-meta", (req, res) => {
+router.get("/live-meta", async (req, res) => {
+  if (isExternalAiEnabled()) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 8000);
+    try {
+      const upstream = await fetch(`${getAiServiceBaseUrl()}/live-meta?t=${Date.now()}`, {
+        signal: controller.signal,
+      });
+      if (!upstream.ok || upstream.status === 204) return res.status(204).end();
+      const text = await upstream.text();
+      return res
+        .status(upstream.status)
+        .set("Content-Type", upstream.headers.get("content-type") || "application/json")
+        .set("Cache-Control", "no-cache, no-store, must-revalidate")
+        .send(text);
+    } catch (_err) {
+      return res.status(204).end();
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
   const liveMetaPath = path.resolve(__dirname, "../../NETRA-AI/output/live_meta.json");
   if (!fs.existsSync(liveMetaPath)) {
     return res.status(204).end();
@@ -577,10 +645,31 @@ router.get("/live-meta", (req, res) => {
   });
 });
 
-router.get("/analysis-result/:runId", (req, res) => {
+router.get("/analysis-result/:runId", async (req, res) => {
   const runId = String(req.params.runId || "").trim();
   if (!runId) {
     return res.status(400).json({ success: false, message: "Missing runId" });
+  }
+
+  if (isExternalAiEnabled()) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 10000);
+    try {
+      const upstream = await fetch(
+        `${getAiServiceBaseUrl()}/jobs/${encodeURIComponent(runId)}?t=${Date.now()}`,
+        { signal: controller.signal }
+      );
+      const payload = await upstream.json().catch(() => ({}));
+      return res.status(upstream.status).json(payload);
+    } catch (_err) {
+      return res.status(503).json({
+        success: false,
+        status: "pending",
+        message: "AI service unavailable while checking result",
+      });
+    } finally {
+      clearTimeout(timer);
+    }
   }
 
   const resultPath = getAnalysisResultPath(runId);
@@ -597,14 +686,41 @@ router.get("/analysis-result/:runId", (req, res) => {
   }
 });
 
-  router.get("/live-logs", (req, res) => {
-    const liveLogPath = path.resolve(__dirname, "../../NETRA-AI/output/live_log.txt");
-    if (fs.existsSync(liveLogPath)) {
-      res.sendFile(liveLogPath, { headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } });
-    } else {
-      res.status(204).end();
+router.get("/live-logs", async (req, res) => {
+  if (isExternalAiEnabled()) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 8000);
+    try {
+      const upstream = await fetch(`${getAiServiceBaseUrl()}/live-logs?t=${Date.now()}`, {
+        signal: controller.signal,
+      });
+      if (!upstream.ok || upstream.status === 204) return res.status(204).end();
+      const text = await upstream.text();
+      return res
+        .status(upstream.status)
+        .set("Content-Type", upstream.headers.get("content-type") || "text/plain; charset=utf-8")
+        .set("Cache-Control", "no-cache, no-store, must-revalidate")
+        .send(text);
+    } catch (_err) {
+      return res.status(204).end();
+    } finally {
+      clearTimeout(timer);
     }
-  });
+  }
+
+  const liveLogPath = path.resolve(__dirname, "../../NETRA-AI/output/live_log.txt");
+  if (fs.existsSync(liveLogPath)) {
+    res.sendFile(liveLogPath, {
+      headers: {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        Pragma: "no-cache",
+        Expires: "0",
+      },
+    });
+  } else {
+    res.status(204).end();
+  }
+});
 router.get("/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
@@ -732,7 +848,7 @@ router.patch("/:id/assign", async (req, res, next) => {
 // POST /api/potholes/analyze-video
 // Upload a video and run the NETRA-AI pipeline
 // \n
-router.post("/analyze-video", upload.single("video"), (req, res, next) => {
+router.post("/analyze-video", upload.single("video"), async (req, res, next) => {
   if (!req.file) {
     return res.status(400).json({ success: false, message: "No video file provided" });
   }
@@ -757,6 +873,83 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   });
+
+  if (isExternalAiEnabled()) {
+    const aiServiceBaseUrl = getAiServiceBaseUrl();
+    const forwardTimeoutMs = parsePositiveInt(process.env.AI_SERVICE_REQUEST_TIMEOUT_MS, 30000);
+
+    try {
+      const fileBuffer = fs.readFileSync(videoPath);
+      const form = new FormData();
+      form.append(
+        "file",
+        new Blob([fileBuffer], { type: req.file.mimetype || "application/octet-stream" }),
+        req.file.originalname || path.basename(videoPath)
+      );
+      form.append("runId", runId);
+      form.append("apiUrl", getInternalApiUrl());
+      form.append(
+        "publicOrigin",
+        (process.env.AI_PUBLIC_ORIGIN && process.env.AI_PUBLIC_ORIGIN.trim()) || publicOrigin
+      );
+
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), forwardTimeoutMs);
+      let upstream;
+      try {
+        upstream = await fetch(`${aiServiceBaseUrl}/jobs`, {
+          method: "POST",
+          body: form,
+          signal: controller.signal,
+        });
+      } finally {
+        clearTimeout(timer);
+      }
+
+      const payload = await upstream.json().catch(() => ({}));
+      fs.unlink(videoPath, () => {});
+
+      if (!upstream.ok || !payload?.success) {
+        writeAnalysisResult(runId, {
+          runId,
+          status: "error",
+          message: payload?.message || `AI service request failed (${upstream.status})`,
+          updatedAt: new Date().toISOString(),
+        });
+        return res.status(502).json({
+          success: false,
+          message: payload?.message || "AI service unavailable",
+        });
+      }
+
+      writeAnalysisResult(runId, {
+        runId,
+        status: "pending",
+        message: "Analysis started on AI service",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      });
+
+      return res.status(202).json({
+        success: true,
+        accepted: true,
+        runId: payload.runId || runId,
+        message: "Analysis queued. Poll /analysis-result/:runId for completion.",
+      });
+    } catch (err) {
+      fs.unlink(videoPath, () => {});
+      writeAnalysisResult(runId, {
+        runId,
+        status: "error",
+        message: `AI service error: ${err.message}`,
+        updatedAt: new Date().toISOString(),
+      });
+      return res.status(502).json({
+        success: false,
+        message: `AI service error: ${err.message}`,
+      });
+    }
+  }
 
   // Reset progress metadata at request start so UI never reuses previous run's 100% snapshot.
   try {
@@ -804,13 +997,16 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
       ...process.env,
       API_URL: internalApiUrl,
       TORCH_HOME: torchHome,
+      YOLO_CONFIG_DIR:
+        (process.env.YOLO_CONFIG_DIR && process.env.YOLO_CONFIG_DIR.trim()) || "/tmp/Ultralytics",
     }
   });
 
   let outputLog = "";
   const liveLogFile = path.resolve(aiDir, "output/live_log.txt");
-  const maxAiRuntimeMs = parsePositiveInt(process.env.AI_MAX_RUNTIME_MS, 8 * 60 * 1000);
+  const maxAiRuntimeMs = parsePositiveInt(process.env.AI_MAX_RUNTIME_MS, 20 * 60 * 1000);
   let finished = false;
+  let timedOut = false;
   fs.writeFileSync(liveLogFile, ""); // Reset log for new run
 
   res.status(202).json({
@@ -822,6 +1018,7 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
 
   const watchdog = setTimeout(() => {
     if (finished) return;
+    timedOut = true;
     const timeoutMsg = `AI processing exceeded ${Math.round(maxAiRuntimeMs / 1000)}s timeout.`;
     outputLog += `${timeoutMsg}\n`;
     fs.appendFileSync(liveLogFile, `${timeoutMsg}\n`);
@@ -865,14 +1062,18 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
     fs.appendFileSync(liveLogFile, data.toString());
   });
 
-  aiProcess.on("close", (code) => {
+  aiProcess.on("close", (code, signal) => {
     finished = true;
     clearTimeout(watchdog);
-    console.log(`[NETRA-API] AI Process exited with code ${code}`);
+    console.log(`[NETRA-API] AI Process exited with code ${code} signal=${signal || "none"}`);
     // Clean up the uploaded file
     fs.unlink(videoPath, (err) => {
       if (err) console.error(`[NETRA-API] Failed to delete temp file: ${err}`);
     });
+
+    if (timedOut) {
+      return;
+    }
 
     if (code === 0) {
       const resultPath = isImage ? "/outputs/annotated_image.jpg" : "/outputs/annotated_video.webm";
@@ -903,10 +1104,11 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
         updatedAt: new Date().toISOString(),
       });
     } else {
+      const detail = code !== null ? `code ${code}` : (signal ? `signal ${signal}` : "unknown exit state");
       writeAnalysisResult(runId, {
         runId,
-        status: "error",
-        message: `AI process failed with code ${code}`,
+        status: "error", 
+        message: `AI process failed with ${detail}`,
         log: outputLog,
         updatedAt: new Date().toISOString(),
       });

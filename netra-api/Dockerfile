@@ -2,9 +2,12 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+RUN apk add --no-cache bash python3 py3-pip
 
-RUN npm install --production
+COPY package*.json ./
+COPY scripts ./scripts
+
+RUN npm install --omit=dev
 
 COPY . .
 
