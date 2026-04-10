@@ -26,6 +26,8 @@ class DepthEstimator:
         self.enabled = False
 
         try:
+            torch.hub.set_dir(str(config.TORCH_HUB_DIR))
+
             # Load MiDaS from torch hub
             self.model = torch.hub.load(
                 "intel-isl/MiDaS", model_type, trust_repo=True,
@@ -44,7 +46,10 @@ class DepthEstimator:
             self.enabled = True
         except Exception as err:
             # Keep the pipeline alive if model download/init fails (offline/SSL/proxy issues).
-            print(f"[NETRA][DepthEstimator] MiDaS unavailable, using zero-depth fallback: {err}")
+            print(
+                f"[NETRA][DepthEstimator] MiDaS unavailable, using zero-depth fallback "
+                f"(cache={config.TORCH_HUB_DIR}): {err}"
+            )
 
     # ───────────────────── full-frame depth map ─────────────────
 

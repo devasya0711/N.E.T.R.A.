@@ -3,6 +3,7 @@ NETRA — Autonomous Pothole Intelligence System
 Global configuration constants and tunable hyperparameters.
 """
 from pathlib import Path
+import os
 import torch
 
 # ──────────────────────────────────────────────────────────────
@@ -12,6 +13,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 WEIGHTS_DIR = PROJECT_ROOT / "weights"
 OUTPUT_DIR = PROJECT_ROOT / "output"
 BASELINE_DB_PATH = OUTPUT_DIR / "baseline_detections.json"
+TORCH_HUB_DIR = Path(os.getenv("TORCH_HOME", str(PROJECT_ROOT / ".torch_cache")))
 
 # ──────────────────────────────────────────────────────────────
 # YOLO Instance-Segmentation
@@ -30,7 +32,7 @@ POTHOLE_CLASS_ID = 0  # class index after fine-tuning on pothole dataset
 # ──────────────────────────────────────────────────────────────
 # Depth Estimation (MiDaS / Depth Anything)
 # ──────────────────────────────────────────────────────────────
-DEPTH_MODEL_TYPE = "MiDaS_small"   # more accurate than MiDaS_small
+DEPTH_MODEL_TYPE = os.getenv("DEPTH_MODEL_TYPE", "MiDaS_small")
 DEPTH_DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 # ──────────────────────────────────────────────────────────────

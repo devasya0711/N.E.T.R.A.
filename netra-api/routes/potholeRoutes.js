@@ -42,6 +42,8 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage: storage });
 
+const AI_OUTPUT_DIR = path.resolve(__dirname, "../../NETRA-AI/output");
+
 function getPublicOrigin(req) {
   if (process.env.PUBLIC_API_ORIGIN && process.env.PUBLIC_API_ORIGIN.trim()) {
     return process.env.PUBLIC_API_ORIGIN.trim().replace(/\/$/, "");
@@ -53,6 +55,15 @@ function getPublicOrigin(req) {
   const protocol = forwardedProto || req.protocol || "https";
 
   return `${protocol}://${host}`;
+}
+
+function getAnalysisResultPath(runId) {
+  return path.resolve(AI_OUTPUT_DIR, `analysis_result_${runId}.json`);
+}
+
+function writeAnalysisResult(runId, payload) {
+  fs.mkdirSync(AI_OUTPUT_DIR, { recursive: true });
+  fs.writeFileSync(getAnalysisResultPath(runId), JSON.stringify(payload, null, 0));
 }
 
 function resolvePythonCommand(aiDir) {
@@ -560,6 +571,26 @@ router.get("/live-meta", (req, res) => {
   });
 });
 
+router.get("/analysis-result/:runId", (req, res) => {
+  const runId = String(req.params.runId || "").trim();
+  if (!runId) {
+    return res.status(400).json({ success: false, message: "Missing runId" });
+  }
+
+  const resultPath = getAnalysisResultPath(runId);
+  if (!fs.existsSync(resultPath)) {
+    return res.status(404).json({ success: false, status: "pending", message: "Result not ready yet" });
+  }
+
+  try {
+    const raw = fs.readFileSync(resultPath, "utf-8");
+    const parsed = JSON.parse(raw);
+    return res.json({ success: true, data: parsed });
+  } catch (err) {
+    return res.status(500).json({ success: false, message: `Failed to read result: ${err.message}` });
+  }
+});
+
   router.get("/live-logs", (req, res) => {
     const liveLogPath = path.resolve(__dirname, "../../NETRA-AI/output/live_log.txt");
     if (fs.existsSync(liveLogPath)) {
@@ -700,6 +731,9 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
     return res.status(400).json({ success: false, message: "No video file provided" });
   }
 
+  const runId =
+    (req.body?.runId && String(req.body.runId).trim()) ||
+    `run-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
   const videoPath = path.resolve(req.file.path);
   // NETRA-AI directory relative to netra-api
   const aiDir = path.resolve(__dirname, "../../NETRA-AI");
@@ -709,6 +743,14 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
   const liveMetaPath = path.resolve(aiDir, "output/live_meta.json");
   
   console.log(`[NETRA-API] Starting AI analysis on ${videoPath}`);
+
+  writeAnalysisResult(runId, {
+    runId,
+    status: "pending",
+    message: "Analysis started",
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  });
 
   // Reset progress metadata at request start so UI never reuses previous run's 100% snapshot.
   try {
@@ -737,6 +779,7 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
 
   // Spawn the python process with a cross-platform interpreter path.
   const pythonPath = resolvePythonCommand(aiDir);
+  const torchHome = (process.env.TORCH_HOME && process.env.TORCH_HOME.trim()) || path.resolve(aiDir, ".torch_cache");
   const internalApiUrl =
     (process.env.INTERNAL_API_URL && process.env.INTERNAL_API_URL.trim()) ||
     `http://127.0.0.1:${process.env.PORT || 5000}/api/potholes`;
@@ -753,28 +796,33 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
     // Add environment variable for API URL to point to this exact server
     env: {
       ...process.env,
-      API_URL: internalApiUrl
+      API_URL: internalApiUrl,
+      TORCH_HOME: torchHome,
     }
   });
 
   let outputLog = "";
   const liveLogFile = path.resolve(aiDir, "output/live_log.txt");
-  let hasResponded = false;
   fs.writeFileSync(liveLogFile, ""); // Reset log for new run
+
+  res.status(202).json({
+    success: true,
+    accepted: true,
+    runId,
+    message: "Analysis queued. Poll /analysis-result/:runId for completion.",
+  });
 
   aiProcess.on("error", (err) => {
     console.error(`[NETRA-API] Failed to start AI process: ${err.message}`);
     outputLog += `${err.message}\n`;
     fs.appendFileSync(liveLogFile, `${err.message}\n`);
-
-    if (!hasResponded) {
-      hasResponded = true;
-      return res.status(500).json({
-        success: false,
-        message: "Failed to start AI process. Check PYTHON_PATH or create NETRA-AI virtual environment.",
-        log: outputLog,
-      });
-    }
+    writeAnalysisResult(runId, {
+      runId,
+      status: "error",
+      message: "Failed to start AI process. Check PYTHON_PATH or create NETRA-AI virtual environment.",
+      log: outputLog,
+      updatedAt: new Date().toISOString(),
+    });
   });
 
   aiProcess.stdout.on("data", (data) => {
@@ -796,11 +844,6 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
       if (err) console.error(`[NETRA-API] Failed to delete temp file: ${err}`);
     });
 
-    if (hasResponded) {
-      return;
-    }
-    hasResponded = true;
-
     if (code === 0) {
       const resultPath = isImage ? "/outputs/annotated_image.jpg" : "/outputs/annotated_video.webm";
       
@@ -818,17 +861,25 @@ router.post("/analyze-video", upload.single("video"), (req, res, next) => {
         console.error("Failed to parse unique_potholes.json", err);
       }
 
-      res.json({
-        success: true,
+      writeAnalysisResult(runId, {
+        runId,
+        status: "success",
         message: "Analysis complete and data synced.",
         log: outputLog,
         totalPotholes: totalDetected,
         potholesList: potholesList,
         csvUrl: `${publicOrigin}/outputs/unique_potholes.csv?t=${Date.now()}`,
-        outputUrl: `${publicOrigin}${resultPath}?t=${Date.now()}`
+        outputUrl: `${publicOrigin}${resultPath}?t=${Date.now()}`,
+        updatedAt: new Date().toISOString(),
       });
     } else {
-      res.status(500).json({ success: false, message: `AI process failed with code ${code}`, log: outputLog });
+      writeAnalysisResult(runId, {
+        runId,
+        status: "error",
+        message: `AI process failed with code ${code}`,
+        log: outputLog,
+        updatedAt: new Date().toISOString(),
+      });
     }
   });
 });

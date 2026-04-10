@@ -68,6 +68,7 @@ export default function VideoUploader() {
   const [resultUrl, setResultUrl] = useState(null);
   const [analysisStats, setAnalysisStats] = useState(null);
   const uploadStartedAtRef = useRef(0);
+  const analysisRunIdRef = useRef(null);
   const fileInputRef = useRef(null);
 
   /* ─── PDF Export ───────────────────────────────────────────────── */
@@ -139,6 +140,59 @@ export default function VideoUploader() {
 
   useEffect(() => { return () => { if (preview) URL.revokeObjectURL(preview); }; }, [preview]);
 
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  const applySuccessResult = (data) => {
+    setProgress(100);
+    setStatus("success");
+    setLog(`[Success] ${data.message || "Analysis complete."}\n\nAI Log:\n${data.log || ""}`);
+    if (data.outputUrl) setResultUrl(data.outputUrl);
+    if (data.totalPotholes !== undefined) {
+      setAnalysisStats({
+        total: data.totalPotholes,
+        csvUrl: data.csvUrl,
+        potholesList: data.potholesList || [],
+      });
+    }
+    refresh();
+  };
+
+  const pollAnalysisResult = async (runId) => {
+    const startedAt = Date.now();
+    const maxWaitMs = 12 * 60 * 1000;
+
+    while (Date.now() - startedAt < maxWaitMs) {
+      try {
+        const res = await fetch(`${API_BASE}/analysis-result/${encodeURIComponent(runId)}?t=${Date.now()}`, {
+          cache: "no-store",
+        });
+
+        if (res.status === 404 || res.status === 204) {
+          await sleep(1200);
+          continue;
+        }
+
+        if (!res.ok) {
+          await sleep(1200);
+          continue;
+        }
+
+        const payload = await res.json().catch(() => null);
+        const result = payload?.data || payload;
+        if (!result || result.status === "pending") {
+          await sleep(1200);
+          continue;
+        }
+
+        return result;
+      } catch (_err) {
+        await sleep(1200);
+      }
+    }
+
+    throw new Error("Timed out waiting for AI result.");
+  };
+
   /* ─── File handling ────────────────────────────────────────────── */
   const processFile = (selected) => {
     setFile(selected);
@@ -146,7 +200,7 @@ export default function VideoUploader() {
     setMediaType(selected.type.startsWith("image/") ? "Image" : "Video");
     setStatus("idle"); setProgress(0);
     setFrameProgress({ processed: 0, total: 0 });
-    setLog(""); setResultUrl(null); uploadStartedAtRef.current = 0;
+    setLog(""); setResultUrl(null); uploadStartedAtRef.current = 0; analysisRunIdRef.current = null;
   };
 
   const handleFileChange = (e) => {
@@ -162,14 +216,19 @@ export default function VideoUploader() {
   const handleUpload = async () => {
     if (!file) return;
     uploadStartedAtRef.current = Date.now();
+    const runId = (globalThis.crypto?.randomUUID?.() || `run-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`);
+    analysisRunIdRef.current = runId;
     setStatus("uploading"); setProgress(0);
     setFrameProgress({ processed: 0, total: 0 }); setResultUrl(null);
-    const formData = new FormData(); formData.append("video", file);
+    const formData = new FormData();
+    formData.append("video", file);
+    formData.append("runId", runId);
     try {
       setAnalysisStats(null);
-      const data = await new Promise((resolve, reject) => {
+      const kickoff = await new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", `${API_BASE}/analyze-video`, true);
+        xhr.timeout = 70000;
         xhr.upload.onprogress = (event) => {
           if (event.lengthComputable) {
             const uploadPercent = Math.min(10, Math.round((event.loaded / event.total) * 10));
@@ -185,24 +244,40 @@ export default function VideoUploader() {
         xhr.onload = () => {
           try {
             const parsed = JSON.parse(xhr.responseText || "{}");
-            if (xhr.status >= 200 && xhr.status < 300) resolve(parsed);
+            if (xhr.status >= 200 && xhr.status < 300) resolve({ status: xhr.status, data: parsed });
             else reject(new Error(parsed.message || `Request failed with status ${xhr.status}`));
           } catch (_e) { reject(new Error("Invalid response from server")); }
         };
-        xhr.onerror = () => reject(new Error("Network error during upload"));
+        xhr.onerror = () => resolve({ status: 0, data: null });
+        xhr.ontimeout = () => resolve({ status: 0, data: null });
         xhr.send(formData);
       });
-      if (data.success) {
-        setProgress(100); setStatus("success");
-        setLog(`[Success] ${data.message}\n\nAI Log:\n${data.log}`);
-        if (data.outputUrl) setResultUrl(data.outputUrl);
-        if (data.totalPotholes !== undefined) {
-          setAnalysisStats({ total: data.totalPotholes, csvUrl: data.csvUrl, potholesList: data.potholesList || [] });
+
+      const kickoffRunId = kickoff?.data?.runId || runId;
+
+      // New async mode: backend returns 202 and we poll the result endpoint.
+      if (kickoff?.status === 202 || kickoff?.data?.accepted || kickoff?.status === 0) {
+        setStatus("analyzing");
+        setProgress((prev) => Math.max(prev, 10));
+        setLog(`[NETRA] Analysis started (job: ${kickoffRunId}). Waiting for completion...`);
+
+        const result = await pollAnalysisResult(kickoffRunId);
+        if (result.status === "success") {
+          applySuccessResult(result);
+        } else {
+          setProgress(100);
+          setStatus("error");
+          setLog(`[Error] ${result.message || "AI processing failed"}\n\nAI Log:\n${result.log || ""}`);
         }
-        refresh();
+        return;
+      }
+
+      const data = kickoff?.data;
+      if (data?.success) {
+        applySuccessResult(data);
       } else {
         setProgress(100); setStatus("error");
-        setLog(`[Error] ${data.message}\n\nAI Log:\n${data.log}`);
+        setLog(`[Error] ${data?.message || "Unknown response from AI service"}\n\nAI Log:\n${data?.log || ""}`);
       }
     } catch (err) {
       setProgress(100); setStatus("error");

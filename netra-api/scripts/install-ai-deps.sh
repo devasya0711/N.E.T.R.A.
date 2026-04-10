@@ -6,6 +6,7 @@ API_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 ROOT_DIR="$(cd "${API_DIR}/.." && pwd)"
 AI_DIR="${AI_DIR:-${ROOT_DIR}/NETRA-AI}"
 REQ_FILE="${AI_REQUIREMENTS_FILE:-${AI_DIR}/requirements-server.txt}"
+TORCH_HOME="${TORCH_HOME:-${AI_DIR}/.torch_cache}"
 
 echo "[NETRA-AI] Preparing Python dependencies..."
 
@@ -27,4 +28,6 @@ fi
 echo "[NETRA-AI] Using requirements file: ${REQ_FILE}"
 python3 -m pip install --upgrade pip setuptools wheel
 python3 -m pip install --no-cache-dir -r "${REQ_FILE}"
+export TORCH_HOME
+python3 "${SCRIPT_DIR}/warm_midas_cache.py"
 echo "[NETRA-AI] Python dependencies installed."
