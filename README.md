@@ -1,108 +1,119 @@
-# N.E.T.R.A. 🛰️
-**Networked Edge Tracking for Road Anomalies**
+<div align="center">
 
-![N.E.T.R.A. Dashboard](admin_dashboard.png)
+  <h1>N.E.T.R.A. System 🛰️</h1>
+  <p><strong>Networked Edge Tracking for Road Anomalies</strong></p>
 
-N.E.T.R.A. is an advanced, AI-powered system designed for **autonomous pothole intelligence**. It actively detects road anomalies using state-of-the-art computer vision algorithms, scores their severity and risk, and automatically triggers actionable workflows—such as filing grievances with relevant authorities without human intervention.
+  <p>
+    <img src="https://img.shields.io/badge/Status-Active-success.svg" alt="Status">
+    <img src="https://img.shields.io/badge/Frontend-Vite%20%7C%20React-blue.svg" alt="Frontend">
+    <img src="https://img.shields.io/badge/Backend-Node.js%20%7C%20FastAPI-green.svg" alt="Backend">
+    <img src="https://img.shields.io/badge/AI-Ultralytics%20YOLOv8%20%7C%20PyTorch-orange.svg" alt="AI">
+  </p>
 
-Built for organizations like CHiPS and NHAI (National Highways Authority of India), N.E.T.R.A. ensures smoother, safer roads by automating the traditionally manual process of road quality assessment.
-
----
-
-## 🎯 Key Features
-
-- **Real-Time Anomaly Detection:** Utilizes YOLOv8 for high-precision, real-time segmentation and detection of potholes from dashcam or standard video feeds.
-- **Risk & Severity Scoring:** Evaluates the danger of a detected anomaly based on estimated depth and dimension (employing models like MiDaS).
-- **Automated Grievance Filing:** Integrates with systems like CPGRAMS to autonomously file complaints to governmental road authorities.
-- **Interactive Geospatial Dashboard:** Live mapping of detected road anomalies using Leaflet, complete with heatmaps and severity triaging.
-- **Microservices Architecture:** Fully decoupled AI inference engine, Node.js backend, and a modern React frontend.
+  <p>
+    An intelligent, autonomous platform for real-time pothole detection, risk assessment, and automated grievance filing — designed for scalable civic infrastructure maintenance.
+  </p>
+</div>
 
 ---
 
-## 🏗️ Architecture
+## 🌟 Overview
 
-N.E.T.R.A. is split into three core microservices:
+**N.E.T.R.A.** (Networked Edge Tracking for Road Anomalies) is an advanced infrastructure safety platform. Leveraging state-of-the-art computer vision models, it automatically detects road anomalies from dashcam or standard video feeds, calculates severity scores, and autonomously relays structured grievance data to civic agencies (e.g., CPGRAMS / NHAI).
 
-1. **`netra-web` (Frontend):** 
-   - A lightning-fast Vite + React SPA.
-   - Styled with TailwindCSS and Shadcn/UI for a premium, modern aesthetic.
-   - User authentication powered by Clerk.
-   - Interactive maps via React-Leaflet.
-
-2. **`netra-api` (Backend API):** 
-   - Node.js & Express server.
-   - Manages CRUD operations, business logic, and communication with MongoDB Atlas.
-   - Acts as the central hub routing requests between the frontend and the AI service.
-
-3. **`NETRA-AI` (Inference Service):** 
-   - Python + FastAPI application.
-   - Runs PyTorch and Ultralytics YOLOv8 models.
-   - Asynchronously processes incoming video/image payloads, determines geolocation, runs inferences, and synchronizes the resultant data back to the `netra-api`.
+By eliminating manual auditing, N.E.T.R.A. drastically reduces response times to hazardous road conditions and provides municipalities with a real-time, geospatial heatmap of infrastructure decay.
 
 ---
 
-## 🚀 Getting Started
+## ✨ Core Capabilities
+
+- 🛣️ **Real-Time Anomaly Detection:** Processes video streams instantly using highly optimized PyTorch integration with Ultralytics YOLOv8.
+- 📐 **Depth & Severity Estimation:** Assesses pothole depth, diameter, and critical risk factors to calculate a normalized severity score.
+- 🤖 **Autonomous Workflows:** Automatically routes high-severity road hazards as official grievance tickets without human intervention.
+- 🗺️ **Dynamic Geospatial Intelligence:** Live-updating dashboards equipped with interactive mapping (Leaflet.js) to cluster and visualize infrastructure damage.
+- ⚡ **Microservices Architecture:** Independently scalable components tailored for edge, local, or full cloud deployments.
+
+---
+
+## 🏗️ System Architecture
+
+N.E.T.R.A. follows a decoupled microservices design standard:
+
+| Component | Stack | Responsibility |
+| :--- | :--- | :--- |
+| **`netra-web`** | React 18, Vite, Tailwind CSS, Shadcn/UI | The management dashboard. Secure Auth via Clerk. Visual data tracking and interactive map views. |
+| **`netra-api`** | Node.js, Express.js, MongoDB Atlas   | Central nervous system. Handles data persistence, user management, and proxies to the AI service. |
+| **`NETRA-AI`**  | Python 3.10+, FastAPI, PyTorch        | Deep learning inference engine. Processes video, generates bounding boxes, and calculates severity. |
+
+---
+
+## 🛠️ Quick Start Guide
 
 ### Prerequisites
-- Node.js (v18+)
-- Python (3.10+)
-- MongoDB Atlas Account / Local MongoDB
-- Docker (Optional, for containerized deployments)
+- Node.js (v18.x or higher)
+- Python (v3.10 or higher)
+- MongoDB Atlas cluster URI
+- Docker & Docker Compose *(Optional, for containerized deployment)*
 
-### Quick Start (Dockerized)
+### 1. Unified Setup via Docker (Recommended)
 
-The easiest way to get the entire platform running locally is via Docker Compose:
+To spin up the entire application environment instantly:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/NETRA.git
+git clone https://github.com/organization/NETRA.git
 cd NETRA
 
-# Start all services (Frontend, API, and AI Engine)
+# Fire up all services (Web, API, AI Engine)
 docker-compose up --build
 ```
-> **Note:** Ensure your `.env` files for `netra-api` and `netra-web` are properly configured before running Docker Compose.
+> Ensure your `.env` variables in `netra-api/.env` and `netra-web/.env` are correctly seeded before running `docker-compose`.
 
-### Manual Setup (Local Development)
+### 2. Manual Development Setup
 
-#### 1. Setup Data API (`netra-api`)
+#### `netra-api` (Backend)
 ```bash
 cd netra-api
 npm install
-# Set up your .env file with MONGO_URI, PORT
+# Configure your .env file here
 npm run dev
 ```
 
-#### 2. Setup AI Pipeline (`NETRA-AI`)
+#### `NETRA-AI` (AI Core)
 ```bash
 cd NETRA-AI
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-# Set up your env variables
-uvicorn ai_service:app --host 0.0.0.0 --port 8000
+
+# Start the FastAPI engine
+uvicorn ai_service:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-#### 3. Setup Frontend Dashboard (`netra-web`)
+#### `netra-web` (Frontend)
 ```bash
 cd netra-web
 npm install
-# Set up your .env (VITE_API_URL, CLERK keys, etc.)
+# Configure your .env file here (Client IDs, API URLs)
 npm run dev
 ```
 
 ---
 
-## 🌐 Deployment Configuration (Render)
+## ☁️ Deployment (Render / Cloud Platforms)
 
-When deploying to cloud platforms like **Render**, ensure the Cross-Origin and Cross-Container network configs are accurately mapped:
+For production deployments where microservices run as isolated containers, verify your cross-container environment configurations. 
 
-- Define `AI_SERVICE_URL` in `netra-api` to point to the deployed `NETRA-AI` URL.
-- Define `PUBLIC_API_ORIGIN` in `netra-api`, allowing the AI service to communicate results back to the database.
-- Define `INTERNAL_API_URL` in `NETRA-AI` to point back to your public API origin setup.
+Specifically, inject these Environment Variables into your deployments:
+
+1. **`netra-api` Container**: 
+   - `AI_SERVICE_URL="https://your-netra-ai.onrender.com"`
+   - `PUBLIC_API_ORIGIN="https://your-netra-api.onrender.com"` *(Critical for AI DB syncing)*
+   - `MONGO_URI="..."`
+2. **`NETRA-AI` Container**:
+   - `INTERNAL_API_URL="https://your-netra-api.onrender.com/api/potholes"`
 
 ---
 
-## 🛡️ License
-
-This project is proprietary and built for specific governmental implementation (CHiPS / NHAI). Unauthorized replication or distribution outside permitted boundaries is prohibited.
+## 🔒 License & Usage Note
+Developed as a proprietary toolset for civic and government implementations (e.g., CHiPS / NHAI). Unauthorized replication or distribution outside permitted boundaries is prohibited.
