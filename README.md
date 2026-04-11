@@ -26,7 +26,11 @@
 
 <br/>
 
-[Live Demo](https://netra-9f3ai58s8-code-flex.vercel.app) · [Documentation](#how-it-works) · [Quick Start](#installation--setup)
+[Live Frontend (Vercel)](https://netra-9f3ai58s8-code-flex.vercel.app/) · [Backend API (Render)](https://netra-api-w3td.onrender.com/) · [AI Service (Render)](https://netra-ai-zzls.onrender.com/)
+
+<br/>
+
+*Note: The backend and AI services on Render may take 30-50 seconds to wake up from a cold start if inactive.*
 
 </div>
 
@@ -318,18 +322,6 @@ POST   /api/potholes/analyze-video      Upload & analyze media via AI
 GET    /api/potholes/analysis-result/:id Poll analysis job status
 GET    /api/potholes/ai-health          Check AI service connectivity
 ```
-
----
-
-## Screenshots
-
-<div align="center">
-
-### Landing Page
-![N.E.T.R.A. Landing](admin_dashboard.png)
-*Autonomous Pothole Intelligence — developed for CHiPS · NHAI*
-
-</div>
 
 ---
 
