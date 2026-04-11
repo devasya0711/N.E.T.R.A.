@@ -67,11 +67,29 @@ function isExternalAiEnabled() {
   return Boolean(getAiServiceBaseUrl());
 }
 
-function getInternalApiUrl() {
-  return (
-    (process.env.INTERNAL_API_URL && process.env.INTERNAL_API_URL.trim()) ||
-    `http://127.0.0.1:${process.env.PORT || 5000}/api/potholes`
-  );
+function getInternalApiUrl(req) {
+  // Explicit override takes priority
+  if (process.env.INTERNAL_API_URL && process.env.INTERNAL_API_URL.trim()) {
+    return process.env.INTERNAL_API_URL.trim();
+  }
+
+  // When using external AI service, the AI container can't reach localhost.
+  // Use PUBLIC_API_ORIGIN so the AI service can sync results back to the backend DB.
+  if (isExternalAiEnabled()) {
+    const publicOrigin = process.env.PUBLIC_API_ORIGIN && process.env.PUBLIC_API_ORIGIN.trim();
+    if (publicOrigin) {
+      return `${publicOrigin.replace(/\/$/, "")}/api/potholes`;
+    }
+    // Auto-detect from request if available
+    if (req) {
+      const origin = getPublicOrigin(req);
+      if (origin && !origin.includes("127.0.0.1") && !origin.includes("localhost")) {
+        return `${origin}/api/potholes`;
+      }
+    }
+  }
+
+  return `http://127.0.0.1:${process.env.PORT || 5000}/api/potholes`;
 }
 
 function getAnalysisResultPath(runId) {
@@ -980,11 +998,19 @@ router.post("/analyze-video", upload.single("video"), async (req, res, next) => 
         req.file.originalname || path.basename(videoPath)
       );
       form.append("runId", runId);
-      form.append("apiUrl", getInternalApiUrl());
-      form.append(
-        "publicOrigin",
-        (process.env.AI_PUBLIC_ORIGIN && process.env.AI_PUBLIC_ORIGIN.trim()) || publicOrigin
-      );
+
+      // Use the public Render URL so AI service can reach this backend to sync to DB
+      const resolvedApiUrl = getInternalApiUrl(req);
+      form.append("apiUrl", resolvedApiUrl);
+
+      // For output URLs (annotated images/videos), prefer the AI service's own origin
+      const resolvedPublicOrigin =
+        (process.env.AI_PUBLIC_ORIGIN && process.env.AI_PUBLIC_ORIGIN.trim()) ||
+        aiServiceBaseUrl; // AI service hosts the output files
+      form.append("publicOrigin", resolvedPublicOrigin);
+
+      console.log(`[NETRA-API]   apiUrl=${resolvedApiUrl}`);
+      console.log(`[NETRA-API]   publicOrigin=${resolvedPublicOrigin}`);
 
       // ── POST /jobs with retry for cold-start resilience ──────────────
       let upstream;
@@ -1018,10 +1044,10 @@ router.post("/analyze-video", upload.single("video"), async (req, res, next) => 
               req.file.originalname || path.basename(videoPath)
             );
             retryForm.append("runId", runId);
-            retryForm.append("apiUrl", getInternalApiUrl());
+            retryForm.append("apiUrl", getInternalApiUrl(req));
             retryForm.append(
               "publicOrigin",
-              (process.env.AI_PUBLIC_ORIGIN && process.env.AI_PUBLIC_ORIGIN.trim()) || publicOrigin
+              (process.env.AI_PUBLIC_ORIGIN && process.env.AI_PUBLIC_ORIGIN.trim()) || aiServiceBaseUrl
             );
             form = retryForm;
           } else {

@@ -246,7 +246,7 @@ export default function VideoUploader() {
       const kickoff = await new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", `${API_BASE}/analyze-video`, true);
-        xhr.timeout = 70000;
+        xhr.timeout = 120000; // 120s — allows for Render cold start + upload
         xhr.upload.onprogress = (event) => {
           if (event.lengthComputable) {
             const uploadPercent = Math.min(10, Math.round((event.loaded / event.total) * 10));
