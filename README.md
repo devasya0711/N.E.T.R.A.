@@ -48,6 +48,20 @@ No human in the loop. No complaint lost. No delay.
 
 ---
 
+## Live Deployments
+
+The platform is fully deployed and accessible via the following cloud services:
+
+| Component | Provider | Live URL |
+|:---|:---|:---|
+| **Frontend Dashboard** | Vercel | [https://netra-9f3ai58s8-code-flex.vercel.app/](https://netra-9f3ai58s8-code-flex.vercel.app/) |
+| **Backend API** | Render | [https://netra-api-w3td.onrender.com/api/potholes](https://netra-api-w3td.onrender.com/api/potholes) |
+| **AI Inference Service** | Render | [https://netra-ai-zzls.onrender.com/health](https://netra-ai-zzls.onrender.com/health) |
+
+*Note: As the backend and AI services are hosted on Render free tiers, they may take 30-50 seconds to wake up from a cold start if there has been no recent traffic.*
+
+---
+
 ## Problem It Solves
 
 | Problem | N.E.T.R.A. Solution |
