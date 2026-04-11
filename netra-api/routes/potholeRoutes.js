@@ -89,6 +89,53 @@ function parsePositiveInt(value, fallback) {
   return Math.floor(parsed);
 }
 
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/**
+ * Poll the external AI service for job completion.
+ * Returns the final result payload or throws on timeout.
+ */
+async function pollAiJobResult(aiBaseUrl, runId, { intervalMs = 2000, timeoutMs = 120000 } = {}) {
+  const deadline = Date.now() + timeoutMs;
+  let attempt = 0;
+
+  while (Date.now() < deadline) {
+    attempt++;
+    const pollUrl = `${aiBaseUrl}/jobs/${encodeURIComponent(runId)}?t=${Date.now()}`;
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 10000);
+      const res = await fetch(pollUrl, { signal: controller.signal });
+      clearTimeout(timer);
+
+      if (res.status === 404 || res.status === 204) {
+        console.log(`[NETRA-AI-POLL] Attempt ${attempt}: runId=${runId} — not ready yet (${res.status})`);
+        await sleep(intervalMs);
+        continue;
+      }
+
+      const payload = await res.json().catch(() => null);
+      const data = payload?.data || payload;
+
+      if (!data || data.status === "pending") {
+        console.log(`[NETRA-AI-POLL] Attempt ${attempt}: runId=${runId} — status=pending`);
+        await sleep(intervalMs);
+        continue;
+      }
+
+      console.log(`[NETRA-AI-POLL] Attempt ${attempt}: runId=${runId} — status=${data.status}`);
+      return data;
+    } catch (err) {
+      console.warn(`[NETRA-AI-POLL] Attempt ${attempt}: runId=${runId} — fetch error: ${err.message}`);
+      await sleep(intervalMs);
+    }
+  }
+
+  throw new Error(`AI job polling timed out after ${Math.round(timeoutMs / 1000)}s for runId=${runId}`);
+}
+
 function resolvePythonCommand(aiDir) {
   if (process.env.PYTHON_PATH && process.env.PYTHON_PATH.trim()) {
     return process.env.PYTHON_PATH.trim();
@@ -645,6 +692,45 @@ router.get("/live-meta", async (req, res) => {
   });
 });
 
+// ─────────────────────────────────────────────────────────────────────────────
+// GET /api/potholes/ai-health
+// Quick check whether the external AI service is reachable.
+// ─────────────────────────────────────────────────────────────────────────────
+router.get("/ai-health", async (_req, res) => {
+  if (!isExternalAiEnabled()) {
+    return res.json({
+      success: true,
+      mode: "local",
+      message: "AI_SERVICE_URL not configured — using local Python pipeline",
+    });
+  }
+
+  const aiBaseUrl = getAiServiceBaseUrl();
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 8000);
+  try {
+    const upstream = await fetch(`${aiBaseUrl}/health?t=${Date.now()}`, {
+      signal: controller.signal,
+    });
+    const payload = await upstream.json().catch(() => ({}));
+    clearTimeout(timer);
+    return res.json({
+      success: upstream.ok,
+      mode: "external",
+      aiServiceUrl: aiBaseUrl,
+      upstream: payload,
+    });
+  } catch (err) {
+    clearTimeout(timer);
+    return res.status(503).json({
+      success: false,
+      mode: "external",
+      aiServiceUrl: aiBaseUrl,
+      message: `AI service unreachable: ${err.message}`,
+    });
+  }
+});
+
 router.get("/analysis-result/:runId", async (req, res) => {
   const runId = String(req.params.runId || "").trim();
   if (!runId) {
@@ -661,11 +747,12 @@ router.get("/analysis-result/:runId", async (req, res) => {
       );
       const payload = await upstream.json().catch(() => ({}));
       return res.status(upstream.status).json(payload);
-    } catch (_err) {
+    } catch (err) {
+      console.warn(`[NETRA-API] Failed to reach AI service for runId=${runId}: ${err.message}`);
       return res.status(503).json({
         success: false,
         status: "pending",
-        message: "AI service unavailable while checking result",
+        message: `AI service temporarily unavailable (${err.message}). Retrying...`,
       });
     } finally {
       clearTimeout(timer);
@@ -876,7 +963,13 @@ router.post("/analyze-video", upload.single("video"), async (req, res, next) => 
 
   if (isExternalAiEnabled()) {
     const aiServiceBaseUrl = getAiServiceBaseUrl();
-    const forwardTimeoutMs = parsePositiveInt(process.env.AI_SERVICE_REQUEST_TIMEOUT_MS, 30000);
+    // Default 60s to accommodate Render free-tier cold starts (~30s)
+    const forwardTimeoutMs = parsePositiveInt(process.env.AI_SERVICE_REQUEST_TIMEOUT_MS, 60000);
+    const waitForResult = req.query.wait === "true";
+    const pollTimeoutMs = parsePositiveInt(process.env.AI_POLL_TIMEOUT_MS, 120000);
+
+    console.log(`[NETRA-API] ▶ Forwarding to external AI service: ${aiServiceBaseUrl}/jobs`);
+    console.log(`[NETRA-API]   runId=${runId}, file=${req.file.originalname}, size=${req.file.size}, wait=${waitForResult}`);
 
     try {
       const fileBuffer = fs.readFileSync(videoPath);
@@ -893,60 +986,122 @@ router.post("/analyze-video", upload.single("video"), async (req, res, next) => 
         (process.env.AI_PUBLIC_ORIGIN && process.env.AI_PUBLIC_ORIGIN.trim()) || publicOrigin
       );
 
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), forwardTimeoutMs);
+      // ── POST /jobs with retry for cold-start resilience ──────────────
       let upstream;
-      try {
-        upstream = await fetch(`${aiServiceBaseUrl}/jobs`, {
-          method: "POST",
-          body: form,
-          signal: controller.signal,
-        });
-      } finally {
-        clearTimeout(timer);
+      let payload;
+      const maxRetries = 2;
+
+      for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), forwardTimeoutMs);
+        try {
+          console.log(`[NETRA-API]   POST /jobs attempt ${attempt}/${maxRetries} (timeout=${forwardTimeoutMs}ms)`);
+          upstream = await fetch(`${aiServiceBaseUrl}/jobs`, {
+            method: "POST",
+            body: form,
+            signal: controller.signal,
+          });
+          clearTimeout(timer);
+          payload = await upstream.json().catch(() => ({}));
+          break; // success — exit retry loop
+        } catch (err) {
+          clearTimeout(timer);
+          console.warn(`[NETRA-API]   Attempt ${attempt} failed: ${err.message}`);
+          if (attempt < maxRetries) {
+            console.log(`[NETRA-API]   Retrying in 5s (AI service may be cold-starting)...`);
+            await sleep(5000);
+            // Re-create form for retry (streams are consumed)
+            const retryForm = new FormData();
+            retryForm.append(
+              "file",
+              new Blob([fileBuffer], { type: req.file.mimetype || "application/octet-stream" }),
+              req.file.originalname || path.basename(videoPath)
+            );
+            retryForm.append("runId", runId);
+            retryForm.append("apiUrl", getInternalApiUrl());
+            retryForm.append(
+              "publicOrigin",
+              (process.env.AI_PUBLIC_ORIGIN && process.env.AI_PUBLIC_ORIGIN.trim()) || publicOrigin
+            );
+            form = retryForm;
+          } else {
+            throw err; // all retries exhausted
+          }
+        }
       }
 
-      const payload = await upstream.json().catch(() => ({}));
       fs.unlink(videoPath, () => {});
 
       if (!upstream.ok || !payload?.success) {
+        const errorMsg = payload?.message || payload?.detail || `AI service returned HTTP ${upstream.status}`;
+        console.error(`[NETRA-API] ✗ AI service rejected job: ${errorMsg}`);
         writeAnalysisResult(runId, {
           runId,
           status: "error",
-          message: payload?.message || `AI service request failed (${upstream.status})`,
+          message: errorMsg,
           updatedAt: new Date().toISOString(),
         });
         return res.status(502).json({
           success: false,
-          message: payload?.message || "AI service unavailable",
+          message: `AI service error: ${errorMsg}`,
         });
       }
 
-      writeAnalysisResult(runId, {
-        runId,
+      const resolvedRunId = payload.runId || runId;
+      console.log(`[NETRA-API] ✓ Job accepted by AI service: runId=${resolvedRunId}`);
+
+      writeAnalysisResult(resolvedRunId, {
+        runId: resolvedRunId,
         status: "pending",
         message: "Analysis started on AI service",
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       });
 
+      // ── Optional server-side polling (when ?wait=true) ──────────────
+      if (waitForResult) {
+        console.log(`[NETRA-API]   Server-side polling enabled (timeout=${pollTimeoutMs}ms)`);
+        try {
+          const result = await pollAiJobResult(aiServiceBaseUrl, resolvedRunId, {
+            intervalMs: 2000,
+            timeoutMs: pollTimeoutMs,
+          });
+          writeAnalysisResult(resolvedRunId, result);
+          return res.json({
+            success: true,
+            data: result,
+          });
+        } catch (pollErr) {
+          console.error(`[NETRA-API] ✗ Server-side polling failed: ${pollErr.message}`);
+          return res.status(504).json({
+            success: false,
+            runId: resolvedRunId,
+            message: pollErr.message,
+          });
+        }
+      }
+
       return res.status(202).json({
         success: true,
         accepted: true,
-        runId: payload.runId || runId,
+        runId: resolvedRunId,
         message: "Analysis queued. Poll /analysis-result/:runId for completion.",
       });
     } catch (err) {
       fs.unlink(videoPath, () => {});
+      const errorDetail = err.name === "AbortError"
+        ? `AI service request timed out after ${Math.round(forwardTimeoutMs / 1000)}s — the service may be starting up (Render cold start). Please retry.`
+        : `AI service connection failed: ${err.message}`;
+      console.error(`[NETRA-API] ✗ External AI error: ${errorDetail}`);
       writeAnalysisResult(runId, {
         runId,
         status: "error",
-        message: `AI service error: ${err.message}`,
+        message: errorDetail,
         updatedAt: new Date().toISOString(),
       });
       return res.status(502).json({
         success: false,
-        message: `AI service error: ${err.message}`,
+        message: errorDetail,
       });
     }
   }

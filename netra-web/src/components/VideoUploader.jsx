@@ -160,6 +160,8 @@ export default function VideoUploader() {
   const pollAnalysisResult = async (runId) => {
     const startedAt = Date.now();
     const maxWaitMs = 12 * 60 * 1000;
+    let pollInterval = 2000; // start at 2s
+    const maxInterval = 5000; // cap at 5s
 
     while (Date.now() - startedAt < maxWaitMs) {
       try {
@@ -168,25 +170,41 @@ export default function VideoUploader() {
         });
 
         if (res.status === 404 || res.status === 204) {
-          await sleep(1200);
+          await sleep(pollInterval);
+          pollInterval = Math.min(pollInterval + 500, maxInterval);
+          continue;
+        }
+
+        // AI service temporarily unavailable (cold start / warming up)
+        if (res.status === 503) {
+          setLog((prev) => {
+            const warmMsg = "[NETRA] AI service is warming up... please wait.";
+            return prev.includes(warmMsg) ? prev : prev + "\n" + warmMsg;
+          });
+          await sleep(pollInterval);
+          pollInterval = Math.min(pollInterval + 500, maxInterval);
           continue;
         }
 
         if (!res.ok) {
-          await sleep(1200);
+          await sleep(pollInterval);
+          pollInterval = Math.min(pollInterval + 500, maxInterval);
           continue;
         }
 
         const payload = await res.json().catch(() => null);
         const result = payload?.data || payload;
         if (!result || result.status === "pending") {
-          await sleep(1200);
+          await sleep(pollInterval);
+          // Reset interval on successful contact
+          pollInterval = 2000;
           continue;
         }
 
         return result;
       } catch (_err) {
-        await sleep(1200);
+        await sleep(pollInterval);
+        pollInterval = Math.min(pollInterval + 500, maxInterval);
       }
     }
 
@@ -281,7 +299,11 @@ export default function VideoUploader() {
       }
     } catch (err) {
       setProgress(100); setStatus("error");
-      setLog(`[Upload Error] ${err.message || "Something went wrong"}`);
+      const detail = err.message || "Something went wrong";
+      const hint = detail.includes("timed out") || detail.includes("cold start")
+        ? "\n\n💡 Tip: The AI service may be waking up from a cold start. Wait 30s and try again."
+        : "";
+      setLog(`[Upload Error] ${detail}${hint}`);
     }
   };
 
